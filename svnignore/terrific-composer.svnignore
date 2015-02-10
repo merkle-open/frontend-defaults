@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+_.*
+.project
+.idea
+.cache
+.settings
+.config
+.buildpath
+.metadata
+.tmp*
+*.prefs
+.deployables
+atlassian-ide-plugin.xml
+
+# VCS
+.svn
+_svn
+
+# Project
+app/bootstrap*
+app/cache/**
+app/logs/**
+build/**
+vendor/**
+web/bundles/**
+web/css/compiled/**
+web/js/compiled/**
+composer.phar
+composer.lock

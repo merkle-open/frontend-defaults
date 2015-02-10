@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+ 
+# IDE
+_.*
+.project
+.idea
+.cache
+.settings
+.config
+.buildpath
+.metadata
+.tmp*
+*.prefs
+.deployables
+atlassian-ide-plugin.xml
+
+# VCS
+.svn
+_svn
