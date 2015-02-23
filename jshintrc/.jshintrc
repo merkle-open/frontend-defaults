@@ -6,11 +6,8 @@
 		"Tc": false
 	},
 	"laxcomma": true,
-	// Ignore Comma Warnings
 	"laxbreak": true,
-	// Allow line breaking before && or ||
 	"-W087": true,
-	// Allow use of debugger; statement
 	"smarttabs": true,
 	"camelcase": true,
 	"curly": true,
@@ -40,7 +37,6 @@
 	"debug": false,
 	"evil": true,
 	"sub": false,
-	"laxbreak": false,
 	"browser": true,
 	"devel": false,
 	"nomen": false,
