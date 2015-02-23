@@ -17,15 +17,7 @@ _.*
 atlassian-ide-plugin.xml
 
 # Project
-app/bootstrap.php.cache
-app/cache/
-app/logs/
-vendor/
-web/bundles/
-web/css/compiled/
-web/js/compiled/
-composer.phar
-composer.lock
+node_modules/
 
 # allow
 !.gitkeep
