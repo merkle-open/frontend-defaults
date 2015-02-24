@@ -18,6 +18,7 @@ atlassian-ide-plugin.xml
 
 # Project
 node_modules/
+public/latest/
 
 # allow
 !.gitkeep
