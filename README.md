@@ -21,8 +21,8 @@ Reason:
 
 ### Gitattributes
 
-Where : /gitattributes/ 
-Infos : http://git-scm.com/book/en/Customizing-Git-Git-Attributes 
+Where: /gitattributes/ 
+Infos: http://git-scm.com/book/en/Customizing-Git-Git-Attributes 
 Reason: 
 
 * Force line ending normalization
@@ -35,8 +35,8 @@ Optional: Place file in user home ($HOME/.gitconfig) for global defaults.
 
 ### EditorConfig
 
-Where : /editorconfig/ 
-Infos : http://editorconfig.org/ 
+Where: /editorconfig/ 
+Infos: http://editorconfig.org/ 
 Reason: 
 Configures the editor
 
