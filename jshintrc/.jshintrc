@@ -2,7 +2,8 @@
 	"globals": {
 		"console": false,
 		"jQuery": false,
-		"T": false
+		"T": false,
+		"util": false
 	},
 	"esnext": true,
 	"bitwise": true,
