@@ -16,7 +16,7 @@
 	"undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
 	"unused"        : true,     // Unused variables: true | "vars" | "strict"
 	"strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
-	"maxdepth"      : true,     // {int} Max depth of nested blocks (within functions)
+	"maxdepth"      : 3,        // {int} Max depth of nested blocks (within functions)
 	"maxstatements" : 25,       // {int} Max number statements per function
 
 	// Relaxing
