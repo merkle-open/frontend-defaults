@@ -20,6 +20,8 @@ atlassian-ide-plugin.xml
 node_modules/
 public/assets/
 assets/vendor/
+components/**/template/*.js
+components/**/template/partial/*.js
 
 # allow
 !.gitkeep

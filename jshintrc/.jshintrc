@@ -35,7 +35,7 @@
 	"globals": {
 		"jQuery": false,
 		"T": false,
-		"util": false,
-		"Modernizr": false
+		"Modernizr": false,
+		"Handlebars": false
 	}
 }
