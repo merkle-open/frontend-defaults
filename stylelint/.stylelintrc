@@ -1,0 +1,25 @@
+{
+    "rules": {
+        "at-rule-no-vendor-prefix": true,
+        "block-opening-brace-newline-after": "always",
+        "block-opening-brace-space-before": "always",
+        "block-closing-brace-newline-before": "always",
+        "color-hex-case": "lower",
+        "color-hex-length": "short",
+        "color-named": "never",
+        "declaration-block-semicolon-newline-after": "always",
+        "declaration-block-properties-order": "alphabetical",
+        "declaration-block-trailing-semicolon": "always",
+        "declaration-colon-space-after": "always",
+        "declaration-no-important": true,
+        "indentation": "tab",
+        "max-empty-lines": 1,
+        "max-nesting-depth": 8,
+        "no-extra-semicolons": true,
+        "no-missing-eof-newline": true,
+        "number-zero-length-no-unit": true,
+        "property-no-vendor-prefix": true,
+        "selector-list-comma-newline-after": "always",
+        "value-no-vendor-prefix": true
+    }
+}
