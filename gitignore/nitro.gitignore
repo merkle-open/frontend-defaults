@@ -18,6 +18,7 @@ atlassian-ide-plugin.xml
 
 # Project
 node_modules/
+npm-debug.log
 public/assets/
 assets/vendor/
 components/**/template/*.js
