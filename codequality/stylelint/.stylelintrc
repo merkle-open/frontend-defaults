@@ -17,12 +17,12 @@
 		"declaration-no-important": true,
 		"function-linear-gradient-no-nonstandard-direction": [true, {"severity": "warning"}],
 		"indentation": ["tab", {"severity": "warning"}],
+		"length-zero-no-unit": true,
 		"max-empty-lines": [1, {"severity": "warning"}],
 		"max-nesting-depth": [2, {"severity": "warning"}],
 		"no-missing-eof-newline": [true, {"severity": "warning"}],
 		"no-unknown-animations": [true, {"severity": "warning"}],
 		"number-leading-zero": ["never", {"severity": "warning"}],
-		"number-zero-length-no-unit": true,
 		"property-no-vendor-prefix": [true, {"severity": "warning"}],
 		"selector-no-id": true,
 		"value-no-vendor-prefix": [true, {"severity": "warning"}]
