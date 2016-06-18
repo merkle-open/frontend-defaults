@@ -17,12 +17,14 @@ _.*
 atlassian-ide-plugin.xml
 
 # Project
-node_modules/
-npm-debug.log
-public/assets/
 assets/vendor/
 components/**/template/*.js
 components/**/template/partial/*.js
+dist/
+node_modules/
+npm-debug.log
+public/assets/
+.servepid
 
 # allow
 !.gitkeep
