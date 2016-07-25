@@ -23,6 +23,7 @@ Reason:
 ### Code
 
 * [.editorconfig](editorconfig/)
+* [eslint](https://github.com/namics/eslint-config-namics)
 * [jshint](codequality/jshint/)
 * [stylelint](codequality/stylelint/)
 
@@ -40,4 +41,3 @@ These files will be removed in 2017
 * `gitattributes/.gitattributes` (new place: `repo/gitattributes/.gitattributes`)
 * `gitignore/.gitignore` (new place: `repo/gitignore/.gitignore`)
 * `jshintrc/.jshintrc` (new place: `codequality/jshint/.jshintrc`)
-
