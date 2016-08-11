@@ -9,6 +9,12 @@
 *.yaml text eol=lf
 *.bash_aliases text eol=lf
 
+# Denote all files that are truly binary and should not be modified.
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
 # Windows-specific files get windows endings
 *.bat     eol=crlf
 *.cmd     eol=crlf
