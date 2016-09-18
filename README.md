@@ -23,7 +23,7 @@ Reason:
 ### Code
 
 * [.editorconfig](editorconfig/)
-* [eslint](https://github.com/namics/eslint-config-namics)
+* [eslint](codequality/eslint/)
 * [jshint](codequality/jshint/)
 * [stylelint](codequality/stylelint/)
 
