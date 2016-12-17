@@ -24,6 +24,7 @@ Reason:
 
 * [.editorconfig](editorconfig/)
 * [eslint](codequality/eslint/)
+* [htmllint](codequality/htmllint/)
 * [jshint](codequality/jshint/)
 * [stylelint](codequality/stylelint/)
 
