@@ -22,11 +22,12 @@ components/**/template/*.js
 components/**/template/partial/*.js
 dist/
 node_modules/
-npm-debug.log
 patterns/**/template/*.js
 patterns/**/template/partial/*.js
+project/tmp/
 public/assets/
 .servepid
+npm-debug.log
 
 # allow
 !.gitkeep
