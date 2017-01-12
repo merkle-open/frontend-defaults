@@ -1,5 +1,9 @@
 {
+	"plugins": [
+		"@namics/stylelint-bem"
+	],
 	"rules": {
+		"plugin/stylelint-bem-namics": true,
 		"at-rule-no-vendor-prefix": true,
 		"block-closing-brace-space-before": ["always-single-line", {"severity": "warning"}],
 		"block-opening-brace-space-after": ["always-single-line", {"severity": "warning"}],
