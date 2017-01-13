@@ -33,12 +33,3 @@ Reason:
 * [.gitattributes](repo/gitattributes/)
 * [.gitignore](repo/gitignore/)
 * [.svnignore](repo/svnignore/)
-
-## Deprecated files
-
-These files will be removed in 2017
-
-* `editorconfig/frontend.editorconfig` (renamed to: `editorconfig/.editorconfig`)
-* `gitattributes/.gitattributes` (new place: `repo/gitattributes/.gitattributes`)
-* `gitignore/.gitignore` (new place: `repo/gitignore/.gitignore`)
-* `jshintrc/.jshintrc` (new place: `codequality/jshint/.jshintrc`)
