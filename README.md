@@ -22,7 +22,8 @@ Reason:
 
 ### Code
 
-* [.editorconfig](editorconfig/)
+* [accessibility](codequality/accessibility/)
+* [editorconfig](editorconfig/)
 * [eslint](codequality/eslint/)
 * [htmllint](codequality/htmllint/)
 * [jshint](codequality/jshint/)
