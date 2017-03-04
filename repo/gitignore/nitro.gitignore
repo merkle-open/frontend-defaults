@@ -6,6 +6,7 @@ Thumbs.db
 _.*
 .project
 .idea
+.vscode
 .cache
 .settings
 .config
@@ -28,6 +29,10 @@ project/tmp/
 public/assets/
 .servepid
 npm-debug.log
+
+# Build
+node/
+target/
 
 # allow
 !.gitkeep

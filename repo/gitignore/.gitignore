@@ -1,11 +1,12 @@
 # OS
 .DS_Store
 Thumbs.db
- 
+
 # IDE
 _.*
 .project
 .idea
+.vscode
 .cache
 .settings
 .config
