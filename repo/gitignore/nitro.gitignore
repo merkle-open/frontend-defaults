@@ -18,21 +18,22 @@ _.*
 atlassian-ide-plugin.xml
 
 # Project
-assets/vendor/
-components/**/template/*.js
-components/**/template/partial/*.js
-dist/
-node_modules/
-patterns/**/template/*.js
-patterns/**/template/partial/*.js
-project/tmp/
-public/assets/
-.servepid
-npm-debug.log
+/assets/vendor
+/components/**/template/*.js
+/components/**/template/partial/*.js
+/config/local*
+dist
+/node_modules
+/npm-debug.log
+/patterns/**/template/*.js
+/patterns/**/template/partial/*.js
+/project/tmp
+/public/assets
+/.servepid
 
 # Build
-node/
-target/
+/node
+/target
 
 # allow
 !.gitkeep
