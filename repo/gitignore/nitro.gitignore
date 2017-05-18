@@ -24,7 +24,7 @@ atlassian-ide-plugin.xml
 /config/local*
 dist
 /node_modules
-/npm-debug.log
+npm-debug.log
 /patterns/**/template/*.js
 /patterns/**/template/partial/*.js
 /project/tmp
