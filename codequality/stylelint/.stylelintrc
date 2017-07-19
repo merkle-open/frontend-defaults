@@ -27,7 +27,7 @@
 		"no-unknown-animations": [true, {"severity": "warning"}],
 		"number-leading-zero": "always",
 		"property-no-vendor-prefix": [true, {"severity": "warning"}],
-		"selector-no-id": true,
+		"selector-max-id": 0,
 		"value-no-vendor-prefix": [true, {"severity": "warning"}]
 	}
 }
