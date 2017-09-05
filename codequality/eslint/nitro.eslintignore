@@ -8,4 +8,8 @@ patterns/**/*Spec.js
 project/
 public/
 spec/
+src/assets/js/*.ts.js
+src/patterns/**/template/*.js
+src/patterns/**/template/partial/*.js
+src/patterns/**/*Spec.js
 views/
