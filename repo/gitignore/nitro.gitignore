@@ -32,6 +32,7 @@ debug.log
 npm-debug.log
 /project/tmp
 /public/assets
+/public/proto
 /src/patterns/**/template/*.js
 /src/patterns/**/template/partial/*.js
 /.servepid
