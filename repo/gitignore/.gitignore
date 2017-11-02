@@ -8,8 +8,11 @@ _.*
 .idea
 .vscode
 .cache
+!*.cache
 .settings
+!.*settings
 .config
+!*.config
 .buildpath
 .metadata
 .tmp*

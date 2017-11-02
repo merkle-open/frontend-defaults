@@ -8,8 +8,11 @@ _.*
 .idea
 .vscode
 .cache
+!*.cache
 .settings
+!.*settings
 .config
+!*.config
 .buildpath
 .metadata
 .tmp*
@@ -33,6 +36,7 @@ npm-debug.log
 /project/tmp
 /public/assets
 /public/proto
+/public/reports
 /src/patterns/**/template/*.js
 /src/patterns/**/template/partial/*.js
 /.servepid
