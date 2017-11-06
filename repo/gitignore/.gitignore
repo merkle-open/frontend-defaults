@@ -10,7 +10,7 @@ _.*
 .cache
 !*.cache
 .settings
-!.*settings
+!*.settings
 .config
 !*.config
 .buildpath
