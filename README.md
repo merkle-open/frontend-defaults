@@ -34,3 +34,5 @@ Reason:
 * [.gitattributes](repo/gitattributes/)
 * [.gitignore](repo/gitignore/)
 * [.svnignore](repo/svnignore/)
+* [commitizen](repo/commitizen)
+* [commitlint](repo/commitlint)
