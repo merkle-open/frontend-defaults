@@ -12,17 +12,12 @@ npm i -D @commitlint/cli
 npm i -D husky
 ```
 
-3. Install the Namics `commitlint conventional` config
+3. Install the Namics `commitlint conventional` and `commitlint lerna` config
 ```
-npm i -D @namics/commitlint-config-conventional
-```
-
-4. Install the Namics `commitlint lerna` config
-```
-npm i -D @namics/commitlint-config-lerna-scope
+npm i -D @namics/frontend-defaults
 ```
 
-5. Add config in package.json
+6. Add config in package.json
 ```json
 ...
   "commitlint": {

@@ -16,7 +16,7 @@ npm i -D husky
 
 3. Install the Namics `commitlint conventional` config
 ```
-npm i -D @namics/commitlint-config-conventional
+npm i -D @namics/frontend-defaults
 ```
 
 4. Add config in package.json
@@ -24,7 +24,7 @@ npm i -D @namics/commitlint-config-conventional
 ...
   "commitlint": {
     "extends": [
-      "./node_modules/@namics/commitlint-config-conventional"
+      "@namics/frontend-defaults/repo/commitlint-config-conventional"
   ]
 },
 ```

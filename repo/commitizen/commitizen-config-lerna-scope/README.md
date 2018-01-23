@@ -16,7 +16,7 @@ npm i -D cz-customizable
 ```
 4. Install the Namics config
 ```
-npm i -D @namics/commitizen-config-lerna-scope
+npm i -D @namics/frontend-defaults
 ```
 5. Add config in package.json
 ```json
