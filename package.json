@@ -28,7 +28,6 @@
     "codequality",
     "docs",
     "frontend",
-    "app",
     "editorconfig",
     "commitlint",
     "commitizen"
@@ -60,7 +59,9 @@
     "parser": "babylon",
     "semi": true
   },
-  "dependencies": {},
+  "dependencies": {
+    "import-from": "2.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "6.0.2",
     "@commitlint/config-conventional": "6.0.2",
@@ -71,8 +72,8 @@
     "cz-conventional-changelog": "2.1.0",
     "eslint": "4.15.0",
     "eslint-plugin-import": "2.8.0",
-    "lint-staged": "4.2.3",
     "husky": "0.14.3",
+    "lint-staged": "4.2.3",
     "prettier": "1.7.4"
   }
 }
