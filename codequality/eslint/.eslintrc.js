@@ -1,5 +1,5 @@
 module.exports = {
-	'extends': '@namics/eslint-config/configurations/es6-browser.js',
+	'extends': '@namics/eslint-config/configurations/es7-browser.js',
 	'globals': {
 		'jQuery': true,
 		'T': true
