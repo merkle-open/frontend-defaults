@@ -28,9 +28,18 @@ Reason:
 * [htmllint](codequality/htmllint/)
 * [jshint](codequality/jshint/)
 * [stylelint](codequality/stylelint/)
+* [prettier](codequality/prettier/README.md)
 
 ### Repo
 
 * [.gitattributes](repo/gitattributes/)
 * [.gitignore](repo/gitignore/)
 * [.svnignore](repo/svnignore/)
+
+
+## Published packages
+
+| Package                                     |                                                                                  npm                                                                                  |
+| ------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `@namics/prettier-config`                   |                       [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                       |
+
