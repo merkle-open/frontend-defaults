@@ -32,7 +32,7 @@ module.exports = require('@namics/prettier-config/lint-staged-config');
 ```json
   ...
   "scripts": {
-    "prettier": "prettier --write \"**/*.(js|jsx|ts|tsx|json)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\"",
     "precommit": "lint-staged"
     ...
   },
