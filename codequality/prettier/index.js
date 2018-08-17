@@ -11,13 +11,13 @@ module.exports = {
 	parser: 'typescript',
 	overrides: [
 		{
-			files: '*.json',
+			files: ['*.json', '.*.json'],
 			options: {
 				parser: 'json',
 			},
 		},
 		{
-			files: '*.(js|jsx)',
+			files: ['*.(js|jsx)', '.*.(js|jsx)'],
 			options: {
 				parser: 'babylon',
 			},

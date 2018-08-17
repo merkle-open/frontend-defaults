@@ -15,18 +15,24 @@ module.exports = require('@namics/prettier-config');
 **.prettierignore**
 
 ```
+# Node
+**/node_modules
 **/package.json
 **/package-lock.json
+
+# Config
 **/bower.json
 **/lerna.json
 
+# Build
 **/build
 **/dist
 **/public
 **/coverage
 **/storybook-static
 
-**/node_modules
+# generator-nitro
+**/project/blueprints
 ```
 
 **package.json**
