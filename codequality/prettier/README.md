@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm i -D husky lint-staged prettier @namics/prettier-config`
+`npm i -D prettier @namics/prettier-config`
 
 **.prettierrc.js**
 
@@ -15,16 +15,18 @@ module.exports = require('@namics/prettier-config');
 **.prettierignore**
 
 ```
-package-lock.json
-build
-dist
-node_modules
-```
+**/package.json
+**/package-lock.json
+**/bower.json
+**/lerna.json
 
-**lint-staged.config.js**
+**/build
+**/dist
+**/public
+**/coverage
+**/storybook-static
 
-```js
-module.exports = require('@namics/prettier-config/lint-staged-config');
+**/node_modules
 ```
 
 **package.json**
@@ -33,7 +35,25 @@ module.exports = require('@namics/prettier-config/lint-staged-config');
   ...
   "scripts": {
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\"",
-    "precommit": "lint-staged"
+    ...
+  },
+  ...
+```
+
+## We recommend to use prettier together with lint-staged and husky
+
+`npm i -D husky lint-staged`
+
+**package.json**
+
+```json
+  ...
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": ["prettier --list-different \"**/*.*(js|jsx|ts|tsx|json)\""]
+  },
+  "scripts": {
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\"",
+    "precommit": "lint-staged",
     ...
   },
   ...

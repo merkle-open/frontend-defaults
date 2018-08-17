@@ -1,23 +1,28 @@
 {
-	"name": "@namics/frontend-defaults",
-	"version": "1.0.0",
-	"license": "MIT",
-	"repository": "https://github.com/namics/frontend-defaults",
-	"contributors": [
-		"Ernst Ammann <ernst.ammann@namics.com>",
-		"Christian Stuff<christian.stuff@namics.com>",
-		"Jan Widmer<jan.widmer@namics.com>",
-		"Simon Mollweide <simon.mollweide@namics.com>"
-	],
-	"devDependencies": {
-		"husky": "0.14.3",
-		"lerna": "3.0.6",
-		"lint-staged": "7.2.2",
-		"prettier": "1.14.2"
-	},
-	"scripts": {
-		"bootstrap": "lerna bootstrap",
-		"prettier": "prettier --write '**/*.*(js|jsx|ts|tsx|json)'",
-		"precommit": "lint-staged"
-	}
+  "name": "@namics/frontend-defaults",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "contributors": [
+    "Ernst Ammann <ernst.ammann@namics.com>",
+    "Christian Stuff<christian.stuff@namics.com>",
+    "Jan Widmer<jan.widmer@namics.com>",
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
+  "devDependencies": {
+    "husky": "0.14.3",
+    "lerna": "3.0.6",
+    "lint-staged": "7.2.2",
+    "prettier": "1.14.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --list-different \"**/*.*(js|jsx|ts|tsx|json)\""
+    ]
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\"",
+    "precommit": "lint-staged"
+  }
 }

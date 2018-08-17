@@ -1,4 +1,12 @@
-package-lock.json
-build
-dist
-node_modules
+**/package.json
+**/package-lock.json
+**/bower.json
+**/lerna.json
+
+**/build
+**/dist
+**/public
+**/coverage
+**/storybook-static
+
+**/node_modules
