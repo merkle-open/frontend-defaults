@@ -20,7 +20,7 @@ module.exports = require('@namics/prettier-config');
 **/package.json
 **/package-lock.json
 
-# Config
+# Generated
 **/bower.json
 **/lerna.json
 
@@ -31,8 +31,9 @@ module.exports = require('@namics/prettier-config');
 **/coverage
 **/storybook-static
 
-# generator-nitro
+# Nitro
 **/project/blueprints
+**/.yo-rc.json
 ```
 
 **package.json**
@@ -48,22 +49,27 @@ module.exports = require('@namics/prettier-config');
 
 ## We recommend to use prettier together with lint-staged and husky
 
-`npm i -D husky lint-staged`
+`npm i -D husky@next lint-staged`
 
 **package.json**
 
 ```json
   ...
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": ["prettier --list-different \"**/*.*(js|jsx|ts|tsx|json)\""]
+    "*.{js,jsx,ts,tsx,json}": ["prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\""]
   },
   "scripts": {
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\"",
-    "precommit": "lint-staged",
     ...
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   ...
 ```
 
 ## License
+
 [MIT License](./LICENSE)
