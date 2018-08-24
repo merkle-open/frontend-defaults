@@ -4,13 +4,16 @@
   "version": "1.1.0",
   "main": "./index.js",
   "author": "Simon Mollweide <simon.mollweide@namics.com>",
+  "contributors": [
+    "Ernst Ammann <ernst.ammann@namics.com>"
+  ],
   "license": "MIT",
   "private": false,
   "engines": {
     "node": ">=8"
   },
+  "files": ["README.md", "LICENSE", "index.js"],
   "peerDependencies": {
     "prettier": "1.x"
-  },
-  "files": ["README.md", "LICENSE", "index.js"]
+  }
 }
