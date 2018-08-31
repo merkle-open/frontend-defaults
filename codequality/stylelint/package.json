@@ -1,7 +1,7 @@
 {
   "name": "@namics/stylelint-config",
   "description": "Shared stylelint config",
-  "version": "1.1.0",
+  "version": "0.2.1",
   "main": "./index.js",
   "license": "MIT",
   "author": "Namics AG",
@@ -15,7 +15,7 @@
   },
   "files": ["README.md", "LICENSE", "index.js"],
   "peerDependencies": {
-    "stylelint": "9.4.0"
+    "stylelint": ">=7.0.0 <10.0.0"
   },
   "devDependencies": {
     "stylelint": "9.4.0"
