@@ -1,7 +1,10 @@
 {
   "name": "@namics/cz-conventional-changelog",
-  "version": "1.1.0",
-  "author": "Simon Mollweide <simon.mollweide@namics.com>",
+  "version": "1.0.1",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",
   "license": "MIT",
