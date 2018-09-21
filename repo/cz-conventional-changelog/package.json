@@ -1,0 +1,27 @@
+{
+  "name": "@namics/cz-conventional-changelog",
+  "version": "1.0.1",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
+  "description": "Commitizen adapter following the conventional-changelog format.",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=8"
+  },
+  "files": ["README.md", "LICENSE", "index.js", "engine.js"],
+  "dependencies": {
+    "conventional-commit-types": "2.2.0",
+    "lodash.map": "4.6.0",
+    "longest": "2.0.1",
+    "right-pad": "1.0.1",
+    "word-wrap": "1.2.3"
+  },
+  "peerDependencies": {
+    "commitizen": "2.x"
+  }
+}

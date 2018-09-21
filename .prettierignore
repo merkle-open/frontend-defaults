@@ -1,0 +1,18 @@
+# Node
+**/node_modules
+**/package.json
+**/package-lock.json
+
+# Config
+**/bower.json
+**/lerna.json
+
+# Build
+**/build
+**/dist
+**/public
+**/coverage
+**/storybook-static
+
+# generator-nitro
+**/project/blueprints

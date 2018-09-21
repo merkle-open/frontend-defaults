@@ -27,10 +27,24 @@ Reason:
 * [eslint](codequality/eslint/)
 * [htmllint](codequality/htmllint/)
 * [jshint](codequality/jshint/)
-* [stylelint](codequality/stylelint/)
+* [stylelint](codequality/stylelint/README.md)
+* [prettier](codequality/prettier/README.md)
 
 ### Repo
 
 * [.gitattributes](repo/gitattributes/)
 * [.gitignore](repo/gitignore/)
 * [.svnignore](repo/svnignore/)
+* [.svnignore](repo/svnignore/)
+* [.svnignore](repo/svnignore/)
+* [commitlint](repo/commitlint-conventional-changelog/README.md)
+* [commitizen](repo/cz-conventional-changelog/README.md)
+
+## Published packages
+
+| Package                                     |                                                                                  npm                                                                                  |
+| ------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `@namics/prettier-config`                   |                       [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                       |
+| `@namics/stylelint-config`                  |                      [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)                      |
+| `@namics/commitlint-conventional-changelog` |                      [![npm](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/commitlint-conventional-changelog)     |
+| `@namics/cz-conventional-changelog`         |                      [![npm](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/cz-conventional-changelog)             |

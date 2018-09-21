@@ -1,0 +1,33 @@
+{
+  "name": "@namics/commitlint-conventional-changelog",
+  "version": "1.0.0",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
+  "description": "Shareable commitlint config enforcing conventional commits",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "files": ["README.md", "LICENSE", "index.js"],
+  "peerDependencies": {
+    "husky": "1.x.x",
+    "@commitlint/cli": "7.x.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.1.2",
+    "@commitlint/utils": "7.1.2",
+    "jest": "23.5.0",
+    "execa": "1.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "./index.js"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
+}

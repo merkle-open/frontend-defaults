@@ -1,0 +1,27 @@
+{
+  "name": "@namics/stylelint-config",
+  "description": "Shared stylelint config",
+  "version": "0.2.1",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "main": "./index.js",
+  "license": "MIT",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>",
+    "Ernst Ammann <ernst.ammann@namics.com>"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">=8"
+  },
+  "files": ["README.md", "LICENSE", "index.js"],
+  "peerDependencies": {
+    "stylelint": ">=7.0.0 <10.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "9.4.0"
+  },
+  "dependencies": {
+    "@namics/stylelint-bem": "5.1.1"
+  }
+}
