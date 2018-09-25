@@ -15,13 +15,12 @@
     "cz": "git-cz",
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\"",
-    "precommit": "lint-staged",
     "test": "npm run prettier"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
