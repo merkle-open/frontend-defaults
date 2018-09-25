@@ -4,7 +4,9 @@ Some defaults for frontend projects
 
 ## This Project
 
-    git clone https://github.com/namics/frontend-defaults.git
+```
+git clone https://github.com/namics/frontend-defaults.git
+```
 
 * Branch - Master only (so long)
 
@@ -27,15 +29,13 @@ Reason:
 * [eslint](codequality/eslint/)
 * [htmllint](codequality/htmllint/)
 * [jshint](codequality/jshint/)
-* [stylelint](codequality/stylelint/README.md)
 * [prettier](codequality/prettier/README.md)
+* [stylelint](codequality/stylelint/README.md)
 
 ### Repo
 
 * [.gitattributes](repo/gitattributes/)
 * [.gitignore](repo/gitignore/)
-* [.svnignore](repo/svnignore/)
-* [.svnignore](repo/svnignore/)
 * [.svnignore](repo/svnignore/)
 * [commitlint](repo/commitlint-conventional-changelog/README.md)
 * [commitizen](repo/cz-conventional-changelog/README.md)
