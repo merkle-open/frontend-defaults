@@ -13,7 +13,7 @@
   ...
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 	},
 	...
   },
