@@ -31,7 +31,7 @@ src/shared/base/reset/css/yui/reset.css
 
 ## We recommend to use stylelint together with lint-staged and husky
 
-`npm i -D husky@next lint-staged`
+`npm i -D husky lint-staged`
 
 **package.json**
 

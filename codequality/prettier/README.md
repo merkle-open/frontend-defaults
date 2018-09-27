@@ -49,7 +49,7 @@ module.exports = require('@namics/prettier-config');
 
 ## We recommend to use prettier together with lint-staged and husky
 
-`npm i -D husky@next lint-staged`
+`npm i -D husky lint-staged`
 
 **package.json**
 

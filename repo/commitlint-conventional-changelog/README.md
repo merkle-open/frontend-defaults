@@ -5,7 +5,7 @@
 
 ## Usage
 
-`npm i -D husky@next @commitlint/cli @namics/commitlint-conventional-changelog`
+`npm i -D husky @commitlint/cli @namics/commitlint-conventional-changelog`
 
 **package.json**
 

@@ -24,7 +24,7 @@ Reason:
 
 ### Code
 
-* [accessibility](codequality/accessibility/)
+* [accessibility](codequality/accessibility/README.md)
 * [editorconfig](editorconfig/)
 * [eslint](codequality/eslint/)
 * [htmllint](codequality/htmllint/)
