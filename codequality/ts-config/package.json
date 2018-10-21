@@ -1,0 +1,20 @@
+{
+  "name": "@namics/ts-config",
+  "description": "Shared configuration for Typescript",
+  "version": "0.1.0",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "main": "./tsconfig.json",
+  "license": "MIT",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">=8"
+  },
+  "files": ["README.md", "LICENSE", "tsconfig.json"],
+  "peerDependencies": {
+    "typescript": "3.x"
+  }
+}
