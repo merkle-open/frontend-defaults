@@ -9,10 +9,8 @@ module.exports = {
 	'array-type': {
 		options: ['array-simple'],
 	},
-	// CHANGE: disallow parens with just one arg
-	'arrow-parens': {
-		options: ['ban-single-arg-parens'],
-	},
+	// tslint:recommended
+	'arrow-parens': true,
 	// tslint:recommended
 	'arrow-return-shorthand': true,
 	// tslint:recommended

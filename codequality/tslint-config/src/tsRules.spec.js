@@ -15,7 +15,7 @@ const lintTSFile = (fileName) => {
 	return linter.getResult();
 };
 
-describe('namics tslint-config', () => {
+describe('namics tslint-config rules', () => {
 	[
 		{
 			name: 'arrow-parens',

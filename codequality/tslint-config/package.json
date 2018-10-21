@@ -13,9 +13,9 @@
   "engines": {
     "node": ">=8"
   },
-  "files": ["README.md", "LICENSE", "tslint.json"],
+  "files": ["README.md", "LICENSE", "build"],
   "scripts": {
-    "build": "node src",
+    "build": "node bin/build-tslint-config.js",
     "prepublish": "npm-run-all build",
     "test": "jest",
     "test:dev": "jest --watch",
