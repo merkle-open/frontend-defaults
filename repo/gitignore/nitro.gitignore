@@ -22,7 +22,7 @@ _.*
 atlassian-ide-plugin.xml
 
 # Node
-/node_modules
+node_modules
 npm-debug.log
 yarn-error.log
 lerna-debug.log
