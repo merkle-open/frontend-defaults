@@ -226,9 +226,9 @@ module.exports = {
 	'unified-signatures': true,
 	// tslint:recommended
 	'use-isnan': true,
-	// tslint:recommended
+	// CHANGE: 2018.11.03 add 'allow-leading-underscore'
 	'variable-name': {
-		options: ['ban-keywords', 'check-format', 'allow-pascal-case'],
+		options: ['ban-keywords', 'check-format', 'allow-pascal-case', 'allow-leading-underscore'],
 	},
 	// tslint:recommended
 	whitespace: {
