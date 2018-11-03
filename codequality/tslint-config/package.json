@@ -17,6 +17,7 @@
   "scripts": {
     "build": "node bin/build-tslint-config.js",
     "prepublish": "npm-run-all build",
+    "pretest": "npm-run-all build",
     "test": "jest",
     "test:dev": "jest --watch",
     "lint:ts": "tslint '__test__/**/*.{ts,tsx}'"

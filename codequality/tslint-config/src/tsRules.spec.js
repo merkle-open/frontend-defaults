@@ -41,8 +41,10 @@ describe('namics tslint-config rules', () => {
 			});
 			it('invalid', () => {
 				const result = lintTSFile(path.join('__test__', `${name}_err.ts`));
-				expect(result.errorCount).toBe(1);
-				expect(result.failures[0].failure).toBe(errorMessage);
+				expect(result.errorCount).toBe(errors);
+				if (errorMessage) {
+					expect(result.failures[0].failure).toBe(errorMessage);
+				}
 			});
 		});
 	});

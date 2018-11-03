@@ -13,8 +13,8 @@ module.exports = {
 	'jsx-no-bind': true,
 	// tslint-react:recommended
 	'jsx-no-lambda': true,
-	// tslint-react:recommended
-	'jsx-no-multiline-js': true,
+	// 2018.11.03 disabled because multiline-js is helpfull
+	'jsx-no-multiline-js': false,
 	// tslint-react:recommended
 	'jsx-no-string-ref': true,
 	// tslint-react:recommended
