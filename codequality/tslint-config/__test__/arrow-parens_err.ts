@@ -1,1 +1,4 @@
-const arrowParensTest1 = (x) => x;
+(() => {
+	// prettier-ignore
+	const arrowParensTest3 = x => x;
+})();

@@ -20,7 +20,7 @@ describe('namics tslint-config rules', () => {
 		{
 			name: 'arrow-parens',
 			errors: 1,
-			errorMessage: 'Parentheses are prohibited around the parameter in this single parameter arrow function',
+			errorMessage: 'Parentheses are required around the parameters of an arrow function definition',
 		},
 		{
 			name: 'arrow-return-shorthand',
