@@ -12,6 +12,7 @@ const filter = function(array) {
 };
 
 const requiredInput = (value) => Boolean(typeof value === 'string' && value !== '');
+const addTicket = (ticket) => (ticket && ticket !== '' ? ` [${ticket.trim()}]` : '');
 
 // This can be any kind of SystemJS compatible module.
 // We use Commonjs here, but ES6 or AMD would do just
@@ -113,7 +114,7 @@ module.exports = function(options) {
 				breaking = breaking ? 'BREAKING CHANGE: ' + breaking.replace(/^BREAKING CHANGE: /, '') : '';
 				breaking = wrap(breaking, wrapOptions);
 
-				const head = `${answers.type}${scope}: ${answers.subject.trim()} [${answers.ticket.trim()}]`.slice(
+				const head = `${answers.type}${scope}: ${answers.subject.trim()}${addTicket(answers.ticket)}`.slice(
 					0,
 					maxLineWidth
 				);
