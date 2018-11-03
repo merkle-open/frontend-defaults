@@ -16,7 +16,17 @@ const lintTSXFile = (fileName) => {
 };
 
 describe('namics tslint-config react-rules', () => {
-	[{ name: 'jsx-no-multiline-js', errors: 0 }].forEach(({ name, errors, errorMessage }) => {
+	[
+		{
+			name: 'jsx-no-multiline-js',
+			errors: 0,
+		},
+		{
+			name: 'jsx-boolean-value',
+			errors: 1,
+			errorMessage: 'Value must be omitted for boolean attributes',
+		},
+	].forEach(({ name, errors, errorMessage }) => {
 		describe(`rule ${name}`, () => {
 			it('valid', () => {
 				expect(lintTSXFile(path.join('__test__', `${name}.tsx`)).errorCount).toBe(0);

@@ -1,8 +1,8 @@
 module.exports = {
 	// tslint-react:recommended
 	'jsx-alignment': true,
-	// tslint-react:recommended
-	'jsx-boolean-value': true,
+	// 2018.11.03 enabled with 'never' because `<input disabled />` is quite common
+	'jsx-boolean-value': [true, 'never'],
 	// tslint-react:recommended
 	'jsx-curly-spacing': [true, 'never'],
 	// tslint-react:recommended
