@@ -56,5 +56,7 @@
   ...
 ```
 
+See [@namics/tslint-config](https://unpkg.com/@namics/tslint-config) on unpkg
+
 ## License
 [MIT License](./LICENSE)
