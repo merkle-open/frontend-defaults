@@ -1,7 +1,7 @@
 {
   "name": "@namics/tslint-config",
   "description": "Shared tslint config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "https://github.com/namics/frontend-defaults",
   "main": "./build/tslint.json",
   "license": "MIT",
