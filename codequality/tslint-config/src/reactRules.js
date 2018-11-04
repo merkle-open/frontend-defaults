@@ -11,8 +11,8 @@ module.exports = {
 	'jsx-key': true,
 	// tslint-react:recommended
 	'jsx-no-bind': true,
-	// tslint-react:recommended
-	'jsx-no-lambda': true,
+	// CHANGE: 2018.11.03 disabled because is needed for render prop functions
+	'jsx-no-lambda': false,
 	// CHANGE: 2018.11.03 disabled because multiline-js is helpfull
 	'jsx-no-multiline-js': false,
 	// tslint-react:recommended

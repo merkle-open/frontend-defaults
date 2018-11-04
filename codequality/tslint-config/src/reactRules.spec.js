@@ -19,24 +19,50 @@ describe('namics tslint-config react-rules', () => {
 	[
 		{
 			name: 'jsx-no-multiline-js',
-			errors: 0,
+			tests: [
+				{
+					name: 'jsx-no-multiline-js ok',
+					file: 'jsx-no-multiline-js.tsx',
+					errors: 0,
+				},
+			],
 		},
 		{
 			name: 'jsx-boolean-value',
-			errors: 1,
-			errorMessage: 'Value must be omitted for boolean attributes',
+			tests: [
+				{
+					name: 'jsx-boolean-value ok',
+					file: 'jsx-boolean-value.tsx',
+					errors: 0,
+				},
+				{
+					name: 'jsx-boolean-value error',
+					file: 'jsx-boolean-value_err.tsx',
+					errors: 1,
+					errorMessage: 'Value must be omitted for boolean attributes',
+				},
+			],
 		},
-	].forEach(({ name, errors, errorMessage }) => {
+		{
+			name: 'jsx-no-lambda',
+			tests: [
+				{
+					name: 'jsx-no-lambda ok',
+					file: 'jsx-no-lambda.tsx',
+					errors: 0,
+				},
+			],
+		},
+	].forEach(({ name, tests }) => {
 		describe(`rule ${name}`, () => {
-			it('valid', () => {
-				expect(lintTSXFile(path.join('__test__', `${name}.tsx`)).errorCount).toBe(0);
-			});
-			it('invalid', () => {
-				const result = lintTSXFile(path.join('__test__', `${name}_err.tsx`));
-				expect(result.errorCount).toBe(errors);
-				if (errorMessage) {
-					expect(result.failures[0].failure).toBe(errorMessage);
-				}
+			tests.forEach((test) => {
+				it(`${test.name}`, () => {
+					const result = lintTSXFile(path.join('__test__', `${test.file}`));
+					expect(result.errorCount).toBe(test.errors);
+					if (test.errorMessage) {
+						expect(result.failures[0].failure).toBe(test.errorMessage);
+					}
+				});
 			});
 		});
 	});
