@@ -31,6 +31,7 @@ Reason:
 * [jshint](codequality/jshint/)
 * [prettier](codequality/prettier/README.md)
 * [stylelint](codequality/stylelint/README.md)
+* [tslint](codequality/tslint/README.md)
 
 ### Repo
 
@@ -46,5 +47,6 @@ Reason:
 | ------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | `@namics/prettier-config`                   |                       [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                       |
 | `@namics/stylelint-config`                  |                      [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)                      |
+| `@namics/tslint-config`                  |                      [![npm](https://img.shields.io/npm/v/@namics/tslint-config.svg)](https://www.npmjs.com/package/@namics/tslint-config)                      |
 | `@namics/commitlint-conventional-changelog` |                      [![npm](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/commitlint-conventional-changelog)     |
 | `@namics/cz-conventional-changelog`         |                      [![npm](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/cz-conventional-changelog)             |

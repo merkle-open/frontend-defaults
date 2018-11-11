@@ -15,7 +15,7 @@
     "cz": "git-cz",
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\"",
-    "test": "npm run prettier"
+    "test": "lerna run test"
   },
   "husky": {
     "hooks": {
