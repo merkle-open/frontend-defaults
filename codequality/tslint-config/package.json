@@ -16,7 +16,7 @@
   "files": ["README.md", "LICENSE", "build"],
   "scripts": {
     "build": "node bin/build-tslint-config.js",
-    "prepublish": "npm-run-all build",
+    "prepublishOnly": "npm run build",
     "pretest": "npm-run-all build",
     "test": "jest",
     "test:dev": "jest --watch",
