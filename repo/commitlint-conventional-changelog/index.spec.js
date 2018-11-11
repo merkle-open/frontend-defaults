@@ -24,7 +24,7 @@ const lint = async (message, expectedError) => {
 	['chore(test): message', true],
 	['chore: message', true],
 	// https://github.com/marionebl/commitlint/issues/292
-	['chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something', false],
+	['chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something', true],
 	['chore(scope): message\n\nBREAKING CHANGE: something', true],
 	['chore(scope): message [ISSUE-1234]', true],
 	[' : message', false, 'type may not be empty [type-empty]'],
