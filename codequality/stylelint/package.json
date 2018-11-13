@@ -19,7 +19,7 @@
     "stylelint": ">=7.0.0 <10.0.0"
   },
   "devDependencies": {
-    "stylelint": "9.5.0"
+    "stylelint": "9.8.0"
   },
   "dependencies": {
     "@namics/stylelint-bem": "5.1.1"
