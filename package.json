@@ -12,6 +12,10 @@
     "Simon Mollweide <simon.mollweide@namics.com>"
   ],
   "scripts": {
+    "clean": "npx npm-run-all clean:*",
+    "clean:lerna": "lerna clean --yes",
+    "clean:lock": "rimraf **/package-lock.json",
+    "clean:modules": "npx rimraf node_modules",
     "cz": "git-cz",
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\"",
@@ -40,10 +44,11 @@
   },
   "devDependencies": {
     "@commitlint/cli": "7.2.1",
+    "commitizen": "3.0.4",
     "husky": "1.2.0",
     "lerna": "3.4.3",
     "lint-staged": "8.1.0",
     "prettier": "1.15.2",
-    "commitizen": "3.0.4"
+    "rimraf": "2.6.2"
   }
 }
