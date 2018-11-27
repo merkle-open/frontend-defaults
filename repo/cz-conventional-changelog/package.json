@@ -13,7 +13,12 @@
   "engines": {
     "node": ">=8"
   },
-  "files": ["README.md", "LICENSE", "index.js", "engine.js"],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "engine.js"
+  ],
   "dependencies": {
     "conventional-commit-types": "2.2.0",
     "lodash.map": "4.6.0",
