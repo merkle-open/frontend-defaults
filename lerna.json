@@ -1,4 +1,4 @@
 {
-  "packages": ["codequality/*", "repo/*"],
+  "packages": ["codequality/*", "repo/*", "cli"],
   "version": "1.1.0"
 }

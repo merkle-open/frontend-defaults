@@ -1,0 +1,62 @@
+{
+  "name": "@namics/frontend-defaults-cli",
+  "description": "CLI tool which creates a default setup for your frontend project",
+  "version": "0.1.0",
+  "repository": "https://github.com/namics/frontend-defaults",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "bin": {
+    "frontend-defaults": "./bin/index.js"
+  },
+  "license": "MIT",
+  "author": "Namics AG",
+  "contributors": [
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "bin",
+    "build",
+    "tmpl"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@namics/ts-config": "*",
+    "@types/chalk": "2.2.0",
+    "@types/commander": "2.12.2",
+    "@types/deepmerge": "2.2.0",
+    "@types/execa": "0.9.0",
+    "@types/fs-extra": "5.0.4",
+    "@types/jest": "23.3.11",
+    "@types/json-stable-stringify": "1.0.32",
+    "@types/listr": "0.13.0",
+    "@types/rimraf": "2.0.2",
+    "@types/node": "10.12.5",
+    "jest": "23.6.0",
+    "ts-jest": "23.10.5",
+    "typescript": "3.1.6"
+  },
+  "dependencies": {
+    "chalk": "2.4.1",
+    "listr": "0.14.3",
+    "deepmerge": "2.2.1",
+    "commander": "2.19.0",
+    "fs-extra": "7.0.1",
+    "execa": "1.0.0",
+    "rimraf": "2.6.2",
+    "latest-version": "4.0.0",
+    "generate-webpack-config": "1.2.0",
+    "json-stable-stringify": "1.0.1"
+  }
+}

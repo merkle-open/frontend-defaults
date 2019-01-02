@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# build
+/build

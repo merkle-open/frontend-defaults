@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gitignore default 1`] = `
+"# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files we want to always be normalized and converted
+# to native line endings on checkout.
+*.sh text eol=lf
+*.pp text eol=lf
+*.rb text eol=lf
+*.yaml text eol=lf
+*.bash_aliases text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Windows-specific files get windows endings
+*.bat     eol=crlf
+*.cmd     eol=crlf
+*-windows.tmpl eol=crlf
+"
+`;
+
+exports[`gitignore default 2`] = `
+"# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+_.*
+.project
+.idea
+/*.iml
+.vscode
+.cache
+!*.cache
+.settings
+!*.settings
+.config
+!*.config
+.buildpath
+.metadata
+.tmp*
+*.prefs
+.deployables
+atlassian-ide-plugin.xml
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# allow
+!.gitkeep
+"
+`;
+
+exports[`gitignore default 3`] = `
+"{
+  \\"devDependencies\\": {
+    \\"npm-run-all\\": \\"4.1.3\\"
+  },
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\"
+  }
+}"
+`;

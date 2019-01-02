@@ -1,0 +1,21 @@
+{
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ]
+  },
+  "scripts": {
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "prettier": "1.14.3",
+    "@namics/prettier-config": "0.2.0",
+    "husky": "1.0.1",
+    "lint-staged": "7.3.0"
+  }
+}

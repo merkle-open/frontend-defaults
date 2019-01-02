@@ -3,7 +3,7 @@
 **/package.json
 **/package-lock.json
 
-# Config
+# Generated
 **/bower.json
 **/lerna.json
 
@@ -14,7 +14,6 @@
 **/coverage
 **/storybook-static
 
-# generator-nitro
+# Nitro
 **/project/blueprints
-
-cli/templates
+**/.yo-rc.json

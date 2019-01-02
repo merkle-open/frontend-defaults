@@ -1,0 +1,19 @@
+{
+	"scripts": {
+		"lint:css": "stylelint src/**/*.*ss"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.*ss": ["stylelint"]
+	},
+	"devDependencies": {
+		"husky": "1.0.1",
+		"lint-staged": "7.3.0",
+		"stylelint": "9.5.0",
+		"@namics/stylelint-config": "0.2.1"
+	}
+}

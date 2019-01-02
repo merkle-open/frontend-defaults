@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack default 1`] = `
+"{
+  \\"devDependencies\\": {
+    \\"@babel/core\\": \\"7.2.2\\",
+    \\"@babel/preset-env\\": \\"7.2.3\\",
+    \\"@babel/preset-react\\": \\"7.0.0\\",
+    \\"asset-config-webpack-plugin\\": \\"1.2.1\\",
+    \\"clean-webpack-plugin\\": \\"1.0.0\\",
+    \\"html-webpack-plugin\\": \\"3.2.0\\",
+    \\"js-config-webpack-plugin\\": \\"1.2.1\\",
+    \\"npm-run-all\\": \\"4.1.3\\",
+    \\"scss-config-webpack-plugin\\": \\"1.2.1\\",
+    \\"webpack\\": \\"4.28.3\\",
+    \\"webpack-cli\\": \\"3.1.2\\",
+    \\"webpack-dev-server\\": \\"3.1.14\\"
+  },
+  \\"scripts\\": {
+    \\"build\\": \\"webpack --mode production\\",
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"start\\": \\"webpack-dev-server --mode development\\"
+  }
+}"
+`;
+
+exports[`webpack default 2`] = `
+"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const JsConfigWebpackPlugin = require('js-config-webpack-plugin');
+const ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    // File loader configuration for .woff and .woff2 files
+    // File loader configuration for .gif .jpg .jpeg .png and .svg files
+    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin
+    new AssetConfigWebpackPlugin(),
+    // Cleans the dist folder before the build starts
+    new CleanWebpackPlugin(['dist']),
+    // Generate a base html file and injects all generated css and js files
+    new HtmlWebpackPlugin(),
+    // Multi threading babel loader configuration with caching for .js and .jsx files
+    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/js-config-webpack-plugin/config
+    new JsConfigWebpackPlugin(),
+    // SCSS Configuration for .css .module.css and .scss .module.scss files
+    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config
+    new ScssConfigWebpackPlugin(),
+  ],
+};
+"
+`;

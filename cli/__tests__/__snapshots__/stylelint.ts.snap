@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stylelint default 1`] = `
+"node_modules/
+src/shared/base/reset/css/yui/reset.css"
+`;
+
+exports[`stylelint default 2`] = `
+"{
+  \\"devDependencies\\": {
+    \\"@namics/stylelint-config\\": \\"0.2.1\\",
+    \\"npm-run-all\\": \\"4.1.3\\",
+    \\"stylelint\\": \\"9.5.0\\"
+  },
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
+  }
+}"
+`;
+
+exports[`stylelint default 3`] = `
+"module.exports = require('@namics/stylelint-config');
+"
+`;
+
+exports[`stylelint with-githooks 1`] = `
+"# ~/.huskyrc
+# Note: it will run in /bin/sh shell
+if command -v nodenv >/dev/null 2>&1; then
+  eval \\"$(nodenv init -)\\"
+fi"
+`;
+
+exports[`stylelint with-githooks 2`] = `
+"node_modules/
+src/shared/base/reset/css/yui/reset.css"
+`;
+
+exports[`stylelint with-githooks 3`] = `
+"{
+  \\"devDependencies\\": {
+    \\"@namics/stylelint-config\\": \\"0.2.1\\",
+    \\"husky\\": \\"1.0.1\\",
+    \\"lint-staged\\": \\"7.3.0\\",
+    \\"npm-run-all\\": \\"4.1.3\\",
+    \\"stylelint\\": \\"9.5.0\\"
+  },
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
+    }
+  },
+  \\"lint-staged\\": {
+    \\"src/**/*.*ss\\": [
+      \\"stylelint\\"
+    ]
+  },
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
+  }
+}"
+`;
+
+exports[`stylelint with-githooks 4`] = `
+"module.exports = require('@namics/stylelint-config');
+"
+`;

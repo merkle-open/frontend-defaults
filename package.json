@@ -18,7 +18,7 @@
     "clean:modules": "npx rimraf node_modules",
     "cz": "git-cz",
     "postinstall": "lerna bootstrap",
-    "prettier": "prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\" \"!cli/templates/**\"",
     "test": "lerna run test"
   },
   "husky": {
@@ -29,8 +29,9 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": [
-      "prettier --list-different --write \"**/*.*(js|jsx|ts|tsx|json)\""
-    ]
+      "prettier --list-different --write"
+    ],
+    "ignore": ["cli/templates"]
   },
   "commitlint": {
     "extends": [
