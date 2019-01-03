@@ -63,9 +63,11 @@ exports[`eslint with-githooks 4`] = `
     }
   },
   \\"lint-staged\\": {
-    \\"src/**/*.{js,jsx}\\": [
-      \\"eslint\\"
-    ]
+    \\"linters\\": {
+      \\"src/**/*.{js,jsx}\\": [
+        \\"eslint\\"
+      ]
+    }
   },
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",

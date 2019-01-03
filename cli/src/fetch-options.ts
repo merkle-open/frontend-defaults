@@ -59,7 +59,7 @@ export interface IProgram {
 
 const pwd = getPwd();
 
-export const hasOptions = (options) => Object.values(options).some((val) => val !== undefined);
+export const hasOptions = (options: any) => Object.values(options).some((val) => val !== undefined);
 
 const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	if (answers.presetTs) {
@@ -144,8 +144,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-l --license [string]', 'add license file with given company name')
 		.option('-gi --gitignore', 'add gitignore')
 		.option('-n --npmrc', 'add npmrc')
-		// TODO add
-		// .option('-r --readme', 'add readme file')
+		.option('-r --readme', 'add readme file')
 		.option('-gh --githooks', 'add githooks')
 		.option('-c --commitlint', 'add commitlint (will enable githooks too)')
 		.option('-nv --nodenv', 'add nodenv node-version file')

@@ -5,6 +5,7 @@ import execa from 'execa';
 import { fetchOptions } from './fetch-options';
 import { existPackage } from './exist-package';
 
+import { listr as readmeListr } from './create-readme';
 import { listr as licenseListr } from './create-license';
 import { listr as editorconfListr } from './create-editorconfig';
 import { listr as gitignoreListr } from './create-gitignore';
@@ -33,6 +34,7 @@ import { listr as installListr } from './install';
 
 	const tasks = new Listr(
 		([] as Listr.ListrTask[]).concat(
+			readmeListr(options),
 			licenseListr(options),
 			editorconfListr(options),
 			gitignoreListr(options),

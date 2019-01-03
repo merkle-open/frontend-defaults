@@ -91,9 +91,11 @@ exports[`prettier with-githooks 4`] = `
     }
   },
   \\"lint-staged\\": {
-    \\"*.{js,jsx,ts,tsx,json}\\": [
-      \\"prettier --list-different --write\\"
-    ]
+    \\"linters\\": {
+      \\"*.{js,jsx,ts,tsx,json}\\": [
+        \\"prettier --list-different --write\\"
+      ]
+    }
   },
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",

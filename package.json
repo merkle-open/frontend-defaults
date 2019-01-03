@@ -28,10 +28,23 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
-      "prettier --list-different --write"
-    ],
-    "ignore": ["cli/templates"]
+    "linters": {
+      "cli/src/*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ],
+      "codequality/*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ],
+      "docs/*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ],
+      "editorconfig/*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ],
+      "repo/*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ]
+    }
   },
   "commitlint": {
     "extends": [

@@ -1,8 +1,10 @@
 {
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
-      "prettier --list-different --write"
-    ]
+    "linters": {
+      "*.{js,jsx,ts,tsx,json}": [
+        "prettier --list-different --write"
+      ]
+    }
   },
   "scripts": {
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\""

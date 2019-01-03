@@ -79,7 +79,7 @@ export const fetchInquirer = async (): Promise<IOptions> => {
 			name: 'project',
 			message: 'Select project defaults \n',
 			choices: [
-				// getChoice(TYPE_CHOICES.readme),
+				getChoice(TYPE_CHOICES.readme),
 				getChoice(TYPE_CHOICES.license),
 				getChoice(TYPE_CHOICES.editorconfig),
 				getChoice(TYPE_CHOICES.npmrc),

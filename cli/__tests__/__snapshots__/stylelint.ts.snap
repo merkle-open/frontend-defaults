@@ -52,9 +52,11 @@ exports[`stylelint with-githooks 3`] = `
     }
   },
   \\"lint-staged\\": {
-    \\"src/**/*.*ss\\": [
-      \\"stylelint\\"
-    ]
+    \\"linters\\": {
+      \\"src/**/*.*ss\\": [
+        \\"stylelint\\"
+      ]
+    }
   },
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",

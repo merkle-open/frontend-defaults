@@ -50,9 +50,11 @@ exports[`tslint with-githooks 2`] = `
     }
   },
   \\"lint-staged\\": {
-    \\"src/**/*.{ts,tsx}\\": [
-      \\"tslint\\"
-    ]
+    \\"linters\\": {
+      \\"src/**/*.{ts,tsx}\\": [
+        \\"tslint\\"
+      ]
+    }
   },
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
