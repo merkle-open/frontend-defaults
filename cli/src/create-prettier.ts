@@ -3,16 +3,13 @@ import fs from 'fs-extra';
 import Listr, { ListrTaskWrapper } from 'listr';
 
 import deepMerge from 'deepmerge';
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createPrettieringoreFile = async ({ prettier, force }: IOptions, task: ListrTaskWrapper) => {
+const createPrettieringoreFile = async ({ cwd, prettier, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.prettierignore')))) {
 		task.skip('.prettierignore exist (use --force to override)');
 		return;
@@ -25,7 +22,7 @@ const createPrettieringoreFile = async ({ prettier, force }: IOptions, task: Lis
 	await fs.writeFile(path.join(cwd, '.prettierignore'), await fetchTemplate('prettier', '.prettierignore'));
 };
 
-const createPrittierrcFile = async ({ prettier, force }: IOptions, task: ListrTaskWrapper) => {
+const createPrittierrcFile = async ({ cwd, prettier, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.prettierrc.js')))) {
 		task.skip('.prettierrc.js exist (use --force to override)');
 		return;
@@ -38,7 +35,7 @@ const createPrittierrcFile = async ({ prettier, force }: IOptions, task: ListrTa
 	await fs.writeFile(path.join(cwd, '.prettierrc.js'), await fetchTemplate('prettier', '.prettierrc.js'));
 };
 
-const updatePackageJson = async ({ prettier, githooks, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, prettier, githooks, force }: IOptions, task: ListrTaskWrapper) => {
 	if (
 		!force &&
 		((await existFile(path.join(cwd, '.prettierrc.js'))) || (await existFile(path.join(cwd, '.prettierignore'))))
@@ -55,7 +52,7 @@ const updatePackageJson = async ({ prettier, githooks, force }: IOptions, task: 
 		await fs.writeFile(
 			path.join(cwd, 'package.json'),
 			JSON.stringify(
-				deepMerge(await fetchPackage(), await fetchTemplateJson('prettier', 'package-githooks.json')),
+				deepMerge(await fetchPackage(cwd), await fetchTemplateJson('prettier', 'package-githooks.json')),
 				null,
 				2
 			)
@@ -65,7 +62,7 @@ const updatePackageJson = async ({ prettier, githooks, force }: IOptions, task: 
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('prettier', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('prettier', 'package.json')), null, 2)
 	);
 };
 

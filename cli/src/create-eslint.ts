@@ -3,16 +3,13 @@ import fs from 'fs-extra';
 import deepMerge from 'deepmerge';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createEslintFile = async ({ eslint, prettier, force }: IOptions, task: ListrTaskWrapper) => {
+const createEslintFile = async ({ cwd, eslint, prettier, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!eslint) {
 		return;
 	}
@@ -29,7 +26,7 @@ const createEslintFile = async ({ eslint, prettier, force }: IOptions, task: Lis
 
 	await fs.writeFile(path.join(cwd, '.eslintrc.js'), await fetchTemplate('eslint', '.eslintrc.js'));
 };
-const createEslintignoreFile = async ({ eslint, force }: IOptions, task: ListrTaskWrapper) => {
+const createEslintignoreFile = async ({ cwd, eslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!eslint) {
 		return;
 	}
@@ -42,7 +39,7 @@ const createEslintignoreFile = async ({ eslint, force }: IOptions, task: ListrTa
 	await fs.writeFile(path.join(cwd, '.eslintignore'), await fetchTemplate('eslint', '.eslintignore'));
 };
 
-const updatePackageJson = async ({ githooks, eslint, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, githooks, eslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!eslint) {
 		return;
 	}
@@ -59,7 +56,7 @@ const updatePackageJson = async ({ githooks, eslint, force }: IOptions, task: Li
 		await fs.writeFile(
 			path.join(cwd, 'package.json'),
 			JSON.stringify(
-				deepMerge(await fetchPackage(), await fetchTemplateJson('eslint', 'package-githooks.json')),
+				deepMerge(await fetchPackage(cwd), await fetchTemplateJson('eslint', 'package-githooks.json')),
 				null,
 				2
 			)
@@ -69,7 +66,7 @@ const updatePackageJson = async ({ githooks, eslint, force }: IOptions, task: Li
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('eslint', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('eslint', 'package.json')), null, 2)
 	);
 };
 

@@ -16,12 +16,12 @@ const cwd = getCwd();
 const updatePackageJson = async () => {
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('install', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('install', 'package.json')), null, 2)
 	);
 };
 
 const cleanPackageJson = async () => {
-	await fs.writeFile(path.join(cwd, 'package.json'), stringify(await fetchPackage(), { space: '  ' }));
+	await fs.writeFile(path.join(cwd, 'package.json'), stringify(await fetchPackage(cwd), { space: '  ' }));
 };
 
 export const install = async (options: IOptions) => {

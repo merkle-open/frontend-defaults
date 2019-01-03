@@ -2,15 +2,12 @@ import path from 'path';
 import fs from 'fs-extra';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createEditorconfig = async ({ editorconfig, force }: IOptions, task: ListrTaskWrapper) => {
+const createEditorconfig = async ({ cwd, editorconfig, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.editorconfig')))) {
 		task.skip('.editorconfig exist (use --force to override)');
 		return;

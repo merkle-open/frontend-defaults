@@ -2,15 +2,12 @@ import path from 'path';
 import fs from 'fs-extra';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createGitignoreFile = async ({ gitignore, force }: IOptions, task: ListrTaskWrapper) => {
+const createGitignoreFile = async ({ cwd, gitignore, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.gitignore')))) {
 		task.skip('.gitignore exist (use --force to override)');
 		return;
@@ -22,7 +19,7 @@ const createGitignoreFile = async ({ gitignore, force }: IOptions, task: ListrTa
 
 	await fs.writeFile(path.join(cwd, '.gitignore'), await fetchTemplate('gitignore', '.gitignore'));
 };
-const createGitattributesFile = async ({ gitignore, force }: IOptions, task: ListrTaskWrapper) => {
+const createGitattributesFile = async ({ cwd, gitignore, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.gitattributes')))) {
 		task.skip('.gitattributes exist (use --force to override)');
 		return;

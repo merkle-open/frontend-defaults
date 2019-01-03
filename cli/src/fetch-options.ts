@@ -3,10 +3,13 @@ import program from 'commander';
 import fs from 'fs-extra';
 
 import { getPwd } from './get-pwd';
+import { getCwd } from './get-cwd';
 import { fetchInquirer } from './fetch-inquirer';
 
 // define cli api by using commander
 export interface IOptions {
+	cwd: string;
+
 	// details
 	ts: boolean;
 	tslint: boolean;
@@ -29,6 +32,8 @@ export interface IOptions {
 }
 
 export interface IProgram {
+	cwd?: string;
+
 	// presets
 	presetTs?: boolean;
 	presetEs?: boolean;
@@ -58,12 +63,14 @@ export interface IProgram {
 }
 
 const pwd = getPwd();
+const cwd = getCwd();
 
 export const hasOptions = (options: any) => Object.values(options).some((val) => val !== undefined);
 
 const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	if (answers.presetTs) {
 		return {
+			cwd: answers.cwd || cwd,
 			ts: true,
 			tslint: true,
 			es: false,
@@ -86,6 +93,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 
 	if (answers.presetEs) {
 		return {
+			cwd: answers.cwd || cwd,
 			ts: false,
 			tslint: false,
 			es: true,
@@ -107,6 +115,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	}
 
 	return {
+		cwd: answers.cwd || cwd,
 		ts: answers.ts || false,
 		tslint: answers.tslint || false,
 		es: answers.es || false,
@@ -152,6 +161,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-i --install', 'install dependencies')
 		.option('-ni --noInstall', "don't install dependencies")
 		.option('-f --force', 'create package.json and override existing files')
+		.option('-cwd --cwd', 'defines where the configurations will be installed (default = process.cwd())')
 		.parse(process.argv) as any) as IProgram;
 
 	if (pg.rawArgs.length <= 2) {

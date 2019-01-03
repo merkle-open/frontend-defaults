@@ -3,16 +3,13 @@ import fs from 'fs-extra';
 import deepMerge from 'deepmerge';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createTsconfigFile = async ({ ts, force }: IOptions, task: ListrTaskWrapper) => {
+const createTsconfigFile = async ({ cwd, ts, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!ts) {
 		return;
 	}
@@ -24,7 +21,7 @@ const createTsconfigFile = async ({ ts, force }: IOptions, task: ListrTaskWrappe
 
 	await fs.writeFile(path.join(cwd, 'tsconfig.json'), await fetchTemplate('tsconfig', 'tsconfig.json'));
 };
-const updatePackageJson = async ({ ts, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, ts, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!ts) {
 		return;
 	}
@@ -36,7 +33,7 @@ const updatePackageJson = async ({ ts, force }: IOptions, task: ListrTaskWrapper
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('tsconfig', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tsconfig', 'package.json')), null, 2)
 	);
 };
 

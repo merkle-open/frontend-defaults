@@ -5,18 +5,15 @@ import latestVersion from 'latest-version';
 import Listr, { ListrTaskWrapper } from 'listr';
 import { generateConfigurations } from 'generate-webpack-config';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 import { fetchTemplate } from './fetch-template';
 
-const cwd = getCwd();
-
 const createWebpackConfigFile = async (
 	webpackConfig: string,
-	{ ts, webpack, force }: IOptions,
+	{ cwd, ts, webpack, force }: IOptions,
 	task: ListrTaskWrapper
 ) => {
 	if (!webpack) {
@@ -37,7 +34,7 @@ const createWebpackConfigFile = async (
 
 	await fs.writeFile(path.join(cwd, 'webpack.config.js'), webpackConfig);
 };
-const updatePackageJson = async (npmInstall: string, { webpack, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async (npmInstall: string, { cwd, webpack, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!webpack) {
 		return;
 	}
@@ -58,7 +55,7 @@ const updatePackageJson = async (npmInstall: string, { webpack, force }: IOption
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
 		JSON.stringify(
-			deepMerge(await fetchPackage(), {
+			deepMerge(await fetchPackage(cwd), {
 				scripts: {
 					build: 'webpack --mode production',
 					start: 'webpack-dev-server --mode development',

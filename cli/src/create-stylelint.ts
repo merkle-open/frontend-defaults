@@ -3,16 +3,13 @@ import fs from 'fs-extra';
 import deepMerge from 'deepmerge';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createStylelintConfigFile = async ({ stylelint, force }: IOptions, task: ListrTaskWrapper) => {
+const createStylelintConfigFile = async ({ cwd, stylelint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, 'stylelint.config.js')))) {
 		task.skip('stylelint.config.js exist (use --force to override)');
 		return;
@@ -24,7 +21,7 @@ const createStylelintConfigFile = async ({ stylelint, force }: IOptions, task: L
 
 	await fs.writeFile(path.join(cwd, 'stylelint.config.js'), await fetchTemplate('stylelint', 'stylelint.config.js'));
 };
-const createStylelintIgnoreFile = async ({ stylelint, force }: IOptions, task: ListrTaskWrapper) => {
+const createStylelintIgnoreFile = async ({ cwd, stylelint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.stylelintignore')))) {
 		task.skip('.stylelintignore exist (use --force to override)');
 		return;
@@ -36,7 +33,7 @@ const createStylelintIgnoreFile = async ({ stylelint, force }: IOptions, task: L
 
 	await fs.writeFile(path.join(cwd, '.stylelintignore'), await fetchTemplate('stylelint', '.stylelintignore'));
 };
-const updatePackageJson = async ({ stylelint, githooks, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, stylelint, githooks, force }: IOptions, task: ListrTaskWrapper) => {
 	if (
 		!force &&
 		((await existFile(path.join(cwd, 'stylelint.config.js'))) ||
@@ -54,7 +51,7 @@ const updatePackageJson = async ({ stylelint, githooks, force }: IOptions, task:
 		await fs.writeFile(
 			path.join(cwd, 'package.json'),
 			JSON.stringify(
-				deepMerge(await fetchPackage(), await fetchTemplateJson('stylelint', 'package-githooks.json')),
+				deepMerge(await fetchPackage(cwd), await fetchTemplateJson('stylelint', 'package-githooks.json')),
 				null,
 				2
 			)
@@ -64,7 +61,11 @@ const updatePackageJson = async ({ stylelint, githooks, force }: IOptions, task:
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('stylelint', 'package.json')), null, 2)
+		JSON.stringify(
+			deepMerge(await fetchPackage(cwd), await fetchTemplateJson('stylelint', 'package.json')),
+			null,
+			2
+		)
 	);
 };
 

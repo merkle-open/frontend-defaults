@@ -1,7 +1,10 @@
 import inquirer, { objects } from 'inquirer';
 import { IOptions } from './fetch-options';
+import { getCwd } from './get-cwd';
 
 type IChoiceOption = objects.ChoiceOption;
+
+const cwd = getCwd();
 
 const TYPE_CHOICES = {
 	ts: 'typescript' as 'typescript',
@@ -126,6 +129,8 @@ export const fetchInquirer = async (): Promise<IOptions> => {
 	])) as IAnswers;
 
 	return {
+		cwd,
+
 		ts: language === TYPE_CHOICES.ts,
 		es: language === TYPE_CHOICES.es,
 		tslint,

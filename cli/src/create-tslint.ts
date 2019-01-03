@@ -3,16 +3,13 @@ import fs from 'fs-extra';
 import deepMerge from 'deepmerge';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createTslintFile = async ({ tslint, force }: IOptions, task: ListrTaskWrapper) => {
+const createTslintFile = async ({ cwd, tslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!tslint) {
 		return;
 	}
@@ -24,7 +21,7 @@ const createTslintFile = async ({ tslint, force }: IOptions, task: ListrTaskWrap
 
 	await fs.writeFile(path.join(cwd, 'tslint.json'), await fetchTemplate('tslint', 'tslint.json'));
 };
-const updatePackageJson = async ({ githooks, tslint, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, githooks, tslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!tslint) {
 		return;
 	}
@@ -38,7 +35,7 @@ const updatePackageJson = async ({ githooks, tslint, force }: IOptions, task: Li
 		await fs.writeFile(
 			path.join(cwd, 'package.json'),
 			JSON.stringify(
-				deepMerge(await fetchPackage(), await fetchTemplateJson('tslint', 'package-githooks.json')),
+				deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tslint', 'package-githooks.json')),
 				null,
 				2
 			)
@@ -48,7 +45,7 @@ const updatePackageJson = async ({ githooks, tslint, force }: IOptions, task: Li
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('tslint', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tslint', 'package.json')), null, 2)
 	);
 };
 

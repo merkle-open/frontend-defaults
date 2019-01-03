@@ -1,10 +1,9 @@
 import path from 'path';
 import fs from 'fs-extra';
-import { getCwd } from './get-cwd';
 
-const cwd = getCwd();
-
-export const fetchPackage = async <P>(): Promise<
+export const fetchPackage = async <P>(
+	cwd: string
+): Promise<
 	{
 		scripts?: { [key: string]: string };
 		dependencies?: { [key: string]: string };

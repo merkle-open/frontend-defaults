@@ -3,15 +3,12 @@ import fs from 'fs-extra';
 import Listr, { ListrTaskWrapper } from 'listr';
 import deepMerge from 'deepmerge';
 
-import { getCwd } from './get-cwd';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 
-const cwd = getCwd();
-
-const updatePackageJson = async ({ commitlint, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, commitlint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (
 		!force &&
 		(await fs.readFile(path.join(cwd, 'package.json'), 'utf8')).includes(
@@ -28,7 +25,11 @@ const updatePackageJson = async ({ commitlint, force }: IOptions, task: ListrTas
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(), await fetchTemplateJson('commitlint', 'package.json')), null, 2)
+		JSON.stringify(
+			deepMerge(await fetchPackage(cwd), await fetchTemplateJson('commitlint', 'package.json')),
+			null,
+			2
+		)
 	);
 };
 

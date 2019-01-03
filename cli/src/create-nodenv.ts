@@ -2,15 +2,12 @@ import path from 'path';
 import fs from 'fs-extra';
 import Listr, { ListrTaskWrapper } from 'listr';
 
-import { getCwd } from './get-cwd';
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const cwd = getCwd();
-
-const createNodeVersionFile = async ({ nodenv, force }: IOptions, task: ListrTaskWrapper) => {
+const createNodeVersionFile = async ({ cwd, nodenv, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.node-version')))) {
 		task.skip('.node-version exist (use --force to override)');
 		return;
@@ -22,7 +19,7 @@ const createNodeVersionFile = async ({ nodenv, force }: IOptions, task: ListrTas
 
 	await fs.writeFile(path.join(cwd, '.node-version'), await fetchTemplate('node-version', '.node-version'));
 };
-const createHuskyrcFile = async ({ githooks, force }: IOptions, task: ListrTaskWrapper) => {
+const createHuskyrcFile = async ({ cwd, githooks, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!force && (await existFile(path.join(cwd, '.huskyrc')))) {
 		task.skip('.huskyrc exist (use --force to override)');
 		return;
