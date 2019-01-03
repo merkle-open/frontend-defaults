@@ -10,10 +10,14 @@ const deleteDir = (pathName: string) => new Promise((resolve) => rimraf(pathName
 const removeIgnoredFiles = (fileName: string) => fileName !== '.DS_Store' && fileName !== 'Thumbs.db';
 
 export const defaultIt = async (tmpPathName: string, cmd: string) => {
-	const tmpPath = path.join(cwd, tmpPathName);
+	const tmpPathRoot = path.join(cwd, '__tests__', 'tmp');
+	const tmpPath = path.join(tmpPathRoot, tmpPathName);
 	await deleteDir(tmpPath);
+	try {
+		await fs.mkdir(tmpPathRoot);
+	} catch (err) {}
 	await fs.mkdir(tmpPath);
-	await execa.shell(`../bin/index.js ${cmd}`, {
+	await execa.shell(`../../../bin/index.js ${cmd}`, {
 		cwd: tmpPath,
 	});
 	const files = (await fs.readdir(tmpPath))

@@ -35,6 +35,7 @@ interface IAnswers {
 	webpack: boolean;
 	install: boolean;
 	force: boolean;
+	license?: string;
 }
 
 const getChoice = (name: string, checked: boolean = true) => ({
@@ -43,7 +44,7 @@ const getChoice = (name: string, checked: boolean = true) => ({
 });
 
 export const fetchInquirer = async (): Promise<IOptions> => {
-	const { language, tslint, eslint, project, linters, webpack, install, force } = (await inquirer.prompt([
+	const { language, tslint, eslint, project, linters, webpack, install, force, license } = (await inquirer.prompt([
 		{
 			type: 'list',
 			name: 'language',
@@ -79,13 +80,20 @@ export const fetchInquirer = async (): Promise<IOptions> => {
 			message: 'Select project defaults \n',
 			choices: [
 				// getChoice(TYPE_CHOICES.readme),
-				// getChoice(TYPE_CHOICES.license),
+				getChoice(TYPE_CHOICES.license),
 				getChoice(TYPE_CHOICES.editorconfig),
 				getChoice(TYPE_CHOICES.npmrc),
 				getChoice(TYPE_CHOICES.nodenv),
 				getChoice(TYPE_CHOICES.gitignore),
 				getChoice(TYPE_CHOICES.githooks),
 			] as IChoiceOption[],
+		},
+		{
+			type: 'input',
+			name: 'license',
+			message: 'Please enter the license copyright holder',
+			when: ({ project }: IAnswers) => project.includes(TYPE_CHOICES.license),
+			validate: (value: string) => Boolean(typeof value === 'string' && value !== ''),
 		},
 		{
 			type: 'checkbox',
@@ -124,7 +132,7 @@ export const fetchInquirer = async (): Promise<IOptions> => {
 		eslint,
 
 		editorconfig: project.includes(TYPE_CHOICES.editorconfig),
-		license: project.includes(TYPE_CHOICES.license),
+		license,
 		gitignore: project.includes(TYPE_CHOICES.gitignore),
 		npmrc: project.includes(TYPE_CHOICES.npmrc),
 		readme: project.includes(TYPE_CHOICES.readme),

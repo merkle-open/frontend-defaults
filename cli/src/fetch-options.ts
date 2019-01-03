@@ -15,7 +15,7 @@ export interface IOptions {
 	editorconfig: boolean;
 	prettier: boolean;
 	stylelint: boolean;
-	license: boolean;
+	license?: string;
 	gitignore: boolean;
 	npmrc: boolean;
 	readme: boolean;
@@ -41,7 +41,7 @@ export interface IProgram {
 	editorconfig?: boolean;
 	prettier?: boolean;
 	stylelint?: boolean;
-	license?: boolean;
+	license?: string;
 	gitignore?: boolean;
 	npmrc?: boolean;
 	readme?: boolean;
@@ -71,7 +71,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			editorconfig: true,
 			prettier: true,
 			stylelint: true,
-			license: true,
+			license: answers.license,
 			gitignore: true,
 			npmrc: true,
 			readme: true,
@@ -93,7 +93,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			editorconfig: true,
 			prettier: true,
 			stylelint: true,
-			license: true,
+			license: answers.license,
 			gitignore: true,
 			npmrc: true,
 			readme: true,
@@ -114,7 +114,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		editorconfig: answers.editorconfig || false,
 		prettier: answers.prettier || false,
 		stylelint: answers.stylelint || false,
-		license: answers.license || false,
+		license: answers.license,
 		gitignore: answers.gitignore || false,
 		npmrc: answers.npmrc || false,
 		readme: answers.readme || false,
@@ -141,8 +141,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-e --editorconfig', 'add editorconfig')
 		.option('-p --prettier', 'add prettier')
 		.option('-s --stylelint', 'add stylelint')
-		// TODO add
-		// .option('-l --license', 'add license file')
+		.option('-l --license [string]', 'add license file with given company name')
 		.option('-gi --gitignore', 'add gitignore')
 		.option('-n --npmrc', 'add npmrc')
 		// TODO add
