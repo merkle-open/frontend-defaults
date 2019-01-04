@@ -9,19 +9,24 @@ import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { existFile } from './exist-file';
 
-const createTslintFile = async ({ cwd, tslint, force }: IOptions, task: ListrTaskWrapper) => {
+const createTslintFile = async ({ cwd, prettier, tslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!tslint) {
 		return;
 	}
 
 	if (!force && (await existFile(path.join(cwd, 'tslint.json')))) {
 		task.skip('tslint.json exist (use --force to override)');
+		return;
+	}
+
+	if (prettier) {
+		await fs.writeFile(path.join(cwd, 'tslint.json'), await fetchTemplate('tslint', 'tslint-prettier.json'));
 		return;
 	}
 
 	await fs.writeFile(path.join(cwd, 'tslint.json'), await fetchTemplate('tslint', 'tslint.json'));
 };
-const updatePackageJson = async ({ cwd, githooks, tslint, force }: IOptions, task: ListrTaskWrapper) => {
+const updatePackageJson = async ({ cwd, prettier, githooks, tslint, force }: IOptions, task: ListrTaskWrapper) => {
 	if (!tslint) {
 		return;
 	}
@@ -31,21 +36,19 @@ const updatePackageJson = async ({ cwd, githooks, tslint, force }: IOptions, tas
 		return;
 	}
 
+	let packageData = await fetchTemplateJson('tslint', 'package.json');
+
+	if (prettier) {
+		packageData = deepMerge(packageData, await fetchTemplateJson('tslint', 'package-prettier.json'));
+	}
+
 	if (githooks) {
-		await fs.writeFile(
-			path.join(cwd, 'package.json'),
-			JSON.stringify(
-				deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tslint', 'package-githooks.json')),
-				null,
-				2
-			)
-		);
-		return;
+		packageData = deepMerge(packageData, await fetchTemplateJson('tslint', 'package-githooks.json'));
 	}
 
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tslint', 'package.json')), null, 2)
+		JSON.stringify(deepMerge(await fetchPackage(cwd), packageData), null, 2)
 	);
 };
 

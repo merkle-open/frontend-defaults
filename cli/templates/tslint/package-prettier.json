@@ -1,0 +1,5 @@
+{
+	"devDependencies": {
+		"tslint-config-prettier": "1.17.0"
+	}
+}

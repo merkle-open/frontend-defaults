@@ -5,8 +5,7 @@ exports[`tslint default 1`] = `
   \\"devDependencies\\": {
     \\"@namics/tslint-config\\": \\"0.2.0\\",
     \\"npm-run-all\\": \\"4.1.3\\",
-    \\"tslint\\": \\"5.11.0\\",
-    \\"tslint-config-prettier\\": \\"1.17.0\\"
+    \\"tslint\\": \\"5.11.0\\"
   },
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
@@ -18,7 +17,7 @@ exports[`tslint default 1`] = `
 exports[`tslint default 2`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
-	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],
+	\\"extends\\": [\\"@namics/tslint-config\\"],
 	\\"jsRules\\": {},
 	\\"rules\\": {},
 	\\"rulesDirectory\\": []
@@ -41,8 +40,7 @@ exports[`tslint with-githooks 2`] = `
     \\"husky\\": \\"1.0.1\\",
     \\"lint-staged\\": \\"7.3.0\\",
     \\"npm-run-all\\": \\"4.1.3\\",
-    \\"tslint\\": \\"5.11.0\\",
-    \\"tslint-config-prettier\\": \\"1.17.0\\"
+    \\"tslint\\": \\"5.11.0\\"
   },
   \\"husky\\": {
     \\"hooks\\": {
@@ -66,7 +64,7 @@ exports[`tslint with-githooks 2`] = `
 exports[`tslint with-githooks 3`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
-	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],
+	\\"extends\\": [\\"@namics/tslint-config\\"],
 	\\"jsRules\\": {},
 	\\"rules\\": {},
 	\\"rulesDirectory\\": []
@@ -120,6 +118,87 @@ exports[`tslint with-prettier 3`] = `
 `;
 
 exports[`tslint with-prettier 4`] = `
+"{
+	\\"defaultSeverity\\": \\"error\\",
+	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],
+	\\"jsRules\\": {},
+	\\"rules\\": {},
+	\\"rulesDirectory\\": []
+}
+"
+`;
+
+exports[`tslint with-prettier-githooks 1`] = `
+"# ~/.huskyrc
+# Note: it will run in /bin/sh shell
+if command -v nodenv >/dev/null 2>&1; then
+  eval \\"$(nodenv init -)\\"
+fi"
+`;
+
+exports[`tslint with-prettier-githooks 2`] = `
+"# Node
+**/node_modules
+**/package.json
+**/package-lock.json
+
+# Generated
+**/bower.json
+**/lerna.json
+
+# Build
+**/build
+**/dist
+**/public
+**/coverage
+**/storybook-static
+
+# Nitro
+**/project/blueprints
+**/.yo-rc.json"
+`;
+
+exports[`tslint with-prettier-githooks 3`] = `
+"module.exports = require('@namics/prettier-config');
+"
+`;
+
+exports[`tslint with-prettier-githooks 4`] = `
+"{
+  \\"devDependencies\\": {
+    \\"@namics/prettier-config\\": \\"0.2.0\\",
+    \\"@namics/tslint-config\\": \\"0.2.0\\",
+    \\"husky\\": \\"1.0.1\\",
+    \\"lint-staged\\": \\"7.3.0\\",
+    \\"npm-run-all\\": \\"4.1.3\\",
+    \\"prettier\\": \\"1.14.3\\",
+    \\"tslint\\": \\"5.11.0\\",
+    \\"tslint-config-prettier\\": \\"1.17.0\\"
+  },
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
+    }
+  },
+  \\"lint-staged\\": {
+    \\"linters\\": {
+      \\"*.{js,jsx,ts,tsx,json}\\": [
+        \\"prettier --list-different --write\\"
+      ],
+      \\"src/**/*.{ts,tsx}\\": [
+        \\"tslint\\"
+      ]
+    }
+  },
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:ts\\": \\"tslint 'src/**/*.{ts,tsx}'\\",
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
+  }
+}"
+`;
+
+exports[`tslint with-prettier-githooks 5`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
 	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],
