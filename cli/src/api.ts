@@ -1,6 +1,8 @@
 import Listr from 'listr';
 import chalk from 'chalk';
 import execa from 'execa';
+import fs from 'fs-extra';
+import path from 'path';
 
 import { IOptions } from './fetch-options';
 import { existPackage } from './exist-package';
@@ -77,7 +79,20 @@ export default async (apiOptions: IApiOptions) => {
 		...apiOptions,
 	};
 
-	if (!(await existPackage()) && !options.force) {
+	// store selected options
+	await fs.writeFile(
+		path.join(apiOptions.cwd || cwd, '.frontend-defaults-rc.json'),
+		JSON.stringify(
+			{
+				...options,
+				cwd: undefined,
+			},
+			null,
+			2
+		)
+	);
+
+	if (!(await existPackage(options.cwd)) && !options.force) {
 		console.error(
 			chalk.red('\npackage.json is missing. Please create it by executing `$npm init` or add --force\n\n')
 		);
@@ -105,6 +120,7 @@ export default async (apiOptions: IApiOptions) => {
 		),
 		{
 			collapse: false,
+			renderer: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci' ? 'silent' : undefined,
 		} as any
 	);
 

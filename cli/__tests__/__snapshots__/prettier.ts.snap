@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prettier default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": true,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`prettier default 2`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -22,12 +43,12 @@ exports[`prettier default 1`] = `
 **/.yo-rc.json"
 `;
 
-exports[`prettier default 2`] = `
+exports[`prettier default 3`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`prettier default 3`] = `
+exports[`prettier default 4`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.2.0\\",
@@ -42,6 +63,27 @@ exports[`prettier default 3`] = `
 `;
 
 exports[`prettier with-githooks 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": true,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": true,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`prettier with-githooks 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -49,7 +91,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`prettier with-githooks 2`] = `
+exports[`prettier with-githooks 3`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -71,12 +113,12 @@ exports[`prettier with-githooks 2`] = `
 **/.yo-rc.json"
 `;
 
-exports[`prettier with-githooks 3`] = `
+exports[`prettier with-githooks 4`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`prettier with-githooks 4`] = `
+exports[`prettier with-githooks 5`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.2.0\\",

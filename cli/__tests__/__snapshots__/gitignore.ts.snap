@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gitignore default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": true,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`gitignore default 2`] = `
 "# Set default behaviour, in case users don't have core.autocrlf set.
 * text=auto
 
@@ -25,7 +46,7 @@ exports[`gitignore default 1`] = `
 "
 `;
 
-exports[`gitignore default 2`] = `
+exports[`gitignore default 3`] = `
 "# OS
 .DS_Store
 Thumbs.db
@@ -60,7 +81,7 @@ lerna-debug.log
 "
 `;
 
-exports[`gitignore default 3`] = `
+exports[`gitignore default 4`] = `
 "{
   \\"devDependencies\\": {
     \\"npm-run-all\\": \\"4.1.3\\"

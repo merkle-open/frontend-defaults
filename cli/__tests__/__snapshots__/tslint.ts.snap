@@ -2,6 +2,27 @@
 
 exports[`tslint default 1`] = `
 "{
+  \\"ts\\": false,
+  \\"tslint\\": true,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`tslint default 2`] = `
+"{
   \\"devDependencies\\": {
     \\"@namics/tslint-config\\": \\"0.2.0\\",
     \\"npm-run-all\\": \\"4.1.3\\",
@@ -14,7 +35,7 @@ exports[`tslint default 1`] = `
 }"
 `;
 
-exports[`tslint default 2`] = `
+exports[`tslint default 3`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
 	\\"extends\\": [\\"@namics/tslint-config\\"],
@@ -26,6 +47,27 @@ exports[`tslint default 2`] = `
 `;
 
 exports[`tslint with-githooks 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": true,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": true,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`tslint with-githooks 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -33,7 +75,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`tslint with-githooks 2`] = `
+exports[`tslint with-githooks 3`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/tslint-config\\": \\"0.2.0\\",
@@ -61,7 +103,7 @@ exports[`tslint with-githooks 2`] = `
 }"
 `;
 
-exports[`tslint with-githooks 3`] = `
+exports[`tslint with-githooks 4`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
 	\\"extends\\": [\\"@namics/tslint-config\\"],
@@ -73,6 +115,27 @@ exports[`tslint with-githooks 3`] = `
 `;
 
 exports[`tslint with-prettier 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": true,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": true,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`tslint with-prettier 2`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -94,12 +157,12 @@ exports[`tslint with-prettier 1`] = `
 **/.yo-rc.json"
 `;
 
-exports[`tslint with-prettier 2`] = `
+exports[`tslint with-prettier 3`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`tslint with-prettier 3`] = `
+exports[`tslint with-prettier 4`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.2.0\\",
@@ -117,7 +180,7 @@ exports[`tslint with-prettier 3`] = `
 }"
 `;
 
-exports[`tslint with-prettier 4`] = `
+exports[`tslint with-prettier 5`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
 	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],
@@ -129,6 +192,27 @@ exports[`tslint with-prettier 4`] = `
 `;
 
 exports[`tslint with-prettier-githooks 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": true,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": true,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": true,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`tslint with-prettier-githooks 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -136,7 +220,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`tslint with-prettier-githooks 2`] = `
+exports[`tslint with-prettier-githooks 3`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -158,12 +242,12 @@ exports[`tslint with-prettier-githooks 2`] = `
 **/.yo-rc.json"
 `;
 
-exports[`tslint with-prettier-githooks 3`] = `
+exports[`tslint with-prettier-githooks 4`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`tslint with-prettier-githooks 4`] = `
+exports[`tslint with-prettier-githooks 5`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.2.0\\",
@@ -198,7 +282,7 @@ exports[`tslint with-prettier-githooks 4`] = `
 }"
 `;
 
-exports[`tslint with-prettier-githooks 5`] = `
+exports[`tslint with-prettier-githooks 6`] = `
 "{
 	\\"defaultSeverity\\": \\"error\\",
 	\\"extends\\": [\\"@namics/tslint-config\\", \\"tslint-config-prettier\\"],

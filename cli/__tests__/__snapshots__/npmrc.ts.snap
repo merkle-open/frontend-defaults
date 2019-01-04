@@ -1,11 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`npmrc default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": true,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`npmrc default 2`] = `
 "save-exact=true
 "
 `;
 
-exports[`npmrc default 2`] = `
+exports[`npmrc default 3`] = `
 "{
   \\"devDependencies\\": {
     \\"npm-run-all\\": \\"4.1.3\\"

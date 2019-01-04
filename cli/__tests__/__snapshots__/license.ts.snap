@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`license default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true,
+  \\"license\\": \\"Namics AG\\"
+}"
+`;
+
+exports[`license default 2`] = `
 "MIT License
 
 Copyright (c) 2019-present Namics AG
@@ -25,7 +47,7 @@ SOFTWARE.
 "
 `;
 
-exports[`license default 2`] = `
+exports[`license default 3`] = `
 "{
   \\"author\\": \\"Namics AG\\",
   \\"contributors\\": [

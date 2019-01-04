@@ -14,6 +14,27 @@ exports[`eslint default 2`] = `
 
 exports[`eslint default 3`] = `
 "{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": true,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`eslint default 4`] = `
+"{
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"6.0.1\\",
     \\"eslint\\": \\"5.10.0\\",
@@ -40,6 +61,27 @@ exports[`eslint with-githooks 2`] = `
 `;
 
 exports[`eslint with-githooks 3`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": true,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": true,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`eslint with-githooks 4`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -47,7 +89,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`eslint with-githooks 4`] = `
+exports[`eslint with-githooks 5`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"6.0.1\\",
@@ -92,6 +134,27 @@ exports[`eslint with-prettier 2`] = `
 `;
 
 exports[`eslint with-prettier 3`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": true,
+  \\"editorconfig\\": false,
+  \\"prettier\\": true,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`eslint with-prettier 4`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -113,12 +176,12 @@ exports[`eslint with-prettier 3`] = `
 **/.yo-rc.json"
 `;
 
-exports[`eslint with-prettier 4`] = `
+exports[`eslint with-prettier 5`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`eslint with-prettier 5`] = `
+exports[`eslint with-prettier 6`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"6.0.1\\",

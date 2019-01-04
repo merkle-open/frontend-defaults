@@ -1,11 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`stylelint default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": true,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`stylelint default 2`] = `
 "node_modules/
 src/shared/base/reset/css/yui/reset.css"
 `;
 
-exports[`stylelint default 2`] = `
+exports[`stylelint default 3`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/stylelint-config\\": \\"0.2.1\\",
@@ -19,12 +40,33 @@ exports[`stylelint default 2`] = `
 }"
 `;
 
-exports[`stylelint default 3`] = `
+exports[`stylelint default 4`] = `
 "module.exports = require('@namics/stylelint-config');
 "
 `;
 
 exports[`stylelint with-githooks 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": true,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": true,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`stylelint with-githooks 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -32,12 +74,12 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`stylelint with-githooks 2`] = `
+exports[`stylelint with-githooks 3`] = `
 "node_modules/
 src/shared/base/reset/css/yui/reset.css"
 `;
 
-exports[`stylelint with-githooks 3`] = `
+exports[`stylelint with-githooks 4`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/stylelint-config\\": \\"0.2.1\\",
@@ -65,7 +107,7 @@ exports[`stylelint with-githooks 3`] = `
 }"
 `;
 
-exports[`stylelint with-githooks 4`] = `
+exports[`stylelint with-githooks 5`] = `
 "module.exports = require('@namics/stylelint-config');
 "
 `;

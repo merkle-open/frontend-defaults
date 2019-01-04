@@ -145,7 +145,7 @@ export const fetchInquirer = async (): Promise<IOptions> => {
 		nodenv: project.includes(TYPE_CHOICES.nodenv),
 
 		commitlint: linters.includes(TYPE_CHOICES.commitlint),
-		prettier: linters.includes(TYPE_CHOICES.editorconfig),
+		prettier: linters.includes(TYPE_CHOICES.prettier),
 		stylelint: linters.includes(TYPE_CHOICES.stylelint),
 
 		webpack,

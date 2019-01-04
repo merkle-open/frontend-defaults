@@ -5,27 +5,24 @@ import execa from 'execa';
 import Listr from 'listr';
 import stringify from 'json-stable-stringify';
 
-import { getCwd } from './get-cwd';
 import { IOptions } from './fetch-options';
 import { wait } from './wait';
 import { fetchPackage } from './fetch-package';
 import { fetchTemplateJson } from './fetch-template';
 
-const cwd = getCwd();
-
-const updatePackageJson = async () => {
+const updatePackageJson = async ({ cwd }: IOptions) => {
 	await fs.writeFile(
 		path.join(cwd, 'package.json'),
 		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('install', 'package.json')), null, 2)
 	);
 };
 
-const cleanPackageJson = async () => {
+const cleanPackageJson = async ({ cwd }: IOptions) => {
 	await fs.writeFile(path.join(cwd, 'package.json'), stringify(await fetchPackage(cwd), { space: '  ' }));
 };
 
-export const install = async (options: IOptions) => {
-	if (!options.install) {
+export const install = async ({ install, cwd }: IOptions) => {
+	if (!install) {
 		return;
 	}
 
@@ -49,13 +46,13 @@ export const listr = (options: IOptions) => {
 					{
 						title: 'add npm-run-all to package.json',
 						task: async () => {
-							return Promise.all([updatePackageJson(), wait()]);
+							return Promise.all([updatePackageJson(options), wait()]);
 						},
 					},
 					{
 						title: 'clean package.json',
 						task: async () => {
-							return Promise.all([cleanPackageJson(), wait()]);
+							return Promise.all([cleanPackageJson(options), wait()]);
 						},
 					},
 				]);
@@ -70,13 +67,13 @@ export const listr = (options: IOptions) => {
 				{
 					title: 'add npm-run-all to package.json',
 					task: async () => {
-						return Promise.all([updatePackageJson(), wait()]);
+						return Promise.all([updatePackageJson(options), wait()]);
 					},
 				},
 				{
 					title: 'clean package.json',
 					task: async () => {
-						return Promise.all([cleanPackageJson(), wait()]);
+						return Promise.all([cleanPackageJson(options), wait()]);
 					},
 				},
 				{

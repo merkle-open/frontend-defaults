@@ -2,6 +2,27 @@
 
 exports[`tsconfig default 1`] = `
 "{
+  \\"ts\\": true,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`tsconfig default 2`] = `
+"{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.1.0\\",
     \\"npm-run-all\\": \\"4.1.3\\",
@@ -13,7 +34,7 @@ exports[`tsconfig default 1`] = `
 }"
 `;
 
-exports[`tsconfig default 2`] = `
+exports[`tsconfig default 3`] = `
 "{
 	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\"
 }

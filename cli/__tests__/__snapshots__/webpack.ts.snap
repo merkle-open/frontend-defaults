@@ -2,6 +2,27 @@
 
 exports[`webpack default 1`] = `
 "{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": true,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`webpack default 2`] = `
+"{
   \\"devDependencies\\": {
     \\"@babel/core\\": \\"7.2.2\\",
     \\"@babel/preset-env\\": \\"7.2.3\\",
@@ -24,7 +45,7 @@ exports[`webpack default 1`] = `
 }"
 `;
 
-exports[`webpack default 2`] = `
+exports[`webpack default 3`] = `
 "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');

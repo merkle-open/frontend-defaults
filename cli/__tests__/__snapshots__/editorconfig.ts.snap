@@ -44,6 +44,27 @@ indent_size = 2
 
 exports[`editorconfig default 2`] = `
 "{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": true,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": false,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`editorconfig default 3`] = `
+"{
   \\"devDependencies\\": {
     \\"npm-run-all\\": \\"4.1.3\\"
   },

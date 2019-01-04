@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`readme default 1`] = `
+"{
+  \\"ts\\": false,
+  \\"tslint\\": false,
+  \\"es\\": false,
+  \\"eslint\\": false,
+  \\"editorconfig\\": false,
+  \\"prettier\\": false,
+  \\"stylelint\\": false,
+  \\"gitignore\\": false,
+  \\"npmrc\\": false,
+  \\"readme\\": true,
+  \\"githooks\\": false,
+  \\"commitlint\\": false,
+  \\"nodenv\\": false,
+  \\"webpack\\": false,
+  \\"install\\": false,
+  \\"force\\": true
+}"
+`;
+
+exports[`readme default 2`] = `
 "# readme
 
 Introduction ...
@@ -86,7 +107,7 @@ Introduction ...
 "
 `;
 
-exports[`readme default 2`] = `
+exports[`readme default 3`] = `
 "{
   \\"devDependencies\\": {
     \\"npm-run-all\\": \\"4.1.3\\"

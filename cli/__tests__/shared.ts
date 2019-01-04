@@ -10,7 +10,7 @@ const cwd = process.cwd();
 const deleteDir = (pathName: string) => new Promise((resolve) => rimraf(pathName, resolve));
 const removeIgnoredFiles = (fileName: string) => fileName !== '.DS_Store' && fileName !== 'Thumbs.db';
 
-export const defaultIt = async (tmpPathName: string, cmd: string) => {
+export const defaultIt = async (tmpPathName: string, cmd: string, shouldDeleteDir: boolean = true) => {
 	const tmpPathRoot = path.join(cwd, '__tests__', 'tmp');
 	const tmpPath = path.join(tmpPathRoot, tmpPathName);
 
@@ -32,10 +32,12 @@ export const defaultIt = async (tmpPathName: string, cmd: string) => {
 		const fileData = await fs.readFile(path.join(tmpPath, files[i]), 'utf8');
 		expect(fileData).toMatchSnapshot();
 	}
-	await deleteDir(tmpPath);
+	if (shouldDeleteDir) {
+		await deleteDir(tmpPath);
+	}
 };
 
-export const apiIt = async (tmpPathName: string, options: IApiOptions) => {
+export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDeleteDir: boolean = true) => {
 	const tmpPathRoot = path.join(cwd, '__tests__', 'tmp');
 	const tmpPath = path.join(tmpPathRoot, tmpPathName);
 	options.cwd = tmpPath;
@@ -60,5 +62,7 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions) => {
 		expect(fileData).toMatchSnapshot();
 	}
 
-	await deleteDir(tmpPath);
+	if (shouldDeleteDir) {
+		await deleteDir(tmpPath);
+	}
 };
