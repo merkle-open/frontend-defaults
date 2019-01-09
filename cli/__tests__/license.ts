@@ -1,5 +1,5 @@
 import { defaultIt } from './shared';
 
-describe('license', async () => {
-	it('default', async () => await defaultIt('license', '--license="Namics AG" --force --noInstall'));
+describe('licenseMIT', async () => {
+	it('default', async () => await defaultIt('licenseMIT', '--licenseMIT="Namics AG" --force --noInstall'));
 });

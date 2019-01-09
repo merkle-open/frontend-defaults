@@ -2,27 +2,67 @@
 
 exports[`webpack default 1`] = `
 "{
-  \\"ts\\": false,
-  \\"tslint\\": false,
-  \\"es\\": false,
-  \\"eslint\\": false,
-  \\"editorconfig\\": false,
-  \\"prettier\\": false,
-  \\"stylelint\\": false,
-  \\"gitignore\\": false,
-  \\"npmrc\\": false,
-  \\"readme\\": false,
-  \\"githooks\\": false,
-  \\"commitlint\\": false,
-  \\"nodenv\\": false,
-  \\"webpack\\": true,
-  \\"install\\": false,
-  \\"force\\": true
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"tslint\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": false,
+    \\"npmrc\\": false,
+    \\"readme\\": false,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodenv\\": false,
+    \\"webpack\\": true,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"cli\\"
+  },
+  \\"mergedFiles\\": {
+    \\"src/index.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"console.log('@namics/frontend-defaults installed');\\\\n\\"
+    },
+    \\"webpack.config.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst CleanWebpackPlugin = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst JsConfigWebpackPlugin = require('js-config-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(['dist']),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // Multi threading babel loader configuration with caching for .js and .jsx files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/js-config-webpack-plugin/config\\\\n    new JsConfigWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
+    },
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"scripts\\": {
+          \\"build\\": \\"webpack --mode production\\",
+          \\"start\\": \\"webpack-dev-server --mode development\\"
+        },
+        \\"devDependencies\\": {
+          \\"@babel/core\\": \\"7.2.2\\",
+          \\"@babel/preset-env\\": \\"7.2.3\\",
+          \\"@babel/preset-react\\": \\"7.0.0\\",
+          \\"asset-config-webpack-plugin\\": \\"1.2.1\\",
+          \\"clean-webpack-plugin\\": \\"1.0.0\\",
+          \\"html-webpack-plugin\\": \\"3.2.0\\",
+          \\"js-config-webpack-plugin\\": \\"1.2.1\\",
+          \\"scss-config-webpack-plugin\\": \\"1.2.1\\",
+          \\"webpack\\": \\"4.28.1\\",
+          \\"webpack-cli\\": \\"3.2.1\\",
+          \\"webpack-dev-server\\": \\"3.1.14\\"
+        }
+      }
+    }
+  }
 }"
 `;
 
 exports[`webpack default 2`] = `
 "{
+  \\"scripts\\": {
+    \\"build\\": \\"webpack --mode production\\",
+    \\"start\\": \\"webpack-dev-server --mode development\\"
+  },
   \\"devDependencies\\": {
     \\"@babel/core\\": \\"7.2.2\\",
     \\"@babel/preset-env\\": \\"7.2.3\\",
@@ -31,16 +71,10 @@ exports[`webpack default 2`] = `
     \\"clean-webpack-plugin\\": \\"1.0.0\\",
     \\"html-webpack-plugin\\": \\"3.2.0\\",
     \\"js-config-webpack-plugin\\": \\"1.2.1\\",
-    \\"npm-run-all\\": \\"4.1.3\\",
     \\"scss-config-webpack-plugin\\": \\"1.2.1\\",
-    \\"webpack\\": \\"4.28.3\\",
-    \\"webpack-cli\\": \\"3.2.0\\",
+    \\"webpack\\": \\"4.28.1\\",
+    \\"webpack-cli\\": \\"3.2.1\\",
     \\"webpack-dev-server\\": \\"3.1.14\\"
-  },
-  \\"scripts\\": {
-    \\"build\\": \\"webpack --mode production\\",
-    \\"lint\\": \\"npm-run-all lint:*\\",
-    \\"start\\": \\"webpack-dev-server --mode development\\"
   }
 }"
 `;

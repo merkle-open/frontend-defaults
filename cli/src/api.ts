@@ -1,32 +1,15 @@
-import Listr from 'listr';
-import chalk from 'chalk';
-import execa from 'execa';
-import fs from 'fs-extra';
-import path from 'path';
-
-import { IOptions } from './fetch-options';
-import { existPackage } from './exist-package';
+import { IOptions, TMode } from './fetch-options';
 import { getCwd } from './get-cwd';
 
-import { listr as readmeListr } from './create-readme';
-import { listr as licenseListr } from './create-license';
-import { listr as editorconfListr } from './create-editorconfig';
-import { listr as gitignoreListr } from './create-gitignore';
-import { listr as nodenvListr } from './create-nodenv';
-import { listr as npmrcListr } from './create-npmrc';
-
-import { listr as prettierListr } from './create-prettier';
-import { listr as tslintListr } from './create-tslint';
-import { listr as tsconfigListr } from './create-tsconfig';
-import { listr as stylelintListr } from './create-stylelint';
-import { listr as commitlintListr } from './create-commitlint';
-import { listr as eslintListr } from './create-eslint';
-
-import { listr as webpackListr } from './create-webpack';
-import { listr as installListr } from './install';
+import { install, openVSCode, storeOptionsAndChanges } from './install';
+import { showDiff } from './log-diff';
+import { writeFiles } from './write-files';
+import { fetchSurveyFiles } from './fetch-survey';
+import { collectChanges } from './collect-changes';
 
 export interface IApiOptions {
 	cwd?: string;
+	packageJson?: string;
 
 	// details
 	ts?: boolean;
@@ -36,7 +19,7 @@ export interface IApiOptions {
 	editorconfig?: boolean;
 	prettier?: boolean;
 	stylelint?: boolean;
-	license?: string;
+	licenseMIT?: string;
 	gitignore?: boolean;
 	npmrc?: boolean;
 	readme?: boolean;
@@ -47,9 +30,9 @@ export interface IApiOptions {
 
 	install?: boolean;
 	force?: boolean;
-}
 
-const cwd = getCwd();
+	mode: TMode;
+}
 
 const defaultApiOptions = {
 	// details
@@ -70,73 +53,27 @@ const defaultApiOptions = {
 
 	install: false,
 	force: false,
+	dryRun: false,
+
+	mode: 'api',
 };
 
 export default async (apiOptions: IApiOptions) => {
+	const cwd = getCwd();
 	const options: IOptions = {
 		cwd,
 		...defaultApiOptions,
 		...apiOptions,
 	};
 
-	// store selected options
-	await fs.writeFile(
-		path.join(apiOptions.cwd || cwd, '.frontend-defaults-rc.json'),
-		JSON.stringify(
-			{
-				...options,
-				cwd: undefined,
-			},
-			null,
-			2
-		)
-	);
-
-	if (!(await existPackage(options.cwd)) && !options.force) {
-		console.error(
-			chalk.red('\npackage.json is missing. Please create it by executing `$npm init` or add --force\n\n')
-		);
-		process.exit(1);
+	const { originalFiles, mergedFiles } = await collectChanges(options);
+	const shouldContinue = await showDiff(originalFiles, mergedFiles, options);
+	if (!shouldContinue) {
+		return;
 	}
-
-	const tasks = new Listr(
-		([] as Listr.ListrTask[]).concat(
-			readmeListr(options),
-			licenseListr(options),
-			editorconfListr(options),
-			gitignoreListr(options),
-			nodenvListr(options),
-			npmrcListr(options),
-
-			commitlintListr(options),
-			prettierListr(options),
-			stylelintListr(options),
-			tsconfigListr(options),
-			tslintListr(options),
-			eslintListr(options),
-
-			webpackListr(options),
-			installListr(options)
-		),
-		{
-			collapse: false,
-			renderer: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci' ? 'silent' : undefined,
-		} as any
-	);
-
-	tasks
-		.run()
-		.then(async () => {
-			try {
-				if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci') {
-					return;
-				}
-				await execa('code', ['.']);
-			} catch (err) {
-				// tslint:disable-next-line
-			}
-		})
-		.catch((err) => {
-			console.error(err);
-		});
+	const files = await fetchSurveyFiles(mergedFiles, options);
+	await writeFiles(files, mergedFiles, options);
+	await storeOptionsAndChanges(options, mergedFiles);
+	await install(options);
+	await openVSCode(options);
 };

@@ -1,44 +1,18 @@
 import path from 'path';
-import fs from 'fs-extra';
-import Listr, { ListrTaskWrapper } from 'listr';
 
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
-import { wait } from './wait';
-import { existFile } from './exist-file';
 
-const createReadme = async ({ cwd, readme, force }: IOptions, task: ListrTaskWrapper) => {
-	if (!force && (await existFile(path.join(cwd, 'README.md')))) {
-		task.skip('README.md exist (use --force to override)');
-		return;
-	}
-
+const createReadme = async ({ cwd, readme }: IOptions): Promise<{ [key: string]: any }> => {
 	if (!readme) {
-		return;
-	}
-
-	await fs.writeFile(
-		path.join(cwd, 'README.md'),
-		(await fetchTemplate('readme', 'README.md')).replace('PROJECT_NAME', path.basename(cwd))
-	);
-};
-
-export const listr = (options: IOptions) => {
-	if (!options.readme) {
-		return [];
+		return {};
 	}
 
 	return {
-		title: 'Readme',
-		task: () => {
-			return new Listr([
-				{
-					title: 'write readme file',
-					task: async (ctx, task) => {
-						return Promise.all([createReadme(options, task), wait()]);
-					},
-				},
-			]);
-		},
+		'README.md': (await fetchTemplate('readme', 'README.md')).replace('PROJECT_NAME', path.basename(cwd)),
 	};
 };
+
+export const create = async (options: IOptions) => ({
+	...(await createReadme(options)),
+});

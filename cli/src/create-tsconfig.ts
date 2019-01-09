@@ -1,64 +1,27 @@
-import path from 'path';
-import fs from 'fs-extra';
-import deepMerge from 'deepmerge';
-import Listr, { ListrTaskWrapper } from 'listr';
-
-import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
-import { wait } from './wait';
-import { existFile } from './exist-file';
 
-const createTsconfigFile = async ({ cwd, ts, force }: IOptions, task: ListrTaskWrapper) => {
+const createTsconfigFile = async ({ ts }: IOptions): Promise<{ [key: string]: any }> => {
 	if (!ts) {
-		return;
-	}
-
-	if (!force && (await existFile(path.join(cwd, 'tsconfig.json')))) {
-		task.skip('tsconfig.json exist (use --force to override)');
-		return;
-	}
-
-	await fs.writeFile(path.join(cwd, 'tsconfig.json'), await fetchTemplate('tsconfig', 'tsconfig.json'));
-};
-const updatePackageJson = async ({ cwd, ts, force }: IOptions, task: ListrTaskWrapper) => {
-	if (!ts) {
-		return;
-	}
-
-	if (!force && (await existFile(path.join(cwd, 'tsconfig.json')))) {
-		task.skip('tsconfig.json exist (use --force to override)');
-		return;
-	}
-
-	await fs.writeFile(
-		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('tsconfig', 'package.json')), null, 2)
-	);
-};
-
-export const listr = (options: IOptions) => {
-	if (!options.ts) {
-		return [];
+		return {};
 	}
 
 	return {
-		title: 'Tsconfig',
-		task: () => {
-			return new Listr([
-				{
-					title: 'write tsconfig file',
-					task: async (ctx, task) => {
-						return Promise.all([createTsconfigFile(options, task), wait()]);
-					},
-				},
-				{
-					title: 'add typescript to package.json',
-					task: async (ctx, task) => {
-						return Promise.all([updatePackageJson(options, task), wait()]);
-					},
-				},
-			]);
-		},
+		'tsconfig.json': await fetchTemplate('tsconfig', 'tsconfig.json'),
 	};
 };
+
+const updatePackageJson = async ({ ts }: IOptions): Promise<{ [key: string]: any }> => {
+	if (!ts) {
+		return {};
+	}
+
+	return {
+		'package.json': await fetchTemplateJson('tsconfig', 'package.json'),
+	};
+};
+
+export const create = async (options: IOptions) => ({
+	...(await createTsconfigFile(options)),
+	...(await updatePackageJson(options)),
+});

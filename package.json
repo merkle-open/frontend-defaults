@@ -66,6 +66,7 @@
     "lerna": "3.4.3",
     "lint-staged": "8.1.0",
     "prettier": "1.15.2",
-    "rimraf": "2.6.2"
+    "rimraf": "2.6.2",
+    "ts-node": "7.0.1"
   }
 }

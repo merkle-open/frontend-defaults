@@ -4,11 +4,14 @@ import fs from 'fs-extra';
 
 import { getPwd } from './get-pwd';
 import { getCwd } from './get-cwd';
-import { fetchInquirer } from './fetch-inquirer';
+import { fetchSurvey } from './fetch-survey';
+
+export type TMode = 'cli' | 'api' | 'survey';
 
 // define cli api by using commander
 export interface IOptions {
 	cwd: string;
+	packageJson?: string;
 
 	// details
 	ts: boolean;
@@ -18,7 +21,7 @@ export interface IOptions {
 	editorconfig: boolean;
 	prettier: boolean;
 	stylelint: boolean;
-	license?: string;
+	licenseMIT?: string;
 	gitignore: boolean;
 	npmrc: boolean;
 	readme: boolean;
@@ -29,6 +32,9 @@ export interface IOptions {
 
 	install: boolean;
 	force: boolean;
+	dryRun: boolean;
+
+	mode: TMode;
 }
 
 export interface IProgram {
@@ -46,7 +52,7 @@ export interface IProgram {
 	editorconfig?: boolean;
 	prettier?: boolean;
 	stylelint?: boolean;
-	license?: string;
+	licenseMIT?: string;
 	gitignore?: boolean;
 	npmrc?: boolean;
 	readme?: boolean;
@@ -58,6 +64,7 @@ export interface IProgram {
 	install?: boolean;
 	noInstall?: boolean;
 	force?: boolean;
+	dryRun?: boolean;
 
 	rawArgs: string[];
 }
@@ -68,9 +75,18 @@ const cwd = getCwd();
 export const hasOptions = (options: any) => Object.values(options).some((val) => val !== undefined);
 
 const transformAnswersToOptions = (answers: IProgram): IOptions => {
+	const options = {
+		cwd: answers.cwd || cwd,
+		licenseMIT: answers.licenseMIT,
+		install: answers.noInstall ? false : answers.install || true,
+		force: answers.force || false,
+		dryRun: answers.dryRun || false,
+		mode: 'cli' as 'cli',
+	};
+
 	if (answers.presetTs) {
 		return {
-			cwd: answers.cwd || cwd,
+			...options,
 			ts: true,
 			tslint: true,
 			es: false,
@@ -78,7 +94,6 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			editorconfig: true,
 			prettier: true,
 			stylelint: true,
-			license: answers.license,
 			gitignore: true,
 			npmrc: true,
 			readme: true,
@@ -86,14 +101,12 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			commitlint: true,
 			nodenv: true,
 			webpack: true,
-			install: answers.noInstall ? false : answers.install || true,
-			force: answers.force || false,
 		};
 	}
 
 	if (answers.presetEs) {
 		return {
-			cwd: answers.cwd || cwd,
+			...options,
 			ts: false,
 			tslint: false,
 			es: true,
@@ -101,7 +114,6 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			editorconfig: true,
 			prettier: true,
 			stylelint: true,
-			license: answers.license,
 			gitignore: true,
 			npmrc: true,
 			readme: true,
@@ -109,13 +121,11 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			commitlint: true,
 			nodenv: true,
 			webpack: true,
-			install: answers.noInstall ? false : answers.install || true,
-			force: answers.force || false,
 		};
 	}
 
 	return {
-		cwd: answers.cwd || cwd,
+		...options,
 		ts: answers.ts || false,
 		tslint: answers.tslint || false,
 		es: answers.es || false,
@@ -123,7 +133,6 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		editorconfig: answers.editorconfig || false,
 		prettier: answers.prettier || false,
 		stylelint: answers.stylelint || false,
-		license: answers.license,
 		gitignore: answers.gitignore || false,
 		npmrc: answers.npmrc || false,
 		readme: answers.readme || false,
@@ -131,8 +140,6 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		commitlint: answers.commitlint || false,
 		nodenv: answers.nodenv || false,
 		webpack: answers.webpack || false,
-		install: answers.noInstall ? false : answers.install || false,
-		force: answers.force || false,
 	};
 };
 
@@ -150,7 +157,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-e --editorconfig', 'add editorconfig')
 		.option('-p --prettier', 'add prettier')
 		.option('-s --stylelint', 'add stylelint')
-		.option('-l --license [string]', 'add license file with given company name')
+		.option('-lmit --licenseMIT [string]', 'add license file with given company name')
 		.option('-gi --gitignore', 'add gitignore')
 		.option('-n --npmrc', 'add npmrc')
 		.option('-r --readme', 'add readme file')
@@ -162,10 +169,11 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-ni --noInstall', "don't install dependencies")
 		.option('-f --force', 'create package.json and override existing files')
 		.option('-cwd --cwd', 'defines where the configurations will be installed (default = process.cwd())')
+		.option('-d --dryRun', 'prints changes will happens by given args')
 		.parse(process.argv) as any) as IProgram;
 
 	if (pg.rawArgs.length <= 2) {
-		return await fetchInquirer();
+		return await fetchSurvey();
 	}
 
 	return transformAnswersToOptions(pg);

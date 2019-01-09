@@ -1,39 +1,27 @@
-import path from 'path';
-import fs from 'fs-extra';
 import deepMerge from 'deepmerge';
-import Listr, { ListrTaskWrapper } from 'listr';
 
-import { fetchPackage } from './fetch-package';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
-import { wait } from './wait';
-import { existFile } from './exist-file';
 
-const createTslintFile = async ({ cwd, prettier, tslint, force }: IOptions, task: ListrTaskWrapper) => {
+const createTslintFile = async ({ prettier, tslint }: IOptions): Promise<{ [key: string]: any }> => {
 	if (!tslint) {
-		return;
-	}
-
-	if (!force && (await existFile(path.join(cwd, 'tslint.json')))) {
-		task.skip('tslint.json exist (use --force to override)');
-		return;
+		return {};
 	}
 
 	if (prettier) {
-		await fs.writeFile(path.join(cwd, 'tslint.json'), await fetchTemplate('tslint', 'tslint-prettier.json'));
-		return;
+		return {
+			'tslint.json': await fetchTemplate('tslint', 'tslint-prettier.json'),
+		};
 	}
 
-	await fs.writeFile(path.join(cwd, 'tslint.json'), await fetchTemplate('tslint', 'tslint.json'));
+	return {
+		'tslint.json': await fetchTemplate('tslint', 'tslint.json'),
+	};
 };
-const updatePackageJson = async ({ cwd, prettier, githooks, tslint, force }: IOptions, task: ListrTaskWrapper) => {
-	if (!tslint) {
-		return;
-	}
 
-	if (!force && (await existFile(path.join(cwd, 'tslint.json')))) {
-		task.skip('tslint.json exist (use --force to override)');
-		return;
+const updatePackageJson = async ({ prettier, githooks, tslint }: IOptions): Promise<{ [key: string]: any }> => {
+	if (!tslint) {
+		return {};
 	}
 
 	let packageData = await fetchTemplateJson('tslint', 'package.json');
@@ -46,34 +34,11 @@ const updatePackageJson = async ({ cwd, prettier, githooks, tslint, force }: IOp
 		packageData = deepMerge(packageData, await fetchTemplateJson('tslint', 'package-githooks.json'));
 	}
 
-	await fs.writeFile(
-		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(cwd), packageData), null, 2)
-	);
-};
-
-export const listr = (options: IOptions) => {
-	if (!options.tslint) {
-		return [];
-	}
-
 	return {
-		title: 'Tslint',
-		task: () => {
-			return new Listr([
-				{
-					title: 'write tslint file',
-					task: async (ctx, task) => {
-						return Promise.all([createTslintFile(options, task), wait()]);
-					},
-				},
-				{
-					title: 'add tslint to package.json',
-					task: async (ctx, task) => {
-						return Promise.all([updatePackageJson(options, task), wait()]);
-					},
-				},
-			]);
-		},
+		'package.json': packageData,
 	};
 };
+export const create = async (options: IOptions) => ({
+	...(await createTslintFile(options)),
+	...(await updatePackageJson(options)),
+});

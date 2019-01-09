@@ -1,43 +1,16 @@
-import path from 'path';
-import fs from 'fs-extra';
-import Listr, { ListrTaskWrapper } from 'listr';
-
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
-import { wait } from './wait';
-import { existFile } from './exist-file';
 
-const create = async ({ cwd, npmrc, force }: IOptions, task: ListrTaskWrapper) => {
-	if (!force && (await existFile(path.join(cwd, '.npmrc')))) {
-		task.skip('.npmrc exist (use --force to override)');
-		return;
-	}
-
+const createNpmRcFile = async ({ npmrc }: IOptions): Promise<{ [key: string]: any }> => {
 	if (!npmrc) {
-		return;
-	}
-
-	await fs.writeFile(path.join(cwd, '.npmrc'), await fetchTemplate('npmrc', '.npmrc'));
-};
-
-export const listr = (options: IOptions) => {
-	if (!options.npmrc) {
-		return [];
+		return {};
 	}
 
 	return {
-		title: 'Npmrc',
-		task: () => {
-			return new Listr([
-				{
-					title: 'write npmrc file',
-					task: async (ctx, task) => {
-						return Promise.all([create(options, task), wait()]);
-					},
-				},
-			]);
-		},
+		'.npmrc': await fetchTemplate('npmrc', '.npmrc'),
 	};
 };
 
-export default create;
+export const create = async (options: IOptions) => ({
+	...(await createNpmRcFile(options)),
+});

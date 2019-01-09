@@ -1,24 +1,33 @@
 import path from 'path';
 import fs from 'fs-extra';
-import deepMerge from 'deepmerge';
 import execa from 'execa';
-import Listr from 'listr';
-import stringify from 'json-stable-stringify';
+import chalk from 'chalk';
+import ora from 'ora';
 
+import { getCwd } from './get-cwd';
 import { IOptions } from './fetch-options';
-import { wait } from './wait';
-import { fetchPackage } from './fetch-package';
 import { fetchTemplateJson } from './fetch-template';
+import { IMergedFiles } from './merge-files';
 
-const updatePackageJson = async ({ cwd }: IOptions) => {
-	await fs.writeFile(
-		path.join(cwd, 'package.json'),
-		JSON.stringify(deepMerge(await fetchPackage(cwd), await fetchTemplateJson('install', 'package.json')), null, 2)
-	);
-};
+const updatePackageJson = async ({  }: IOptions, changes: object): Promise<{ [key: string]: any }> => {
+	if (!changes['package.json'] || !changes['package.json'].data || !changes['package.json'].data.scipts) {
+		return {};
+	}
 
-const cleanPackageJson = async ({ cwd }: IOptions) => {
-	await fs.writeFile(path.join(cwd, 'package.json'), stringify(await fetchPackage(cwd), { space: '  ' }));
+	const packageData = JSON.parse(changes['package.json'].data);
+
+	if (!packageData || !packageData.scipts) {
+		return {};
+	}
+
+	const scripts = JSON.stringify(changes['package.json'].data.scipts, null, 2);
+	if (!scripts.includes('lint:')) {
+		return {};
+	}
+
+	return {
+		'package.json': await fetchTemplateJson('install', 'package.json'),
+	};
 };
 
 export const install = async ({ install, cwd }: IOptions) => {
@@ -26,63 +35,62 @@ export const install = async ({ install, cwd }: IOptions) => {
 		return;
 	}
 
+	const spinnerInstall = ora('Installing').start();
+
 	try {
+		if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci') {
+			return;
+		}
 		await execa('npm', ['i'], {
 			cwd,
 		});
+		spinnerInstall.stop();
 	} catch (err) {
-		throw new Error(err);
+		spinnerInstall.fail('Installation failed');
+		console.error(chalk.red(err));
+		process.exit(1);
 	}
 
 	return;
 };
 
-export const listr = (options: IOptions) => {
-	if (!options.install) {
-		return {
-			title: 'npm-run-all and clean package.json',
-			task: () => {
-				return new Listr([
-					{
-						title: 'add npm-run-all to package.json',
-						task: async () => {
-							return Promise.all([updatePackageJson(options), wait()]);
-						},
-					},
-					{
-						title: 'clean package.json',
-						task: async () => {
-							return Promise.all([cleanPackageJson(options), wait()]);
-						},
-					},
-				]);
-			},
-		};
+export const openVSCode = async ({ cwd }: IOptions) => {
+	try {
+		if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci') {
+			return;
+		}
+		await execa('code', ['.'], {
+			cwd,
+		});
+	} catch (err) {
+		console.error(chalk.red(err));
+		process.exit(1);
 	}
-
-	return {
-		title: 'Install',
-		task: () => {
-			return new Listr([
-				{
-					title: 'add npm-run-all to package.json',
-					task: async () => {
-						return Promise.all([updatePackageJson(options), wait()]);
-					},
-				},
-				{
-					title: 'clean package.json',
-					task: async () => {
-						return Promise.all([cleanPackageJson(options), wait()]);
-					},
-				},
-				{
-					title: 'execute npm install',
-					task: async () => {
-						return Promise.all([install(options), wait()]);
-					},
-				},
-			]);
-		},
-	};
 };
+
+export const storeOptionsAndChanges = async (options: IOptions, mergedFiles: IMergedFiles) => {
+	try {
+		const cwd = getCwd();
+		await fs.writeFile(
+			path.join(options.cwd || cwd, '.frontend-defaults-rc.json'),
+			JSON.stringify(
+				{
+					options: {
+						...options,
+						cwd: undefined,
+					},
+					mergedFiles,
+				},
+				null,
+				2
+			)
+		);
+	} catch (err) {
+		console.error(chalk.red(err));
+		process.exit(1);
+	}
+};
+
+export const create = async (options: IOptions, changes: object) => ({
+	...updatePackageJson(options, changes),
+});

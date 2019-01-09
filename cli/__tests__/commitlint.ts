@@ -6,5 +6,6 @@ describe('commitlint', async () => {
 		await apiIt('commitlint-via-api', {
 			commitlint: true,
 			force: true,
+			mode: 'api',
 		}));
 });
