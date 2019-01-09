@@ -1,3 +1,3 @@
 
-// eslint-disable-next-line
+// tslint:disable-next-line
 console.log('@namics/frontend-defaults installed');

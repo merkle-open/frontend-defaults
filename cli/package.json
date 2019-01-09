@@ -29,6 +29,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "watch": "tsc -w",
+    "prebuild": "rimraf build",
     "build": "tsc",
     "prepublishOnly": "npm run test"
   },

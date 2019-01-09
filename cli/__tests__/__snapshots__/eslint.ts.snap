@@ -2,7 +2,8 @@
 
 exports[`eslint default 1`] = `
 "/.idea/
-/node_modules/"
+/node_modules/
+/*.js"
 `;
 
 exports[`eslint default 2`] = `
@@ -41,7 +42,7 @@ exports[`eslint default 3`] = `
     },
     \\".eslintignore\\": {
       \\"override\\": false,
-      \\"data\\": \\"/.idea/\\\\n/node_modules/\\"
+      \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
     },
     \\"package.json\\": {
       \\"override\\": false,
@@ -75,7 +76,8 @@ exports[`eslint default 4`] = `
 
 exports[`eslint with-githooks 1`] = `
 "/.idea/
-/node_modules/"
+/node_modules/
+/*.js"
 `;
 
 exports[`eslint with-githooks 2`] = `
@@ -118,7 +120,7 @@ exports[`eslint with-githooks 3`] = `
     },
     \\".eslintignore\\": {
       \\"override\\": false,
-      \\"data\\": \\"/.idea/\\\\n/node_modules/\\"
+      \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
     },
     \\"package.json\\": {
       \\"override\\": false,
@@ -188,7 +190,8 @@ exports[`eslint with-githooks 5`] = `
 
 exports[`eslint with-prettier 1`] = `
 "/.idea/
-/node_modules/"
+/node_modules/
+/*.js"
 `;
 
 exports[`eslint with-prettier 2`] = `
@@ -254,7 +257,7 @@ exports[`eslint with-prettier 3`] = `
     },
     \\".eslintignore\\": {
       \\"override\\": false,
-      \\"data\\": \\"/.idea/\\\\n/node_modules/\\"
+      \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
     }
   }
 }"

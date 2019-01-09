@@ -6,5 +6,5 @@
 		"esModuleInterop": true,
 		"target": "ES2016"
 	},
-	"exclude": ["dist", "build", "node_modules", "__tests__"]
+	"exclude": ["dist", "build", "node_modules", "__tests__", "templates"]
 }

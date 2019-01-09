@@ -25,7 +25,7 @@ exports[`webpack default 1`] = `
   \\"mergedFiles\\": {
     \\"src/index.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"console.log('@namics/frontend-defaults installed');\\\\n\\"
+      \\"data\\": \\"\\\\n// eslint-disable-next-line\\\\nconsole.log('@namics/frontend-defaults installed');\\\\n\\"
     },
     \\"webpack.config.js\\": {
       \\"override\\": false,

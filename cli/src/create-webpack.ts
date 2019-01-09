@@ -15,8 +15,10 @@ const createWebpackConfigFile = async (
 		return {};
 	}
 
+	const indexFileName = ts ? 'index.ts' : 'index.js';
+
 	return {
-		[path.join('src', ts ? 'index.ts' : 'index.js')]: await fetchTemplate('webpack', 'index.js'),
+		[path.join('src', indexFileName)]: await fetchTemplate('webpack', indexFileName),
 		'webpack.config.js': webpackConfig,
 	};
 };
