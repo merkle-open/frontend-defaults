@@ -64,7 +64,7 @@ export const showDiff = async (originalFiles: IFiles, mergedFiles: IMergedFiles,
 			type: 'confirm',
 			name: 'showDiff',
 			message: 'Do you want to take a look at the potential changes',
-			initial: true,
+			initial: false,
 		})) as { showDiff: boolean };
 
 		if (showDiff) {
