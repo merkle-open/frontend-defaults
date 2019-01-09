@@ -6,6 +6,7 @@ import { showDiff } from './log-diff';
 import { writeFiles } from './write-files';
 import { fetchSurveyFiles } from './fetch-survey';
 import { collectChanges } from './collect-changes';
+import chalk from 'chalk';
 
 export interface IApiOptions {
 	cwd?: string;
@@ -66,14 +67,19 @@ export default async (apiOptions: IApiOptions) => {
 		...apiOptions,
 	};
 
-	const { originalFiles, mergedFiles } = await collectChanges(options);
-	const shouldContinue = await showDiff(originalFiles, mergedFiles, options);
-	if (!shouldContinue) {
-		return;
+	try {
+		const { originalFiles, mergedFiles } = await collectChanges(options);
+		const shouldContinue = await showDiff(originalFiles, mergedFiles, options);
+		if (!shouldContinue) {
+			return;
+		}
+		const files = await fetchSurveyFiles(mergedFiles, options);
+		await writeFiles(files, mergedFiles, options);
+		await storeOptionsAndChanges(options, mergedFiles);
+		await install(options);
+		await openVSCode(options);
+	} catch (err) {
+		console.error(chalk.red(err));
+		process.exit(1);
 	}
-	const files = await fetchSurveyFiles(mergedFiles, options);
-	await writeFiles(files, mergedFiles, options);
-	await storeOptionsAndChanges(options, mergedFiles);
-	await install(options);
-	await openVSCode(options);
 };

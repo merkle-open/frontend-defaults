@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npx generate-namics-frontend-defaults`
+`npx @namics/frontend-defaults-cli`
 
 ## Result
 
