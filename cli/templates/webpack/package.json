@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"build": "webpack --mode production",
+		"postinstall": "npm rebuild node-sass",
+		"start": "webpack-dev-server --mode development"
+	}
+}

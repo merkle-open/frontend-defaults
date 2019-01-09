@@ -36,6 +36,7 @@ exports[`webpack default 1`] = `
       \\"data\\": {
         \\"scripts\\": {
           \\"build\\": \\"webpack --mode production\\",
+          \\"postinstall\\": \\"npm rebuild node-sass\\",
           \\"start\\": \\"webpack-dev-server --mode development\\"
         },
         \\"devDependencies\\": {
@@ -61,6 +62,7 @@ exports[`webpack default 2`] = `
 "{
   \\"scripts\\": {
     \\"build\\": \\"webpack --mode production\\",
+    \\"postinstall\\": \\"npm rebuild node-sass\\",
     \\"start\\": \\"webpack-dev-server --mode development\\"
   },
   \\"devDependencies\\": {

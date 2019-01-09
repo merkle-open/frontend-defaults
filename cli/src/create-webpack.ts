@@ -5,7 +5,7 @@ import { generateConfigurations } from 'generate-webpack-config';
 import { Ora } from 'ora';
 
 import { IOptions } from './fetch-options';
-import { fetchTemplate } from './fetch-template';
+import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 
 const createWebpackConfigFile = async (
 	webpackConfig: string,
@@ -47,10 +47,7 @@ const updatePackageJson = async (
 
 	return {
 		'package.json': {
-			scripts: {
-				build: 'webpack --mode production',
-				start: 'webpack-dev-server --mode development',
-			},
+			...await fetchTemplateJson('webpack', 'package.json'),
 			devDependencies,
 		},
 	};
