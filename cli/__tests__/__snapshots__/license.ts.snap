@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`license default 1`] = `
+exports[`licenseMIT default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
@@ -21,7 +21,7 @@ exports[`license default 1`] = `
     \\"force\\": true,
     \\"dryRun\\": false,
     \\"mode\\": \\"cli\\",
-    \\"license\\": \\"Namics AG\\"
+    \\"licenseMIT\\": \\"Namics AG\\"
   },
   \\"mergedFiles\\": {
     \\"LICENSE\\": {
@@ -31,14 +31,14 @@ exports[`license default 1`] = `
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
-        \\"license\\": \\"MIT\\"
+        \\"licenseMIT\\": \\"MIT\\"
       }
     }
   }
 }"
 `;
 
-exports[`license default 2`] = `
+exports[`licenseMIT default 2`] = `
 "MIT License
 
 Copyright (c) 2019-present Namics AG
@@ -63,8 +63,8 @@ SOFTWARE.
 "
 `;
 
-exports[`license default 3`] = `
+exports[`licenseMIT default 3`] = `
 "{
-  \\"license\\": \\"MIT\\"
+  \\"licenseMIT\\": \\"MIT\\"
 }"
 `;

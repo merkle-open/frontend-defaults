@@ -2,7 +2,6 @@ import path from 'path';
 import program from 'commander';
 import fs from 'fs-extra';
 
-import { getPwd } from './get-pwd';
 import { getCwd } from './get-cwd';
 import { fetchSurvey } from './fetch-survey';
 
@@ -69,7 +68,6 @@ export interface IProgram {
 	rawArgs: string[];
 }
 
-const pwd = getPwd();
 const cwd = getCwd();
 
 export const hasOptions = (options: any) => Object.values(options).some((val) => val !== undefined);
@@ -144,10 +142,10 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 };
 
 export const fetchOptions = async (): Promise<IOptions> => {
-	const packageData = JSON.parse(await fs.readFile(path.join(pwd, 'package.json'), 'utf8'));
+	const packageData = require('../package.json');
 
 	const pg = (program
-		.version(packageData.version || '')
+		.version(packageData.version)
 		.option('-pTs, --presetTs', 'Preset typescript (recommended)')
 		.option('-pEs, --presetEs', 'Preset javascript')
 		.option('-ts, --ts', 'with typescript configurations')
