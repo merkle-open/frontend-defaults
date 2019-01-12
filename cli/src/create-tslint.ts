@@ -20,7 +20,11 @@ const createTslintFile = async ({ prettier, tslint }: IOptions): Promise<{ 'tsli
 	};
 };
 
-const updatePackageJson = async ({ prettier, githooks, tslint }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+const updatePackageJson = async ({
+	prettier,
+	githooks,
+	tslint,
+}: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!tslint) {
 		return {};
 	}

@@ -11,7 +11,7 @@ import { IPackageJson } from './type-package-json';
 const createWebpackConfigFile = async (
 	webpackConfig: string,
 	{ ts, webpack }: IOptions
-): Promise<{ 'webpack.config.js'?: string, 'src/index.ts'?: string, 'src/index.js'?: string }> => {
+): Promise<{ 'webpack.config.js'?: string; 'src/index.ts'?: string; 'src/index.js'?: string }> => {
 	if (!webpack) {
 		return {};
 	}
@@ -48,7 +48,7 @@ const updatePackageJson = async (
 
 	return {
 		'package.json': {
-			...await fetchTemplateJson('webpack', 'package.json'),
+			...(await fetchTemplateJson('webpack', 'package.json')),
 			devDependencies,
 		},
 	};

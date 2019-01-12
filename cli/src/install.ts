@@ -12,10 +12,9 @@ import { fetchPackage } from './fetch-package';
 import { IPackageJson } from './type-package-json';
 
 const updatePackageJson = async <P>({ cwd }: IOptions, changes: P): Promise<{ 'package.json'?: IPackageJson }> => {
-
 	const packageDataScripts: { [script: string]: string } = {
-		...((await fetchPackage(cwd)) || {}).scripts || {},
-		...(changes['package.json'] || {}).scripts || {},
+		...(((await fetchPackage(cwd)) || {}).scripts || {}),
+		...((changes['package.json'] || {}).scripts || {}),
 	};
 
 	if (

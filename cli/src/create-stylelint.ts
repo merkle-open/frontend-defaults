@@ -22,7 +22,11 @@ const createStylelintIgnoreFile = async ({ stylelint }: IOptions): Promise<{ '.s
 	};
 };
 
-const updatePackageJson = async ({ cwd, stylelint, githooks }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+const updatePackageJson = async ({
+	cwd,
+	stylelint,
+	githooks,
+}: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!stylelint) {
 		return {};
 	}
