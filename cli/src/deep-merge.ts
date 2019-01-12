@@ -14,7 +14,8 @@ const merge = <
 	T11 = {},
 	T12 = {},
 	T13 = {},
-	T14 = {}
+	T14 = {},
+	T15 = {}
 >(
 	t1: T1,
 	t2: T2,
@@ -29,8 +30,9 @@ const merge = <
 	t11?: T11,
 	t12?: T12,
 	t13?: T13,
-	t14?: T14
-): T1 & T2 & T3 & T4 & T5 & T6 & T7 & T8 & T9 & T10 & T11 & T12 & T13 & T14 => {
+	t14?: T14,
+	t15?: T15
+): T1 & T2 & T3 & T4 & T5 & T6 & T7 & T8 & T9 & T10 & T11 & T12 & T13 & T14 & T15 => {
 	let m = {};
 	m = deepMerge(m, t1);
 	m = deepMerge(m, t2);
@@ -46,6 +48,7 @@ const merge = <
 	m = deepMerge(m, t12 || {});
 	m = deepMerge(m, t13 || {});
 	m = deepMerge(m, t14 || {});
+	m = deepMerge(m, t15 || {});
 	return m as any;
 };
 

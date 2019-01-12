@@ -6,6 +6,7 @@ import { create as createLicense } from './create-license';
 import { create as createEditorconf } from './create-editorconfig';
 import { create as createGitignore } from './create-gitignore';
 import { create as createNodeVersion } from './create-node-version';
+import { create as createGithooks } from './create-githooks';
 import { create as createNpmrc } from './create-npmrc';
 
 import { create as createPrettier } from './create-prettier';
@@ -35,6 +36,7 @@ export const collectChanges = async (options: IOptions) => {
 		await createEditorconf(options),
 		await createGitignore(options),
 		await createNodeVersion(options),
+		await createGithooks(options),
 		await createNpmrc(options),
 		await createPrettier(options),
 		await createTslint(options),

@@ -1,5 +1,7 @@
-import { fetchTemplate } from './fetch-template';
+import latestVersion from 'latest-version';
+
 import { IOptions } from './fetch-options';
+import { IPackageJson } from './type-package-json';
 
 const createNodeVersionFile = async ({ nodeVersion }: IOptions): Promise<{ '.node-version'?: string }> => {
 	if (!nodeVersion) {
@@ -7,21 +9,27 @@ const createNodeVersionFile = async ({ nodeVersion }: IOptions): Promise<{ '.nod
 	}
 
 	return {
-		'.node-version': await fetchTemplate('node-version', '.node-version'),
+		'.node-version': `${await latestVersion('node', { version: 'lts' })}`,
 	};
 };
 
-const createHuskyrcFile = async ({ githooks }: IOptions): Promise<{ '.huskyrc'?: string }> => {
-	if (!githooks) {
+const updatePackageJson = async ({ nodeVersion }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+	if (!nodeVersion) {
 		return {};
 	}
 
+	const nodeV = await latestVersion('node', { version: 'lts' });
+
 	return {
-		'.huskyrc': await fetchTemplate('node-version', '.huskyrc'),
+		'package.json': {
+			engines: {
+				node: `>=${nodeV.trim().split('.')[0]}`,
+			},
+		},
 	};
 };
 
 export const create = async (options: IOptions) => ({
 	...(await createNodeVersionFile(options)),
-	...(await createHuskyrcFile(options)),
+	...(await updatePackageJson(options)),
 });

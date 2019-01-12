@@ -23,17 +23,30 @@ exports[`node-version default 1`] = `
     \\"mode\\": \\"cli\\"
   },
   \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"engines\\": {
+          \\"node\\": \\">=10\\"
+        }
+      }
+    },
     \\".node-version\\": {
       \\"override\\": false,
-      \\"data\\": \\"8.12.0\\\\n\\"
+      \\"data\\": \\"10.15.0\\"
     }
   }
 }"
 `;
 
-exports[`node-version default 2`] = `
-"8.12.0
-"
+exports[`node-version default 2`] = `"10.15.0"`;
+
+exports[`node-version default 3`] = `
+"{
+  \\"engines\\": {
+    \\"node\\": \\">=10\\"
+  }
+}"
 `;
 
 exports[`node-version with-githooks 1`] = `
@@ -59,9 +72,17 @@ exports[`node-version with-githooks 1`] = `
     \\"mode\\": \\"cli\\"
   },
   \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"engines\\": {
+          \\"node\\": \\">=10\\"
+        }
+      }
+    },
     \\".node-version\\": {
       \\"override\\": false,
-      \\"data\\": \\"8.12.0\\\\n\\"
+      \\"data\\": \\"10.15.0\\"
     },
     \\".huskyrc\\": {
       \\"override\\": false,
@@ -79,7 +100,12 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`node-version with-githooks 3`] = `
-"8.12.0
-"
+exports[`node-version with-githooks 3`] = `"10.15.0"`;
+
+exports[`node-version with-githooks 4`] = `
+"{
+  \\"engines\\": {
+    \\"node\\": \\">=10\\"
+  }
+}"
 `;
