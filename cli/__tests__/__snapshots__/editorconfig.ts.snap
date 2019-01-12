@@ -57,7 +57,7 @@ exports[`editorconfig default 2`] = `
     \\"readme\\": false,
     \\"githooks\\": false,
     \\"commitlint\\": false,
-    \\"nodenv\\": false,
+    \\"nodeVersion\\": false,
     \\"webpack\\": false,
     \\"install\\": false,
     \\"force\\": true,

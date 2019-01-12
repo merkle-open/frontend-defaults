@@ -15,7 +15,7 @@ exports[`commitlint default 1`] = `
     \\"readme\\": false,
     \\"githooks\\": true,
     \\"commitlint\\": true,
-    \\"nodenv\\": false,
+    \\"nodeVersion\\": false,
     \\"webpack\\": false,
     \\"install\\": false,
     \\"force\\": true,

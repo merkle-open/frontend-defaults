@@ -28,7 +28,7 @@ export const TYPE_CHOICES = {
 	licenseMIT: 'licenseMIT' as 'licenseMIT',
 	editorconfig: 'editorconfig' as 'editorconfig',
 	npmrc: 'npmrc' as 'npmrc',
-	nodenv: 'nodenv' as 'nodenv',
+	nodeVersion: 'nodeVersion' as 'nodeVersion',
 	gitignore: 'gitignore' as 'gitignore',
 	githooks: 'githooks' as 'githooks',
 
@@ -120,7 +120,7 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 		npmrc: project.includes(TYPE_CHOICES.npmrc),
 		readme: project.includes(TYPE_CHOICES.readme),
 		githooks: project.includes(TYPE_CHOICES.githooks),
-		nodenv: project.includes(TYPE_CHOICES.nodenv),
+		nodeVersion: project.includes(TYPE_CHOICES.nodeVersion),
 
 		commitlint: linters.includes(TYPE_CHOICES.commitlint),
 		prettier: linters.includes(TYPE_CHOICES.prettier),

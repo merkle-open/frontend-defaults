@@ -5,7 +5,7 @@ import { create as createReadme } from './create-readme';
 import { create as createLicense } from './create-license';
 import { create as createEditorconf } from './create-editorconfig';
 import { create as createGitignore } from './create-gitignore';
-import { create as createNodenv } from './create-nodenv';
+import { create as createNodeVersion } from './create-node-version';
 import { create as createNpmrc } from './create-npmrc';
 
 import { create as createPrettier } from './create-prettier';
@@ -34,7 +34,7 @@ export const collectChanges = async (options: IOptions) => {
 		await createLicense(options),
 		await createEditorconf(options),
 		await createGitignore(options),
-		await createNodenv(options),
+		await createNodeVersion(options),
 		await createNpmrc(options),
 		await createPrettier(options),
 		await createTslint(options),

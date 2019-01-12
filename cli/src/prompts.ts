@@ -107,7 +107,7 @@ export const getProjectConfigs = promptCache(
 				getChoice(TYPE_CHOICES.licenseMIT, 'MIT license'),
 				getChoice(TYPE_CHOICES.editorconfig),
 				getChoice(TYPE_CHOICES.npmrc),
-				getChoice(TYPE_CHOICES.nodenv),
+				getChoice(TYPE_CHOICES.nodeVersion),
 				getChoice(TYPE_CHOICES.gitignore),
 				getChoice(TYPE_CHOICES.githooks),
 			],

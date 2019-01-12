@@ -15,7 +15,7 @@ exports[`readme default 1`] = `
     \\"readme\\": true,
     \\"githooks\\": false,
     \\"commitlint\\": false,
-    \\"nodenv\\": false,
+    \\"nodeVersion\\": false,
     \\"webpack\\": false,
     \\"install\\": false,
     \\"force\\": true,

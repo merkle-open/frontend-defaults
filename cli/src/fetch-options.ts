@@ -25,7 +25,7 @@ export interface IOptions {
 	readme: boolean;
 	githooks: boolean;
 	commitlint: boolean;
-	nodenv: boolean;
+	nodeVersion: boolean;
 	webpack: boolean;
 
 	install: boolean;
@@ -56,7 +56,7 @@ export interface IProgram {
 	readme?: boolean;
 	githooks?: boolean;
 	commitlint?: boolean;
-	nodenv?: boolean;
+	nodeVersion?: boolean;
 	webpack?: boolean;
 
 	install?: boolean;
@@ -96,7 +96,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			readme: true,
 			githooks: true,
 			commitlint: true,
-			nodenv: true,
+			nodeVersion: true,
 			webpack: true,
 		};
 	}
@@ -116,7 +116,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			readme: true,
 			githooks: true,
 			commitlint: true,
-			nodenv: true,
+			nodeVersion: true,
 			webpack: true,
 		};
 	}
@@ -135,7 +135,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		readme: answers.readme || false,
 		githooks: answers.githooks || false,
 		commitlint: answers.commitlint || false,
-		nodenv: answers.nodenv || false,
+		nodeVersion: answers.nodeVersion || false,
 		webpack: answers.webpack || false,
 	};
 };
@@ -160,7 +160,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-r --readme', 'add readme file')
 		.option('-gh --githooks', 'add githooks')
 		.option('-c --commitlint', 'add commitlint (will enable githooks too)')
-		.option('-nv --nodenv', 'add nodenv node-version file')
+		.option('-nv --nodeVersion', 'add node-version file')
 		.option('-w --webpack', 'add webpack with webpack-config-plugins')
 		.option('-i --install', 'install dependencies')
 		.option('-ni --noInstall', "don't install dependencies")

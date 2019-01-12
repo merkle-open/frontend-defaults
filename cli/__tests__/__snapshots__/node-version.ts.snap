@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`nodenv default 1`] = `
+exports[`node-version default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
@@ -15,7 +15,7 @@ exports[`nodenv default 1`] = `
     \\"readme\\": false,
     \\"githooks\\": false,
     \\"commitlint\\": false,
-    \\"nodenv\\": true,
+    \\"nodeVersion\\": true,
     \\"webpack\\": false,
     \\"install\\": false,
     \\"force\\": true,
@@ -31,12 +31,12 @@ exports[`nodenv default 1`] = `
 }"
 `;
 
-exports[`nodenv default 2`] = `
+exports[`node-version default 2`] = `
 "8.12.0
 "
 `;
 
-exports[`nodenv with-githooks 1`] = `
+exports[`node-version with-githooks 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
@@ -51,7 +51,7 @@ exports[`nodenv with-githooks 1`] = `
     \\"readme\\": false,
     \\"githooks\\": true,
     \\"commitlint\\": false,
-    \\"nodenv\\": true,
+    \\"nodeVersion\\": true,
     \\"webpack\\": false,
     \\"install\\": false,
     \\"force\\": true,
@@ -71,7 +71,7 @@ exports[`nodenv with-githooks 1`] = `
 }"
 `;
 
-exports[`nodenv with-githooks 2`] = `
+exports[`node-version with-githooks 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -79,7 +79,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`nodenv with-githooks 3`] = `
+exports[`node-version with-githooks 3`] = `
 "8.12.0
 "
 `;
