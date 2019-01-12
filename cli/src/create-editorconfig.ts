@@ -1,7 +1,7 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 
-const createEditorconfig = async ({ editorconfig }: IOptions): Promise<{ [key: string]: any }> => {
+const createEditorconfig = async ({ editorconfig }: IOptions): Promise<{ '.editorconfig'?: string }> => {
 	if (!editorconfig) {
 		return {};
 	}

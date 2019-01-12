@@ -1,16 +1,24 @@
 import { prompt } from 'enquirer';
-import semver from 'semver';
 import chalk from 'chalk';
 
 import { IOptions } from './fetch-options';
 import { getCwd } from './get-cwd';
-import { templatePackageSnippet } from './template-package-snippet';
-import { existPackage } from './exist-package';
 import { IMergedFiles } from './merge-files';
+import { IPackageJson } from './type-package-json';
+import {
+	getPackageJson,
+	getLanguage,
+	getTslint,
+	getEslint,
+	getProjectConfigs,
+	getLinters,
+	getWebpack,
+	getInstall,
+} from './prompts';
 
 const cwd = getCwd();
 
-const TYPE_CHOICES = {
+export const TYPE_CHOICES = {
 	ts: 'typescript' as 'typescript',
 	tslint: 'tslint' as 'tslint',
 	es: 'javascript' as 'javascript',
@@ -33,8 +41,10 @@ const TYPE_CHOICES = {
 	force: 'force' as 'force',
 };
 
+export type TLanguage = typeof TYPE_CHOICES.ts | typeof TYPE_CHOICES.es;
+
 interface IAnswers {
-	language: typeof TYPE_CHOICES.ts | typeof TYPE_CHOICES.es;
+	language: TLanguage;
 	tslint: boolean;
 	eslint: boolean;
 	project: string[];
@@ -42,15 +52,9 @@ interface IAnswers {
 	webpack: boolean;
 	install: boolean;
 	force: boolean;
-	packageJson: string;
+	packageJson?: IPackageJson;
 	licenseMIT?: string;
 }
-
-const getChoice = (name: string, value?: string) => ({
-	name,
-	value: value || name,
-	message: value || name,
-});
 
 export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOptions) => {
 	const filesChoices = Object.keys(mergedFiles).map((fileName) => ({
@@ -77,133 +81,29 @@ export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOpti
 };
 
 export const fetchSurvey = async (): Promise<IOptions> => {
-	const existPackageJson = await existPackage(cwd);
-	let answers = {} as IAnswers;
+	// let answers = {} as IAnswers;
 
-	if (!existPackageJson) {
-		const { packageJson } = await prompt<{ packageJson: { result: string } }>({
-			type: 'snippet',
-			name: 'packageJson',
-			message: 'Fill out the fields in package.json',
-			required: true,
-			fields: [
-				{
-					name: 'author_name',
-					message: 'Author Name',
-				},
-				{
-					name: 'version',
-					validate(value: string, _state: any, item: any) {
-						if (item && item.name === 'version' && !semver.valid(value)) {
-							return chalk.red('version should be a valid semver value');
-						}
-						return true;
-					},
-				},
-			],
-			template: templatePackageSnippet,
-		} as any);
-		Object.assign(answers, {
-			packageJson: JSON.parse(packageJson.result.replace(/\n/g, '')),
-		});
-	}
+	const answers = {
+		...(await getPackageJson(cwd)),
+		...(await getLanguage()),
+		...(await getTslint(await getLanguage())),
+		...(await getEslint(await getLanguage())),
+		...(await getProjectConfigs()),
+		...(await getLinters()),
+		...(await getWebpack()),
+		...(await getInstall()),
+	};
 
-	Object.assign(
-		answers,
-		await prompt<{ language: string }>({
-			type: 'select',
-			name: 'language',
-			message: 'Select prefered language',
-			choices: [
-				{
-					name: TYPE_CHOICES.ts,
-				},
-				{
-					name: TYPE_CHOICES.es,
-				},
-			],
-		})
-	);
-
-	if (answers.language === TYPE_CHOICES.ts) {
-		Object.assign(
-			answers,
-			await prompt<{ tslint: boolean }>({
-				type: 'confirm',
-				name: 'tslint',
-				message: 'Do you want to use tslint',
-				initial: true,
-			})
-		);
-	}
-
-	if (answers.language === TYPE_CHOICES.es) {
-		Object.assign(
-			answers,
-			await prompt<{ eslint: boolean }>({
-				type: 'confirm',
-				name: 'eslint',
-				message: 'Do you want to use eslint',
-				initial: true,
-			})
-		);
-	}
-
-	Object.assign(
-		answers,
-		await prompt({
-			type: 'multiselect',
-			name: 'project',
-			message: 'Select project defaults \n',
-			initial: [0, 2, 3, 4, 5, 6],
-			choices: [
-				getChoice(TYPE_CHOICES.readme),
-				getChoice(TYPE_CHOICES.licenseMIT, 'MIT license'),
-				getChoice(TYPE_CHOICES.editorconfig),
-				getChoice(TYPE_CHOICES.npmrc),
-				getChoice(TYPE_CHOICES.nodenv),
-				getChoice(TYPE_CHOICES.gitignore),
-				getChoice(TYPE_CHOICES.githooks),
-			],
-		})
-	);
-
-	Object.assign(
-		answers,
-		await prompt({
-			type: 'multiselect',
-			name: 'linters',
-			message: 'Select autoformatter and additional linters \n',
-			initial: [0, 1, 2],
-			choices: [
-				getChoice(TYPE_CHOICES.prettier),
-				getChoice(TYPE_CHOICES.stylelint),
-				getChoice(TYPE_CHOICES.commitlint),
-			],
-		})
-	);
-
-	Object.assign(
-		answers,
-		await prompt({
-			type: 'confirm',
-			name: 'webpack',
-			message: 'Do you want to use webpack',
-			initial: true,
-		})
-	);
-
-	Object.assign(
-		answers,
-		await prompt({
-			type: 'confirm',
-			name: 'install',
-			message: 'Do you want to run install afterwards',
-			initial: true,
-		})
-	);
-
-	const { language, tslint, eslint, project, linters, webpack, install, force, licenseMIT, packageJson } = answers;
+	const {
+		language,
+		tslint = false,
+		eslint = false,
+		project = [],
+		linters = [],
+		webpack,
+		install,
+		packageJson,
+	} = answers;
 
 	return {
 		cwd,
@@ -215,7 +115,7 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 		eslint,
 
 		editorconfig: project.includes(TYPE_CHOICES.editorconfig),
-		licenseMIT,
+		licenseMIT: '',
 		gitignore: project.includes(TYPE_CHOICES.gitignore),
 		npmrc: project.includes(TYPE_CHOICES.npmrc),
 		readme: project.includes(TYPE_CHOICES.readme),
@@ -228,7 +128,7 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 
 		webpack,
 		install,
-		force,
+		force: false,
 		dryRun: false,
 
 		mode: 'survey',

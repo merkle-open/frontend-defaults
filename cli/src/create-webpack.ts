@@ -6,11 +6,12 @@ import { Ora } from 'ora';
 
 import { IOptions } from './fetch-options';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
+import { IPackageJson } from './type-package-json';
 
 const createWebpackConfigFile = async (
 	webpackConfig: string,
 	{ ts, webpack }: IOptions
-): Promise<{ [key: string]: any }> => {
+): Promise<{ 'webpack.config.js'?: string, 'src/index.ts'?: string, 'src/index.js'?: string }> => {
 	if (!webpack) {
 		return {};
 	}
@@ -27,7 +28,7 @@ const updatePackageJson = async (
 	npmInstall: string,
 	{ webpack }: IOptions,
 	oraSpinner: Ora
-): Promise<{ [key: string]: any }> => {
+): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!webpack) {
 		return {};
 	}
@@ -53,7 +54,7 @@ const updatePackageJson = async (
 	};
 };
 
-export const create = async (options: IOptions, oraSpinner: Ora): Promise<{ [key: string]: any }> => {
+export const create = async (options: IOptions, oraSpinner: Ora) => {
 	if (!options.webpack) {
 		return {};
 	}

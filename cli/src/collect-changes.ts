@@ -1,6 +1,5 @@
 import chalk from 'chalk';
 import ora from 'ora';
-import deepMerge from 'deepmerge';
 
 import { create as createReadme } from './create-readme';
 import { create as createLicense } from './create-license';
@@ -24,35 +23,35 @@ import { IOptions } from './fetch-options';
 import { fetchOriginalFiles } from './fetch-original-files';
 import { mergeFiles } from './merge-files';
 import { IPackageJson } from './type-package-json';
+import deepMerge from './deep-merge';
 
 export const collectChanges = async (options: IOptions) => {
 	const spinnerCollectChanges = ora('Collect changes').start();
 
-	let changes = {};
+	const changes1 = deepMerge(
+		{ 'package.json': options.packageJson ? options.packageJson : undefined },
+		await createReadme(options),
+		await createLicense(options),
+		await createEditorconf(options),
+		await createGitignore(options),
+		await createNodenv(options),
+		await createNpmrc(options),
+		await createPrettier(options),
+		await createTslint(options),
+		await createTsconfig(options),
+		await createStylelint(options),
+		await createCommitlint(options),
+		await createEslint(options),
+		await createWebpack(options, spinnerCollectChanges)
+	);
 
-	if (options.packageJson) {
-		changes['package.json'] = options.packageJson;
-	}
-
-	changes = deepMerge(changes, await createReadme(options));
-	changes = deepMerge(changes, await createLicense(options));
-	changes = deepMerge(changes, await createEditorconf(options));
-	changes = deepMerge(changes, await createGitignore(options));
-	changes = deepMerge(changes, await createNodenv(options));
-	changes = deepMerge(changes, await createNpmrc(options));
-	changes = deepMerge(changes, await createPrettier(options));
-	changes = deepMerge(changes, await createTslint(options));
-	changes = deepMerge(changes, await createTsconfig(options));
-	changes = deepMerge(changes, await createStylelint(options));
-	changes = deepMerge(changes, await createCommitlint(options));
-	changes = deepMerge(changes, await createEslint(options));
-	changes = deepMerge(changes, await createWebpack(options, spinnerCollectChanges));
-	changes = deepMerge(changes, await createInstall(options, changes));
+	const changes = deepMerge(changes1, await createInstall<typeof changes1>(options, changes1));
 
 	const originalFiles = await fetchOriginalFiles(options.cwd, changes);
 	const mergedFiles = mergeFiles(originalFiles, changes);
 
 	if (Object.keys(mergedFiles).length <= 0) {
+		spinnerCollectChanges.stop();
 		console.log(chalk.red('\n  No changes required!\n'));
 		process.exit(1);
 	}

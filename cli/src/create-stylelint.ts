@@ -1,7 +1,8 @@
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
+import { IPackageJson } from './type-package-json';
 
-const createStylelintConfigFile = async ({ stylelint }: IOptions): Promise<{ [key: string]: any }> => {
+const createStylelintConfigFile = async ({ stylelint }: IOptions): Promise<{ 'stylelint.config.js'?: string }> => {
 	if (!stylelint) {
 		return {};
 	}
@@ -11,7 +12,7 @@ const createStylelintConfigFile = async ({ stylelint }: IOptions): Promise<{ [ke
 	};
 };
 
-const createStylelintIgnoreFile = async ({ stylelint }: IOptions): Promise<{ [key: string]: any }> => {
+const createStylelintIgnoreFile = async ({ stylelint }: IOptions): Promise<{ '.stylelintignore'?: string }> => {
 	if (!stylelint) {
 		return {};
 	}
@@ -21,7 +22,7 @@ const createStylelintIgnoreFile = async ({ stylelint }: IOptions): Promise<{ [ke
 	};
 };
 
-const updatePackageJson = async ({ cwd, stylelint, githooks }: IOptions): Promise<{ [key: string]: any }> => {
+const updatePackageJson = async ({ cwd, stylelint, githooks }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!stylelint) {
 		return {};
 	}

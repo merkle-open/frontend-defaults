@@ -2,8 +2,9 @@ import deepMerge from 'deepmerge';
 
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
+import { IPackageJson } from './type-package-json';
 
-const createTslintFile = async ({ prettier, tslint }: IOptions): Promise<{ [key: string]: any }> => {
+const createTslintFile = async ({ prettier, tslint }: IOptions): Promise<{ 'tslint.json'?: string }> => {
 	if (!tslint) {
 		return {};
 	}
@@ -19,7 +20,7 @@ const createTslintFile = async ({ prettier, tslint }: IOptions): Promise<{ [key:
 	};
 };
 
-const updatePackageJson = async ({ prettier, githooks, tslint }: IOptions): Promise<{ [key: string]: any }> => {
+const updatePackageJson = async ({ prettier, githooks, tslint }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!tslint) {
 		return {};
 	}

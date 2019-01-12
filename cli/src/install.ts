@@ -8,20 +8,21 @@ import { getCwd } from './get-cwd';
 import { IOptions } from './fetch-options';
 import { fetchTemplateJson } from './fetch-template';
 import { IMergedFiles } from './merge-files';
+import { fetchPackage } from './fetch-package';
+import { IPackageJson } from './type-package-json';
 
-const updatePackageJson = async ({  }: IOptions, changes: object): Promise<{ [key: string]: any }> => {
-	if (!changes['package.json'] || !changes['package.json'].data || !changes['package.json'].data.scipts) {
-		return {};
-	}
+const updatePackageJson = async <P>({ cwd }: IOptions, changes: P): Promise<{ 'package.json'?: IPackageJson }> => {
 
-	const packageData = JSON.parse(changes['package.json'].data);
+	const packageDataScripts: { [script: string]: string } = {
+		...((await fetchPackage(cwd)) || {}).scripts || {},
+		...(changes['package.json'] || {}).scripts || {},
+	};
 
-	if (!packageData || !packageData.scipts) {
-		return {};
-	}
-
-	const scripts = JSON.stringify(changes['package.json'].data.scipts, null, 2);
-	if (!scripts.includes('lint:')) {
+	if (
+		!Object.keys(packageDataScripts)
+			.join(',')
+			.includes('lint:')
+	) {
 		return {};
 	}
 
@@ -91,6 +92,6 @@ export const storeOptionsAndChanges = async (options: IOptions, mergedFiles: IMe
 	}
 };
 
-export const create = async (options: IOptions, changes: object) => ({
-	...updatePackageJson(options, changes),
+export const create = async <P>(options: IOptions, changes: P) => ({
+	...(await updatePackageJson(options, changes)),
 });

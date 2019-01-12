@@ -1,7 +1,8 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
+import { IPackageJson } from './type-package-json';
 
-const createLicense = async ({ licenseMIT }: IOptions): Promise<{ [key: string]: any }> => {
+const createLicense = async ({ licenseMIT }: IOptions): Promise<{ LICENSE?: string }> => {
 	if (typeof licenseMIT !== 'string' || licenseMIT === '') {
 		return {};
 	}
@@ -13,14 +14,14 @@ const createLicense = async ({ licenseMIT }: IOptions): Promise<{ [key: string]:
 	};
 };
 
-const updatePackageJson = async ({ licenseMIT }: IOptions): Promise<{ [key: string]: any }> => {
+const updatePackageJson = async ({ licenseMIT }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (typeof licenseMIT !== 'string' || licenseMIT === '') {
 		return {};
 	}
 
 	return {
 		'package.json': {
-			licenseMIT: 'MIT',
+			license: 'MIT',
 		},
 	};
 };

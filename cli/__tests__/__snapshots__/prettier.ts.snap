@@ -23,14 +23,6 @@ exports[`prettier default 1`] = `
     \\"mode\\": \\"cli\\"
   },
   \\"mergedFiles\\": {
-    \\".prettierignore\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# Node\\\\n**/node_modules\\\\n**/package.json\\\\n**/package-lock.json\\\\n\\\\n# Generated\\\\n**/bower.json\\\\n**/lerna.json\\\\n\\\\n# Build\\\\n**/build\\\\n**/dist\\\\n**/public\\\\n**/coverage\\\\n**/storybook-static\\\\n\\\\n# Nitro\\\\n**/project/blueprints\\\\n**/.yo-rc.json\\"
-    },
-    \\".prettierrc.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = require('@namics/prettier-config');\\\\n\\"
-    },
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
@@ -42,6 +34,14 @@ exports[`prettier default 1`] = `
           \\"prettier\\": \\"1.14.3\\"
         }
       }
+    },
+    \\".prettierignore\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# Node\\\\n**/node_modules\\\\n**/package.json\\\\n**/package-lock.json\\\\n\\\\n# Generated\\\\n**/bower.json\\\\n**/lerna.json\\\\n\\\\n# Build\\\\n**/build\\\\n**/dist\\\\n**/public\\\\n**/coverage\\\\n**/storybook-static\\\\n\\\\n# Nitro\\\\n**/project/blueprints\\\\n**/.yo-rc.json\\"
+    },
+    \\".prettierrc.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"module.exports = require('@namics/prettier-config');\\\\n\\"
     }
   }
 }"
@@ -109,18 +109,6 @@ exports[`prettier with-githooks 1`] = `
     \\"mode\\": \\"cli\\"
   },
   \\"mergedFiles\\": {
-    \\".huskyrc\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
-    },
-    \\".prettierignore\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# Node\\\\n**/node_modules\\\\n**/package.json\\\\n**/package-lock.json\\\\n\\\\n# Generated\\\\n**/bower.json\\\\n**/lerna.json\\\\n\\\\n# Build\\\\n**/build\\\\n**/dist\\\\n**/public\\\\n**/coverage\\\\n**/storybook-static\\\\n\\\\n# Nitro\\\\n**/project/blueprints\\\\n**/.yo-rc.json\\"
-    },
-    \\".prettierrc.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = require('@namics/prettier-config');\\\\n\\"
-    },
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
@@ -146,6 +134,18 @@ exports[`prettier with-githooks 1`] = `
           \\"prettier\\": \\"1.14.3\\"
         }
       }
+    },
+    \\".huskyrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
+    },
+    \\".prettierignore\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# Node\\\\n**/node_modules\\\\n**/package.json\\\\n**/package-lock.json\\\\n\\\\n# Generated\\\\n**/bower.json\\\\n**/lerna.json\\\\n\\\\n# Build\\\\n**/build\\\\n**/dist\\\\n**/public\\\\n**/coverage\\\\n**/storybook-static\\\\n\\\\n# Nitro\\\\n**/project/blueprints\\\\n**/.yo-rc.json\\"
+    },
+    \\".prettierrc.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"module.exports = require('@namics/prettier-config');\\\\n\\"
     }
   }
 }"

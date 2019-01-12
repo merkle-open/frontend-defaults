@@ -3,7 +3,7 @@ import path from 'path';
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 
-const createReadme = async ({ cwd, readme }: IOptions): Promise<{ [key: string]: any }> => {
+const createReadme = async ({ cwd, readme }: IOptions): Promise<{ 'README.md'?: string }> => {
 	if (!readme) {
 		return {};
 	}

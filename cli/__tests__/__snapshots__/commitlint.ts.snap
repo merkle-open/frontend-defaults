@@ -23,10 +23,6 @@ exports[`commitlint default 1`] = `
     \\"mode\\": \\"cli\\"
   },
   \\"mergedFiles\\": {
-    \\".huskyrc\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
-    },
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
@@ -57,6 +53,10 @@ exports[`commitlint default 1`] = `
           \\"lint-staged\\": \\"7.3.0\\"
         }
       }
+    },
+    \\".huskyrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
     }
   }
 }"

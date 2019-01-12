@@ -1,16 +1,15 @@
-import path from 'path';
 import program from 'commander';
-import fs from 'fs-extra';
 
 import { getCwd } from './get-cwd';
 import { fetchSurvey } from './fetch-survey';
+import { IPackageJson } from './type-package-json';
 
 export type TMode = 'cli' | 'api' | 'survey';
 
 // define cli api by using commander
 export interface IOptions {
 	cwd: string;
-	packageJson?: string;
+	packageJson?: IPackageJson;
 
 	// details
 	ts: boolean;
@@ -134,7 +133,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		gitignore: answers.gitignore || false,
 		npmrc: answers.npmrc || false,
 		readme: answers.readme || false,
-		githooks: answers.commitlint || answers.githooks || false,
+		githooks: answers.githooks || false,
 		commitlint: answers.commitlint || false,
 		nodenv: answers.nodenv || false,
 		webpack: answers.webpack || false,

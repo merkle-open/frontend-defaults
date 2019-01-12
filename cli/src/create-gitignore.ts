@@ -1,7 +1,7 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 
-const createGitignoreFile = async ({ gitignore }: IOptions): Promise<{ [key: string]: any }> => {
+const createGitignoreFile = async ({ gitignore }: IOptions): Promise<{ '.gitignore'?: string }> => {
 	if (!gitignore) {
 		return {};
 	}
@@ -11,7 +11,7 @@ const createGitignoreFile = async ({ gitignore }: IOptions): Promise<{ [key: str
 	};
 };
 
-const createGitattributesFile = async ({ gitignore }: IOptions): Promise<{ [key: string]: any }> => {
+const createGitattributesFile = async ({ gitignore }: IOptions): Promise<{ '.gitattributes'?: string }> => {
 	if (!gitignore) {
 		return {};
 	}

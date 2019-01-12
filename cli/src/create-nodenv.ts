@@ -1,7 +1,7 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 
-const createNodeVersionFile = async ({ nodenv }: IOptions): Promise<{ [key: string]: any }> => {
+const createNodeVersionFile = async ({ nodenv }: IOptions): Promise<{ '.node-version'?: string }> => {
 	if (!nodenv) {
 		return {};
 	}
@@ -11,7 +11,7 @@ const createNodeVersionFile = async ({ nodenv }: IOptions): Promise<{ [key: stri
 	};
 };
 
-const createHuskyrcFile = async ({ githooks }: IOptions): Promise<{ [key: string]: any }> => {
+const createHuskyrcFile = async ({ githooks }: IOptions): Promise<{ '.huskyrc'?: string }> => {
 	if (!githooks) {
 		return {};
 	}

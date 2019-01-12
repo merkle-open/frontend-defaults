@@ -1,7 +1,8 @@
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
+import { IPackageJson } from './type-package-json';
 
-const createPrettieringoreFile = async ({ prettier }: IOptions): Promise<{ [key: string]: any }> => {
+const createPrettieringoreFile = async ({ prettier }: IOptions): Promise<{ '.prettierignore'?: string }> => {
 	if (!prettier) {
 		return {};
 	}
@@ -11,7 +12,7 @@ const createPrettieringoreFile = async ({ prettier }: IOptions): Promise<{ [key:
 	};
 };
 
-const createPrittierrcFile = async ({ prettier }: IOptions): Promise<{ [key: string]: any }> => {
+const createPrittierrcFile = async ({ prettier }: IOptions): Promise<{ '.prettierrc.js'?: string }> => {
 	if (!prettier) {
 		return {};
 	}
@@ -21,7 +22,7 @@ const createPrittierrcFile = async ({ prettier }: IOptions): Promise<{ [key: str
 	};
 };
 
-const updatePackageJson = async ({ prettier, githooks }: IOptions): Promise<{ [key: string]: any }> => {
+const updatePackageJson = async ({ prettier, githooks }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!prettier) {
 		return {};
 	}

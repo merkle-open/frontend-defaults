@@ -7,10 +7,11 @@ import { writeFiles } from './write-files';
 import { fetchSurveyFiles } from './fetch-survey';
 import { collectChanges } from './collect-changes';
 import chalk from 'chalk';
+import { IPackageJson } from './type-package-json';
 
 export interface IApiOptions {
 	cwd?: string;
-	packageJson?: string;
+	packageJson?: IPackageJson;
 
 	// details
 	ts?: boolean;
@@ -66,6 +67,11 @@ export default async (apiOptions: IApiOptions) => {
 		...defaultApiOptions,
 		...apiOptions,
 	};
+
+	// enable githooks always with commitlint
+	if (options.commitlint) {
+		options.githooks = true;
+	}
 
 	try {
 		const { originalFiles, mergedFiles } = await collectChanges(options);

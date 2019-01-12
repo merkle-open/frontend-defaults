@@ -1,7 +1,7 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 
-const createNpmRcFile = async ({ npmrc }: IOptions): Promise<{ [key: string]: any }> => {
+const createNpmRcFile = async ({ npmrc }: IOptions): Promise<{ '.npmrc'?: string }> => {
 	if (!npmrc) {
 		return {};
 	}
