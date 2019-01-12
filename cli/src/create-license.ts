@@ -1,27 +1,44 @@
 import { fetchTemplate } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { TYPE_CHOICES } from './fetch-survey';
+import chalk from 'chalk';
 
-const createLicense = async ({ licenseMIT }: IOptions): Promise<{ LICENSE?: string }> => {
-	if (typeof licenseMIT !== 'string' || licenseMIT === '') {
+const createLicense = async ({ license, copyrightHolder }: IOptions): Promise<{ LICENSE?: string }> => {
+	if (license !== TYPE_CHOICES.licenseOpenSource) {
+		return {};
+	}
+
+	if (!copyrightHolder) {
+		console.warn(chalk.yellow('CopyrightHolder `--copyrightHolder=[string]` needed for open source license MIT'));
 		return {};
 	}
 
 	return {
 		LICENSE: (await fetchTemplate('license', 'LICENSE'))
 			.replace('COPYRIGHT_YEAR', new Date().getFullYear().toString())
-			.replace('COPYRIGHT_HOLDER', licenseMIT),
+			.replace('COPYRIGHT_HOLDER', copyrightHolder),
 	};
 };
 
-const updatePackageJson = async ({ licenseMIT }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
-	if (typeof licenseMIT !== 'string' || licenseMIT === '') {
+const updatePackageJson = async ({ license }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+	if (!license) {
 		return {};
+	}
+
+	if (license === TYPE_CHOICES.licenseClosedSource) {
+		return {
+			'package.json': {
+				license: 'UNLICENSED',
+				private: true,
+			},
+		};
 	}
 
 	return {
 		'package.json': {
 			license: 'MIT',
+			private: false,
 		},
 	};
 };

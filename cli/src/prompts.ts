@@ -5,7 +5,7 @@ import { prompt } from 'enquirer';
 import getUsername from 'username';
 
 import { promptCache } from './prompt-cache';
-import { TYPE_CHOICES, TLanguage } from './fetch-survey';
+import { TYPE_CHOICES, TLanguage, TLicense } from './fetch-survey';
 import { IPackageJson } from './type-package-json';
 import { templatePackageSnippet } from './template-package-snippet';
 import { fetchPackage } from './fetch-package';
@@ -71,6 +71,43 @@ export const getLanguage = promptCache(async () => {
 	});
 });
 
+export const getLicense = promptCache(
+	async (): Promise<{ license: TLicense; copyrightHolder?: string }> => {
+		const { license } = await prompt<{ license: TLicense }>({
+			type: 'select',
+			name: 'license',
+			message: 'Select prefered license',
+			choices: [
+				{
+					name: TYPE_CHOICES.licenseClosedSource,
+					message: 'Closed source',
+				},
+				{
+					name: TYPE_CHOICES.licenseOpenSource,
+					message: 'Open source (MIT)',
+				},
+			],
+			initial: TYPE_CHOICES.licenseClosedSource,
+		});
+
+		let copyrightHolder: string | undefined;
+
+		if (license === TYPE_CHOICES.licenseOpenSource) {
+			copyrightHolder = (await prompt<{ copyrightHolder: string }>({
+				type: 'input',
+				name: 'copyrightHolder',
+				message: 'Please enter the copyright holder name',
+				required: true,
+			})).copyrightHolder;
+		}
+
+		return {
+			license,
+			copyrightHolder,
+		};
+	}
+);
+
 export const getTslint = promptCache(
 	async ({ language }: { language: string }): Promise<{ tslint?: boolean }> => {
 		if (language !== TYPE_CHOICES.ts) {
@@ -107,10 +144,9 @@ export const getProjectConfigs = promptCache(
 			type: 'multiselect',
 			name: 'project',
 			message: 'Select project defaults \n',
-			initial: [0, 2, 3, 4, 5, 6],
+			initial: [0, 1, 2, 3, 4, 5],
 			choices: [
 				getChoice(TYPE_CHOICES.readme),
-				getChoice(TYPE_CHOICES.licenseMIT, 'MIT license'),
 				getChoice(TYPE_CHOICES.editorconfig),
 				getChoice(TYPE_CHOICES.npmrc),
 				getChoice(TYPE_CHOICES.nodeVersion),

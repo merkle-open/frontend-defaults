@@ -1,7 +1,7 @@
 import program from 'commander';
 
 import { getCwd } from './get-cwd';
-import { fetchSurvey } from './fetch-survey';
+import { fetchSurvey, TLicense, TYPE_CHOICES } from './fetch-survey';
 import { IPackageJson } from './type-package-json';
 
 export type TMode = 'cli' | 'api' | 'survey';
@@ -10,6 +10,8 @@ export type TMode = 'cli' | 'api' | 'survey';
 export interface IOptions {
 	cwd: string;
 	packageJson?: IPackageJson;
+	license?: TLicense;
+	copyrightHolder?: string;
 
 	// details
 	ts: boolean;
@@ -19,7 +21,6 @@ export interface IOptions {
 	editorconfig: boolean;
 	prettier: boolean;
 	stylelint: boolean;
-	licenseMIT?: string;
 	gitignore: boolean;
 	npmrc: boolean;
 	readme: boolean;
@@ -37,6 +38,9 @@ export interface IOptions {
 
 export interface IProgram {
 	cwd?: string;
+	licenseOpenSource?: boolean;
+	licenseClosedSource?: boolean;
+	copyrightHolder?: string;
 
 	// presets
 	presetTs?: boolean;
@@ -50,7 +54,6 @@ export interface IProgram {
 	editorconfig?: boolean;
 	prettier?: boolean;
 	stylelint?: boolean;
-	licenseMIT?: string;
 	gitignore?: boolean;
 	npmrc?: boolean;
 	readme?: boolean;
@@ -74,7 +77,12 @@ export const hasOptions = (options: any) => Object.values(options).some((val) =>
 const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	const options = {
 		cwd: answers.cwd || cwd,
-		licenseMIT: answers.licenseMIT,
+		license: answers.licenseOpenSource
+			? TYPE_CHOICES.licenseOpenSource
+			: answers.licenseClosedSource
+			? TYPE_CHOICES.licenseClosedSource
+			: undefined,
+		copyrightHolder: answers.copyrightHolder,
 		install: answers.noInstall ? false : answers.install || true,
 		force: answers.force || false,
 		dryRun: answers.dryRun || false,
@@ -154,7 +162,9 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-e --editorconfig', 'add editorconfig')
 		.option('-p --prettier', 'add prettier')
 		.option('-s --stylelint', 'add stylelint')
-		.option('-lmit --licenseMIT [string]', 'add license file with given company name')
+		.option('-lo --licenseOpenSource', 'select open source license')
+		.option('-lc --licenseClosedSource', 'select closed source license')
+		.option('-ch --copyrightHolder [string]', 'for open source license the copyrightHolder is needed')
 		.option('-gi --gitignore', 'add gitignore')
 		.option('-n --npmrc', 'add npmrc')
 		.option('-r --readme', 'add readme file')

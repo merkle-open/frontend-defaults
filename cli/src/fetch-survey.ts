@@ -13,6 +13,7 @@ import {
 	getLinters,
 	getWebpack,
 	getInstall,
+	getLicense,
 } from './prompts';
 
 const cwd = getCwd();
@@ -24,7 +25,8 @@ export const TYPE_CHOICES = {
 	eslint: 'eslint' as 'eslint',
 
 	readme: 'readme' as 'readme',
-	licenseMIT: 'licenseMIT' as 'licenseMIT',
+	licenseOpenSource: 'licenseOpenSource' as 'licenseOpenSource',
+	licenseClosedSource: 'licenseClosedSource' as 'licenseClosedSource',
 	editorconfig: 'editorconfig' as 'editorconfig',
 	npmrc: 'npmrc' as 'npmrc',
 	nodeVersion: 'nodeVersion' as 'nodeVersion',
@@ -41,6 +43,7 @@ export const TYPE_CHOICES = {
 };
 
 export type TLanguage = typeof TYPE_CHOICES.ts | typeof TYPE_CHOICES.es;
+export type TLicense = typeof TYPE_CHOICES.licenseOpenSource | typeof TYPE_CHOICES.licenseClosedSource | undefined;
 
 export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOptions) => {
 	const filesChoices = Object.keys(mergedFiles).map((fileName) => ({
@@ -68,6 +71,7 @@ export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOpti
 
 export const fetchSurvey = async (): Promise<IOptions> => {
 	const answers = {
+		...(await getLicense()),
 		...(await getPackageJson(cwd)),
 		...(await getLanguage()),
 		...(await getTslint(await getLanguage())),
@@ -80,6 +84,8 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 
 	const {
 		language,
+		license,
+		copyrightHolder,
 		tslint = false,
 		eslint = false,
 		project = [],
@@ -92,6 +98,8 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 	return {
 		cwd,
 		packageJson,
+		license,
+		copyrightHolder,
 
 		ts: language === TYPE_CHOICES.ts,
 		es: language === TYPE_CHOICES.es,
@@ -99,7 +107,6 @@ export const fetchSurvey = async (): Promise<IOptions> => {
 		eslint,
 
 		editorconfig: project.includes(TYPE_CHOICES.editorconfig),
-		licenseMIT: '',
 		gitignore: project.includes(TYPE_CHOICES.gitignore),
 		npmrc: project.includes(TYPE_CHOICES.npmrc),
 		readme: project.includes(TYPE_CHOICES.readme),

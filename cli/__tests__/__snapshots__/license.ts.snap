@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`licenseMIT default 1`] = `
+exports[`license license-closed-source 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
@@ -21,13 +21,57 @@ exports[`licenseMIT default 1`] = `
     \\"force\\": true,
     \\"dryRun\\": false,
     \\"mode\\": \\"cli\\",
-    \\"licenseMIT\\": \\"Namics AG\\"
+    \\"license\\": \\"licenseClosedSource\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
-        \\"license\\": \\"MIT\\"
+        \\"license\\": \\"UNLICENSED\\",
+        \\"private\\": true
+      }
+    }
+  }
+}"
+`;
+
+exports[`license license-closed-source 2`] = `
+"{
+  \\"license\\": \\"UNLICENSED\\",
+  \\"private\\": true
+}"
+`;
+
+exports[`license license-open-source 1`] = `
+"{
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"tslint\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": false,
+    \\"npmrc\\": false,
+    \\"readme\\": false,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodeVersion\\": false,
+    \\"webpack\\": false,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"cli\\",
+    \\"license\\": \\"licenseOpenSource\\",
+    \\"copyrightHolder\\": \\"Namics AG\\"
+  },
+  \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"license\\": \\"MIT\\",
+        \\"private\\": false
       }
     },
     \\"LICENSE\\": {
@@ -38,7 +82,7 @@ exports[`licenseMIT default 1`] = `
 }"
 `;
 
-exports[`licenseMIT default 2`] = `
+exports[`license license-open-source 2`] = `
 "MIT License
 
 Copyright (c) 2019-present Namics AG
@@ -63,8 +107,9 @@ SOFTWARE.
 "
 `;
 
-exports[`licenseMIT default 3`] = `
+exports[`license license-open-source 3`] = `
 "{
-  \\"license\\": \\"MIT\\"
+  \\"license\\": \\"MIT\\",
+  \\"private\\": false
 }"
 `;
