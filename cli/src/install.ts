@@ -51,6 +51,8 @@ export const install = async ({ install, cwd }: IOptions) => {
 		process.exit(1);
 	}
 
+	spinnerInstall.succeed();
+
 	return;
 };
 

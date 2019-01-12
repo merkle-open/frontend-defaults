@@ -9,7 +9,6 @@ import { TYPE_CHOICES, TLanguage } from './fetch-survey';
 import { IPackageJson } from './type-package-json';
 import { templatePackageSnippet } from './template-package-snippet';
 import { fetchPackage } from './fetch-package';
-import { pathExists } from 'fs-extra';
 
 const getChoice = (name: string, value?: string) => ({
 	name,

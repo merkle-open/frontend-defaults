@@ -8,6 +8,7 @@ import { fetchSurveyFiles } from './fetch-survey';
 import { collectChanges } from './collect-changes';
 import chalk from 'chalk';
 import { IPackageJson } from './type-package-json';
+import { gitInit } from './git-init';
 
 export interface IApiOptions {
 	cwd?: string;
@@ -82,6 +83,7 @@ export default async (apiOptions: IApiOptions) => {
 		const files = await fetchSurveyFiles(mergedFiles, options);
 		await writeFiles(files, mergedFiles, options);
 		await storeOptionsAndChanges(options, mergedFiles);
+		await gitInit(options.cwd);
 		await install(options);
 		await openVSCode(options);
 	} catch (err) {
