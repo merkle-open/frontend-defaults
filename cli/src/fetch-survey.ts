@@ -4,7 +4,6 @@ import chalk from 'chalk';
 import { IOptions } from './fetch-options';
 import { getCwd } from './get-cwd';
 import { IMergedFiles } from './merge-files';
-import { IPackageJson } from './type-package-json';
 import {
 	getPackageJson,
 	getLanguage,
@@ -43,19 +42,6 @@ export const TYPE_CHOICES = {
 
 export type TLanguage = typeof TYPE_CHOICES.ts | typeof TYPE_CHOICES.es;
 
-interface IAnswers {
-	language: TLanguage;
-	tslint: boolean;
-	eslint: boolean;
-	project: string[];
-	linters: string[];
-	webpack: boolean;
-	install: boolean;
-	force: boolean;
-	packageJson?: IPackageJson;
-	licenseMIT?: string;
-}
-
 export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOptions) => {
 	const filesChoices = Object.keys(mergedFiles).map((fileName) => ({
 		message: `${fileName}${chalk.red(mergedFiles[fileName].override ? ' (override)' : '')}`,
@@ -81,8 +67,6 @@ export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOpti
 };
 
 export const fetchSurvey = async (): Promise<IOptions> => {
-	// let answers = {} as IAnswers;
-
 	const answers = {
 		...(await getPackageJson(cwd)),
 		...(await getLanguage()),

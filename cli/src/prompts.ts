@@ -1,12 +1,15 @@
+import path from 'path';
 import chalk from 'chalk';
 import semver from 'semver';
 import { prompt } from 'enquirer';
+import getUsername from 'username';
 
 import { promptCache } from './prompt-cache';
 import { TYPE_CHOICES, TLanguage } from './fetch-survey';
-import { existPackage } from './exist-package';
 import { IPackageJson } from './type-package-json';
 import { templatePackageSnippet } from './template-package-snippet';
+import { fetchPackage } from './fetch-package';
+import { pathExists } from 'fs-extra';
 
 const getChoice = (name: string, value?: string) => ({
 	name,
@@ -16,9 +19,7 @@ const getChoice = (name: string, value?: string) => ({
 
 export const getPackageJson = promptCache(
 	async (cwd: string): Promise<{ packageJson?: IPackageJson }> => {
-		if (await existPackage(cwd)) {
-			return {};
-		}
+		const originalPackageJson = await fetchPackage(cwd);
 
 		const { packageJson } = await prompt<{ packageJson: { result: string } }>({
 			type: 'snippet',
@@ -27,7 +28,7 @@ export const getPackageJson = promptCache(
 			required: true,
 			fields: [
 				{
-					name: 'author_name',
+					name: 'author',
 					message: 'Author Name',
 				},
 				{
@@ -41,6 +42,12 @@ export const getPackageJson = promptCache(
 				},
 			],
 			template: templatePackageSnippet,
+			initial: {
+				name: originalPackageJson.name || path.basename(cwd),
+				description: originalPackageJson.description,
+				author: originalPackageJson.author || (await getUsername()),
+				version: originalPackageJson.version || '0.1.0',
+			},
 		} as any);
 
 		return {
