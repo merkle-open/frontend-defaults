@@ -1,3 +1,5 @@
+import deepMerge from 'deepmerge';
+
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
@@ -33,14 +35,14 @@ const updatePackageJson = async ({ githooks, eslint }: IOptions): Promise<{ 'pac
 		return {};
 	}
 
+	let packageJson = await fetchTemplateJson('eslint', 'package.json');
+
 	if (githooks) {
-		return {
-			'package.json': await fetchTemplateJson('eslint', 'package-githooks.json'),
-		};
+		packageJson = deepMerge(packageJson, await fetchTemplateJson('eslint', 'package-githooks.json'));
 	}
 
 	return {
-		'package.json': await fetchTemplateJson('eslint', 'package.json'),
+		'package.json': packageJson,
 	};
 };
 

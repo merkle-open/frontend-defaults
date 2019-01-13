@@ -1,7 +1,4 @@
 {
-	"scripts": {
-		"lint:js": "eslint ."
-	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
@@ -14,9 +11,6 @@
 	},
 	"devDependencies": {
 		"husky": "1.0.1",
-		"lint-staged": "7.3.0",
-		"eslint": "5.10.0",
-		"eslint-plugin-import": "2.14.0",
-		"@namics/eslint-config": "6.0.1"
+		"lint-staged": "7.3.0"
 	}
 }
