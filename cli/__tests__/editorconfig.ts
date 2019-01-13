@@ -1,5 +1,8 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('editorconfig', async () => {
-	it('default', async () => await defaultIt('editorconfig', '--editorconfig --force --noInstall'));
+	it('default', async () =>
+		await apiIt('editorconfig', {
+			editorconfig: true,
+		}));
 });

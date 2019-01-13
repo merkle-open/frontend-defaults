@@ -20,31 +20,31 @@ exports[`node-version default 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
         \\"engines\\": {
-          \\"node\\": \\">=10\\"
+          \\"node\\": \\">=0\\"
         }
       }
     },
     \\".node-version\\": {
       \\"override\\": false,
-      \\"data\\": \\"10.15.0\\"
+      \\"data\\": \\"0.1.0-mock\\"
     }
   }
 }"
 `;
 
-exports[`node-version default 2`] = `"10.15.0"`;
+exports[`node-version default 2`] = `"0.1.0-mock"`;
 
 exports[`node-version default 3`] = `
 "{
   \\"engines\\": {
-    \\"node\\": \\">=10\\"
+    \\"node\\": \\">=0\\"
   }
 }"
 `;
@@ -69,20 +69,20 @@ exports[`node-version with-githooks 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
         \\"engines\\": {
-          \\"node\\": \\">=10\\"
+          \\"node\\": \\">=0\\"
         }
       }
     },
     \\".node-version\\": {
       \\"override\\": false,
-      \\"data\\": \\"10.15.0\\"
+      \\"data\\": \\"0.1.0-mock\\"
     },
     \\".huskyrc\\": {
       \\"override\\": false,
@@ -100,12 +100,12 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`node-version with-githooks 3`] = `"10.15.0"`;
+exports[`node-version with-githooks 3`] = `"0.1.0-mock"`;
 
 exports[`node-version with-githooks 4`] = `
 "{
   \\"engines\\": {
-    \\"node\\": \\">=10\\"
+    \\"node\\": \\">=0\\"
   }
 }"
 `;

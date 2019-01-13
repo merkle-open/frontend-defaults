@@ -20,7 +20,7 @@ exports[`stylelint default 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
@@ -93,7 +93,7 @@ exports[`stylelint with-githooks 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {

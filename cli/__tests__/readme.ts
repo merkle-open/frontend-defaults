@@ -1,5 +1,8 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('readme', async () => {
-	it('default', async () => await defaultIt('readme', '--readme --force --noInstall'));
+	it('default', async () =>
+		await apiIt('readme', {
+			readme: true,
+		}));
 });

@@ -20,7 +20,7 @@ exports[`tslint default 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
@@ -90,7 +90,7 @@ exports[`tslint with-githooks 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
@@ -200,7 +200,7 @@ exports[`tslint with-prettier 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {
@@ -313,7 +313,7 @@ exports[`tslint with-prettier-githooks 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"package.json\\": {

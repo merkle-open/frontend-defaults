@@ -62,7 +62,7 @@ exports[`editorconfig default 2`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\".editorconfig\\": {

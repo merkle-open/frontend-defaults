@@ -1,7 +1,13 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('prettier', async () => {
-	it('default', async () => await defaultIt('prettier', '--prettier --force --noInstall'));
+	it('default', async () =>
+		await apiIt('prettier', {
+			prettier: true,
+		}));
 	it('with-githooks', async () =>
-		await defaultIt('prettier-with-githooks', '--prettier --githooks --force --noInstall'));
+		await apiIt('prettier-with-githooks', {
+			prettier: true,
+			githooks: true,
+		}));
 });

@@ -4,7 +4,7 @@ import { getCwd } from './get-cwd';
 import { install, openVSCode, storeOptionsAndChanges } from './install';
 import { showDiff } from './log-diff';
 import { writeFiles } from './write-files';
-import { fetchSurveyFiles } from './fetch-survey';
+import { fetchSurveyFiles, TLicense, TYPE_CHOICES } from './fetch-survey';
 import { collectChanges } from './collect-changes';
 import chalk from 'chalk';
 import { IPackageJson } from './type-package-json';
@@ -13,6 +13,8 @@ import { gitInit } from './git-init';
 export interface IApiOptions {
 	cwd?: string;
 	packageJson?: IPackageJson;
+	license?: TLicense;
+	copyrightHolder?: string;
 
 	// details
 	ts?: boolean;
@@ -22,7 +24,6 @@ export interface IApiOptions {
 	editorconfig?: boolean;
 	prettier?: boolean;
 	stylelint?: boolean;
-	licenseMIT?: string;
 	gitignore?: boolean;
 	npmrc?: boolean;
 	readme?: boolean;
@@ -34,7 +35,7 @@ export interface IApiOptions {
 	install?: boolean;
 	force?: boolean;
 
-	mode: TMode;
+	mode?: TMode;
 }
 
 const defaultApiOptions = {
@@ -58,7 +59,7 @@ const defaultApiOptions = {
 	force: false,
 	dryRun: false,
 
-	mode: 'api',
+	mode: 'api' as 'api',
 };
 
 export default async (apiOptions: IApiOptions) => {

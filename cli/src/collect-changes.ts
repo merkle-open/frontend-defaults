@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import ora from 'ora';
+import ora from './ora';
 
 import { create as createReadme } from './create-readme';
 import { create as createLicense } from './create-license';

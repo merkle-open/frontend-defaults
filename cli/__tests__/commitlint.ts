@@ -1,11 +1,8 @@
-import { defaultIt, apiIt } from './shared';
+import { apiIt } from './shared';
 
 describe('commitlint', async () => {
-	it('default', async () => await defaultIt('commitlint', '--commitlint --force --noInstall'));
-	it('via-api', async () =>
-		await apiIt('commitlint-via-api', {
+	it('default', async () =>
+		await apiIt('commitlint', {
 			commitlint: true,
-			force: true,
-			mode: 'api',
 		}));
 });

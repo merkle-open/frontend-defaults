@@ -1,7 +1,13 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('stylelint', async () => {
-	it('default', async () => await defaultIt('stylelint', '--stylelint --force --noInstall'));
+	it('default', async () =>
+		await apiIt('stylelint', {
+			stylelint: true,
+		}));
 	it('with-githooks', async () =>
-		await defaultIt('stylelint-with-githooks', '--stylelint --githooks --force --noInstall'));
+		await apiIt('stylelint-with-githooks', {
+			stylelint: true,
+			githooks: true,
+		}));
 });

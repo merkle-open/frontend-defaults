@@ -20,7 +20,7 @@ exports[`readme default 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\"
+    \\"mode\\": \\"api\\"
   },
   \\"mergedFiles\\": {
     \\"README.md\\": {

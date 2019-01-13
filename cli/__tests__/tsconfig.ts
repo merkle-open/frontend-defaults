@@ -1,5 +1,8 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('tsconfig', async () => {
-	it('default', async () => await defaultIt('tsconfig', '--ts --force --noInstall'));
+	it('default', async () =>
+		await apiIt('tsconfig', {
+			ts: true,
+		}));
 });

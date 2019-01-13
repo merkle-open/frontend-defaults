@@ -33,7 +33,7 @@ export interface IOptions {
 	force: boolean;
 	dryRun: boolean;
 
-	mode: TMode;
+	mode?: TMode;
 }
 
 export interface IProgram {

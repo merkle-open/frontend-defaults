@@ -20,7 +20,7 @@ exports[`license license-closed-source 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\",
+    \\"mode\\": \\"api\\",
     \\"license\\": \\"licenseClosedSource\\"
   },
   \\"mergedFiles\\": {
@@ -62,7 +62,7 @@ exports[`license license-open-source 1`] = `
     \\"install\\": false,
     \\"force\\": true,
     \\"dryRun\\": false,
-    \\"mode\\": \\"cli\\",
+    \\"mode\\": \\"api\\",
     \\"license\\": \\"licenseOpenSource\\",
     \\"copyrightHolder\\": \\"Namics AG\\"
   },

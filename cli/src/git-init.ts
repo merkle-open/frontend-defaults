@@ -1,6 +1,6 @@
 import path from 'path';
 import execa = require('execa');
-import ora from 'ora';
+import ora from './ora';
 
 import { existFile } from './exist-file';
 import { wait } from './wait';

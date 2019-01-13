@@ -1,7 +1,13 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('node-version', async () => {
-	it('default', async () => await defaultIt('node-version', '--nodeVersion --force --noInstall'));
+	it('default', async () =>
+		await apiIt('node-version', {
+			nodeVersion: true,
+		}));
 	it('with-githooks', async () =>
-		await defaultIt('node-version-with-githooks', '--nodeVersion --githooks --force --noInstall'));
+		await apiIt('node-version-with-githooks', {
+			nodeVersion: true,
+			githooks: true,
+		}));
 });

@@ -1,9 +1,24 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
 
 describe('tslint', async () => {
-	it('default', async () => await defaultIt('tslint', '--tslint --force --noInstall'));
-	it('with-prettier', async () => await defaultIt('tslint-with-prettier', '--tslint --prettier --force --noInstall'));
-	it('with-githooks', async () => await defaultIt('tslint-with-githooks', '--tslint --githooks --force --noInstall'));
+	it('default', async () =>
+		await apiIt('tslint', {
+			tslint: true,
+		}));
+	it('with-prettier', async () =>
+		await apiIt('tslint-with-prettier', {
+			tslint: true,
+			prettier: true,
+		}));
+	it('with-githooks', async () =>
+		await apiIt('tslint-with-githooks', {
+			tslint: true,
+			githooks: true,
+		}));
 	it('with-prettier-githooks', async () =>
-		await defaultIt('tslint-with-prettier-githooks', '--tslint --prettier --githooks --force --noInstall'));
+		await apiIt('tslint-with-prettier-githooks', {
+			tslint: true,
+			prettier: true,
+			githooks: true,
+		}));
 });

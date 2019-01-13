@@ -25,7 +25,6 @@
     "templates"
   ],
   "scripts": {
-    "pretest": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "watch": "tsc -w",

@@ -2,8 +2,8 @@ import path from 'path';
 import fs from 'fs-extra';
 import execa from 'execa';
 import chalk from 'chalk';
-import ora from 'ora';
 
+import ora from './ora';
 import { getCwd } from './get-cwd';
 import { IOptions } from './fetch-options';
 import { fetchTemplateJson } from './fetch-template';

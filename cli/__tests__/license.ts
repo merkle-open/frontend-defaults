@@ -1,11 +1,14 @@
-import { defaultIt } from './shared';
+import { apiIt } from './shared';
+import { TYPE_CHOICES } from '../src/fetch-survey';
 
 describe('license', async () => {
 	it('license-open-source', async () =>
-		await defaultIt(
-			'license-open-source',
-			'--licenseOpenSource --copyrightHolder="Namics AG" --force --noInstall'
-		));
+		await apiIt('license-open-source', {
+			license: TYPE_CHOICES.licenseOpenSource,
+			copyrightHolder: 'Namics AG',
+		}));
 	it('license-closed-source', async () =>
-		await defaultIt('license-closed-source', '--licenseClosedSource --force --noInstall'));
+		await apiIt('license-closed-source', {
+			license: TYPE_CHOICES.licenseClosedSource,
+		}));
 });

@@ -20,6 +20,7 @@ export const writeFiles = async (files: string[], mergedFiles: IMergedFiles, { c
 		})),
 		{
 			concurrent: 3,
+			renderer: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci' ? 'silent' : 'default',
 		}
 	);
 
