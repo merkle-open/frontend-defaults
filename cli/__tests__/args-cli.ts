@@ -1,4 +1,6 @@
 import 'jest';
+import path from 'path';
+
 import { fetchOptions } from '../src/fetch-options';
 
 const defaultOptions = {
@@ -196,5 +198,15 @@ describe('webpack', async () => {
 		const options = await fetchOptions();
 		delete options.cwd;
 		expect(options).toEqual({ ...defaultOptions, webpack: true, ts: true, install: true });
+	});
+});
+
+describe('with project name', async () => {
+	it('default', async () => {
+		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', 'my-project', '--webpack'];
+		const options = await fetchOptions();
+		expect(path.basename(options.cwd)).toBe('my-project');
+		delete options.cwd;
+		expect(options).toEqual({ ...defaultOptions, webpack: true, install: true });
 	});
 });

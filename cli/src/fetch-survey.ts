@@ -2,7 +2,6 @@ import { prompt } from 'enquirer';
 import chalk from 'chalk';
 
 import { IOptions } from './fetch-options';
-import { getCwd } from './get-cwd';
 import { IMergedFiles } from './merge-files';
 import {
 	getPackageJson,
@@ -15,8 +14,6 @@ import {
 	getInstall,
 	getLicense,
 } from './prompts';
-
-const cwd = getCwd();
 
 export const TYPE_CHOICES = {
 	ts: 'typescript' as 'typescript',
@@ -69,7 +66,7 @@ export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOpti
 	return files.sort();
 };
 
-export const fetchSurvey = async (): Promise<IOptions> => {
+export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 	const answers = {
 		...(await getLicense()),
 		...(await getPackageJson(cwd)),

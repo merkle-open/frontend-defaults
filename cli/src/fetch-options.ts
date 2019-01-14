@@ -1,3 +1,4 @@
+import path from 'path';
 import { Command } from 'commander';
 
 import { getCwd } from './get-cwd';
@@ -68,6 +69,7 @@ export interface IProgram {
 	dryRun?: boolean;
 
 	rawArgs: string[];
+	args: string[];
 }
 
 const cwd = getCwd();
@@ -76,7 +78,7 @@ export const hasOptions = (options: any) => Object.values(options).some((val) =>
 
 const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	const options = {
-		cwd: answers.cwd || cwd,
+		cwd: Array.isArray(answers.args) && answers.args[0] ? path.join(cwd, answers.args[0]) : cwd,
 		license: answers.licenseOpenSource
 			? TYPE_CHOICES.licenseOpenSource
 			: answers.licenseClosedSource
@@ -153,6 +155,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 
 	const pg = (new Command()
 		.version(packageData.version)
+		.command('<project-name>')
 		.option('-pTs, --presetTs', 'Preset typescript (recommended)')
 		.option('-pEs, --presetEs', 'Preset javascript')
 		.option('-ts, --ts', 'with typescript configurations')
@@ -179,8 +182,14 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-d --dryRun', 'prints changes will happens by given args')
 		.parse(process.argv) as any) as IProgram;
 
+	let newCwd = pg.args.length === 1 ? path.join(cwd, pg.args[0]) : path.join(cwd);
+
+	if (pg.args.length === 1 && pg.rawArgs.length <= 3) {
+		return await fetchSurvey(newCwd);
+	}
+
 	if (pg.rawArgs.length <= 2) {
-		return await fetchSurvey();
+		return await fetchSurvey(newCwd);
 	}
 
 	return transformAnswersToOptions(pg);

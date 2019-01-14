@@ -2,6 +2,8 @@ import 'jest';
 import enquirer from 'enquirer';
 
 import { fetchSurvey, TYPE_CHOICES } from '../src/fetch-survey';
+import { getCwd } from '../src/get-cwd';
+const cwd = getCwd();
 
 jest.mock('enquirer');
 
@@ -32,7 +34,11 @@ describe('enqirer', async () => {
 			webpack: true,
 			install: true,
 		});
-		expect({ ...(await fetchSurvey()), cwd: undefined, packageJson: undefined }).toEqual({
+		expect({
+			...(await fetchSurvey(cwd)),
+			cwd: undefined,
+			packageJson: undefined,
+		}).toEqual({
 			cwd: undefined,
 			packageJson: undefined,
 			commitlint: true,

@@ -17,7 +17,12 @@ export const gitInit = async (cwd: string) => {
 	spinner.text = 'Init local git repository';
 
 	try {
-		await Promise.all([execa('git', ['init']), wait(1000)]);
+		await Promise.all([
+			execa('git', ['init'], {
+				cwd,
+			}),
+			wait(1000),
+		]);
 	} catch (err) {
 		spinner.fail(chalk.red(err));
 	}

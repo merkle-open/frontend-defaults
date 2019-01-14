@@ -4,25 +4,48 @@
 
 ## Usage
 
-`npx @namics/frontend-defaults-cli`
+`npx @namics/frontend-defaults-cli@alpha my-project`
 
-## Result
+### Show potential changes
+`npx @namics/frontend-defaults-cli@alpha --tslint --dryRun`
+
+### Example greenfield project default with Typescript
+
+`npx @namics/frontend-defaults-cli@alpha my-project --presetTs`
+
+### Extend existing Typescript project with tslint
+
+`npx @namics/frontend-defaults-cli@alpha --tslint`
 
 ```
-- your-project
--- .editorconfig
--- .gitignore
--- .node-version
--- .npmrc
--- .prettierignore
--- .prettierrc.js
--- .stylelintignore
--- .stylelintrc
--- src
---- index.ts
--- package.json
--- tsconfig.json
--- tslint.json
+Usage: <project-name> [options]
+
+Options:
+  -pTs, --presetTs                Preset typescript (recommended)
+  -pEs, --presetEs                Preset javascript
+  -ts, --ts                       with typescript configurations
+  -tsl, --tslint                  add tslint
+  -es, --es                       with javascript configurations
+  -esl, --eslint                  add eslint
+  -e --editorconfig               add editorconfig
+  -p --prettier                   add prettier
+  -s --stylelint                  add stylelint
+  -lo --licenseOpenSource         select open source license
+  -lc --licenseClosedSource       select closed source license
+  -ch --copyrightHolder [string]  for open source license the copyrightHolder is needed
+  -gi --gitignore                 add gitignore
+  -n --npmrc                      add npmrc
+  -r --readme                     add readme file
+  -gh --githooks                  add githooks
+  -c --commitlint                 add commitlint (will enable githooks too)
+  -nv --nodeVersion               add node-version file
+  -w --webpack                    add webpack with webpack-config-plugins
+  -i --install                    install dependencies
+  -ni --noInstall                 don't install dependencies
+  -f --force                      create package.json and override existing files
+  -cwd --cwd                      defines where the configurations will be installed (default = process.cwd())
+  -d --dryRun                     prints changes will happens by given args
+  -h, --help                      output usage information
 ```
 
 ## License
