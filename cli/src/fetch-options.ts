@@ -1,4 +1,4 @@
-import program from 'commander';
+import { Command } from 'commander';
 
 import { getCwd } from './get-cwd';
 import { fetchSurvey, TLicense, TYPE_CHOICES } from './fetch-survey';
@@ -151,7 +151,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 export const fetchOptions = async (): Promise<IOptions> => {
 	const packageData = require('../package.json');
 
-	const pg = (program
+	const pg = (new Command()
 		.version(packageData.version)
 		.option('-pTs, --presetTs', 'Preset typescript (recommended)')
 		.option('-pEs, --presetEs', 'Preset javascript')
