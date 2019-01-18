@@ -2,10 +2,101 @@ import chalk from 'chalk';
 import { prompt } from 'enquirer';
 
 import { IFiles, IMergedFiles } from './merge-files';
-import { diffWords } from 'diff';
+import { diffLines } from 'diff';
 import { IOptions } from './fetch-options';
 
 const { log } = console;
+
+const logLine = (line: number, value: string) =>
+	log(`${chalk.gray(`${line.toString().padStart(5, ' ')} │ `)}${chalk.white(`    ${value}`)}`);
+const logLineAdded = (line: number, value: string) =>
+	log(`${chalk.gray(`${line.toString().padStart(5, ' ')} │ `)}${chalk.green(` +  ${value}`)}`);
+const logLineRemoved = (line: number, value: string) =>
+	log(`${chalk.gray(`${line.toString().padStart(5, ' ')} │ `)}${chalk.red(` -  ${value}`)}`);
+const logLineSpacer = () => log('');
+
+interface IResult {
+	value: string;
+	added?: boolean;
+	removed?: boolean;
+	lineNumber: number;
+	addedLineNumber: number;
+	removedLineNumber: number;
+}
+
+export const logDiffJsonStrings = (objA: string, objB: string) => {
+	const diff = diffLines(objA, objB);
+
+	const results: IResult[] = [];
+	let lineNumber = 0;
+	let addedLineNumber = 0;
+	let removedLineNumber = 0;
+
+	diff.forEach(({ value, added, removed }) => {
+		value
+			.replace(/\n$/g, '')
+			.split('\n')
+			.forEach((line) => {
+				if (added) {
+					addedLineNumber += 1;
+				} else if (removed) {
+					removedLineNumber += 1;
+				} else {
+					lineNumber += 1;
+				}
+
+				results.push({
+					value: line,
+					added,
+					removed,
+					lineNumber,
+					addedLineNumber,
+					removedLineNumber,
+				});
+			});
+	});
+
+	let unchangedResults: IResult[] = [];
+
+	results.forEach((result, index) => {
+		const { value, added, removed, lineNumber, addedLineNumber, removedLineNumber } = result;
+
+		if (added) {
+			logLineAdded(lineNumber + addedLineNumber, value);
+			unchangedResults = [];
+			return;
+		}
+
+		if (removed) {
+			logLineRemoved(lineNumber + removedLineNumber, value);
+			unchangedResults = [];
+			return;
+		}
+
+		unchangedResults.push(result);
+
+		if (
+			index === results.length - 1 ||
+			(results[index + 1] && (results[index + 1].added || results[index + 1].removed))
+		) {
+			if (unchangedResults.length <= 3) {
+				unchangedResults.forEach((resultInner) => {
+					logLine(resultInner.lineNumber + resultInner.addedLineNumber, resultInner.value);
+				});
+				return;
+			}
+			logLine(unchangedResults[0].lineNumber + unchangedResults[0].addedLineNumber, unchangedResults[0].value);
+			logLineSpacer();
+			logLine(
+				unchangedResults[unchangedResults.length - 1].lineNumber +
+					unchangedResults[unchangedResults.length - 1].addedLineNumber,
+				unchangedResults[unchangedResults.length - 1].value
+			);
+		}
+	});
+
+	log('\n');
+};
 
 export const logDiff = (originalFiles: IFiles, mergedFiles: IMergedFiles, { mode, force }: IOptions) => {
 	Object.keys(mergedFiles).forEach((fileName: string) => {
@@ -20,8 +111,6 @@ export const logDiff = (originalFiles: IFiles, mergedFiles: IMergedFiles, { mode
 			originalFileData = JSON.stringify(originalFileData, null, 2);
 		}
 
-		const diff = diffWords(originalFileData, fileData);
-
 		if (mergedFiles[fileName].override && mode !== 'survey' && !force) {
 			log(`\n\n  ${chalk.white.underline(fileName)}\n`);
 			log(`  ${chalk.red.bold(`add \`--force\` to write this file\n`)}`);
@@ -34,22 +123,7 @@ export const logDiff = (originalFiles: IFiles, mergedFiles: IMergedFiles, { mode
 			}\n`
 		);
 
-		diff.forEach(({ value, added, removed }) => {
-			value.split('\n').forEach((line) => {
-				if (added) {
-					log(chalk.green(` +  ${line}`));
-					return;
-				}
-				if (removed) {
-					log(chalk.red(` -  ${line}`));
-					return;
-				}
-				log(chalk.black(`    ${line}`));
-				return;
-			});
-		});
-
-		log('\n');
+		logDiffJsonStrings(originalFileData, fileData);
 	});
 };
 
