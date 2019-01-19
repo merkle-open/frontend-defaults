@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import latestVersion from 'latest-version';
 import { generateConfigurations } from 'generate-webpack-config';
 import { Ora } from 'ora';
+import deepMerge from 'deepmerge';
 
 import { IOptions } from './fetch-options';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
@@ -21,6 +22,16 @@ const createWebpackConfigFile = async (
 	return {
 		[path.join('src', indexFileName)]: await fetchTemplate('webpack', indexFileName),
 		'webpack.config.js': webpackConfig,
+	};
+};
+
+const createBabelrcConfigFile = async ({ webpack }: IOptions): Promise<{ '.babelrc'?: string }> => {
+	if (!webpack) {
+		return {};
+	}
+
+	return {
+		'.babelrc': await fetchTemplate('webpack', '.babelrc'),
 	};
 };
 
@@ -47,10 +58,7 @@ const updatePackageJson = async (
 	}
 
 	return {
-		'package.json': {
-			...(await fetchTemplateJson('webpack', 'package.json')),
-			devDependencies,
-		},
+		'package.json': deepMerge(await fetchTemplateJson('webpack', 'package.json'), { devDependencies }),
 	};
 };
 
@@ -74,6 +82,7 @@ export const create = async (options: IOptions, oraSpinner: Ora) => {
 
 	return {
 		...(await createWebpackConfigFile(webpackConfig, options)),
+		...(await createBabelrcConfigFile(options)),
 		...(await updatePackageJson(npmInstall, options, oraSpinner)),
 	};
 };

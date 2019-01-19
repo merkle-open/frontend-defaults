@@ -3,13 +3,18 @@ import latestVersion from 'latest-version';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
 
-const createNodeVersionFile = async ({ nodeVersion }: IOptions): Promise<{ '.node-version'?: string }> => {
+const createNodeVersionFiles = async ({
+	nodeVersion,
+}: IOptions): Promise<{ '.node-version'?: string; '.nvmrc'?: string }> => {
 	if (!nodeVersion) {
 		return {};
 	}
 
+	const nodeVersionNumber = await latestVersion('node', { version: 'lts' });
+
 	return {
-		'.node-version': `${await latestVersion('node', { version: 'lts' })}`,
+		'.node-version': nodeVersionNumber,
+		'.nvmrc': nodeVersionNumber,
 	};
 };
 
@@ -30,6 +35,6 @@ const updatePackageJson = async ({ nodeVersion }: IOptions): Promise<{ 'package.
 };
 
 export const create = async (options: IOptions) => ({
-	...(await createNodeVersionFile(options)),
+	...(await createNodeVersionFiles(options)),
 	...(await updatePackageJson(options)),
 });
