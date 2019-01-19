@@ -34,6 +34,10 @@ exports[`node-version default 1`] = `
     \\".node-version\\": {
       \\"override\\": false,
       \\"data\\": \\"0.1.0-mock\\"
+    },
+    \\".nvmrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"0.1.0-mock\\"
     }
   }
 }"
@@ -41,7 +45,9 @@ exports[`node-version default 1`] = `
 
 exports[`node-version default 2`] = `"0.1.0-mock"`;
 
-exports[`node-version default 3`] = `
+exports[`node-version default 3`] = `"0.1.0-mock"`;
+
+exports[`node-version default 4`] = `
 "{
   \\"engines\\": {
     \\"node\\": \\">=0\\"
@@ -84,6 +90,10 @@ exports[`node-version with-githooks 1`] = `
       \\"override\\": false,
       \\"data\\": \\"0.1.0-mock\\"
     },
+    \\".nvmrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"0.1.0-mock\\"
+    },
     \\".huskyrc\\": {
       \\"override\\": false,
       \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
@@ -102,7 +112,9 @@ fi"
 
 exports[`node-version with-githooks 3`] = `"0.1.0-mock"`;
 
-exports[`node-version with-githooks 4`] = `
+exports[`node-version with-githooks 4`] = `"0.1.0-mock"`;
+
+exports[`node-version with-githooks 5`] = `
 "{
   \\"engines\\": {
     \\"node\\": \\">=0\\"

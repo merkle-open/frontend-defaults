@@ -2,6 +2,14 @@
 
 exports[`webpack default 1`] = `
 "{
+	\\"presets\\": [
+	  \\"env\\"
+	]
+}"
+`;
+
+exports[`webpack default 2`] = `
+"{
   \\"options\\": {
     \\"ts\\": false,
     \\"tslint\\": false,
@@ -26,16 +34,13 @@ exports[`webpack default 1`] = `
     \\"package.json\\": {
       \\"override\\": false,
       \\"data\\": {
-        \\"scripts\\": {
-          \\"build\\": \\"webpack --mode production\\",
-          \\"postinstall\\": \\"npm rebuild node-sass\\",
-          \\"start\\": \\"webpack-dev-server --mode development\\"
-        },
         \\"devDependencies\\": {
           \\"@babel/core\\": \\"0.1.0-mock\\",
           \\"@babel/preset-env\\": \\"0.1.0-mock\\",
           \\"@babel/preset-react\\": \\"0.1.0-mock\\",
           \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
+          \\"babel\\": \\"6.23.0\\",
+          \\"babel-preset-react-app\\": \\"7.0.0\\",
           \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"js-config-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -43,6 +48,16 @@ exports[`webpack default 1`] = `
           \\"webpack\\": \\"0.1.0-mock\\",
           \\"webpack-cli\\": \\"0.1.0-mock\\",
           \\"webpack-dev-server\\": \\"0.1.0-mock\\"
+        },
+        \\"browserslist\\": [
+          \\"> 1%\\",
+          \\"last 2 versions\\",
+          \\"not ie <= 10\\"
+        ],
+        \\"scripts\\": {
+          \\"build\\": \\"webpack --mode production\\",
+          \\"postinstall\\": \\"npm rebuild node-sass\\",
+          \\"start\\": \\"webpack-dev-server --mode development\\"
         }
       }
     },
@@ -53,23 +68,24 @@ exports[`webpack default 1`] = `
     \\"webpack.config.js\\": {
       \\"override\\": false,
       \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst CleanWebpackPlugin = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst JsConfigWebpackPlugin = require('js-config-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(['dist']),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // Multi threading babel loader configuration with caching for .js and .jsx files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/js-config-webpack-plugin/config\\\\n    new JsConfigWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
+    },
+    \\".babelrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"presets\\\\\\": [\\\\n\\\\t  \\\\\\"env\\\\\\"\\\\n\\\\t]\\\\n}\\"
     }
   }
 }"
 `;
 
-exports[`webpack default 2`] = `
+exports[`webpack default 3`] = `
 "{
-  \\"scripts\\": {
-    \\"build\\": \\"webpack --mode production\\",
-    \\"postinstall\\": \\"npm rebuild node-sass\\",
-    \\"start\\": \\"webpack-dev-server --mode development\\"
-  },
   \\"devDependencies\\": {
     \\"@babel/core\\": \\"0.1.0-mock\\",
     \\"@babel/preset-env\\": \\"0.1.0-mock\\",
     \\"@babel/preset-react\\": \\"0.1.0-mock\\",
     \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
+    \\"babel\\": \\"6.23.0\\",
+    \\"babel-preset-react-app\\": \\"7.0.0\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"js-config-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -77,11 +93,21 @@ exports[`webpack default 2`] = `
     \\"webpack\\": \\"0.1.0-mock\\",
     \\"webpack-cli\\": \\"0.1.0-mock\\",
     \\"webpack-dev-server\\": \\"0.1.0-mock\\"
+  },
+  \\"browserslist\\": [
+    \\"> 1%\\",
+    \\"last 2 versions\\",
+    \\"not ie <= 10\\"
+  ],
+  \\"scripts\\": {
+    \\"build\\": \\"webpack --mode production\\",
+    \\"postinstall\\": \\"npm rebuild node-sass\\",
+    \\"start\\": \\"webpack-dev-server --mode development\\"
   }
 }"
 `;
 
-exports[`webpack default 3`] = `
+exports[`webpack default 4`] = `
 "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -111,6 +137,14 @@ module.exports = {
 
 exports[`webpack webpack-with-ts 1`] = `
 "{
+	\\"presets\\": [
+	  \\"env\\"
+	]
+}"
+`;
+
+exports[`webpack webpack-with-ts 2`] = `
+"{
   \\"options\\": {
     \\"ts\\": true,
     \\"tslint\\": false,
@@ -137,6 +171,8 @@ exports[`webpack webpack-with-ts 1`] = `
       \\"data\\": {
         \\"devDependencies\\": {
           \\"@namics/ts-config\\": \\"0.1.0\\",
+          \\"babel\\": \\"6.23.0\\",
+          \\"babel-preset-react-app\\": \\"7.0.0\\",
           \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"common-config-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -145,6 +181,11 @@ exports[`webpack webpack-with-ts 1`] = `
           \\"webpack-cli\\": \\"0.1.0-mock\\",
           \\"webpack-dev-server\\": \\"0.1.0-mock\\"
         },
+        \\"browserslist\\": [
+          \\"> 1%\\",
+          \\"last 2 versions\\",
+          \\"not ie <= 10\\"
+        ],
         \\"scripts\\": {
           \\"build\\": \\"webpack --mode production\\",
           \\"postinstall\\": \\"npm rebuild node-sass\\",
@@ -163,15 +204,21 @@ exports[`webpack webpack-with-ts 1`] = `
     \\"webpack.config.js\\": {
       \\"override\\": false,
       \\"data\\": \\"const CleanWebpackPlugin = require('clean-webpack-plugin');\\\\nconst CommonConfigWebpackPlugin = require('common-config-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(['dist']),\\\\n    // Multi threading babel loader configuration with caching for .js and .jsx files\\\\n    // Multi threading typescript loader configuration with caching for .ts and .tsx files\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/\\\\n    new CommonConfigWebpackPlugin(),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
+    },
+    \\".babelrc\\": {
+      \\"override\\": false,
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"presets\\\\\\": [\\\\n\\\\t  \\\\\\"env\\\\\\"\\\\n\\\\t]\\\\n}\\"
     }
   }
 }"
 `;
 
-exports[`webpack webpack-with-ts 2`] = `
+exports[`webpack webpack-with-ts 3`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.1.0\\",
+    \\"babel\\": \\"6.23.0\\",
+    \\"babel-preset-react-app\\": \\"7.0.0\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"common-config-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -180,6 +227,11 @@ exports[`webpack webpack-with-ts 2`] = `
     \\"webpack-cli\\": \\"0.1.0-mock\\",
     \\"webpack-dev-server\\": \\"0.1.0-mock\\"
   },
+  \\"browserslist\\": [
+    \\"> 1%\\",
+    \\"last 2 versions\\",
+    \\"not ie <= 10\\"
+  ],
   \\"scripts\\": {
     \\"build\\": \\"webpack --mode production\\",
     \\"postinstall\\": \\"npm rebuild node-sass\\",
@@ -188,7 +240,7 @@ exports[`webpack webpack-with-ts 2`] = `
 }"
 `;
 
-exports[`webpack webpack-with-ts 3`] = `
+exports[`webpack webpack-with-ts 4`] = `
 "{
 	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
@@ -196,7 +248,7 @@ exports[`webpack webpack-with-ts 3`] = `
 "
 `;
 
-exports[`webpack webpack-with-ts 4`] = `
+exports[`webpack webpack-with-ts 5`] = `
 "const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CommonConfigWebpackPlugin = require('common-config-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
