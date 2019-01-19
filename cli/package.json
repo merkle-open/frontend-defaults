@@ -1,7 +1,7 @@
 {
   "name": "@namics/frontend-defaults-cli",
   "description": "CLI tool which creates a default setup for your frontend project",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "repository": "https://github.com/namics/frontend-defaults",
   "main": "./build/index.js",
   "typings": "./build/index.d.ts",
@@ -30,7 +30,7 @@
     "watch": "tsc -w",
     "prebuild": "rimraf build",
     "build": "tsc",
-    "prepublishOnly": "npm-run-all build test"
+    "prepublishOnly": "npm-run-all test build"
   },
   "devDependencies": {
     "@namics/ts-config": "*",
