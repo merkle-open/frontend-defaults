@@ -7,7 +7,7 @@ const createGitignoreFile = async ({ gitignore }: IOptions): Promise<{ '.gitigno
 	}
 
 	return {
-		'.gitignore': await fetchTemplate('gitignore', '.gitignore'),
+		'.gitignore': await fetchTemplate('gitignore', 'gitignore'),
 	};
 };
 
@@ -17,7 +17,7 @@ const createGitattributesFile = async ({ gitignore }: IOptions): Promise<{ '.git
 	}
 
 	return {
-		'.gitattributes': await fetchTemplate('gitignore', '.gitattributes'),
+		'.gitattributes': await fetchTemplate('gitignore', 'gitattributes'),
 	};
 };
 
