@@ -12,9 +12,6 @@
     "Simon Mollweide <simon.mollweide@namics.com>"
   ],
   "scripts": {
-    "b": "npm run bootstrap",
-    "p": "npm run p",
-    "t": "npm run t",
     "clean": "npx npm-run-all clean:*",
     "clean:lerna": "lerna clean --yes",
     "clean:lock": "rimraf **/package-lock.json",
