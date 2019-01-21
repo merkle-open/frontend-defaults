@@ -39,7 +39,7 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDel
 
 	let i = 0;
 	for (i = 0; i < files.length; i += 1) {
-		const fileData = await fs.readFile(path.join(tmpPath, files[i]), 'utf8');
+		const fileData = (await fs.readFile(path.join(tmpPath, files[i]), 'utf8')).replace(/(\r\n\t|\n|\r\t)/gm, '');
 		expect(fileData).toMatchSnapshot();
 	}
 };

@@ -1,58 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tsconfig default 1`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": true,
-    \\"tslint\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": false,
-    \\"prettier\\": false,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"devDependencies\\": {
-          \\"@namics/ts-config\\": \\"0.1.0\\",
-          \\"typescript\\": \\"3.1.3\\"
-        }
-      }
-    },
-    \\"tsconfig.json\\": {
-      \\"override\\": false,
-      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
-    }
-  }
-}"
-`;
+exports[`tsconfig default 1`] = `"{  \\"options\\": {    \\"ts\\": true,    \\"tslint\\": false,    \\"es\\": false,    \\"eslint\\": false,    \\"editorconfig\\": false,    \\"prettier\\": false,    \\"stylelint\\": false,    \\"gitignore\\": false,    \\"npmrc\\": false,    \\"readme\\": false,    \\"githooks\\": false,    \\"commitlint\\": false,    \\"nodeVersion\\": false,    \\"webpack\\": false,    \\"install\\": false,    \\"force\\": true,    \\"dryRun\\": false,    \\"mode\\": \\"api\\"  },  \\"mergedFiles\\": {    \\"package.json\\": {      \\"override\\": false,      \\"data\\": {        \\"devDependencies\\": {          \\"@namics/ts-config\\": \\"0.1.0\\",          \\"typescript\\": \\"3.1.3\\"        }      }    },    \\"tsconfig.json\\": {      \\"override\\": false,      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"    }  }}"`;
 
-exports[`tsconfig default 2`] = `
-"{
-  \\"devDependencies\\": {
-    \\"@namics/ts-config\\": \\"0.1.0\\",
-    \\"typescript\\": \\"3.1.3\\"
-  }
-}"
-`;
+exports[`tsconfig default 2`] = `"{  \\"devDependencies\\": {    \\"@namics/ts-config\\": \\"0.1.0\\",    \\"typescript\\": \\"3.1.3\\"  }}"`;
 
-exports[`tsconfig default 3`] = `
-"{
-	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
-	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
-}
-"
-`;
+exports[`tsconfig default 3`] = `"{	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]}"`;
