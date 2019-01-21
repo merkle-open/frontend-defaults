@@ -25,19 +25,19 @@ const createWebpackConfigFile = async (
 	};
 };
 
-const createBabelrcConfigFile = async ({ webpack }: IOptions): Promise<{ '.babelrc'?: string }> => {
-	if (!webpack) {
+const createBabelConfigFile = async ({ webpack, ts }: IOptions): Promise<{ 'babel.config.js'?: string }> => {
+	if (!webpack || ts) {
 		return {};
 	}
 
 	return {
-		'.babelrc': await fetchTemplate('webpack', '.babelrc'),
+		'babel.config.js': await fetchTemplate('webpack', 'babel.config.js'),
 	};
 };
 
 const updatePackageJson = async (
 	npmInstall: string,
-	{ webpack }: IOptions,
+	{ webpack, ts }: IOptions,
 	oraSpinner: Ora
 ): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!webpack) {
@@ -57,9 +57,15 @@ const updatePackageJson = async (
 		process.exit(1);
 	}
 
-	return {
-		'package.json': deepMerge(await fetchTemplateJson('webpack', 'package.json'), { devDependencies }),
-	};
+	let packageData = deepMerge(await fetchTemplateJson('webpack', 'package.json'), { devDependencies });
+
+	if (ts) {
+		return {
+			'package.json': packageData,
+		};
+	}
+
+	return { 'package.json': deepMerge(packageData, await fetchTemplateJson('webpack', 'package-babel.json')) };
 };
 
 export const create = async (options: IOptions, oraSpinner: Ora) => {
@@ -68,7 +74,7 @@ export const create = async (options: IOptions, oraSpinner: Ora) => {
 	}
 
 	const { webpackConfig, npmInstall } = generateConfigurations({
-		useJs: true,
+		useJs: options.es,
 		useTs: options.ts,
 		useScss: true,
 		useCss: true,
@@ -82,7 +88,7 @@ export const create = async (options: IOptions, oraSpinner: Ora) => {
 
 	return {
 		...(await createWebpackConfigFile(webpackConfig, options)),
-		...(await createBabelrcConfigFile(options)),
+		...(await createBabelConfigFile(options)),
 		...(await updatePackageJson(npmInstall, options, oraSpinner)),
 	};
 };

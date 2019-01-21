@@ -1,8 +1,4 @@
 {
-	"devDependencies": {
-		"babel": "6.23.0",
-		"babel-preset-react-app": "7.0.0"
-	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
