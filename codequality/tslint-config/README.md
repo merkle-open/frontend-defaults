@@ -31,7 +31,10 @@
 
 ## Usage with prettier
 
+The [`tslint-config-prettier`](https://www.npmjs.com/package/tslint-config-prettier) npm package disables all conflicting rules that may cause such problems. Prettier takes care of the formatting whereas tslint takes care of all the other things.
+
 `npm i -D tslint tslint-config-prettier @namics/tslint-config`
+
 
 **tslint.json**
 
