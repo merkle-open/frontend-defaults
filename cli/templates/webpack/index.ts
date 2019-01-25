@@ -1,4 +1,3 @@
 import '@babel/polyfill';
 
-// tslint:disable-next-line
-console.log('@namics/frontend-defaults installed');
+document.write('@namics/frontend-defaults installed');
