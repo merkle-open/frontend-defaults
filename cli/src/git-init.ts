@@ -1,15 +1,25 @@
 import path from 'path';
 import chalk from 'chalk';
-import execa = require('execa');
+import execa from 'execa';
 
 import ora from './ora';
-import { existDir } from './exist-dir';
 import { wait } from './wait';
+
+async function existGit(cwd: string) {
+	try {
+		await execa('git', ['status'], {
+			cwd,
+		});
+		return true;
+	} catch (err) {
+		return false;
+	}
+}
 
 export const gitInit = async (cwd: string) => {
 	const spinner = ora('Check for existing git repository').start();
 
-	if (await existDir(path.join(cwd, '.git'))) {
+	if (await existGit(cwd)) {
 		spinner.stop();
 		return;
 	}
