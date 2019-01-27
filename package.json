@@ -13,14 +13,15 @@
   ],
   "scripts": {
     "clean": "npx npm-run-all clean:*",
-    "clean:lerna": "lerna clean --yes",
-    "clean:lock": "rimraf **/package-lock.json",
-    "clean:modules": "npx rimraf node_modules",
+    "clean:lerna": "npx lerna clean --yes",
+    "clean:dirs": "npx rimraf lerna-debug.log npm-debug.log **/package-lock.json node_modules **/build",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\" \"!cli/templates/**\"",
-    "test": "lerna run test"
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\" \"!cli/templates/**\" \"!cli/__tests__/tmp/**\"",
+    "test": "lerna run test",
+    "lint": "lerna run lint --parallel",
+    "build": "lerna run build"
   },
   "husky": {
     "hooks": {
@@ -61,8 +62,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "7.2.1",
-    "commitizen": "3.0.4",
+    "@commitlint/cli": "7.3.2",
+    "commitizen": "3.0.5",
     "husky": "1.2.0",
     "lerna": "3.4.3",
     "lint-staged": "8.1.0",

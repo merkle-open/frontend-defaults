@@ -17,11 +17,28 @@ const createWebpackConfigFile = async (
 		return {};
 	}
 
-	const indexFileName = ts ? 'index.ts' : 'index.js';
+	return {
+		'webpack.config.js': webpackConfig,
+	};
+};
+
+const createDemoFiles = async ({
+	ts,
+	webpack,
+}: IOptions): Promise<{ 'src/index.ts'?: string; 'src/polyfill.ts'?: string; 'src/index.js'?: string }> => {
+	if (!webpack) {
+		return {};
+	}
+
+	if (ts) {
+		return {
+			[path.join('src', 'index.ts')]: await fetchTemplate('webpack', 'index.ts'),
+			[path.join('src', 'polyfill.ts')]: await fetchTemplate('webpack', 'polyfill.ts'),
+		};
+	}
 
 	return {
-		[path.join('src', indexFileName)]: await fetchTemplate('webpack', indexFileName),
-		'webpack.config.js': webpackConfig,
+		[path.join('src', 'index.js')]: await fetchTemplate('webpack', 'index.js'),
 	};
 };
 
@@ -89,6 +106,7 @@ export const create = async (options: IOptions, oraSpinner: Ora) => {
 	return {
 		...(await createWebpackConfigFile(webpackConfig, options)),
 		...(await createBabelConfigFile(options)),
+		...(await createDemoFiles(options)),
 		...(await updatePackageJson(npmInstall, options, oraSpinner)),
 	};
 };

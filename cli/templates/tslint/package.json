@@ -3,7 +3,7 @@
 		"lint:ts": "tslint 'src/**/*.{ts,tsx}'"
 	},
 	"devDependencies": {
-		"tslint": "5.11.0",
+		"tslint": "5.12.1",
 		"@namics/tslint-config": "0.2.0"
 	}
 }

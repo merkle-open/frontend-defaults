@@ -15,9 +15,9 @@
     }
   },
   "devDependencies": {
-    "prettier": "1.14.3",
+    "prettier": "1.15.2",
     "@namics/prettier-config": "0.2.0",
-    "husky": "1.0.1",
-    "lint-staged": "7.3.0"
+    "husky": "1.2.0",
+    "lint-staged": "8.1.0"
   }
 }
