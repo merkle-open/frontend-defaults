@@ -8,11 +8,5 @@
 		"build": "webpack --mode production",
 		"postinstall": "npm rebuild node-sass",
 		"start": "webpack-dev-server --mode development"
-	},
-	"devDependencies": {
-		"@types/core-js": "2.5.0"
-	},
-	"dependencies": {
-		"core-js": "2.6.3"
 	}
 }
