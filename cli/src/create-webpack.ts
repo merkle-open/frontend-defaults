@@ -32,12 +32,14 @@ const createDemoFiles = async ({
 
 	if (ts) {
 		return {
+			[path.join('src', 'wait.ts')]: await fetchTemplate('webpack', 'wait.ts'),
 			[path.join('src', 'index.ts')]: await fetchTemplate('webpack', 'index.ts'),
 			[path.join('src', 'polyfill.ts')]: await fetchTemplate('webpack', 'polyfill.ts'),
 		};
 	}
 
 	return {
+		[path.join('src', 'wait.js')]: await fetchTemplate('webpack', 'wait.js'),
 		[path.join('src', 'index.js')]: await fetchTemplate('webpack', 'index.js'),
 	};
 };

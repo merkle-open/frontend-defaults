@@ -1,10 +1,8 @@
 import './polyfill';
 
-async function wait(delay: number = 500) {
-	return new Promise((resolve) => setTimeout(resolve, delay));
-};
-
 (async () => {
+	// dynamic import
+	const { wait } = await import(/* webpackChunkName: "wait" */ './wait');
 	await wait();
 	document.write('@namics/frontend-defaults installed');
 })();
