@@ -125,7 +125,13 @@ async function createTag(newVersion) {
 
 (async () => {
 	const packageTemplateFiles = await globby(
-		['cli/templates/**/package.json', 'cli/templates/**/package-*.json', '!**/package-lock.json', '!**/node_modules', '!**/__tests__'],
+		[
+			'cli/templates/**/package.json',
+			'cli/templates/**/package-*.json',
+			'!**/package-lock.json',
+			'!**/node_modules',
+			'!**/__tests__',
+		],
 		{ cwd }
 	);
 	const lernaPackageFiles = await lerna.packages();
@@ -161,7 +167,9 @@ async function createTag(newVersion) {
 	spinners[1].start();
 	try {
 		await Promise.all(
-			packageTemplateFiles.map(async (pathName) => await bumpDependencies(pathName, await lerna.list(), newVersion))
+			packageTemplateFiles.map(
+				async (pathName) => await bumpDependencies(pathName, await lerna.list(), newVersion)
+			)
 		);
 	} catch (err) {
 		spinners[1].fail(err);
@@ -203,5 +211,4 @@ async function createTag(newVersion) {
 		return;
 	}
 	spinners[4].succeed();
-
 })();
