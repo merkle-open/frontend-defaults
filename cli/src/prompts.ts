@@ -184,6 +184,21 @@ export const getWebpack = promptCache(
 	}
 );
 
+export const getBuild = promptCache(
+	async ({ webpack }: { webpack: boolean }): Promise<{ build: boolean }> => {
+		if (webpack) {
+			return { build: false };
+		}
+
+		return await prompt<{ build: boolean }>({
+			type: 'confirm',
+			name: 'build',
+			message: 'Do you want to add build and watch script?',
+			initial: true,
+		});
+	}
+);
+
 export const getInstall = promptCache(
 	async (): Promise<{ install: boolean }> => {
 		return await prompt<{ install: boolean }>({

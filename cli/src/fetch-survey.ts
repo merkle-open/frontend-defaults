@@ -11,6 +11,7 @@ import {
 	getProjectConfigs,
 	getLinters,
 	getWebpack,
+	getBuild,
 	getInstall,
 	getLicense,
 } from './prompts';
@@ -76,6 +77,7 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		...(await getProjectConfigs()),
 		...(await getLinters()),
 		...(await getWebpack()),
+		...(await getBuild(await getWebpack())),
 		...(await getInstall()),
 	};
 
@@ -88,6 +90,7 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		project = [],
 		linters = [],
 		webpack,
+		build,
 		install,
 		packageJson,
 	} = answers;
@@ -115,6 +118,7 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		stylelint: linters.includes(TYPE_CHOICES.stylelint),
 
 		webpack,
+		build,
 		install,
 		force: false,
 		dryRun: false,

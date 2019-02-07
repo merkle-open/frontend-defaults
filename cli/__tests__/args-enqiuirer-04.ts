@@ -8,7 +8,7 @@ const cwd = getCwd();
 jest.mock('enquirer');
 
 describe('enqirer', async () => {
-	it('everything', async () => {
+	it('build ts', async () => {
 		enquirer.prompt = jest.fn().mockResolvedValue({
 			license: TYPE_CHOICES.licenseClosedSource,
 			packageJson: {
@@ -21,7 +21,7 @@ describe('enqirer', async () => {
 			},
 			language: TYPE_CHOICES.ts,
 			tslint: true,
-			eslint: true,
+			eslint: false,
 			project: [
 				TYPE_CHOICES.readme,
 				TYPE_CHOICES.editorconfig,
@@ -31,9 +31,11 @@ describe('enqirer', async () => {
 				TYPE_CHOICES.githooks,
 			],
 			linters: [TYPE_CHOICES.prettier, TYPE_CHOICES.stylelint, TYPE_CHOICES.commitlint],
-			webpack: true,
+			webpack: false,
+			build: true,
 			install: true,
 		});
+
 		expect({
 			...(await fetchSurvey(cwd)),
 			cwd: undefined,
@@ -42,11 +44,10 @@ describe('enqirer', async () => {
 			cwd: undefined,
 			packageJson: undefined,
 			commitlint: true,
-			copyrightHolder: undefined,
 			dryRun: false,
 			editorconfig: true,
 			es: false,
-			eslint: true,
+			eslint: false,
 			force: false,
 			githooks: true,
 			gitignore: true,
@@ -60,8 +61,8 @@ describe('enqirer', async () => {
 			stylelint: true,
 			ts: true,
 			tslint: true,
-			webpack: true,
-			build: false,
+			webpack: false,
+			build: true,
 		});
 	});
 });

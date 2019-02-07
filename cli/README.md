@@ -40,6 +40,7 @@ Options:
   -c --commitlint                 add commitlint (will enable githooks too)
   -nv --nodeVersion               add node-version file
   -w --webpack                    add webpack with webpack-config-plugins
+  -b --build                      add build and watch script
   -i --install                    install dependencies
   -ni --noInstall                 don't install dependencies
   -f --force                      create package.json and override existing files

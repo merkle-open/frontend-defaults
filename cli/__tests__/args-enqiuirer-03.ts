@@ -61,6 +61,7 @@ describe('enqirer', async () => {
 			ts: false,
 			tslint: false,
 			webpack: true,
+			build: false,
 		});
 	});
 });

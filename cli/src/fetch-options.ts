@@ -5,6 +5,13 @@ import { getCwd } from './get-cwd';
 import { fetchSurvey, TLicense, TYPE_CHOICES } from './fetch-survey';
 import { IPackageJson } from './type-package-json';
 
+export const presets = {
+	ts: 'ts' as 'ts',
+	es: 'es' as 'es',
+};
+
+export type TPreset = keyof typeof presets;
+
 export type TMode = 'cli' | 'api' | 'survey';
 
 // define cli api by using commander
@@ -29,12 +36,14 @@ export interface IOptions {
 	commitlint: boolean;
 	nodeVersion: boolean;
 	webpack: boolean;
+	build: boolean;
 
 	install: boolean;
 	force: boolean;
 	dryRun: boolean;
 
 	mode?: TMode;
+	preset?: TPreset;
 }
 
 export interface IProgram {
@@ -62,6 +71,7 @@ export interface IProgram {
 	commitlint?: boolean;
 	nodeVersion?: boolean;
 	webpack?: boolean;
+	build?: boolean;
 
 	install?: boolean;
 	noInstall?: boolean;
@@ -89,6 +99,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		force: answers.force || false,
 		dryRun: answers.dryRun || false,
 		mode: 'cli' as 'cli',
+		build: answers.build || false,
 	};
 
 	if (answers.presetTs) {
@@ -108,6 +119,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			commitlint: true,
 			nodeVersion: true,
 			webpack: true,
+			preset: presets.ts,
 		};
 	}
 
@@ -128,6 +140,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			commitlint: true,
 			nodeVersion: true,
 			webpack: true,
+			preset: presets.es,
 		};
 	}
 
@@ -175,6 +188,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-c --commitlint', 'add commitlint (will enable githooks too)')
 		.option('-nv --nodeVersion', 'add node-version file')
 		.option('-w --webpack', 'add webpack with webpack-config-plugins')
+		.option('-b --build', 'add build and watch script')
 		.option('-i --install', 'install dependencies')
 		.option('-ni --noInstall', "don't install dependencies")
 		.option('-f --force', 'create package.json and override existing files')

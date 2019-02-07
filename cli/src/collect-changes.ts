@@ -17,6 +17,7 @@ import { create as createCommitlint } from './create-commitlint';
 import { create as createEslint } from './create-eslint';
 
 import { create as createWebpack } from './create-webpack';
+import { create as createBuild } from './create-build';
 import { create as createInstall } from './install';
 
 import { sortPackageJson } from './sort-package-json';
@@ -44,7 +45,8 @@ export const collectChanges = async (options: IOptions) => {
 		await createStylelint(options),
 		await createCommitlint(options),
 		await createEslint(options),
-		await createWebpack(options, spinnerCollectChanges)
+		await createWebpack(options, spinnerCollectChanges),
+		await createBuild(options)
 	);
 
 	const changes = deepMerge(changes1, await createInstall<typeof changes1>(options, changes1));

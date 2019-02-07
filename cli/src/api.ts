@@ -1,4 +1,4 @@
-import { IOptions, TMode } from './fetch-options';
+import { IOptions, TMode, TPreset } from './fetch-options';
 import { getCwd } from './get-cwd';
 
 import { install, openVSCode, storeOptionsAndChanges } from './install';
@@ -31,11 +31,13 @@ export interface IApiOptions {
 	commitlint?: boolean;
 	nodeVersion?: boolean;
 	webpack?: boolean;
+	build?: boolean;
 
 	install?: boolean;
 	force?: boolean;
 
 	mode?: TMode;
+	preset?: TPreset;
 }
 
 const defaultApiOptions = {
@@ -54,6 +56,7 @@ const defaultApiOptions = {
 	commitlint: false,
 	nodeVersion: false,
 	webpack: false,
+	build: false,
 
 	install: false,
 	force: false,
@@ -73,6 +76,11 @@ export default async (apiOptions: IApiOptions) => {
 	// enable githooks always with commitlint
 	if (options.commitlint) {
 		options.githooks = true;
+	}
+
+	// disable build if webpack enabled
+	if (options.build && options.webpack) {
+		options.build = false;
 	}
 
 	try {

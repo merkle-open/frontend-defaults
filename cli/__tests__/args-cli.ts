@@ -24,6 +24,7 @@ const defaultOptions = {
 	ts: false,
 	tslint: false,
 	webpack: false,
+	build: false,
 };
 
 describe('presetTs', async () => {
@@ -52,6 +53,38 @@ describe('presetTs', async () => {
 			ts: true,
 			tslint: true,
 			webpack: true,
+			preset: 'ts',
+		});
+	});
+});
+
+describe('presetEs', async () => {
+	it('default', async () => {
+		global.process.argv = [
+			'/usr/local/bin/node',
+			'/usr/local/bin/frontend-defaults',
+			'--presetEs',
+			'--force',
+			'--noInstall',
+		];
+		const options = await fetchOptions();
+		delete options.cwd;
+		expect(options).toEqual({
+			...defaultOptions,
+			commitlint: true,
+			editorconfig: true,
+			force: true,
+			githooks: true,
+			gitignore: true,
+			nodeVersion: true,
+			npmrc: true,
+			prettier: true,
+			readme: true,
+			stylelint: true,
+			es: true,
+			eslint: true,
+			webpack: true,
+			preset: 'es',
 		});
 	});
 });
@@ -198,6 +231,21 @@ describe('webpack', async () => {
 		const options = await fetchOptions();
 		delete options.cwd;
 		expect(options).toEqual({ ...defaultOptions, webpack: true, ts: true, install: true });
+	});
+});
+
+describe('build', async () => {
+	it('default', async () => {
+		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--build'];
+		const options = await fetchOptions();
+		delete options.cwd;
+		expect(options).toEqual({ ...defaultOptions, build: true, install: true });
+	});
+	it('build-ts', async () => {
+		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--build', '--ts'];
+		const options = await fetchOptions();
+		delete options.cwd;
+		expect(options).toEqual({ ...defaultOptions, build: true, ts: true, install: true });
 	});
 });
 
