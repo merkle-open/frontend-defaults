@@ -4,18 +4,18 @@
 
 ## Usage
 
-`npx @namics/frontend-defaults-cli@alpha my-project`
+`npx @namics/frontend-defaults-cli my-project`
 
 ### Show potential changes
-`npx @namics/frontend-defaults-cli@alpha --tslint --dryRun`
+`npx @namics/frontend-defaults-cli --tslint --dryRun`
 
 ### Example greenfield project default with Typescript
 
-`npx @namics/frontend-defaults-cli@alpha my-project --presetTs`
+`npx @namics/frontend-defaults-cli my-project --presetTs`
 
 ### Extend existing Typescript project with tslint
 
-`npx @namics/frontend-defaults-cli@alpha --tslint`
+`npx @namics/frontend-defaults-cli --tslint`
 
 ```
 Usage: <project-name> [options]
