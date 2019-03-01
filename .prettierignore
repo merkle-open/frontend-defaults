@@ -16,3 +16,6 @@
 
 # generator-nitro
 **/project/blueprints
+
+cli/templates
+cli/__tests__/tmp

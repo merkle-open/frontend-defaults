@@ -1,0 +1,14 @@
+{
+	"devDependencies": {
+		"@babel/cli": "7.2.3",
+		"@babel/core": "7.3.4",
+		"@babel/preset-env": "7.3.4",
+		"@babel/preset-react": "7.0.0",
+		"@babel/plugin-proposal-decorators": "7.3.0",
+		"@babel/plugin-syntax-dynamic-import": "7.2.0"
+	},
+	"scripts": {
+		"build": "babel src --out-dir build",
+		"watch": "babel src --watch --out-dir build"
+	}
+}

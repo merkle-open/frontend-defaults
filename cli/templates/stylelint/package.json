@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"lint:css": "stylelint src/**/*.*ss"
+	},
+	"devDependencies": {
+		"stylelint": "9.10.1",
+		"@namics/stylelint-config": "0.2.1"
+	}
+}

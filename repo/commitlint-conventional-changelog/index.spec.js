@@ -28,7 +28,6 @@ const lint = async (message, expectedError) => {
 	['chore(scope): message\n\nBREAKING CHANGE: something', true],
 	['chore(scope): message [ISSUE-1234]', true],
 	[' : message', false, 'type may not be empty [type-empty]'],
-	['chore, message', false, 'message may not be empty [subject-empty]'],
 	[
 		'bugfix: message',
 		false,

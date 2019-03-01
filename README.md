@@ -10,6 +10,10 @@ git clone https://github.com/namics/frontend-defaults.git
 
 * Branch - Master only (so long)
 
+## CLI
+
+You can use our [CLI](cli/README.md) for adding configurations to your project
+
 ## Contents
 
 ### Documentation
@@ -46,6 +50,7 @@ Reason:
 
 | Package                                     |                                                                                  npm                                                                                  |
 | ------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `@namics/frontend-defaults-cli`                   |                       [![npm](https://img.shields.io/npm/v/@namics/frontend-defaults-cli.svg)](https://www.npmjs.com/package/@namics/frontend-defaults-cli)                       |
 | `@namics/prettier-config`                   |                       [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                       |
 | `@namics/stylelint-config`                  |                      [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)                      |
 | `@namics/ts-config`                  |                      [![npm](https://img.shields.io/npm/v/@namics/ts-config.svg)](https://www.npmjs.com/package/@namics/ts-config)                      |

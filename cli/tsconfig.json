@@ -1,0 +1,10 @@
+{
+	"extends": "./node_modules/@namics/ts-config/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "build",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"target": "ES2016"
+	},
+	"exclude": ["dist", "build", "node_modules", "__tests__", "templates"]
+}
