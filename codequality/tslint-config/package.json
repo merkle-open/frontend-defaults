@@ -30,10 +30,10 @@
     "tslint": "5.x"
   },
   "devDependencies": {
-    "jest": "23.6.0",
+    "jest": "24.1.0",
     "rimraf": "2.6.3",
-    "tslint": "5.12.1",
-    "typescript": "3.3.1"
+    "tslint": "5.13.1",
+    "typescript": "3.3.3333"
   },
   "dependencies": {
     "tslint-react": "3.6.0"

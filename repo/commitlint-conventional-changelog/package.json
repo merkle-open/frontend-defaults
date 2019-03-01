@@ -20,9 +20,9 @@
     "@commitlint/cli": "7.x.x"
   },
   "devDependencies": {
-    "@commitlint/cli": "7.5.0",
+    "@commitlint/cli": "7.5.2",
     "@commitlint/utils": "7.5.0",
-    "jest": "23.6.0",
+    "jest": "24.1.0",
     "execa": "1.0.0"
   },
   "commitlint": {
