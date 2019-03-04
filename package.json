@@ -13,8 +13,9 @@
   ],
   "scripts": {
     "clean": "npx npm-run-all clean:*",
-    "clean:lerna": "npx lerna clean --yes",
-    "clean:dirs": "npx rimraf lerna-debug.log npm-debug.log **/package-lock.json node_modules **/build",
+    "clean:lerna": "lerna clean --yes",
+    "clean:dirs": "rimraf lerna-debug.log npm-debug.log **/package-lock.json",
+    "clean:modules": "npx rimraf node_modules",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
@@ -26,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -64,21 +65,22 @@
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
+    "chalk": "2.4.2",
     "commitizen": "3.0.7",
     "conventional-changelog": "3.0.6",
     "conventional-recommended-bump": "4.0.4",
-    "husky": "1.3.1",
-    "lerna": "3.13.1",
-    "lint-staged": "8.1.4",
-    "prettier": "1.16.4",
-    "rimraf": "2.6.3",
-    "globby": "9.0.0",
     "enquirer": "2.3.0",
-    "latest-version": "4.0.0",
-    "chalk": "2.4.2",
-    "ora": "3.1.0",
     "execa": "1.0.0",
     "git-raw-commits": "2.0.0",
-    "git-semver-tags": "2.0.2"
+    "git-semver-tags": "2.0.2",
+    "globby": "9.1.0",
+    "husky": "1.3.1",
+    "latest-version": "4.0.0",
+    "lerna": "3.13.1",
+    "lint-staged": "8.1.5",
+    "npm-run-all": "4.1.5",
+    "ora": "3.2.0",
+    "prettier": "1.15.2",
+    "rimraf": "2.6.3"
   }
 }
