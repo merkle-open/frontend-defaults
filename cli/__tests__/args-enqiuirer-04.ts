@@ -1,4 +1,4 @@
-import 'jest';
+/// <reference types="@types/jest" />
 import enquirer from 'enquirer';
 
 import { fetchSurvey, TYPE_CHOICES } from '../src/fetch-survey';
@@ -7,7 +7,7 @@ const cwd = getCwd();
 
 jest.mock('enquirer');
 
-describe('enqirer', async () => {
+describe('enqirer', () => {
 	it('build ts', async () => {
 		enquirer.prompt = jest.fn().mockResolvedValue({
 			license: TYPE_CHOICES.licenseClosedSource,

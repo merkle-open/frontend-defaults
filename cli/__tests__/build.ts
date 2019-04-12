@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('build', async () => {
+describe('build', () => {
 	it('default', async () =>
 		await apiIt('build', {
 			build: true,

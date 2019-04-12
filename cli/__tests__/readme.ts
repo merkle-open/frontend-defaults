@@ -1,7 +1,8 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 import { TYPE_CHOICES } from '../src/fetch-survey';
 
-describe('readme', async () => {
+describe('readme', () => {
 	it('open-source', async () =>
 		await apiIt('readme-open-source', {
 			readme: true,

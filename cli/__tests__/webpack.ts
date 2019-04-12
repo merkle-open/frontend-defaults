@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('webpack', async () => {
+describe('webpack', () => {
 	it('default', async () =>
 		await apiIt('webpack', {
 			webpack: true,

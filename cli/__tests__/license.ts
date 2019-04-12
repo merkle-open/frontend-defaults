@@ -1,7 +1,8 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 import { TYPE_CHOICES } from '../src/fetch-survey';
 
-describe('license', async () => {
+describe('license', () => {
 	it('license-open-source', async () =>
 		await apiIt('license-open-source', {
 			license: TYPE_CHOICES.licenseOpenSource,

@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('eslint', async () => {
+describe('eslint', () => {
 	it('default', async () =>
 		await apiIt('eslint', {
 			eslint: true,

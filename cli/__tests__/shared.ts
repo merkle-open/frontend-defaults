@@ -1,6 +1,6 @@
+/// <reference types="@types/jest" />
 jest.mock('latest-version');
 
-import latestVersion from 'latest-version';
 import 'jest';
 import path from 'path';
 import fs from 'fs-extra';
@@ -8,7 +8,10 @@ import rimraf from 'rimraf';
 
 import api, { IApiOptions } from '../src/api';
 
-latestVersion.mockImplementation(() => '0.1.0-mock');
+jest.mock('latest-version', () => ({
+	__esModule: true,
+	default: jest.fn().mockReturnValue('0.1.0-mock'),
+}));
 
 const cwd = process.cwd();
 
@@ -39,7 +42,7 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDel
 
 	let i = 0;
 	for (i = 0; i < files.length; i += 1) {
-		const fileData = (await fs.readFile(path.join(tmpPath, files[i]), 'utf8')).replace(/(\r\n\t|\n|\r\t)/gm, '');
+		const fileData = await fs.readFile(path.join(tmpPath, files[i]), 'utf8');
 		expect(fileData).toMatchSnapshot();
 	}
 };

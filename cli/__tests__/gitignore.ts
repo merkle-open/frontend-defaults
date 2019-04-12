@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('gitignore', async () => {
+describe('gitignore', () => {
 	it('default', async () =>
 		await apiIt('gitignore', {
 			gitignore: true,

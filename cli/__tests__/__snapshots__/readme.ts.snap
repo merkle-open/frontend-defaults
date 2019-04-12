@@ -1,15 +1,247 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`readme closed-source 1`] = `"{  \\"options\\": {    \\"ts\\": false,    \\"tslint\\": false,    \\"es\\": false,    \\"eslint\\": false,    \\"editorconfig\\": false,    \\"prettier\\": false,    \\"stylelint\\": false,    \\"gitignore\\": false,    \\"npmrc\\": false,    \\"readme\\": true,    \\"githooks\\": false,    \\"commitlint\\": false,    \\"nodeVersion\\": false,    \\"webpack\\": false,    \\"build\\": false,    \\"install\\": false,    \\"force\\": true,    \\"dryRun\\": false,    \\"mode\\": \\"api\\",    \\"license\\": \\"licenseClosedSource\\"  },  \\"mergedFiles\\": {    \\"package.json\\": {      \\"override\\": false,      \\"data\\": {        \\"license\\": \\"UNLICENSED\\",        \\"private\\": true      }    },    \\"README.md\\": {      \\"override\\": false,      \\"data\\": \\"# readme-closed-source\\\\n\\\\nIntroduction ...\\\\n\\\\n## Overview\\\\n\\\\n* Layout: ...\\\\n* Languages: ...\\\\n* SEO: ...\\\\n* WAI: ...\\\\n* Clientside Tracking: ...\\\\n* Security: ...\\\\n* Methodology: ...\\\\n* Dates: ...\\\\n* Persons: ...\\\\n\\\\n### Customer-Objectives\\\\n\\\\n* ...\\\\n* ...\\\\n\\\\n### Testing\\\\n\\\\n* Browser Test Matrix: ...\\\\n* Javascript: ...\\\\n* Touch Support: ...\\\\n* Screen Resolutions/Retina: ...\\\\n* Print: ...\\\\n* Automated testing: ...\\\\n* Component testing: ...\\\\n\\\\n## Development\\\\n\\\\n### URL\\\\n* Specification: ...\\\\n* Wireframes: ...\\\\n* Styleguide: ...\\\\n* CVS: ...\\\\n* Jira: ...\\\\n* Prototype: ...\\\\n* Build: ...\\\\n\\\\n### Guidelines\\\\n\\\\n* [Code Guidelines](project/docs/___.md)\\\\n* Folder structure: ...\\\\n* Patterns: ...\\\\n* Dependencies: ...\\\\n* Progressive enhancement: ...\\\\n* Commit messages: ...\\\\n\\\\n### Tech\\\\n\\\\n* Doctype: ...\\\\n* HTML Head: ...\\\\n* UTF-8: overall\\\\n* Libraries: ...\\\\n* Webfonts: ...\\\\n* Clientside Storage: ...\\\\n* Licences: ...\\\\n* Performance-Budget: ...\\\\n* Interfaces/API: ...\\\\n* Documentation: ...\\\\n\\\\n### Design\\\\n\\\\n* Sources: ...\\\\n* Webfonts: ...\\\\n* Icons: ...\\\\n* Touch Icons: ...\\\\n\\\\n## Setup\\\\n\\\\n* [Setup Info](project/docs/___.md)\\\\n* Development in branch develop\\\\n\\\\n## Integration/Deployment\\\\n\\\\n* Protocols: ...\\\\n* Minification & Compression: ...\\\\n\\\\n...\\\\n\\"    }  }}"`;
+exports[`readme closed-source 1`] = `
+"{
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"tslint\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": false,
+    \\"npmrc\\": false,
+    \\"readme\\": true,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodeVersion\\": false,
+    \\"webpack\\": false,
+    \\"build\\": false,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"api\\",
+    \\"license\\": \\"licenseClosedSource\\"
+  },
+  \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"license\\": \\"UNLICENSED\\",
+        \\"private\\": true
+      }
+    },
+    \\"README.md\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# readme-closed-source\\\\n\\\\nIntroduction ...\\\\n\\\\n## Overview\\\\n\\\\n* Layout: ...\\\\n* Languages: ...\\\\n* SEO: ...\\\\n* WAI: ...\\\\n* Clientside Tracking: ...\\\\n* Security: ...\\\\n* Methodology: ...\\\\n* Dates: ...\\\\n* Persons: ...\\\\n\\\\n### Customer-Objectives\\\\n\\\\n* ...\\\\n* ...\\\\n\\\\n### Testing\\\\n\\\\n* Browser Test Matrix: ...\\\\n* Javascript: ...\\\\n* Touch Support: ...\\\\n* Screen Resolutions/Retina: ...\\\\n* Print: ...\\\\n* Automated testing: ...\\\\n* Component testing: ...\\\\n\\\\n## Development\\\\n\\\\n### URL\\\\n* Specification: ...\\\\n* Wireframes: ...\\\\n* Styleguide: ...\\\\n* CVS: ...\\\\n* Jira: ...\\\\n* Prototype: ...\\\\n* Build: ...\\\\n\\\\n### Guidelines\\\\n\\\\n* [Code Guidelines](project/docs/___.md)\\\\n* Folder structure: ...\\\\n* Patterns: ...\\\\n* Dependencies: ...\\\\n* Progressive enhancement: ...\\\\n* Commit messages: ...\\\\n\\\\n### Tech\\\\n\\\\n* Doctype: ...\\\\n* HTML Head: ...\\\\n* UTF-8: overall\\\\n* Libraries: ...\\\\n* Webfonts: ...\\\\n* Clientside Storage: ...\\\\n* Licences: ...\\\\n* Performance-Budget: ...\\\\n* Interfaces/API: ...\\\\n* Documentation: ...\\\\n\\\\n### Design\\\\n\\\\n* Sources: ...\\\\n* Webfonts: ...\\\\n* Icons: ...\\\\n* Touch Icons: ...\\\\n\\\\n## Setup\\\\n\\\\n* [Setup Info](project/docs/___.md)\\\\n* Development in branch develop\\\\n\\\\n## Integration/Deployment\\\\n\\\\n* Protocols: ...\\\\n* Minification & Compression: ...\\\\n\\\\n...\\\\n\\"
+    }
+  }
+}"
+`;
 
-exports[`readme closed-source 2`] = `"# readme-closed-sourceIntroduction ...## Overview* Layout: ...* Languages: ...* SEO: ...* WAI: ...* Clientside Tracking: ...* Security: ...* Methodology: ...* Dates: ...* Persons: ...### Customer-Objectives* ...* ...### Testing* Browser Test Matrix: ...* Javascript: ...* Touch Support: ...* Screen Resolutions/Retina: ...* Print: ...* Automated testing: ...* Component testing: ...## Development### URL* Specification: ...* Wireframes: ...* Styleguide: ...* CVS: ...* Jira: ...* Prototype: ...* Build: ...### Guidelines* [Code Guidelines](project/docs/___.md)* Folder structure: ...* Patterns: ...* Dependencies: ...* Progressive enhancement: ...* Commit messages: ...### Tech* Doctype: ...* HTML Head: ...* UTF-8: overall* Libraries: ...* Webfonts: ...* Clientside Storage: ...* Licences: ...* Performance-Budget: ...* Interfaces/API: ...* Documentation: ...### Design* Sources: ...* Webfonts: ...* Icons: ...* Touch Icons: ...## Setup* [Setup Info](project/docs/___.md)* Development in branch develop## Integration/Deployment* Protocols: ...* Minification & Compression: ......"`;
+exports[`readme closed-source 2`] = `
+"# readme-closed-source
 
-exports[`readme closed-source 3`] = `"{  \\"license\\": \\"UNLICENSED\\",  \\"private\\": true}"`;
+Introduction ...
 
-exports[`readme open-source 1`] = `"{  \\"options\\": {    \\"ts\\": false,    \\"tslint\\": false,    \\"es\\": false,    \\"eslint\\": false,    \\"editorconfig\\": false,    \\"prettier\\": false,    \\"stylelint\\": false,    \\"gitignore\\": false,    \\"npmrc\\": false,    \\"readme\\": true,    \\"githooks\\": false,    \\"commitlint\\": false,    \\"nodeVersion\\": false,    \\"webpack\\": false,    \\"build\\": false,    \\"install\\": false,    \\"force\\": true,    \\"dryRun\\": false,    \\"mode\\": \\"api\\",    \\"license\\": \\"licenseOpenSource\\",    \\"copyrightHolder\\": \\"Namics AG\\"  },  \\"mergedFiles\\": {    \\"package.json\\": {      \\"override\\": false,      \\"data\\": {        \\"license\\": \\"MIT\\",        \\"private\\": false      }    },    \\"README.md\\": {      \\"override\\": false,      \\"data\\": \\"\\\\n<div align=\\\\\\"center\\\\\\">\\\\n<br />\\\\n#logo\\\\n<br />\\\\n<br />\\\\n<br />\\\\n\\\\n[![NPM version](https://badge.fury.io/js/readme-open-source.svg)](https://www.npmjs.com/package/readme-open-source) [![Travis](https://img.shields.io/travis/namics/readme-open-source/master.svg)](https://travis-ci.org/namics/readme-open-source)\\\\n\\\\n[![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier) <!--IF(ts)-->![TypeScript-ready](https://img.shields.io/npm/types/readme-open-source.svg)<!--/IF-->\\\\n\\\\n<h1>readme-open-source</h1>\\\\n<br />\\\\n#Description\\\\n<br />\\\\n<br />\\\\n</div>\\\\n\\\\n## Table of Contents\\\\n\\\\n## Installation\\\\n\\\\n## Usage\\\\n\\\\n## Contributing\\\\n\\\\n## Credits\\\\n\\\\n## License\\\\n\\\\nThe readme-open-source is [MIT licensed](./LICENSE)\\\\n\\"    },    \\"LICENSE\\": {      \\"override\\": false,      \\"data\\": \\"MIT License\\\\n\\\\nCopyright (c) 2019-present Namics AG\\\\n\\\\nPermission is hereby granted, free of charge, to any person obtaining a copy\\\\nof this software and associated documentation files (the \\\\\\"Software\\\\\\"), to deal\\\\nin the Software without restriction, including without limitation the rights\\\\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\\\\ncopies of the Software, and to permit persons to whom the Software is\\\\nfurnished to do so, subject to the following conditions:\\\\n\\\\nThe above copyright notice and this permission notice shall be included in all\\\\ncopies or substantial portions of the Software.\\\\n\\\\nTHE SOFTWARE IS PROVIDED \\\\\\"AS IS\\\\\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\\\\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\\\\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\\\\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\\\\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\\\\nSOFTWARE.\\\\n\\"    }  }}"`;
+## Overview
 
-exports[`readme open-source 2`] = `"MIT LicenseCopyright (c) 2019-present Namics AGPermission is hereby granted, free of charge, to any person obtaining a copyof this software and associated documentation files (the \\"Software\\"), to dealin the Software without restriction, including without limitation the rightsto use, copy, modify, merge, publish, distribute, sublicense, and/or sellcopies of the Software, and to permit persons to whom the Software isfurnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software.THE SOFTWARE IS PROVIDED \\"AS IS\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THESOFTWARE."`;
+* Layout: ...
+* Languages: ...
+* SEO: ...
+* WAI: ...
+* Clientside Tracking: ...
+* Security: ...
+* Methodology: ...
+* Dates: ...
+* Persons: ...
 
-exports[`readme open-source 3`] = `"<div align=\\"center\\"><br />#logo<br /><br /><br />[![NPM version](https://badge.fury.io/js/readme-open-source.svg)](https://www.npmjs.com/package/readme-open-source) [![Travis](https://img.shields.io/travis/namics/readme-open-source/master.svg)](https://travis-ci.org/namics/readme-open-source)[![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier) <!--IF(ts)-->![TypeScript-ready](https://img.shields.io/npm/types/readme-open-source.svg)<!--/IF--><h1>readme-open-source</h1><br />#Description<br /><br /></div>## Table of Contents## Installation## Usage## Contributing## Credits## LicenseThe readme-open-source is [MIT licensed](./LICENSE)"`;
+### Customer-Objectives
 
-exports[`readme open-source 4`] = `"{  \\"license\\": \\"MIT\\",  \\"private\\": false}"`;
+* ...
+* ...
+
+### Testing
+
+* Browser Test Matrix: ...
+* Javascript: ...
+* Touch Support: ...
+* Screen Resolutions/Retina: ...
+* Print: ...
+* Automated testing: ...
+* Component testing: ...
+
+## Development
+
+### URL
+* Specification: ...
+* Wireframes: ...
+* Styleguide: ...
+* CVS: ...
+* Jira: ...
+* Prototype: ...
+* Build: ...
+
+### Guidelines
+
+* [Code Guidelines](project/docs/___.md)
+* Folder structure: ...
+* Patterns: ...
+* Dependencies: ...
+* Progressive enhancement: ...
+* Commit messages: ...
+
+### Tech
+
+* Doctype: ...
+* HTML Head: ...
+* UTF-8: overall
+* Libraries: ...
+* Webfonts: ...
+* Clientside Storage: ...
+* Licences: ...
+* Performance-Budget: ...
+* Interfaces/API: ...
+* Documentation: ...
+
+### Design
+
+* Sources: ...
+* Webfonts: ...
+* Icons: ...
+* Touch Icons: ...
+
+## Setup
+
+* [Setup Info](project/docs/___.md)
+* Development in branch develop
+
+## Integration/Deployment
+
+* Protocols: ...
+* Minification & Compression: ...
+
+...
+"
+`;
+
+exports[`readme closed-source 3`] = `
+"{
+  \\"license\\": \\"UNLICENSED\\",
+  \\"private\\": true
+}"
+`;
+
+exports[`readme open-source 1`] = `
+"{
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"tslint\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": false,
+    \\"npmrc\\": false,
+    \\"readme\\": true,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodeVersion\\": false,
+    \\"webpack\\": false,
+    \\"build\\": false,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"api\\",
+    \\"license\\": \\"licenseOpenSource\\",
+    \\"copyrightHolder\\": \\"Namics AG\\"
+  },
+  \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"license\\": \\"MIT\\",
+        \\"private\\": false
+      }
+    },
+    \\"README.md\\": {
+      \\"override\\": false,
+      \\"data\\": \\"\\\\n<div align=\\\\\\"center\\\\\\">\\\\n<br />\\\\n#logo\\\\n<br />\\\\n<br />\\\\n<br />\\\\n\\\\n[![NPM version](https://badge.fury.io/js/readme-open-source.svg)](https://www.npmjs.com/package/readme-open-source) [![Travis](https://img.shields.io/travis/namics/readme-open-source/master.svg)](https://travis-ci.org/namics/readme-open-source)\\\\n\\\\n[![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier) <!--IF(ts)-->![TypeScript-ready](https://img.shields.io/npm/types/readme-open-source.svg)<!--/IF-->\\\\n\\\\n<h1>readme-open-source</h1>\\\\n<br />\\\\n#Description\\\\n<br />\\\\n<br />\\\\n</div>\\\\n\\\\n## Table of Contents\\\\n\\\\n## Installation\\\\n\\\\n## Usage\\\\n\\\\n## Contributing\\\\n\\\\n## Credits\\\\n\\\\n## License\\\\n\\\\nThe readme-open-source is [MIT licensed](./LICENSE)\\\\n\\"
+    },
+    \\"LICENSE\\": {
+      \\"override\\": false,
+      \\"data\\": \\"MIT License\\\\n\\\\nCopyright (c) 2019-present Namics AG\\\\n\\\\nPermission is hereby granted, free of charge, to any person obtaining a copy\\\\nof this software and associated documentation files (the \\\\\\"Software\\\\\\"), to deal\\\\nin the Software without restriction, including without limitation the rights\\\\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\\\\ncopies of the Software, and to permit persons to whom the Software is\\\\nfurnished to do so, subject to the following conditions:\\\\n\\\\nThe above copyright notice and this permission notice shall be included in all\\\\ncopies or substantial portions of the Software.\\\\n\\\\nTHE SOFTWARE IS PROVIDED \\\\\\"AS IS\\\\\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\\\\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\\\\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\\\\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\\\\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\\\\nSOFTWARE.\\\\n\\"
+    }
+  }
+}"
+`;
+
+exports[`readme open-source 2`] = `
+"MIT License
+
+Copyright (c) 2019-present Namics AG
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \\"Software\\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \\"AS IS\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"
+`;
+
+exports[`readme open-source 3`] = `
+"
+<div align=\\"center\\">
+<br />
+#logo
+<br />
+<br />
+<br />
+
+[![NPM version](https://badge.fury.io/js/readme-open-source.svg)](https://www.npmjs.com/package/readme-open-source) [![Travis](https://img.shields.io/travis/namics/readme-open-source/master.svg)](https://travis-ci.org/namics/readme-open-source)
+
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier) <!--IF(ts)-->![TypeScript-ready](https://img.shields.io/npm/types/readme-open-source.svg)<!--/IF-->
+
+<h1>readme-open-source</h1>
+<br />
+#Description
+<br />
+<br />
+</div>
+
+## Table of Contents
+
+## Installation
+
+## Usage
+
+## Contributing
+
+## Credits
+
+## License
+
+The readme-open-source is [MIT licensed](./LICENSE)
+"
+`;
+
+exports[`readme open-source 4`] = `
+"{
+  \\"license\\": \\"MIT\\",
+  \\"private\\": false
+}"
+`;

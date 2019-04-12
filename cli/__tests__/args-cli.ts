@@ -1,4 +1,4 @@
-import 'jest';
+/// <reference types="@types/jest" />
 import path from 'path';
 
 import { fetchOptions } from '../src/fetch-options';
@@ -27,7 +27,7 @@ const defaultOptions = {
 	build: false,
 };
 
-describe('presetTs', async () => {
+describe('presetTs', () => {
 	it('default', async () => {
 		global.process.argv = [
 			'/usr/local/bin/node',
@@ -58,7 +58,7 @@ describe('presetTs', async () => {
 	});
 });
 
-describe('presetEs', async () => {
+describe('presetEs', () => {
 	it('default', async () => {
 		global.process.argv = [
 			'/usr/local/bin/node',
@@ -89,7 +89,7 @@ describe('presetEs', async () => {
 	});
 });
 
-describe('commitlint', async () => {
+describe('commitlint', () => {
 	it('default', async () => {
 		global.process.argv = [
 			'/usr/local/bin/node',
@@ -104,7 +104,7 @@ describe('commitlint', async () => {
 	});
 });
 
-describe('editorconfig', async () => {
+describe('editorconfig', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--editorconfig'];
 		const options = await fetchOptions();
@@ -113,7 +113,7 @@ describe('editorconfig', async () => {
 	});
 });
 
-describe('eslint', async () => {
+describe('eslint', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--eslint'];
 		const options = await fetchOptions();
@@ -122,7 +122,7 @@ describe('eslint', async () => {
 	});
 });
 
-describe('gitignore', async () => {
+describe('gitignore', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--gitignore'];
 		const options = await fetchOptions();
@@ -131,7 +131,7 @@ describe('gitignore', async () => {
 	});
 });
 
-describe('license', async () => {
+describe('license', () => {
 	it('closedSource', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--licenseClosedSource'];
 		const options = await fetchOptions();
@@ -156,7 +156,7 @@ describe('license', async () => {
 	});
 });
 
-describe('node-version', async () => {
+describe('node-version', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--nodeVersion'];
 		const options = await fetchOptions();
@@ -165,7 +165,7 @@ describe('node-version', async () => {
 	});
 });
 
-describe('npmrc', async () => {
+describe('npmrc', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--npmrc'];
 		const options = await fetchOptions();
@@ -174,7 +174,7 @@ describe('npmrc', async () => {
 	});
 });
 
-describe('prettier', async () => {
+describe('prettier', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--prettier'];
 		const options = await fetchOptions();
@@ -183,7 +183,7 @@ describe('prettier', async () => {
 	});
 });
 
-describe('readme', async () => {
+describe('readme', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--readme'];
 		const options = await fetchOptions();
@@ -192,7 +192,7 @@ describe('readme', async () => {
 	});
 });
 
-describe('stylelint', async () => {
+describe('stylelint', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--stylelint'];
 		const options = await fetchOptions();
@@ -201,7 +201,7 @@ describe('stylelint', async () => {
 	});
 });
 
-describe('tsconfig', async () => {
+describe('tsconfig', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--ts'];
 		const options = await fetchOptions();
@@ -210,7 +210,7 @@ describe('tsconfig', async () => {
 	});
 });
 
-describe('tslint', async () => {
+describe('tslint', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--tslint'];
 		const options = await fetchOptions();
@@ -219,7 +219,7 @@ describe('tslint', async () => {
 	});
 });
 
-describe('webpack', async () => {
+describe('webpack', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--webpack'];
 		const options = await fetchOptions();
@@ -234,7 +234,7 @@ describe('webpack', async () => {
 	});
 });
 
-describe('build', async () => {
+describe('build', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--build'];
 		const options = await fetchOptions();
@@ -249,7 +249,7 @@ describe('build', async () => {
 	});
 });
 
-describe('with project name', async () => {
+describe('with project name', () => {
 	it('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', 'my-project', '--webpack'];
 		const options = await fetchOptions();

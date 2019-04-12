@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('node-version', async () => {
+describe('node-version', () => {
 	it('default', async () =>
 		await apiIt('node-version', {
 			nodeVersion: true,

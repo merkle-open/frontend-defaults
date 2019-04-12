@@ -1,6 +1,7 @@
+/// <reference types="@types/jest" />
 import { apiIt } from './shared';
 
-describe('prettier', async () => {
+describe('prettier', () => {
 	it('default', async () =>
 		await apiIt('prettier', {
 			prettier: true,
