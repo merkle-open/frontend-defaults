@@ -23,7 +23,7 @@ export interface IOptions {
 
 	// details
 	ts: boolean;
-	tslint: boolean;
+	typescriptEslint: boolean;
 	es: boolean;
 	eslint: boolean;
 	editorconfig: boolean;
@@ -58,7 +58,7 @@ export interface IProgram {
 
 	// details
 	ts?: boolean;
-	tslint?: boolean;
+	typescriptEslint?: boolean;
 	es?: boolean;
 	eslint?: boolean;
 	editorconfig?: boolean;
@@ -106,7 +106,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		return {
 			...options,
 			ts: true,
-			tslint: true,
+			typescriptEslint: true,
 			es: false,
 			eslint: false,
 			editorconfig: true,
@@ -127,7 +127,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		return {
 			...options,
 			ts: false,
-			tslint: false,
+			typescriptEslint: false,
 			es: true,
 			eslint: true,
 			editorconfig: true,
@@ -147,7 +147,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 	return {
 		...options,
 		ts: answers.ts || false,
-		tslint: answers.tslint || false,
+		typescriptEslint: answers.typescriptEslint || false,
 		es: answers.es || false,
 		eslint: answers.eslint || false,
 		editorconfig: answers.editorconfig || false,
@@ -172,7 +172,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-pTs, --presetTs', 'Preset typescript (recommended)')
 		.option('-pEs, --presetEs', 'Preset javascript')
 		.option('-ts, --ts', 'with typescript configurations')
-		.option('-tsl, --tslint', 'add tslint')
+		.option('-tesl, --typescriptEslint', 'add typescript-eslint')
 		.option('-es, --es', 'with javascript configurations')
 		.option('-esl, --eslint', 'add eslint')
 		.option('-e --editorconfig', 'add editorconfig')

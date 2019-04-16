@@ -6,8 +6,8 @@
 	},
 	"lint-staged": {
 		"linters": {
-			"src/**/*.{ts,tsx}": [
-				"tslint"
+			"src/**/*.{js,jsx,ts,tsx}": [
+				"eslint --ext .jsx,.js,.ts,.tsx"
 			]
 		}
 	},

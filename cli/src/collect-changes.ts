@@ -10,7 +10,7 @@ import { create as createGithooks } from './create-githooks';
 import { create as createNpmrc } from './create-npmrc';
 
 import { create as createPrettier } from './create-prettier';
-import { create as createTslint } from './create-tslint';
+import { create as createTypescriptEslint } from './create-typescript-eslint';
 import { create as createTsconfig } from './create-tsconfig';
 import { create as createStylelint } from './create-stylelint';
 import { create as createCommitlint } from './create-commitlint';
@@ -40,7 +40,7 @@ export const collectChanges = async (options: IOptions) => {
 		await createGithooks(options),
 		await createNpmrc(options),
 		await createPrettier(options),
-		await createTslint(options),
+		await createTypescriptEslint(options),
 		await createTsconfig(options),
 		await createStylelint(options),
 		await createCommitlint(options),

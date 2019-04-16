@@ -4,7 +4,7 @@ exports[`webpack default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -164,7 +164,7 @@ exports[`webpack webpack-with-ts 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": true,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

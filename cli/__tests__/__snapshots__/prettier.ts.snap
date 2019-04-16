@@ -4,7 +4,7 @@ exports[`prettier default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -91,7 +91,7 @@ exports[`prettier with-githooks 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-plugin-import": "2.16.0",
+    "@namics/eslint-config": "6.1.0"
+  }
+}

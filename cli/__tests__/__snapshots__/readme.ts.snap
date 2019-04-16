@@ -4,7 +4,7 @@ exports[`readme closed-source 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -137,7 +137,7 @@ exports[`readme open-source 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
+    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

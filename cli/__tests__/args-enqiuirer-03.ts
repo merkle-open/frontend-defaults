@@ -20,7 +20,7 @@ describe('enqirer', () => {
 				}`,
 			},
 			language: TYPE_CHOICES.es,
-			tslint: false,
+			typescriptEslint: false,
 			eslint: true,
 			project: [
 				TYPE_CHOICES.readme,
@@ -42,6 +42,7 @@ describe('enqirer', () => {
 		}).toEqual({
 			cwd: undefined,
 			packageJson: undefined,
+			copyrightHolder: undefined,
 			commitlint: true,
 			dryRun: false,
 			editorconfig: true,
@@ -59,7 +60,7 @@ describe('enqirer', () => {
 			readme: true,
 			stylelint: true,
 			ts: false,
-			tslint: false,
+			typescriptEslint: false,
 			webpack: true,
 			build: false,
 		});

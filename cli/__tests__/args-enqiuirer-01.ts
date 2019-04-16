@@ -20,8 +20,8 @@ describe('enqirer', () => {
 				}`,
 			},
 			language: TYPE_CHOICES.ts,
-			tslint: true,
-			eslint: true,
+			typescriptEslint: true,
+			eslint: false,
 			project: [
 				TYPE_CHOICES.readme,
 				TYPE_CHOICES.editorconfig,
@@ -46,7 +46,8 @@ describe('enqirer', () => {
 			dryRun: false,
 			editorconfig: true,
 			es: false,
-			eslint: true,
+			eslint: false,
+			typescriptEslint: true,
 			force: false,
 			githooks: true,
 			gitignore: true,
@@ -59,7 +60,6 @@ describe('enqirer', () => {
 			readme: true,
 			stylelint: true,
 			ts: true,
-			tslint: true,
 			webpack: true,
 			build: false,
 		});

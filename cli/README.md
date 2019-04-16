@@ -7,15 +7,15 @@
 `npx @namics/frontend-defaults-cli my-project`
 
 ### Show potential changes
-`npx @namics/frontend-defaults-cli --tslint --dryRun`
+`npx @namics/frontend-defaults-cli --typescriptEslint --dryRun`
 
 ### Example greenfield project default with Typescript
 
 `npx @namics/frontend-defaults-cli my-project --presetTs`
 
-### Extend existing Typescript project with tslint
+### Extend existing Typescript project with eslint for typescript
 
-`npx @namics/frontend-defaults-cli --tslint`
+`npx @namics/frontend-defaults-cli --typescriptEslint`
 
 ```
 Usage: <project-name> [options]
@@ -24,9 +24,9 @@ Options:
   -pTs, --presetTs                Preset typescript (recommended)
   -pEs, --presetEs                Preset javascript
   -ts, --ts                       with typescript configurations
-  -tsl, --tslint                  add tslint
   -es, --es                       with javascript configurations
   -esl, --eslint                  add eslint
+  -tesl, --typescriptEslint       add typescript-eslint
   -e --editorconfig               add editorconfig
   -p --prettier                   add prettier
   -s --stylelint                  add stylelint
