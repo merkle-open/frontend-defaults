@@ -34,6 +34,6 @@
   "scripts": {
     "prepublishOnly": "npm-run-all test",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "watch-test": "jest --watchAll"
   }
 }

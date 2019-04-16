@@ -25,8 +25,8 @@
     "templates"
   ],
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch --notify --notifyMode=failure-change",
+    "test": "jest --coverage",
+    "watch-test": "jest --watchAll --coverage --notify --notifyMode=failure-change",
     "watch": "tsc -w",
     "prebuild": "rimraf build",
     "build": "tsc",

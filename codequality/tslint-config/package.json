@@ -23,7 +23,8 @@
     "prepublishOnly": "npm-run-all test build",
     "pretest": "npm run build",
     "test": "jest",
-    "test:dev": "jest --watch",
+    "watch-test": "jest --watchAll",
+    "lint": "npm-run-all lint:*",
     "lint:ts": "tslint '__test__/**/*.{ts,tsx}'"
   },
   "peerDependencies": {

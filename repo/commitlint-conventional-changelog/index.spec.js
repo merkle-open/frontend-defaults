@@ -1,41 +1,58 @@
 const execa = require('execa');
 
-const lint = async (message, expectedError) => {
-	let out = '';
-	let hasError = false;
-	try {
-		out = (await execa.shell(`echo \"${message}\" | node_modules/.bin/commitlint`)).stdout;
-	} catch (err) {
-		hasError = true;
-		out = err.toString();
-	}
-	if (hasError) {
-		if (!expectedError) {
-			console.error(`\n\n\n${out}`);
-			console.error('no expectedError defined\n\n\n');
-			return;
+describe('commitlint', () => {
+	test('chore(test): message => valid'.replace(/\n/g, ' '), async () => {
+		const out = (await execa.shell(`echo \"chore(test): message\" | node_modules/.bin/commitlint`)).stdout;
+		expect(out.toString().includes('found 0 problems, 0 warnings')).toBe(true);
+	});
+	test('chore: message => valid'.replace(/\n/g, ' '), async () => {
+		const out = (await execa.shell(`echo \"chore: message\" | node_modules/.bin/commitlint`)).stdout;
+		expect(out.toString().includes('found 0 problems, 0 warnings')).toBe(true);
+	});
+	test('chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something => valid'.replace(/\n/g, ' '), async () => {
+		const out = (await execa.shell(
+			`echo \"chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something\" | node_modules/.bin/commitlint`
+		)).stdout;
+		expect(out.toString().includes('found 0 problems, 0 warnings')).toBe(true);
+	});
+	test('chore(scope): message\n\nBREAKING CHANGE: something => valid'.replace(/\n/g, ' '), async () => {
+		const out = (await execa.shell(
+			`echo \"chore(scope): message\n\nBREAKING CHANGE: something\" | node_modules/.bin/commitlint`
+		)).stdout;
+		expect(out.toString().includes('found 0 problems, 0 warnings')).toBe(true);
+	});
+	test('chore(scope): message [ISSUE-1234] => valid'.replace(/\n/g, ' '), async () => {
+		const out = (await execa.shell(`echo \"chore(scope): message [ISSUE-1234]\" | node_modules/.bin/commitlint`))
+			.stdout;
+		expect(out.toString().includes('found 0 problems, 0 warnings')).toBe(true);
+	});
+	test(' : message => invalid'.replace(/\n/g, ' '), async () => {
+		try {
+			const out = (await execa.shell(`echo \" : message\" | node_modules/.bin/commitlint`)).stdout;
+		} catch (err) {
+			expect(err.toString().includes('type may not be empty')).toBe(true);
 		}
-		return !Boolean(out.indexOf(expectedError) >= 0);
-	}
-	return Boolean(out.indexOf('found 0 problems, 0 warnings') >= 0);
-};
-
-[
-	['chore(test): message', true],
-	['chore: message', true],
-	// https://github.com/marionebl/commitlint/issues/292
-	['chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something', true],
-	['chore(scope): message\n\nBREAKING CHANGE: something', true],
-	['chore(scope): message [ISSUE-1234]', true],
-	[' : message', false, 'type may not be empty [type-empty]'],
-	[
-		'bugfix: message',
-		false,
-		'type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test] [type-enum]',
-	],
-	['chore: Message', false, 'subject must not be sentence-case, start-case, pascal-case, upper-case [subject-case]'],
-].forEach(([message, isValid, expectedError]) => {
-	test(`"${message.replace(/\n/g, '\\n')}" -> ${isValid ? 'valid' : 'invalid'}`, async () => {
-		expect(await lint(message, expectedError)).toBe(isValid);
+	});
+	test('bugfix: message => invalid'.replace(/\n/g, ' '), async () => {
+		try {
+			const out = (await execa.shell(`echo \"bugfix: message\" | node_modules/.bin/commitlint`)).stdout;
+		} catch (err) {
+			expect(
+				err
+					.toString()
+					.includes(
+						'type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]'
+					)
+			).toBe(true);
+		}
+	});
+	test('chore: Message => invalid'.replace(/\n/g, ' '), async () => {
+		try {
+			const out = (await execa.shell(`echo \"chore: Message\" | node_modules/.bin/commitlint`)).stdout;
+		} catch (err) {
+			expect(
+				err.toString().includes('subject must not be sentence-case, start-case, pascal-case, upper-case')
+			).toBe(true);
+		}
 	});
 });
