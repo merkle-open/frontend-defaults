@@ -18,7 +18,6 @@ export interface IApiOptions {
 
 	// details
 	ts?: boolean;
-	typescriptEslint?: boolean;
 	es?: boolean;
 	eslint?: boolean;
 	editorconfig?: boolean;
@@ -43,7 +42,6 @@ export interface IApiOptions {
 const defaultApiOptions = {
 	// details
 	ts: false,
-	typescriptEslint: false,
 	es: false,
 	eslint: false,
 	editorconfig: false,
@@ -72,6 +70,11 @@ export default async (apiOptions: IApiOptions) => {
 		...defaultApiOptions,
 		...apiOptions,
 	};
+
+	// if eslint is enabled and ts not es should be true
+	if (options.eslint && !options.ts) {
+		options.es = true;
+	}
 
 	// enable githooks always with commitlint
 	if (options.commitlint) {

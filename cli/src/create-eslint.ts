@@ -4,8 +4,8 @@ import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
 
-const createEslintFile = async ({ eslint, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string }> => {
-	if (!eslint) {
+const createEslintFile = async ({ es, eslint, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string }> => {
+	if (!es || !eslint) {
 		return {};
 	}
 
@@ -20,8 +20,8 @@ const createEslintFile = async ({ eslint, prettier }: IOptions): Promise<{ '.esl
 	};
 };
 
-const createEslintignoreFile = async ({ eslint }: IOptions): Promise<{ '.eslintignore'?: string }> => {
-	if (!eslint) {
+const createEslintignoreFile = async ({ es, eslint }: IOptions): Promise<{ '.eslintignore'?: string }> => {
+	if (!es || !eslint) {
 		return {};
 	}
 
@@ -30,8 +30,8 @@ const createEslintignoreFile = async ({ eslint }: IOptions): Promise<{ '.eslinti
 	};
 };
 
-const updatePackageJson = async ({ githooks, eslint }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
-	if (!eslint) {
+const updatePackageJson = async ({ es, githooks, eslint }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+	if (!es || !eslint) {
 		return {};
 	}
 

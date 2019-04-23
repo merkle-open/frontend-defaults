@@ -4,7 +4,6 @@ exports[`stylelint default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -78,7 +77,6 @@ exports[`stylelint with-githooks 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

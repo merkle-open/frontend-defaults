@@ -124,14 +124,14 @@ export const getEslint = promptCache(
 );
 
 export const getTypescriptEslint = promptCache(
-	async ({ language }: { language: string }): Promise<{ typescriptEslint?: boolean }> => {
+	async ({ language }: { language: string }): Promise<{ eslint?: boolean }> => {
 		if (language !== TYPE_CHOICES.ts) {
 			return {};
 		}
 
-		return await prompt<{ typescriptEslint: boolean }>({
+		return await prompt<{ eslint: boolean }>({
 			type: 'confirm',
-			name: 'typescriptEslint',
+			name: 'eslint',
 			message: 'Do you want to use eslint for typescript',
 			initial: true,
 		});

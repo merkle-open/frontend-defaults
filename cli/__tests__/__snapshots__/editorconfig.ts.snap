@@ -46,7 +46,6 @@ exports[`editorconfig default 2`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": true,

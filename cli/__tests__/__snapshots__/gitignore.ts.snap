@@ -4,7 +4,6 @@ exports[`gitignore default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

@@ -4,7 +4,6 @@ exports[`build build-with-ts 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": true,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -84,7 +83,6 @@ exports[`build default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

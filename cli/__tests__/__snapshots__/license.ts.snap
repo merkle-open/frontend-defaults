@@ -4,7 +4,6 @@ exports[`license license-closed-source 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -47,7 +46,6 @@ exports[`license license-open-source 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

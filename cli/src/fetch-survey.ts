@@ -20,7 +20,6 @@ export const TYPE_CHOICES = {
 	ts: 'typescript' as 'typescript',
 	es: 'javascript' as 'javascript',
 	eslint: 'eslint' as 'eslint',
-	typescriptEslint: 'typescriptEslint' as 'typescriptEslint',
 
 	readme: 'readme' as 'readme',
 	licenseOpenSource: 'licenseOpenSource' as 'licenseOpenSource',
@@ -86,7 +85,6 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		license,
 		copyrightHolder,
 		eslint = false,
-		typescriptEslint = false,
 		project = [],
 		linters = [],
 		webpack,
@@ -103,7 +101,6 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 
 		ts: language === TYPE_CHOICES.ts,
 		es: language === TYPE_CHOICES.es,
-		typescriptEslint,
 		eslint,
 
 		editorconfig: project.includes(TYPE_CHOICES.editorconfig),

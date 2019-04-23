@@ -4,7 +4,6 @@ exports[`tsconfig default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": true,
-    \\"typescriptEslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

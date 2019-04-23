@@ -20,7 +20,6 @@ describe('enqirer', () => {
 				}`,
 			},
 			language: TYPE_CHOICES.ts,
-			typescriptEslint: true,
 			eslint: false,
 			project: [
 				TYPE_CHOICES.readme,
@@ -47,7 +46,6 @@ describe('enqirer', () => {
 			editorconfig: true,
 			es: false,
 			eslint: false,
-			typescriptEslint: true,
 			force: false,
 			githooks: true,
 			gitignore: true,

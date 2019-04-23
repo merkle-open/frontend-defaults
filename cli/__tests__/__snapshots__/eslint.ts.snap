@@ -17,8 +17,7 @@ exports[`eslint default 3`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
-    \\"es\\": false,
+    \\"es\\": true,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
     \\"prettier\\": false,
@@ -96,8 +95,7 @@ exports[`eslint with-githooks 3`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
-    \\"es\\": false,
+    \\"es\\": true,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
     \\"prettier\\": false,
@@ -218,8 +216,7 @@ exports[`eslint with-prettier 3`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"typescriptEslint\\": false,
-    \\"es\\": false,
+    \\"es\\": true,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
     \\"prettier\\": true,

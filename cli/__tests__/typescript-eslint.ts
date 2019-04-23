@@ -5,18 +5,18 @@ describe('typescript-eslint', () => {
 	it('default', async () =>
 		await apiIt('typescript-eslint', {
 			ts: true,
-			typescriptEslint: true,
+			eslint: true,
 		}));
 	it('with-prettier', async () =>
 		await apiIt('typescript-eslint-with-prettier', {
 			ts: true,
-			typescriptEslint: true,
+			eslint: true,
 			prettier: true,
 		}));
 	it('with-githooks', async () =>
 		await apiIt('typescript-eslint-with-githooks', {
 			ts: true,
-			typescriptEslint: true,
+			eslint: true,
 			githooks: true,
 		}));
 });

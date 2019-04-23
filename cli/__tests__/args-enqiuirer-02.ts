@@ -21,7 +21,6 @@ describe('enqirer', () => {
 				}`,
 			},
 			language: TYPE_CHOICES.ts,
-			typescriptEslint: true,
 			eslint: true,
 			project: [
 				TYPE_CHOICES.readme,
@@ -61,7 +60,6 @@ describe('enqirer', () => {
 			readme: true,
 			stylelint: true,
 			ts: true,
-			typescriptEslint: true,
 			webpack: true,
 			build: false,
 		});
