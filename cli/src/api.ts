@@ -71,11 +71,6 @@ export default async (apiOptions: IApiOptions) => {
 		...apiOptions,
 	};
 
-	// if eslint is enabled and ts not es should be true
-	if (options.eslint && !options.ts) {
-		options.es = true;
-	}
-
 	// enable githooks always with commitlint
 	if (options.commitlint) {
 		options.githooks = true;
