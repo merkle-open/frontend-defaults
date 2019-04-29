@@ -5,9 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 0.3.0 (2019-04-29)
 
-
-
-# 1.0.0 (2019-04-12)
+# 0.2.2 (2019-04-12)
 
 
 ### Bug Fixes
