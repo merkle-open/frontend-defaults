@@ -4,7 +4,6 @@ exports[`tsconfig default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": true,
-    \\"tslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -29,7 +28,7 @@ exports[`tsconfig default 1`] = `
       \\"data\\": {
         \\"devDependencies\\": {
           \\"@namics/ts-config\\": \\"0.2.0\\",
-          \\"typescript\\": \\"3.4.3\\"
+          \\"typescript\\": \\"3.4.5\\"
         }
       }
     },
@@ -45,7 +44,7 @@ exports[`tsconfig default 2`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.2.0\\",
-    \\"typescript\\": \\"3.4.3\\"
+    \\"typescript\\": \\"3.4.5\\"
   }
 }"
 `;

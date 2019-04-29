@@ -22,7 +22,6 @@ const defaultOptions = {
 	readme: false,
 	stylelint: false,
 	ts: false,
-	tslint: false,
 	webpack: false,
 	build: false,
 };
@@ -51,7 +50,7 @@ describe('presetTs', () => {
 			readme: true,
 			stylelint: true,
 			ts: true,
-			tslint: true,
+			eslint: true,
 			webpack: true,
 			preset: 'ts',
 		});
@@ -166,7 +165,7 @@ describe('node-version', () => {
 });
 
 describe('npmrc', () => {
-	it('default', async () => {
+	it.skip('default', async () => {
 		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--npmrc'];
 		const options = await fetchOptions();
 		delete options.cwd;
@@ -207,15 +206,6 @@ describe('tsconfig', () => {
 		const options = await fetchOptions();
 		delete options.cwd;
 		expect(options).toEqual({ ...defaultOptions, ts: true, install: true });
-	});
-});
-
-describe('tslint', () => {
-	it('default', async () => {
-		global.process.argv = ['/usr/local/bin/node', '/usr/local/bin/frontend-defaults', '--tslint'];
-		const options = await fetchOptions();
-		delete options.cwd;
-		expect(options).toEqual({ ...defaultOptions, tslint: true, install: true });
 	});
 });
 

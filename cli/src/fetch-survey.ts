@@ -6,8 +6,8 @@ import { IMergedFiles } from './merge-files';
 import {
 	getPackageJson,
 	getLanguage,
-	getTslint,
 	getEslint,
+	getTypescriptEslint,
 	getProjectConfigs,
 	getLinters,
 	getWebpack,
@@ -18,7 +18,6 @@ import {
 
 export const TYPE_CHOICES = {
 	ts: 'typescript' as 'typescript',
-	tslint: 'tslint' as 'tslint',
 	es: 'javascript' as 'javascript',
 	eslint: 'eslint' as 'eslint',
 
@@ -72,8 +71,8 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		...(await getLicense()),
 		...(await getPackageJson(cwd)),
 		...(await getLanguage()),
-		...(await getTslint(await getLanguage())),
 		...(await getEslint(await getLanguage())),
+		...(await getTypescriptEslint(await getLanguage())),
 		...(await getProjectConfigs()),
 		...(await getLinters()),
 		...(await getWebpack()),
@@ -85,7 +84,6 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		language,
 		license,
 		copyrightHolder,
-		tslint = false,
 		eslint = false,
 		project = [],
 		linters = [],
@@ -103,7 +101,6 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 
 		ts: language === TYPE_CHOICES.ts,
 		es: language === TYPE_CHOICES.es,
-		tslint,
 		eslint,
 
 		editorconfig: project.includes(TYPE_CHOICES.editorconfig),

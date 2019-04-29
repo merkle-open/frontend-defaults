@@ -18,7 +18,6 @@ export interface IApiOptions {
 
 	// details
 	ts?: boolean;
-	tslint?: boolean;
 	es?: boolean;
 	eslint?: boolean;
 	editorconfig?: boolean;
@@ -43,7 +42,6 @@ export interface IApiOptions {
 const defaultApiOptions = {
 	// details
 	ts: false,
-	tslint: false,
 	es: false,
 	eslint: false,
 	editorconfig: false,

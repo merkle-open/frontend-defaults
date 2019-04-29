@@ -4,7 +4,6 @@ exports[`build build-with-ts 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": true,
-    \\"tslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,
@@ -29,7 +28,7 @@ exports[`build build-with-ts 1`] = `
       \\"data\\": {
         \\"devDependencies\\": {
           \\"@namics/ts-config\\": \\"0.2.0\\",
-          \\"typescript\\": \\"3.4.3\\"
+          \\"typescript\\": \\"3.4.5\\"
         },
         \\"browserslist\\": [
           \\"> 1%\\",
@@ -58,7 +57,7 @@ exports[`build build-with-ts 2`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.2.0\\",
-    \\"typescript\\": \\"3.4.3\\"
+    \\"typescript\\": \\"3.4.5\\"
   },
   \\"browserslist\\": [
     \\"> 1%\\",
@@ -84,7 +83,6 @@ exports[`build default 1`] = `
 "{
   \\"options\\": {
     \\"ts\\": false,
-    \\"tslint\\": false,
     \\"es\\": false,
     \\"eslint\\": false,
     \\"editorconfig\\": false,

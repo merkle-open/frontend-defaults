@@ -108,21 +108,6 @@ export const getLicense = promptCache(
 	}
 );
 
-export const getTslint = promptCache(
-	async ({ language }: { language: string }): Promise<{ tslint?: boolean }> => {
-		if (language !== TYPE_CHOICES.ts) {
-			return {};
-		}
-
-		return await prompt<{ tslint: boolean }>({
-			type: 'confirm',
-			name: 'tslint',
-			message: 'Do you want to use tslint',
-			initial: true,
-		});
-	}
-);
-
 export const getEslint = promptCache(
 	async ({ language }: { language: string }): Promise<{ eslint?: boolean }> => {
 		if (language !== TYPE_CHOICES.es) {
@@ -133,6 +118,21 @@ export const getEslint = promptCache(
 			type: 'confirm',
 			name: 'eslint',
 			message: 'Do you want to use eslint',
+			initial: true,
+		});
+	}
+);
+
+export const getTypescriptEslint = promptCache(
+	async ({ language }: { language: string }): Promise<{ eslint?: boolean }> => {
+		if (language !== TYPE_CHOICES.ts) {
+			return {};
+		}
+
+		return await prompt<{ eslint: boolean }>({
+			type: 'confirm',
+			name: 'eslint',
+			message: 'Do you want to use eslint for typescript',
 			initial: true,
 		});
 	}

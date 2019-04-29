@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`eslint default 1`] = `
+exports[`typescript-eslint default 1`] = `
 "/.idea/
 /node_modules/
 /*.js"
 `;
 
-exports[`eslint default 2`] = `
+exports[`typescript-eslint default 2`] = `
 "module.exports = {
-	extends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),
+	extends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),
 };
 "
 `;
 
-exports[`eslint default 3`] = `
+exports[`typescript-eslint default 3`] = `
 "{
   \\"options\\": {
-    \\"ts\\": false,
+    \\"ts\\": true,
     \\"es\\": false,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
@@ -41,60 +41,76 @@ exports[`eslint default 3`] = `
       \\"data\\": {
         \\"scripts\\": {
           \\"lint\\": \\"npm-run-all lint:*\\",
-          \\"lint:js\\": \\"eslint .\\"
+          \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\"
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.0\\",
+          \\"@namics/ts-config\\": \\"0.2.0\\",
           \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.17.2\\",
-          \\"npm-run-all\\": \\"4.1.5\\"
+          \\"npm-run-all\\": \\"4.1.5\\",
+          \\"typescript\\": \\"3.4.5\\"
         }
       }
     },
     \\".eslintrc.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\textends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),\\\\n};\\\\n\\"
+      \\"data\\": \\"module.exports = {\\\\n\\\\textends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),\\\\n};\\\\n\\"
     },
     \\".eslintignore\\": {
       \\"override\\": false,
       \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
+    },
+    \\"tsconfig.json\\": {
+      \\"override\\": false,
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
 `;
 
-exports[`eslint default 4`] = `
+exports[`typescript-eslint default 4`] = `
 "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
-    \\"lint:js\\": \\"eslint .\\"
+    \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\"
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.0\\",
+    \\"@namics/ts-config\\": \\"0.2.0\\",
     \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.17.2\\",
-    \\"npm-run-all\\": \\"4.1.5\\"
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"typescript\\": \\"3.4.5\\"
   }
 }"
 `;
 
-exports[`eslint with-githooks 1`] = `
+exports[`typescript-eslint default 5`] = `
+"{
+	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
+}
+"
+`;
+
+exports[`typescript-eslint with-githooks 1`] = `
 "/.idea/
 /node_modules/
 /*.js"
 `;
 
-exports[`eslint with-githooks 2`] = `
+exports[`typescript-eslint with-githooks 2`] = `
 "module.exports = {
-	extends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),
+	extends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),
 };
 "
 `;
 
-exports[`eslint with-githooks 3`] = `
+exports[`typescript-eslint with-githooks 3`] = `
 "{
   \\"options\\": {
-    \\"ts\\": false,
+    \\"ts\\": true,
     \\"es\\": false,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
@@ -119,15 +135,17 @@ exports[`eslint with-githooks 3`] = `
       \\"data\\": {
         \\"scripts\\": {
           \\"lint\\": \\"npm-run-all lint:*\\",
-          \\"lint:js\\": \\"eslint .\\"
+          \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\"
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.0\\",
+          \\"@namics/ts-config\\": \\"0.2.0\\",
           \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.17.2\\",
           \\"husky\\": \\"2.1.0\\",
           \\"lint-staged\\": \\"8.1.4\\",
-          \\"npm-run-all\\": \\"4.1.5\\"
+          \\"npm-run-all\\": \\"4.1.5\\",
+          \\"typescript\\": \\"3.4.5\\"
         },
         \\"husky\\": {
           \\"hooks\\": {
@@ -136,8 +154,8 @@ exports[`eslint with-githooks 3`] = `
         },
         \\"lint-staged\\": {
           \\"linters\\": {
-            \\"src/**/*.{js,jsx}\\": [
-              \\"eslint\\"
+            \\"src/**/*.{js,jsx,ts,tsx}\\": [
+              \\"eslint --ext .jsx,.js,.ts,.tsx\\"
             ]
           }
         }
@@ -149,17 +167,21 @@ exports[`eslint with-githooks 3`] = `
     },
     \\".eslintrc.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\textends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),\\\\n};\\\\n\\"
+      \\"data\\": \\"module.exports = {\\\\n\\\\textends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),\\\\n};\\\\n\\"
     },
     \\".eslintignore\\": {
       \\"override\\": false,
       \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
+    },
+    \\"tsconfig.json\\": {
+      \\"override\\": false,
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
 `;
 
-exports[`eslint with-githooks 4`] = `
+exports[`typescript-eslint with-githooks 4`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -167,19 +189,21 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`eslint with-githooks 5`] = `
+exports[`typescript-eslint with-githooks 5`] = `
 "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
-    \\"lint:js\\": \\"eslint .\\"
+    \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\"
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.0\\",
+    \\"@namics/ts-config\\": \\"0.2.0\\",
     \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.17.2\\",
     \\"husky\\": \\"2.1.0\\",
     \\"lint-staged\\": \\"8.1.4\\",
-    \\"npm-run-all\\": \\"4.1.5\\"
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"typescript\\": \\"3.4.5\\"
   },
   \\"husky\\": {
     \\"hooks\\": {
@@ -188,34 +212,42 @@ exports[`eslint with-githooks 5`] = `
   },
   \\"lint-staged\\": {
     \\"linters\\": {
-      \\"src/**/*.{js,jsx}\\": [
-        \\"eslint\\"
+      \\"src/**/*.{js,jsx,ts,tsx}\\": [
+        \\"eslint --ext .jsx,.js,.ts,.tsx\\"
       ]
     }
   }
 }"
 `;
 
-exports[`eslint with-prettier 1`] = `
+exports[`typescript-eslint with-githooks 6`] = `
+"{
+	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
+}
+"
+`;
+
+exports[`typescript-eslint with-prettier 1`] = `
 "/.idea/
 /node_modules/
 /*.js"
 `;
 
-exports[`eslint with-prettier 2`] = `
+exports[`typescript-eslint with-prettier 2`] = `
 "module.exports = {
 	extends: [
-		'@namics/eslint-config/configurations/es8-react.js',
-		'@namics/eslint-config/configurations/es8-react-disable-styles.js',
+		'@namics/eslint-config/configurations/typescript-react.js',
+		'@namics/eslint-config/configurations/typescript-react-disable-styles.js',
 	].map(require.resolve),
 };
 "
 `;
 
-exports[`eslint with-prettier 3`] = `
+exports[`typescript-eslint with-prettier 3`] = `
 "{
   \\"options\\": {
-    \\"ts\\": false,
+    \\"ts\\": true,
     \\"es\\": false,
     \\"eslint\\": true,
     \\"editorconfig\\": false,
@@ -240,16 +272,18 @@ exports[`eslint with-prettier 3`] = `
       \\"data\\": {
         \\"scripts\\": {
           \\"lint\\": \\"npm-run-all lint:*\\",
-          \\"lint:js\\": \\"eslint .\\",
+          \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\",
           \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.0\\",
           \\"@namics/prettier-config\\": \\"0.2.0\\",
+          \\"@namics/ts-config\\": \\"0.2.0\\",
           \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.17.2\\",
           \\"npm-run-all\\": \\"4.1.5\\",
-          \\"prettier\\": \\"1.17.0\\"
+          \\"prettier\\": \\"1.17.0\\",
+          \\"typescript\\": \\"3.4.5\\"
         }
       }
     },
@@ -263,17 +297,21 @@ exports[`eslint with-prettier 3`] = `
     },
     \\".eslintrc.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\textends: [\\\\n\\\\t\\\\t'@namics/eslint-config/configurations/es8-react.js',\\\\n\\\\t\\\\t'@namics/eslint-config/configurations/es8-react-disable-styles.js',\\\\n\\\\t].map(require.resolve),\\\\n};\\\\n\\"
+      \\"data\\": \\"module.exports = {\\\\n\\\\textends: [\\\\n\\\\t\\\\t'@namics/eslint-config/configurations/typescript-react.js',\\\\n\\\\t\\\\t'@namics/eslint-config/configurations/typescript-react-disable-styles.js',\\\\n\\\\t].map(require.resolve),\\\\n};\\\\n\\"
     },
     \\".eslintignore\\": {
       \\"override\\": false,
       \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\"
+    },
+    \\"tsconfig.json\\": {
+      \\"override\\": false,
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
 `;
 
-exports[`eslint with-prettier 4`] = `
+exports[`typescript-eslint with-prettier 4`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -295,25 +333,35 @@ exports[`eslint with-prettier 4`] = `
 **/.yo-rc.json"
 `;
 
-exports[`eslint with-prettier 5`] = `
+exports[`typescript-eslint with-prettier 5`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`eslint with-prettier 6`] = `
+exports[`typescript-eslint with-prettier 6`] = `
 "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
-    \\"lint:js\\": \\"eslint .\\",
+    \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx\\",
     \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.0\\",
     \\"@namics/prettier-config\\": \\"0.2.0\\",
+    \\"@namics/ts-config\\": \\"0.2.0\\",
     \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.17.2\\",
     \\"npm-run-all\\": \\"4.1.5\\",
-    \\"prettier\\": \\"1.17.0\\"
+    \\"prettier\\": \\"1.17.0\\",
+    \\"typescript\\": \\"3.4.5\\"
   }
 }"
+`;
+
+exports[`typescript-eslint with-prettier 7`] = `
+"{
+	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
+}
+"
 `;

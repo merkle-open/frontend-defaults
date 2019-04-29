@@ -3,7 +3,7 @@
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json)\""
   },
   "devDependencies": {
-    "prettier": "1.16.4",
+    "prettier": "1.17.0",
     "@namics/prettier-config": "0.2.0"
   }
 }

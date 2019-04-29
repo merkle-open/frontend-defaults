@@ -16,7 +16,7 @@
     "index.js"
   ],
   "peerDependencies": {
-    "husky": "1.x.x",
+    "husky": "2.x.x",
     "@commitlint/cli": "7.x.x"
   },
   "devDependencies": {
