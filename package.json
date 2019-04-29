@@ -1,6 +1,6 @@
 {
   "name": "@namics/frontend-defaults",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": "https://github.com/namics/frontend-defaults",
   "private": true,
@@ -23,7 +23,8 @@
     "test": "lerna run test",
     "lint": "lerna run lint --parallel",
     "build": "lerna run build",
-    "update": "node ./bin/update.js"
+    "update": "node ./bin/update.js",
+    "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master"
   },
   "husky": {
     "hooks": {
