@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.2.0...@namics/frontend-defaults-cli@0.2.1) (2019-04-30)
+
+
+### Bug Fixes
+
+* **cli:** update namics eslint config and update dependencies ([6ae0ef9](https://github.com/namics/frontend-defaults/commit/6ae0ef9))
+
+
+
+
+
 # 0.2.0 (2019-04-29)
 
 
