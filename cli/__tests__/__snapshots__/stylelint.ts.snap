@@ -31,7 +31,7 @@ exports[`stylelint default 1`] = `
           \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
         },
         \\"devDependencies\\": {
-          \\"@namics/stylelint-config\\": \\"0.2.2\\",
+          \\"@namics/stylelint-config\\": \\"0.3.0\\",
           \\"npm-run-all\\": \\"4.1.5\\",
           \\"stylelint\\": \\"10.0.1\\"
         }
@@ -61,7 +61,7 @@ exports[`stylelint default 3`] = `
     \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
   },
   \\"devDependencies\\": {
-    \\"@namics/stylelint-config\\": \\"0.2.2\\",
+    \\"@namics/stylelint-config\\": \\"0.3.0\\",
     \\"npm-run-all\\": \\"4.1.5\\",
     \\"stylelint\\": \\"10.0.1\\"
   }
@@ -116,7 +116,7 @@ exports[`stylelint with-githooks 1`] = `
           }
         },
         \\"devDependencies\\": {
-          \\"@namics/stylelint-config\\": \\"0.2.2\\",
+          \\"@namics/stylelint-config\\": \\"0.3.0\\",
           \\"husky\\": \\"2.1.0\\",
           \\"lint-staged\\": \\"8.1.4\\",
           \\"npm-run-all\\": \\"4.1.5\\",
@@ -172,7 +172,7 @@ exports[`stylelint with-githooks 4`] = `
     }
   },
   \\"devDependencies\\": {
-    \\"@namics/stylelint-config\\": \\"0.2.2\\",
+    \\"@namics/stylelint-config\\": \\"0.3.0\\",
     \\"husky\\": \\"2.1.0\\",
     \\"lint-staged\\": \\"8.1.4\\",
     \\"npm-run-all\\": \\"4.1.5\\",
