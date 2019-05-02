@@ -1,5 +1,5 @@
 {
-	"extends": "./node_modules/@namics/ts-config/tsconfig.json",
+	"extends": "@namics/ts-config",
 	"compilerOptions": {
 		"outDir": "build",
 		"module": "commonjs",

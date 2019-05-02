@@ -10,9 +10,10 @@
 
 ```json
 {
-  "extends": "./node_modules/@namics/ts-config/tsconfig.json"
+  "extends": "@namics/ts-config"
 }
 ```
 
 ## License
+
 [MIT License](./LICENSE)
