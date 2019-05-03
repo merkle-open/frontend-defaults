@@ -20,12 +20,12 @@
     "index.js"
   ],
   "peerDependencies": {
-    "stylelint": "10.x.x"
+    "stylelint": "10.x"
   },
   "devDependencies": {
     "stylelint": "10.0.1"
   },
   "dependencies": {
-    "@namics/stylelint-bem": "5.1.1"
+    "@namics/stylelint-bem": "6.0.0"
   }
 }
