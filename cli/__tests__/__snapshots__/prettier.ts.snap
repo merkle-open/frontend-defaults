@@ -129,8 +129,8 @@ exports[`prettier with-githooks 1`] = `
         },
         \\"devDependencies\\": {
           \\"@namics/prettier-config\\": \\"0.2.0\\",
-          \\"husky\\": \\"2.1.0\\",
-          \\"lint-staged\\": \\"8.1.4\\",
+          \\"husky\\": \\"2.2.0\\",
+          \\"lint-staged\\": \\"8.1.6\\",
           \\"prettier\\": \\"1.17.0\\"
         }
       }
@@ -205,8 +205,8 @@ exports[`prettier with-githooks 5`] = `
   },
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.2.0\\",
-    \\"husky\\": \\"2.1.0\\",
-    \\"lint-staged\\": \\"8.1.4\\",
+    \\"husky\\": \\"2.2.0\\",
+    \\"lint-staged\\": \\"8.1.6\\",
     \\"prettier\\": \\"1.17.0\\"
   }
 }"
