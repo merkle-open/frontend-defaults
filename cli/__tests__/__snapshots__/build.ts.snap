@@ -43,7 +43,7 @@ exports[`build build-with-ts 1`] = `
     },
     \\"tsconfig.json\\": {
       \\"override\\": false,
-      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"@namics/ts-config\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     },
     \\"src/index.ts\\": {
       \\"override\\": false,
@@ -73,7 +73,7 @@ exports[`build build-with-ts 2`] = `
 
 exports[`build build-with-ts 3`] = `
 "{
-	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
 "

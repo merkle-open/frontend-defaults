@@ -63,7 +63,7 @@ exports[`typescript-eslint default 3`] = `
     },
     \\"tsconfig.json\\": {
       \\"override\\": false,
-      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"@namics/ts-config\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
@@ -88,7 +88,7 @@ exports[`typescript-eslint default 4`] = `
 
 exports[`typescript-eslint default 5`] = `
 "{
-	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
 "
@@ -175,7 +175,7 @@ exports[`typescript-eslint with-githooks 3`] = `
     },
     \\"tsconfig.json\\": {
       \\"override\\": false,
-      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"@namics/ts-config\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
@@ -222,7 +222,7 @@ exports[`typescript-eslint with-githooks 5`] = `
 
 exports[`typescript-eslint with-githooks 6`] = `
 "{
-	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
 "
@@ -305,7 +305,7 @@ exports[`typescript-eslint with-prettier 3`] = `
     },
     \\"tsconfig.json\\": {
       \\"override\\": false,
-      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"./node_modules/@namics/ts-config/tsconfig.json\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
+      \\"data\\": \\"{\\\\n\\\\t\\\\\\"extends\\\\\\": \\\\\\"@namics/ts-config\\\\\\",\\\\n\\\\t\\\\\\"exclude\\\\\\": [\\\\\\"dist\\\\\\", \\\\\\"build\\\\\\", \\\\\\"node_modules\\\\\\", \\\\\\"__tests__\\\\\\"]\\\\n}\\\\n\\"
     }
   }
 }"
@@ -360,7 +360,7 @@ exports[`typescript-eslint with-prettier 6`] = `
 
 exports[`typescript-eslint with-prettier 7`] = `
 "{
-	\\"extends\\": \\"./node_modules/@namics/ts-config/tsconfig.json\\",
+	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
 "
