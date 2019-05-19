@@ -1,7 +1,7 @@
 {
   "name": "@namics/ts-config",
   "description": "Shared configuration for Typescript",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "https://github.com/namics/frontend-defaults",
   "main": "./tsconfig.json",
   "license": "MIT",
@@ -13,7 +13,11 @@
   "engines": {
     "node": ">=8"
   },
-  "files": ["README.md", "LICENSE", "tsconfig.json"],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "tsconfig.json"
+  ],
   "peerDependencies": {
     "typescript": "3.x"
   }
