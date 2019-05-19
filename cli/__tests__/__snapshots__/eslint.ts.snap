@@ -125,8 +125,8 @@ exports[`eslint with-githooks 3`] = `
           \\"@namics/eslint-config\\": \\"7.0.1\\",
           \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.17.2\\",
-          \\"husky\\": \\"2.2.0\\",
-          \\"lint-staged\\": \\"8.1.6\\",
+          \\"husky\\": \\"2.3.0\\",
+          \\"lint-staged\\": \\"8.1.7\\",
           \\"npm-run-all\\": \\"4.1.5\\"
         },
         \\"husky\\": {
@@ -177,8 +177,8 @@ exports[`eslint with-githooks 5`] = `
     \\"@namics/eslint-config\\": \\"7.0.1\\",
     \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.17.2\\",
-    \\"husky\\": \\"2.2.0\\",
-    \\"lint-staged\\": \\"8.1.6\\",
+    \\"husky\\": \\"2.3.0\\",
+    \\"lint-staged\\": \\"8.1.7\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   },
   \\"husky\\": {
@@ -249,7 +249,7 @@ exports[`eslint with-prettier 3`] = `
           \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.17.2\\",
           \\"npm-run-all\\": \\"4.1.5\\",
-          \\"prettier\\": \\"1.17.0\\"
+          \\"prettier\\": \\"1.17.1\\"
         }
       }
     },
@@ -313,7 +313,7 @@ exports[`eslint with-prettier 6`] = `
     \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.17.2\\",
     \\"npm-run-all\\": \\"4.1.5\\",
-    \\"prettier\\": \\"1.17.0\\"
+    \\"prettier\\": \\"1.17.1\\"
   }
 }"
 `;
