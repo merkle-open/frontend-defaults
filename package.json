@@ -14,8 +14,8 @@
   "scripts": {
     "clean": "npx npm-run-all clean:*",
     "clean:lerna": "lerna clean --yes",
-    "clean:dirs": "rimraf lerna-debug.log npm-debug.log **/package-lock.json",
-    "clean:modules": "npx rimraf node_modules",
+    "clean:dirs": "rimraf lerna-debug.log npm-debug.log package-lock.json */package-lock.json */*/package-lock.json",
+    "clean:modules": "rimraf node_modules",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
@@ -24,7 +24,8 @@
     "lint": "lerna run lint --parallel",
     "build": "lerna run build",
     "update": "node ./bin/update.js",
-    "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master"
+    "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master",
+    "start": "dash4"
   },
   "husky": {
     "hooks": {
@@ -65,22 +66,28 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "7.6.1",
+    "@commitlint/cli": "8.0.0",
+    "@dash4/plugin-code-coverage": "0.5.0",
+    "@dash4/plugin-dependencies": "0.5.0",
+    "@dash4/plugin-npm-scripts": "0.5.0",
+    "@dash4/plugin-readme": "0.5.0",
+    "@dash4/plugin-terminal": "0.5.0",
+    "@dash4/server": "0.5.0",
     "chalk": "2.4.2",
     "commitizen": "3.1.1",
     "conventional-changelog": "3.1.8",
-    "enquirer": "2.3.0",
-    "execa": "1.0.0",
+    "enquirer": "2.3.1",
+    "execa": "2.0.3",
     "git-raw-commits": "2.0.0",
     "git-semver-tags": "2.0.2",
-    "globby": "9.2.0",
-    "husky": "2.3.0",
+    "globby": "10.0.1",
+    "husky": "3.0.0",
     "latest-version": "5.1.0",
-    "lerna": "3.14.1",
-    "lint-staged": "8.1.7",
+    "lerna": "3.15.0",
+    "lint-staged": "9.2.0",
     "npm-run-all": "4.1.5",
     "ora": "3.4.0",
-    "prettier": "1.17.1",
+    "prettier": "1.18.2",
     "rimraf": "2.6.3"
   }
 }

@@ -37,10 +37,10 @@ exports[`webpack default 1`] = `
           \\"start\\": \\"webpack-dev-server --mode development\\"
         },
         \\"devDependencies\\": {
-          \\"@babel/core\\": \\"7.4.4\\",
+          \\"@babel/core\\": \\"7.5.4\\",
           \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
           \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-          \\"@babel/preset-env\\": \\"7.4.4\\",
+          \\"@babel/preset-env\\": \\"7.5.4\\",
           \\"@babel/preset-react\\": \\"7.0.0\\",
           \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -116,10 +116,10 @@ exports[`webpack default 3`] = `
     \\"start\\": \\"webpack-dev-server --mode development\\"
   },
   \\"devDependencies\\": {
-    \\"@babel/core\\": \\"7.4.4\\",
+    \\"@babel/core\\": \\"7.5.4\\",
     \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
     \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-    \\"@babel/preset-env\\": \\"7.4.4\\",
+    \\"@babel/preset-env\\": \\"7.5.4\\",
     \\"@babel/preset-react\\": \\"7.0.0\\",
     \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -186,8 +186,8 @@ exports[`webpack webpack-with-ts 1`] = `
       \\"override\\": false,
       \\"data\\": {
         \\"devDependencies\\": {
-          \\"@namics/ts-config\\": \\"0.2.0\\",
-          \\"@types/core-js\\": \\"2.5.0\\",
+          \\"@namics/ts-config\\": \\"0.3.0\\",
+          \\"@types/core-js\\": \\"2.5.2\\",
           \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -209,7 +209,7 @@ exports[`webpack webpack-with-ts 1`] = `
           \\"start\\": \\"webpack-dev-server --mode development\\"
         },
         \\"dependencies\\": {
-          \\"core-js\\": \\"3.0.1\\"
+          \\"core-js\\": \\"3.1.4\\"
         }
       }
     },
@@ -240,8 +240,8 @@ exports[`webpack webpack-with-ts 1`] = `
 exports[`webpack webpack-with-ts 2`] = `
 "{
   \\"devDependencies\\": {
-    \\"@namics/ts-config\\": \\"0.2.0\\",
-    \\"@types/core-js\\": \\"2.5.0\\",
+    \\"@namics/ts-config\\": \\"0.3.0\\",
+    \\"@types/core-js\\": \\"2.5.2\\",
     \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -263,7 +263,7 @@ exports[`webpack webpack-with-ts 2`] = `
     \\"start\\": \\"webpack-dev-server --mode development\\"
   },
   \\"dependencies\\": {
-    \\"core-js\\": \\"3.0.1\\"
+    \\"core-js\\": \\"3.1.4\\"
   }
 }"
 `;
