@@ -24,6 +24,7 @@
     "lint": "lerna run lint --parallel",
     "build": "lerna run build",
     "update": "node ./bin/update.js",
+    "prerelease": "npm-run-all test lint",
     "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master",
     "start": "dash4"
   },
