@@ -17,8 +17,11 @@ const createWebpackConfigFile = async (
 		return {};
 	}
 
+	// TODO remove replace after this issue is fixed https://github.com/namics/webpack-config-plugins/issues/65
 	return {
-		'webpack.config.js': webpackConfig,
+		'webpack.config.js': webpackConfig
+			.replace('const CleanWebpackPlugin =', 'const { CleanWebpackPlugin } =')
+			.replace("new CleanWebpackPlugin(['dist'])", 'new CleanWebpackPlugin()'),
 	};
 };
 
@@ -35,12 +38,14 @@ const createDemoFiles = async ({
 			[path.join('src', 'wait.ts')]: await fetchTemplate('webpack', 'wait.ts'),
 			[path.join('src', 'index.ts')]: await fetchTemplate('webpack', 'index.ts'),
 			[path.join('src', 'polyfill.ts')]: await fetchTemplate('webpack', 'polyfill.ts'),
+			[path.join('src', 'styles.scss')]: await fetchTemplate('webpack', 'styles.scss'),
 		};
 	}
 
 	return {
 		[path.join('src', 'wait.js')]: await fetchTemplate('webpack', 'wait.js'),
 		[path.join('src', 'index.js')]: await fetchTemplate('webpack', 'index.js'),
+		[path.join('src', 'styles.scss')]: await fetchTemplate('webpack', 'styles.scss'),
 	};
 };
 

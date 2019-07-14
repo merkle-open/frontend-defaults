@@ -57,7 +57,7 @@ exports[`webpack default 1`] = `
     },
     \\"webpack.config.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst CleanWebpackPlugin = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(['dist']),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
+      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst { CleanWebpackPlugin } = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
     },
     \\"babel.config.js\\": {
       \\"override\\": false,
@@ -69,7 +69,11 @@ exports[`webpack default 1`] = `
     },
     \\"src/index.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"import '@babel/polyfill';\\\\n\\\\n(async () => {\\\\n\\\\t// dynamic import\\\\n\\\\tconst { wait } = await import(/* webpackChunkName: \\\\\\"wait\\\\\\" */ './wait');\\\\n\\\\tawait wait();\\\\n\\\\tdocument.write('@namics/frontend-defaults installed');\\\\n})();\\\\n\\"
+      \\"data\\": \\"import '@babel/polyfill';\\\\nimport './styles.scss';\\\\n\\\\n(async () => {\\\\n\\\\t// dynamic import\\\\n\\\\tconst { wait } = await import(/* webpackChunkName: \\\\\\"wait\\\\\\" */ './wait');\\\\n\\\\tawait wait();\\\\n\\\\tdocument.body.innerHTML =\\\\n\\\\t\\\\t'<h1 class=\\\\\\"m-title\\\\\\">@namics/frontend-defaults. <span class=\\\\\\"m-title__highlight\\\\\\">Installed.</span></h1>';\\\\n})();\\\\n\\"
+    },
+    \\"src/styles.scss\\": {
+      \\"override\\": false,
+      \\"data\\": \\"body {\\\\n\\\\tbackground: #fff;\\\\n\\\\tcolor: #000;\\\\n\\\\tfont-family: -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, Oxygen, Ubuntu, Cantarell, \\\\\\"Fira Sans\\\\\\", \\\\\\"Droid Sans\\\\\\", \\\\\\"Helvetica Neue\\\\\\", sans-serif;\\\\n\\\\tfont-size: 20px;\\\\n\\\\t-webkit-font-smoothing: antialiased;\\\\n\\\\ttext-align: center;\\\\n\\\\tpadding: 100px 20px;\\\\n}\\\\n\\\\n.m-title__highlight {\\\\n\\\\tcolor: #ff003d;\\\\n}\\\\n\\"
     }
   }
 }"
@@ -137,7 +141,7 @@ exports[`webpack default 3`] = `
 
 exports[`webpack default 4`] = `
 "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');
 
@@ -148,7 +152,7 @@ module.exports = {
     // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin
     new AssetConfigWebpackPlugin(),
     // Cleans the dist folder before the build starts
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     // Generate a base html file and injects all generated css and js files
     new HtmlWebpackPlugin(),
     // SCSS Configuration for .css .module.css and .scss .module.scss files
@@ -219,7 +223,7 @@ exports[`webpack webpack-with-ts 1`] = `
     },
     \\"webpack.config.js\\": {
       \\"override\\": false,
-      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst CleanWebpackPlugin = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\nconst TsConfigWebpackPlugin = require('ts-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(['dist']),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n    // Multi threading typescript loader configuration with caching for .ts and .tsx files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/ts-config-webpack-plugin/config\\\\n    new TsConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
+      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst { CleanWebpackPlugin } = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\nconst TsConfigWebpackPlugin = require('ts-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n    // Multi threading typescript loader configuration with caching for .ts and .tsx files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/ts-config-webpack-plugin/config\\\\n    new TsConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
     },
     \\"src/wait.ts\\": {
       \\"override\\": false,
@@ -227,11 +231,15 @@ exports[`webpack webpack-with-ts 1`] = `
     },
     \\"src/index.ts\\": {
       \\"override\\": false,
-      \\"data\\": \\"import './polyfill';\\\\n\\\\n(async () => {\\\\n\\\\t// dynamic import\\\\n\\\\tconst { wait } = await import(/* webpackChunkName: \\\\\\"wait\\\\\\" */ './wait');\\\\n\\\\tawait wait();\\\\n\\\\tdocument.write('@namics/frontend-defaults installed');\\\\n})();\\\\n\\"
+      \\"data\\": \\"import './polyfill';\\\\nimport './styles.scss';\\\\n\\\\n(async () => {\\\\n\\\\t// dynamic import\\\\n\\\\tconst { wait } = await import(/* webpackChunkName: \\\\\\"wait\\\\\\" */ './wait');\\\\n\\\\tawait wait();\\\\n\\\\tdocument.body.innerHTML =\\\\n\\\\t\\\\t'<h1 class=\\\\\\"m-title\\\\\\">@namics/frontend-defaults. <span class=\\\\\\"m-title__highlight\\\\\\">Installed.</span></h1>';\\\\n})();\\\\n\\"
     },
     \\"src/polyfill.ts\\": {
       \\"override\\": false,
       \\"data\\": \\"\\\\n// https://github.com/zloirock/core-js/tree/v2\\\\n\\\\n// import required polyfills here\\\\nimport 'core-js/features/promise'; \\\\n\\"
+    },
+    \\"src/styles.scss\\": {
+      \\"override\\": false,
+      \\"data\\": \\"body {\\\\n\\\\tbackground: #fff;\\\\n\\\\tcolor: #000;\\\\n\\\\tfont-family: -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, Oxygen, Ubuntu, Cantarell, \\\\\\"Fira Sans\\\\\\", \\\\\\"Droid Sans\\\\\\", \\\\\\"Helvetica Neue\\\\\\", sans-serif;\\\\n\\\\tfont-size: 20px;\\\\n\\\\t-webkit-font-smoothing: antialiased;\\\\n\\\\ttext-align: center;\\\\n\\\\tpadding: 100px 20px;\\\\n}\\\\n\\\\n.m-title__highlight {\\\\n\\\\tcolor: #ff003d;\\\\n}\\\\n\\"
     }
   }
 }"
@@ -278,7 +286,7 @@ exports[`webpack webpack-with-ts 3`] = `
 
 exports[`webpack webpack-with-ts 4`] = `
 "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');
 const TsConfigWebpackPlugin = require('ts-config-webpack-plugin');
@@ -290,7 +298,7 @@ module.exports = {
     // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin
     new AssetConfigWebpackPlugin(),
     // Cleans the dist folder before the build starts
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     // Generate a base html file and injects all generated css and js files
     new HtmlWebpackPlugin(),
     // SCSS Configuration for .css .module.css and .scss .module.scss files

@@ -45,7 +45,7 @@ function getUpdateValue(name, oldVersion, newVersion) {
 
 async function fetchDependencies() {
 	const packageFiles = await globby(
-		['**/package.json', '**/package-*.json', '!**/package-lock.json', '!**/node_modules', '!**/__tests__'],
+		['cli/**/package.json', 'cli/**/package-*.json', '!**/package-lock.json', '!**/node_modules', '!**/__tests__'],
 		{
 			cwd,
 		}

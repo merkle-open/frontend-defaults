@@ -45,7 +45,7 @@ exports[`eslint default 3`] = `
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.2\\",
-          \\"eslint\\": \\"6.0.1\\",
+          \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.18.0\\",
           \\"npm-run-all\\": \\"4.1.5\\"
         }
@@ -71,7 +71,7 @@ exports[`eslint default 4`] = `
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.2\\",
-    \\"eslint\\": \\"6.0.1\\",
+    \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.18.0\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   }
@@ -123,10 +123,10 @@ exports[`eslint with-githooks 3`] = `
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.2\\",
-          \\"eslint\\": \\"6.0.1\\",
+          \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.18.0\\",
-          \\"husky\\": \\"2.3.0\\",
-          \\"lint-staged\\": \\"8.1.7\\",
+          \\"husky\\": \\"3.0.0\\",
+          \\"lint-staged\\": \\"9.2.0\\",
           \\"npm-run-all\\": \\"4.1.5\\"
         },
         \\"husky\\": {
@@ -175,10 +175,10 @@ exports[`eslint with-githooks 5`] = `
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.2\\",
-    \\"eslint\\": \\"6.0.1\\",
+    \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.18.0\\",
-    \\"husky\\": \\"2.3.0\\",
-    \\"lint-staged\\": \\"8.1.7\\",
+    \\"husky\\": \\"3.0.0\\",
+    \\"lint-staged\\": \\"9.2.0\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   },
   \\"husky\\": {
@@ -246,10 +246,10 @@ exports[`eslint with-prettier 3`] = `
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"7.0.2\\",
           \\"@namics/prettier-config\\": \\"0.2.0\\",
-          \\"eslint\\": \\"6.0.1\\",
+          \\"eslint\\": \\"5.16.0\\",
           \\"eslint-plugin-import\\": \\"2.18.0\\",
           \\"npm-run-all\\": \\"4.1.5\\",
-          \\"prettier\\": \\"1.17.1\\"
+          \\"prettier\\": \\"1.18.2\\"
         }
       }
     },
@@ -310,10 +310,10 @@ exports[`eslint with-prettier 6`] = `
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"7.0.2\\",
     \\"@namics/prettier-config\\": \\"0.2.0\\",
-    \\"eslint\\": \\"6.0.1\\",
+    \\"eslint\\": \\"5.16.0\\",
     \\"eslint-plugin-import\\": \\"2.18.0\\",
     \\"npm-run-all\\": \\"4.1.5\\",
-    \\"prettier\\": \\"1.17.1\\"
+    \\"prettier\\": \\"1.18.2\\"
   }
 }"
 `;
