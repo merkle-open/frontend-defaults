@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.2.3...@namics/frontend-defaults-cli@0.3.0) (2019-07-14)
+
+
+### Bug Fixes
+
+* **cli:** use eslint 5.16.0 instead of 6.0.1 ([f17eb74](https://github.com/namics/frontend-defaults/commit/f17eb74))
+
+
+### Features
+
+* **cli:** demo with scss file and update dependencies ([edd168d](https://github.com/namics/frontend-defaults/commit/edd168d))
+
+
+
+
+
 ## [0.2.3](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.2.2...@namics/frontend-defaults-cli@0.2.3) (2019-07-13)
 
 **Note:** Version bump only for package @namics/frontend-defaults-cli
