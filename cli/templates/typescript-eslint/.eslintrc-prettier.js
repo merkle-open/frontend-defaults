@@ -1,6 +1,9 @@
 module.exports = {
 	extends: [
-		'@namics/eslint-config/configurations/typescript-react.js',
-		'@namics/eslint-config/configurations/typescript-react-disable-styles.js',
+		'./.eslintrc.strict.js',
 	].map(require.resolve),
+	/* define rules for IDE only here https://github.com/namics/frontend-defaults/issues/12 */
+	rules: {
+		'no-console': 1
+	}
 };

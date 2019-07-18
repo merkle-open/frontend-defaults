@@ -4,7 +4,7 @@ import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
 
-const createEslintFile = async ({ eslint, ts, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string }> => {
+const createEslintFile = async ({ eslint, ts, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string, '.eslintrc.strict.js'?: string }> => {
 	if (!ts || !eslint) {
 		return {};
 	}
@@ -12,11 +12,13 @@ const createEslintFile = async ({ eslint, ts, prettier }: IOptions): Promise<{ '
 	if (prettier) {
 		return {
 			'.eslintrc.js': await fetchTemplate('typescript-eslint', '.eslintrc-prettier.js'),
+			'.eslintrc.strict.js': await fetchTemplate('typescript-eslint', '.eslintrc-prettier.strict.js'),
 		};
 	}
 
 	return {
 		'.eslintrc.js': await fetchTemplate('typescript-eslint', '.eslintrc.js'),
+		'.eslintrc.strict.js': await fetchTemplate('typescript-eslint', '.eslintrc.strict.js'),
 	};
 };
 

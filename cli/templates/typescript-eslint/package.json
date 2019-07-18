@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx"
+    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js"
   },
   "devDependencies": {
     "eslint": "5.16.0",
