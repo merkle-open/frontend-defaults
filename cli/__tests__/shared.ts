@@ -16,7 +16,6 @@ jest.mock('latest-version', () => ({
 const cwd = process.cwd();
 
 const deleteDir = (pathName: string) => new Promise((resolve) => rimraf(pathName, resolve));
-const removeIgnoredFiles = (fileName: string) => fileName !== '.DS_Store' && fileName !== 'Thumbs.db';
 
 export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDeleteDir: boolean = true) => {
 	const tmpPathRoot = path.join(cwd, '__tests__', 'tmp');
@@ -33,16 +32,6 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDel
 	} catch (err) {}
 	await fs.mkdir(tmpPath);
 
-	await api(options);
-
-	const files = (await fs.readdir(tmpPath))
-		.filter((dirName: string) => !fs.statSync(path.join(tmpPath, dirName)).isDirectory())
-		.filter(removeIgnoredFiles)
-		.sort();
-
-	let i = 0;
-	for (i = 0; i < files.length; i += 1) {
-		const fileData = await fs.readFile(path.join(tmpPath, files[i]), 'utf8');
-		expect(fileData).toMatchSnapshot();
-	}
+	const files = await api(options);
+	expect(files).toMatchSnapshot();
 };
