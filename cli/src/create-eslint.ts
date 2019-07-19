@@ -1,12 +1,11 @@
 /**
- * 
+ *
  * This file produces eslint files and changes required for
- * 
+ *
  * 		JS + eslint
- * 
+ *
  * for Typescript please check typescript-eslint
  */
-
 
 import deepMerge from 'deepmerge';
 
@@ -14,7 +13,11 @@ import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
 
-const createEslintFile = async ({ ts, eslint, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string, '.eslintrc.strict.js'?: string }> => {
+const createEslintFile = async ({
+	ts,
+	eslint,
+	prettier,
+}: IOptions): Promise<{ '.eslintrc.js'?: string; '.eslintrc.strict.js'?: string }> => {
 	if (ts || !eslint) {
 		return {};
 	}

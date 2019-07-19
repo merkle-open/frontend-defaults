@@ -93,8 +93,10 @@ export default async (apiOptions: IApiOptions) => {
 		await gitInit(options.cwd);
 		await install(options);
 		await openVSCode(options);
+		return files;
 	} catch (err) {
 		console.error(chalk.red(err));
 		process.exit(1);
 	}
+	return;
 };

@@ -15,9 +15,9 @@
 		}
 	},
 	"devDependencies": {
-		"husky": "3.0.0",
+		"husky": "3.0.1",
 		"lint-staged": "9.2.0",
 		"stylelint": "10.1.0",
-		"@namics/stylelint-config": "0.3.3"
+		"@namics/stylelint-config": "0.3.4"
 	}
 }

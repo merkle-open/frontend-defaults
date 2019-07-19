@@ -4,7 +4,11 @@ import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
 
-const createEslintFile = async ({ eslint, ts, prettier }: IOptions): Promise<{ '.eslintrc.js'?: string, '.eslintrc.strict.js'?: string }> => {
+const createEslintFile = async ({
+	eslint,
+	ts,
+	prettier,
+}: IOptions): Promise<{ '.eslintrc.js'?: string; '.eslintrc.strict.js'?: string }> => {
 	if (!ts || !eslint) {
 		return {};
 	}
