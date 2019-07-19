@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.3.0...@namics/frontend-defaults-cli@0.4.0) (2019-07-19)
+
+
+### Bug Fixes
+
+* update dependencies and fix lodash vulnerabilities ([13fc044](https://github.com/namics/frontend-defaults/commit/13fc044))
+
+
+### Features
+
+* **cli:** add pretty-quick [#6](https://github.com/namics/frontend-defaults/issues/6) ([c7523f4](https://github.com/namics/frontend-defaults/commit/c7523f4))
+* **cli:** improve linting for dev [#12](https://github.com/namics/frontend-defaults/issues/12) ([33af849](https://github.com/namics/frontend-defaults/commit/33af849))
+
+
+
+
+
 # [0.3.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.2.3...@namics/frontend-defaults-cli@0.3.0) (2019-07-14)
 
 

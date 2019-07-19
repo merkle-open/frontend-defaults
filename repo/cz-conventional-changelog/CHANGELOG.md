@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.1...@namics/cz-conventional-changelog@1.1.2) (2019-07-19)
+
+
+### Bug Fixes
+
+* update dependencies and fix lodash vulnerabilities ([13fc044](https://github.com/namics/frontend-defaults/commit/13fc044))
+
+
+
+
+
 ## [1.1.1](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.0...@namics/cz-conventional-changelog@1.1.1) (2019-07-13)
 
 **Note:** Version bump only for package @namics/cz-conventional-changelog

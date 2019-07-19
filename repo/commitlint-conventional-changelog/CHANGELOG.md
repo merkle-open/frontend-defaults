@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.2...@namics/commitlint-conventional-changelog@1.1.3) (2019-07-19)
+
+
+### Bug Fixes
+
+* update dependencies and fix lodash vulnerabilities ([dd74b8e](https://github.com/namics/frontend-defaults/commit/dd74b8e))
+* update dependencies and fix lodash vulnerabilities ([c787c52](https://github.com/namics/frontend-defaults/commit/c787c52))
+* update dependencies and fix lodash vulnerabilities ([13fc044](https://github.com/namics/frontend-defaults/commit/13fc044))
+
+
+
+
+
 ## [1.1.2](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.1...@namics/commitlint-conventional-changelog@1.1.2) (2019-07-13)
 
 **Note:** Version bump only for package @namics/commitlint-conventional-changelog
