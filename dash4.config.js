@@ -24,7 +24,7 @@ async function getConfig() {
 					[
 						new PluginDependencies({
 							lerna: 'lerna.json',
-							installProcess: { title: 'run install', cmd: 'npm run install', cwd: '/' },
+							installProcess: { title: 'run install', cmd: 'npm install' },
 							width: [12, 6, 8],
 						}),
 						new PluginNpmScripts({
