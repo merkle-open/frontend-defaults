@@ -14,8 +14,6 @@
 **/coverage
 **/storybook-static
 
-# generator-nitro
-**/project/blueprints
-
+# Project
 cli/templates
 cli/__tests__/tmp
