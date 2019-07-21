@@ -2,6 +2,6 @@
 
 exports[`editorconfig default 1`] = `
 Array [
-  ".editorconfig",
+  .editorconfig,
 ]
 `;

@@ -2,7 +2,7 @@
 
 exports[`gitignore default 1`] = `
 Array [
-  ".gitattributes",
-  ".gitignore",
+  .gitattributes,
+  .gitignore,
 ]
 `;

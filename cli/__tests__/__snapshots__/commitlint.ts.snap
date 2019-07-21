@@ -2,7 +2,7 @@
 
 exports[`commitlint default 1`] = `
 Array [
-  ".huskyrc",
-  "package.json",
+  .huskyrc,
+  package.json,
 ]
 `;

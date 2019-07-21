@@ -2,7 +2,7 @@
 
 exports[`tsconfig default 1`] = `
 Array [
-  "package.json",
-  "tsconfig.json",
+  package.json,
+  tsconfig.json,
 ]
 `;
