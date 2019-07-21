@@ -37,26 +37,24 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "cli/src/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ],
-      "cli/__tests__/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ],
-      "codequality/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ],
-      "docs/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ],
-      "editorconfig/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ],
-      "repo/*.*{js,jsx,ts,tsx,json}": [
-        "prettier --list-different --write"
-      ]
-    }
+    "cli/src/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ],
+    "cli/__tests__/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ],
+    "codequality/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ],
+    "docs/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ],
+    "editorconfig/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ],
+    "repo/*.*{js,jsx,ts,tsx,json}": [
+      "prettier --list-different --write"
+    ]
   },
   "commitlint": {
     "extends": [
