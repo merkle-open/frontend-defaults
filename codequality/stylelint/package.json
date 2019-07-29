@@ -1,7 +1,7 @@
 {
   "name": "@namics/stylelint-config",
   "description": "Shared stylelint config",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "repository": "https://github.com/namics/frontend-defaults",
   "main": "./index.js",
   "license": "MIT",
