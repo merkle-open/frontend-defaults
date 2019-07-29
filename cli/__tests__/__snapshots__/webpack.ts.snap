@@ -2,23 +2,23 @@
 
 exports[`webpack default 1`] = `
 Array [
-  "babel.config.js",
-  "package.json",
-  "src/index.js",
-  "src/styles.scss",
-  "src/wait.js",
-  "webpack.config.js",
+  babel.config.js,
+  package.json,
+  src/index.js,
+  src/styles.scss,
+  src/wait.js,
+  webpack.config.js,
 ]
 `;
 
 exports[`webpack webpack-with-ts 1`] = `
 Array [
-  "package.json",
-  "src/index.ts",
-  "src/polyfill.ts",
-  "src/styles.scss",
-  "src/wait.ts",
-  "tsconfig.json",
-  "webpack.config.js",
+  package.json,
+  src/index.ts,
+  src/polyfill.ts,
+  src/styles.scss,
+  src/wait.ts,
+  tsconfig.json,
+  webpack.config.js,
 ]
 `;

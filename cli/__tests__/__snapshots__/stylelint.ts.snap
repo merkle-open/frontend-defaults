@@ -2,17 +2,17 @@
 
 exports[`stylelint default 1`] = `
 Array [
-  ".stylelintignore",
-  "package.json",
-  "stylelint.config.js",
+  .stylelintignore,
+  package.json,
+  stylelint.config.js,
 ]
 `;
 
 exports[`stylelint with-githooks 1`] = `
 Array [
-  ".huskyrc",
-  ".stylelintignore",
-  "package.json",
-  "stylelint.config.js",
+  .huskyrc,
+  .stylelintignore,
+  package.json,
+  stylelint.config.js,
 ]
 `;

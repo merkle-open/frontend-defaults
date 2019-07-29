@@ -2,17 +2,17 @@
 
 exports[`prettier default 1`] = `
 Array [
-  ".prettierignore",
-  ".prettierrc.js",
-  "package.json",
+  .prettierignore,
+  .prettierrc.js,
+  package.json,
 ]
 `;
 
 exports[`prettier with-githooks 1`] = `
 Array [
-  ".huskyrc",
-  ".prettierignore",
-  ".prettierrc.js",
-  "package.json",
+  .huskyrc,
+  .prettierignore,
+  .prettierrc.js,
+  package.json,
 ]
 `;

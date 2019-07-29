@@ -2,17 +2,17 @@
 
 exports[`node-version default 1`] = `
 Array [
-  ".node-version",
-  ".nvmrc",
-  "package.json",
+  .node-version,
+  .nvmrc,
+  package.json,
 ]
 `;
 
 exports[`node-version with-githooks 1`] = `
 Array [
-  ".huskyrc",
-  ".node-version",
-  ".nvmrc",
-  "package.json",
+  .huskyrc,
+  .node-version,
+  .nvmrc,
+  package.json,
 ]
 `;

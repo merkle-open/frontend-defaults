@@ -2,16 +2,16 @@
 
 exports[`build build-with-ts 1`] = `
 Array [
-  "package.json",
-  "src/index.ts",
-  "tsconfig.json",
+  package.json,
+  src/index.ts,
+  tsconfig.json,
 ]
 `;
 
 exports[`build default 1`] = `
 Array [
-  "babel.config.js",
-  "package.json",
-  "src/index.js",
+  babel.config.js,
+  package.json,
+  src/index.js,
 ]
 `;

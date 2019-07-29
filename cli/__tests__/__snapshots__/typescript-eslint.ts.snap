@@ -2,33 +2,33 @@
 
 exports[`typescript-eslint default 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  "package.json",
-  "tsconfig.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  package.json,
+  tsconfig.json,
 ]
 `;
 
 exports[`typescript-eslint with-githooks 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  ".huskyrc",
-  "package.json",
-  "tsconfig.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  .huskyrc,
+  package.json,
+  tsconfig.json,
 ]
 `;
 
 exports[`typescript-eslint with-prettier 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  ".prettierignore",
-  ".prettierrc.js",
-  "package.json",
-  "tsconfig.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  .prettierignore,
+  .prettierrc.js,
+  package.json,
+  tsconfig.json,
 ]
 `;

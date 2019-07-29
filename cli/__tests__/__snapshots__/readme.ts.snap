@@ -2,15 +2,15 @@
 
 exports[`readme closed-source 1`] = `
 Array [
-  "README.md",
-  "package.json",
+  README.md,
+  package.json,
 ]
 `;
 
 exports[`readme open-source 1`] = `
 Array [
-  "LICENSE",
-  "README.md",
-  "package.json",
+  LICENSE,
+  README.md,
+  package.json,
 ]
 `;

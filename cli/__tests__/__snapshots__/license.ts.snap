@@ -2,13 +2,13 @@
 
 exports[`license license-closed-source 1`] = `
 Array [
-  "package.json",
+  package.json,
 ]
 `;
 
 exports[`license license-open-source 1`] = `
 Array [
-  "LICENSE",
-  "package.json",
+  LICENSE,
+  package.json,
 ]
 `;

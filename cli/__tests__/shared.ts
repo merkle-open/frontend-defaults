@@ -33,5 +33,13 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDel
 	await fs.mkdir(tmpPath);
 
 	const files = await api(options);
+
+	// normalize pathes to look the same on windows, linux and mac
+	expect.addSnapshotSerializer({
+		test: (val) => typeof val === 'string',
+		print(val) {
+			return `${val.replace(/\\/g, '/')}`;
+		},
+	});
 	expect(files).toMatchSnapshot();
 };

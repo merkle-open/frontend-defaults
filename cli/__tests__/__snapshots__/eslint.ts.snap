@@ -2,30 +2,30 @@
 
 exports[`eslint default 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  "package.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  package.json,
 ]
 `;
 
 exports[`eslint with-githooks 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  ".huskyrc",
-  "package.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  .huskyrc,
+  package.json,
 ]
 `;
 
 exports[`eslint with-prettier 1`] = `
 Array [
-  ".eslintignore",
-  ".eslintrc.js",
-  ".eslintrc.strict.js",
-  ".prettierignore",
-  ".prettierrc.js",
-  "package.json",
+  .eslintignore,
+  .eslintrc.js,
+  .eslintrc.strict.js,
+  .prettierignore,
+  .prettierrc.js,
+  package.json,
 ]
 `;
