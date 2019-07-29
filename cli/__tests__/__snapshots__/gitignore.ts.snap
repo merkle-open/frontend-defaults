@@ -1,7 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gitignore default 1`] = `
+"{
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": true,
+    \\"npmrc\\": false,
+    \\"readme\\": false,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodeVersion\\": false,
+    \\"webpack\\": false,
+    \\"build\\": false,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"api\\"
+  },
+  \\"mergedFiles\\": {
+    \\".gitignore\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# OS\\\\n.DS_Store\\\\nThumbs.db\\\\n\\\\n# IDE\\\\n_.*\\\\n.project\\\\n.idea\\\\n/*.iml\\\\n.vscode\\\\n.cache\\\\n!*.cache\\\\n.settings\\\\n!*.settings\\\\n.config\\\\n!*.config\\\\n.buildpath\\\\n.metadata\\\\n.tmp*\\\\n*.prefs\\\\n.deployables\\\\natlassian-ide-plugin.xml\\\\n\\\\n# Node\\\\nnode_modules\\\\nnpm-debug.log\\\\nyarn-error.log\\\\nlerna-debug.log\\\\n\\\\n# allow\\\\n!.gitkeep\\\\n\\\\n# build\\\\ndist\\\\nbuild\\\\n\\"
+    },
+    \\".gitattributes\\": {
+      \\"override\\": false,
+      \\"data\\": \\"# Set default behaviour, in case users don't have core.autocrlf set.\\\\n* text=auto\\\\n\\\\n# Explicitly declare text files we want to always be normalized and converted\\\\n# to native line endings on checkout.\\\\n*.sh text eol=lf\\\\n*.pp text eol=lf\\\\n*.rb text eol=lf\\\\n*.yaml text eol=lf\\\\n*.bash_aliases text eol=lf\\\\n\\\\n# Denote all files that are truly binary and should not be modified.\\\\n*.eot binary\\\\n*.ttf binary\\\\n*.woff binary\\\\n*.woff2 binary\\\\n\\\\n# Windows-specific files get windows endings\\\\n*.bat     eol=crlf\\\\n*.cmd     eol=crlf\\\\n*-windows.tmpl eol=crlf\\\\n\\"
+    }
+  }
+}"
+`;
+
+exports[`gitignore default 2`] = `
+"# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files we want to always be normalized and converted
+# to native line endings on checkout.
+*.sh text eol=lf
+*.pp text eol=lf
+*.rb text eol=lf
+*.yaml text eol=lf
+*.bash_aliases text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Windows-specific files get windows endings
+*.bat     eol=crlf
+*.cmd     eol=crlf
+*-windows.tmpl eol=crlf
+"
+`;
+
+exports[`gitignore default 3`] = `
+"# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+_.*
+.project
+.idea
+/*.iml
+.vscode
+.cache
+!*.cache
+.settings
+!*.settings
+.config
+!*.config
+.buildpath
+.metadata
+.tmp*
+*.prefs
+.deployables
+atlassian-ide-plugin.xml
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# allow
+!.gitkeep
+
+# build
+dist
+build
+"
+`;
+
+exports[`gitignore default 4`] = `
 Array [
+  .frontend-defaults-rc.json,
   .gitattributes,
   .gitignore,
 ]

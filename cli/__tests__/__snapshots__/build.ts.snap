@@ -1,17 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`build build-with-ts 1`] = `
+{
+  "options": {
+    "ts": true,
+    "es": false,
+    "eslint": false,
+    "editorconfig": false,
+    "prettier": false,
+    "stylelint": false,
+    "gitignore": false,
+    "npmrc": false,
+    "readme": false,
+    "githooks": false,
+    "commitlint": false,
+    "nodeVersion": false,
+    "webpack": false,
+    "build": true,
+    "install": false,
+    "force": true,
+    "dryRun": false,
+    "mode": "api"
+  },
+  "mergedFiles": {
+    "package.json": {
+      "override": false,
+      "data": {
+        "devDependencies": {
+          "@namics/ts-config": "0.3.0",
+          "typescript": "3.4.5"
+        },
+        "browserslist": [
+          "> 1%",
+          "last 2 versions",
+          "not ie <= 10"
+        ],
+        "scripts": {
+          "build": "tsc --outDir build",
+          "watch": "tsc --watch --outDir build"
+        }
+      }
+    },
+    "tsconfig.json": {
+      "override": false,
+      "data": "{/n/t/"extends/": /"@namics/ts-config/",/n/t/"exclude/": [/"dist/", /"build/", /"node_modules/", /"__tests__/"]/n}/n"
+    },
+    "src/index.ts": {
+      "override": false,
+      "data": "/nexport const sum = (a: number, b: number) => {/n/treturn a + b;/n};/n"
+    }
+  }
+}
+`;
+
+exports[`build build-with-ts 2`] = `
+{
+  "devDependencies": {
+    "@namics/ts-config": "0.3.0",
+    "typescript": "3.4.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "scripts": {
+    "build": "tsc --outDir build",
+    "watch": "tsc --watch --outDir build"
+  }
+}
+`;
+
+exports[`build build-with-ts 3`] = `
+{
+	"extends": "@namics/ts-config",
+	"exclude": ["dist", "build", "node_modules", "__tests__"]
+}
+
+`;
+
+exports[`build build-with-ts 4`] = `
 Array [
+  .frontend-defaults-rc.json,
   package.json,
-  src/index.ts,
   tsconfig.json,
 ]
 `;
 
 exports[`build default 1`] = `
+"{
+  \\"options\\": {
+    \\"ts\\": false,
+    \\"es\\": false,
+    \\"eslint\\": false,
+    \\"editorconfig\\": false,
+    \\"prettier\\": false,
+    \\"stylelint\\": false,
+    \\"gitignore\\": false,
+    \\"npmrc\\": false,
+    \\"readme\\": false,
+    \\"githooks\\": false,
+    \\"commitlint\\": false,
+    \\"nodeVersion\\": false,
+    \\"webpack\\": false,
+    \\"build\\": true,
+    \\"install\\": false,
+    \\"force\\": true,
+    \\"dryRun\\": false,
+    \\"mode\\": \\"api\\"
+  },
+  \\"mergedFiles\\": {
+    \\"package.json\\": {
+      \\"override\\": false,
+      \\"data\\": {
+        \\"browserslist\\": [
+          \\"> 1%\\",
+          \\"last 2 versions\\",
+          \\"not ie <= 10\\"
+        ],
+        \\"devDependencies\\": {
+          \\"@babel/cli\\": \\"7.5.5\\",
+          \\"@babel/core\\": \\"7.5.5\\",
+          \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
+          \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
+          \\"@babel/preset-env\\": \\"7.5.5\\",
+          \\"@babel/preset-react\\": \\"7.0.0\\"
+        },
+        \\"scripts\\": {
+          \\"build\\": \\"babel src --out-dir build\\",
+          \\"watch\\": \\"babel src --watch --out-dir build\\"
+        }
+      }
+    },
+    \\"babel.config.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"module.exports = {\\\\n\\\\tplugins: [\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/plugin-proposal-decorators'),\\\\n\\\\t\\\\t\\\\t{\\\\n\\\\t\\\\t\\\\t\\\\t\\\\\\"legacy\\\\\\": true\\\\n\\\\t\\\\t\\\\t},\\\\n\\\\t\\\\t],\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/plugin-syntax-dynamic-import'),\\\\n\\\\t\\\\t],\\\\n\\\\t],\\\\n\\\\tpresets: [\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/preset-react'),\\\\n\\\\t\\\\t],\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/preset-env'),\\\\n\\\\t\\\\t\\\\t{\\\\n\\\\t\\\\t\\\\t\\\\tuseBuiltIns: 'entry'\\\\n\\\\t\\\\t\\\\t},\\\\n\\\\t\\\\t],\\\\n\\\\t],\\\\n};\\\\n\\"
+    },
+    \\"src/index.js\\": {
+      \\"override\\": false,
+      \\"data\\": \\"\\\\nexport const sum = (a, b) => {\\\\n\\\\treturn a + b;\\\\n};\\\\n\\"
+    }
+  }
+}"
+`;
+
+exports[`build default 2`] = `
+"module.exports = {
+	plugins: [
+		[
+			require.resolve('@babel/plugin-proposal-decorators'),
+			{
+				\\"legacy\\": true
+			},
+		],
+		[
+			require.resolve('@babel/plugin-syntax-dynamic-import'),
+		],
+	],
+	presets: [
+		[
+			require.resolve('@babel/preset-react'),
+		],
+		[
+			require.resolve('@babel/preset-env'),
+			{
+				useBuiltIns: 'entry'
+			},
+		],
+	],
+};
+"
+`;
+
+exports[`build default 3`] = `
+"{
+  \\"browserslist\\": [
+    \\"> 1%\\",
+    \\"last 2 versions\\",
+    \\"not ie <= 10\\"
+  ],
+  \\"devDependencies\\": {
+    \\"@babel/cli\\": \\"7.5.5\\",
+    \\"@babel/core\\": \\"7.5.5\\",
+    \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
+    \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
+    \\"@babel/preset-env\\": \\"7.5.5\\",
+    \\"@babel/preset-react\\": \\"7.0.0\\"
+  },
+  \\"scripts\\": {
+    \\"build\\": \\"babel src --out-dir build\\",
+    \\"watch\\": \\"babel src --watch --out-dir build\\"
+  }
+}"
+`;
+
+exports[`build default 4`] = `
 Array [
+  .frontend-defaults-rc.json,
   babel.config.js,
   package.json,
-  src/index.js,
 ]
 `;
