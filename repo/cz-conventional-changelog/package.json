@@ -27,6 +27,6 @@
     "word-wrap": "1.2.3"
   },
   "peerDependencies": {
-    "commitizen": "4.0.1"
+    "commitizen": "4.0.3"
   }
 }
