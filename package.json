@@ -14,8 +14,8 @@
   "scripts": {
     "clean": "npx npm-run-all clean:*",
     "clean:lerna": "lerna clean --yes",
-    "clean:dirs": "rimraf lerna-debug.log npm-debug.log package-lock.json */package-lock.json */*/package-lock.json",
-    "clean:modules": "rimraf node_modules",
+    "clean:dirs": "rimraf **/lerna-debug.log **/npm-debug.log **/package-lock.json",
+    "clean:modules": "npx rimraf node_modules",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
