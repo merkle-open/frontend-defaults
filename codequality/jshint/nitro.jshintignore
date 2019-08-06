@@ -1,7 +1,0 @@
-assets/vendor/**/*.js
-public/assets/js/*.ts.js
-components/**/template/*.js
-components/**/template/partial/*.js
-patterns/**/template/*.js
-patterns/**/template/partial/*.js
-node_modules/

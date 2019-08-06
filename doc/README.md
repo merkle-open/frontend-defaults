@@ -43,7 +43,7 @@ Introduction ...
 
 ### Guidelines
 
-* [Code Guidelines](project/docs/___.md)
+* [Code Guidelines](./project/docs/___.md)
 * Folder structure: ...
 * Patterns: ...
 * Dependencies: ...
@@ -75,7 +75,7 @@ Introduction ...
 
 ## Setup
 
-* [Setup Info](project/docs/___.md)
+* [Setup Info](./project/docs/___.md)
 * Development in branch develop
 
 ## Integration/Deployment

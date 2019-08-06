@@ -1,3 +1,3 @@
-## Infos
+# Accessibility
 
-more info on [.accessibilityrc options](https://github.com/yargalot/AccessSniff)
+Infos on [.accessibilityrc options](https://github.com/yargalot/AccessSniff)
