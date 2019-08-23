@@ -1,3 +1,6 @@
 /.idea/
 /node_modules/
 /*.js
+/dist
+/build
+/coverage

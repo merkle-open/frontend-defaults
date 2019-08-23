@@ -43,19 +43,19 @@ async function getConfig() {
 				],
 			},
 			{
-				title: 'prettier-config',
+				title: 'prettier',
 				rows: [[new PluginReadme({ file: 'codequality/prettier/README.md', width: [12, 10, 6] })]],
 			},
 			{
-				title: 'stylelint-config',
+				title: 'stylelint',
 				rows: [[new PluginReadme({ file: 'codequality/stylelint/README.md', width: [12, 10, 6] })]],
 			},
 			{
-				title: 'ts-config',
+				title: 'ts',
 				rows: [[new PluginReadme({ file: 'codequality/ts-config/README.md', width: [12, 10, 6] })]],
 			},
 			{
-				title: 'commitlint-conventional-changelog',
+				title: 'commitlint',
 				rows: [
 					[
 						new PluginReadme({
@@ -80,11 +80,11 @@ async function getConfig() {
 				],
 			},
 			{
-				title: 'cz-conventional-changelog',
+				title: 'commitizen',
 				rows: [[new PluginReadme({ file: 'repo/cz-conventional-changelog/README.md', width: [12, 10, 6] })]],
 			},
 			{
-				title: 'frontend-defaults-cli',
+				title: 'cli',
 				rows: [
 					[new PluginReadme({ file: 'cli/README.md', width: [12, 10, 6] })],
 					[

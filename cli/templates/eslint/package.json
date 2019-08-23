@@ -3,8 +3,8 @@
     "lint:js": "eslint . -c .eslintrc.strict.js"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
+    "eslint": "6.2.1",
     "eslint-plugin-import": "2.18.2",
-    "@namics/eslint-config": "7.0.3"
+    "@namics/eslint-config": "8.0.0"
   }
 }
