@@ -3,7 +3,7 @@
     "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js"
   },
   "devDependencies": {
-    "eslint": "6.2.1",
+    "eslint": "6.3.0",
     "eslint-plugin-import": "2.18.2",
     "@namics/eslint-config": "8.0.0"
   }

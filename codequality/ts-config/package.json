@@ -19,6 +19,6 @@
     "tsconfig.json"
   ],
   "peerDependencies": {
-    "typescript": "3.x"
+    "typescript": "3.6.2"
   }
 }

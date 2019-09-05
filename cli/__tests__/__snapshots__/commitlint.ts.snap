@@ -49,8 +49,8 @@ exports[`commitlint default 1`] = `
           \\"@namics/commitlint-conventional-changelog\\": \\"1.1.5\\",
           \\"@namics/cz-conventional-changelog\\": \\"1.1.4\\",
           \\"commitizen\\": \\"4.0.3\\",
-          \\"husky\\": \\"3.0.4\\",
-          \\"lint-staged\\": \\"9.2.3\\"
+          \\"husky\\": \\"3.0.5\\",
+          \\"lint-staged\\": \\"9.2.5\\"
         }
       }
     },
@@ -95,8 +95,8 @@ exports[`commitlint default 3`] = `
     \\"@namics/commitlint-conventional-changelog\\": \\"1.1.5\\",
     \\"@namics/cz-conventional-changelog\\": \\"1.1.4\\",
     \\"commitizen\\": \\"4.0.3\\",
-    \\"husky\\": \\"3.0.4\\",
-    \\"lint-staged\\": \\"9.2.3\\"
+    \\"husky\\": \\"3.0.5\\",
+    \\"lint-staged\\": \\"9.2.5\\"
   }
 }"
 `;
