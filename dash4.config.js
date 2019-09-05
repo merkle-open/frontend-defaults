@@ -86,15 +86,8 @@ async function getConfig() {
 			{
 				title: 'cli',
 				rows: [
-					[new PluginReadme({ file: 'cli/README.md', width: [12, 10, 6] })],
 					[
-						new PluginTerminal({
-							cmd: 'npm run watch-test',
-							cwd: 'cli',
-							allowedCommands: jestCommands,
-							width: [12, 6, 8],
-						}),
-
+						new PluginReadme({ file: 'cli/README.md', width: [12, 6, 8] }),
 						new PluginNpmScripts({
 							width: [12, 6, 4],
 							scripts: [
@@ -102,6 +95,20 @@ async function getConfig() {
 								{ title: 'watch', cmd: 'npm run watch', cwd: 'cli' },
 								{ title: 'test', cmd: 'npm run test', cwd: 'cli' },
 							],
+						}),
+					],
+					[
+						new PluginTerminal({
+							cmd: 'npm run watch-test',
+							cwd: 'cli',
+							allowedCommands: jestCommands,
+							width: [12, 6, 6],
+						}),
+						new PluginTerminal({
+							autostart: true,
+							cmd: 'npm run watch',
+							cwd: 'cli',
+							width: [12, 6, 6],
 						}),
 					],
 				],

@@ -122,11 +122,10 @@ exports[`prettier with-githooks 1`] = `
       "override": false,
       "data": {
         "lint-staged": {
-          "linters": {
-            "*.{js,jsx,ts,tsx,json}": [
-              "pretty-quick --staged"
-            ]
-          }
+          "*.{js,jsx,ts,tsx,json}": [
+            "prettier --write",
+            "git add"
+          ]
         },
         "scripts": {
           "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
@@ -140,8 +139,7 @@ exports[`prettier with-githooks 1`] = `
           "@namics/prettier-config": "0.2.0",
           "husky": "3.0.4",
           "lint-staged": "9.2.3",
-          "prettier": "1.18.2",
-          "pretty-quick": "1.11.1"
+          "prettier": "1.18.2"
         }
       }
     },
@@ -199,11 +197,10 @@ module.exports = require('@namics/prettier-config');
 exports[`prettier with-githooks 5`] = `
 {
   "lint-staged": {
-    "linters": {
-      "*.{js,jsx,ts,tsx,json}": [
-        "pretty-quick --staged"
-      ]
-    }
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
     "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
@@ -217,8 +214,7 @@ exports[`prettier with-githooks 5`] = `
     "@namics/prettier-config": "0.2.0",
     "husky": "3.0.4",
     "lint-staged": "9.2.3",
-    "prettier": "1.18.2",
-    "pretty-quick": "1.11.1"
+    "prettier": "1.18.2"
   }
 }
 `;

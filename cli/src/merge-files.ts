@@ -17,7 +17,7 @@ export interface IMergedFiles {
 	};
 }
 
-const uniqueArray = (arr: Array<string | number>) => arr.sort().filter((value, index) => value !== arr[index - 1]);
+const uniqueArray = (arr: Array<string | number>) => arr.filter((value, index) => value !== arr[index - 1]);
 const findArrayInObject = (obj: object, cb: (arr: Array<string | number>) => Array<string | number>) => {
 	Object.keys(obj).forEach((key) => {
 		if (Array.isArray(obj[key])) {

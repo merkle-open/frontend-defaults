@@ -8,11 +8,9 @@
 		}
 	},
 	"lint-staged": {
-		"linters": {
-			"src/**/*.*ss": [
-				"stylelint"
-			]
-		}
+		"src/**/*.*ss": [
+			"stylelint"
+		]
 	},
 	"devDependencies": {
 		"husky": "3.0.4",

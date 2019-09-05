@@ -46,9 +46,7 @@ src/shared/base/reset/css/yui/reset.css
     }
   },
   "lint-staged": {
-    "linters": {
-      "src/**/*.*ss": ["stylelint"]
-    }
+    "src/**/*.*ss": ["stylelint"]
   }
 }
 ```

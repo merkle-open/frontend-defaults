@@ -239,7 +239,7 @@ exports[`webpack webpack-with-ts 1`] = `
     },
     "src/wait.ts": {
       "override": false,
-      "data": "/nexport async function wait(delay: number = 500) {/n/treturn new Promise((resolve) => setTimeout(resolve, delay));/n};/n"
+      "data": "/nexport async function wait(delay = 500) {/n/treturn new Promise((resolve) => setTimeout(resolve, delay));/n};/n"
     },
     "src/index.ts": {
       "override": false,

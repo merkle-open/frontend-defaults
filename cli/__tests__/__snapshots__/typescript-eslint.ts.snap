@@ -194,11 +194,9 @@ exports[`typescript-eslint with-githooks 4`] = `
           }
         },
         "lint-staged": {
-          "linters": {
-            "src/**/*.{js,jsx,ts,tsx}": [
-              "eslint --ext .jsx,.js,.ts,.tsx"
-            ]
-          }
+          "src/**/*.{js,jsx,ts,tsx}": [
+            "eslint --ext .jsx,.js,.ts,.tsx"
+          ]
         }
       }
     },
@@ -256,11 +254,9 @@ exports[`typescript-eslint with-githooks 6`] = `
     }
   },
   "lint-staged": {
-    "linters": {
-      "src/**/*.{js,jsx,ts,tsx}": [
-        "eslint --ext .jsx,.js,.ts,.tsx"
-      ]
-    }
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --ext .jsx,.js,.ts,.tsx"
+    ]
   }
 }
 `;

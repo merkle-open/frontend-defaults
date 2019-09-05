@@ -5,11 +5,9 @@
 		}
 	},
 	"lint-staged": {
-		"linters": {
-			"src/**/*.{js,jsx}": [
-				"eslint"
-			]
-		}
+		"src/**/*.{js,jsx}": [
+			"eslint"
+		]
 	},
 	"devDependencies": {
 		"husky": "3.0.4",

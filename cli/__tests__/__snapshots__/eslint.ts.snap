@@ -183,11 +183,9 @@ exports[`eslint with-githooks 4`] = `
           }
         },
         "lint-staged": {
-          "linters": {
-            "src/**/*.{js,jsx}": [
-              "eslint"
-            ]
-          }
+          "src/**/*.{js,jsx}": [
+            "eslint"
+          ]
         }
       }
     },
@@ -239,11 +237,9 @@ exports[`eslint with-githooks 6`] = `
     }
   },
   "lint-staged": {
-    "linters": {
-      "src/**/*.{js,jsx}": [
-        "eslint"
-      ]
-    }
+    "src/**/*.{js,jsx}": [
+      "eslint"
+    ]
   }
 }
 `;
