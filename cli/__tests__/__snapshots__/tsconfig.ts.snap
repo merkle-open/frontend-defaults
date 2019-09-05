@@ -27,7 +27,7 @@ exports[`tsconfig default 1`] = `
       \\"override\\": false,
       \\"data\\": {
         \\"devDependencies\\": {
-          \\"@namics/ts-config\\": \\"0.3.0\\",
+          \\"@namics/ts-config\\": \\"0.3.1\\",
           \\"typescript\\": \\"3.4.5\\"
         }
       }
@@ -43,7 +43,7 @@ exports[`tsconfig default 1`] = `
 exports[`tsconfig default 2`] = `
 "{
   \\"devDependencies\\": {
-    \\"@namics/ts-config\\": \\"0.3.0\\",
+    \\"@namics/ts-config\\": \\"0.3.1\\",
     \\"typescript\\": \\"3.4.5\\"
   }
 }"

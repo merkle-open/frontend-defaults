@@ -4,6 +4,6 @@
 	},
 	"devDependencies": {
 		"stylelint": "10.1.0",
-		"@namics/stylelint-config": "0.3.6"
+		"@namics/stylelint-config": "0.3.7"
 	}
 }

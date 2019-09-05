@@ -4,6 +4,6 @@
   },
   "devDependencies": {
     "prettier": "1.18.2",
-    "@namics/prettier-config": "0.2.0"
+    "@namics/prettier-config": "0.3.0"
   }
 }

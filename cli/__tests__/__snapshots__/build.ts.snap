@@ -27,7 +27,7 @@ exports[`build build-with-ts 1`] = `
       "override": false,
       "data": {
         "devDependencies": {
-          "@namics/ts-config": "0.3.0",
+          "@namics/ts-config": "0.3.1",
           "typescript": "3.4.5"
         },
         "browserslist": [
@@ -56,7 +56,7 @@ exports[`build build-with-ts 1`] = `
 exports[`build build-with-ts 2`] = `
 {
   "devDependencies": {
-    "@namics/ts-config": "0.3.0",
+    "@namics/ts-config": "0.3.1",
     "typescript": "3.4.5"
   },
   "browserslist": [

@@ -30,7 +30,7 @@ exports[`prettier default 1`] = `
           \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
         },
         \\"devDependencies\\": {
-          \\"@namics/prettier-config\\": \\"0.2.0\\",
+          \\"@namics/prettier-config\\": \\"0.3.0\\",
           \\"prettier\\": \\"1.18.2\\"
         }
       }
@@ -80,7 +80,7 @@ exports[`prettier default 4`] = `
     \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
   \\"devDependencies\\": {
-    \\"@namics/prettier-config\\": \\"0.2.0\\",
+    \\"@namics/prettier-config\\": \\"0.3.0\\",
     \\"prettier\\": \\"1.18.2\\"
   }
 }"
@@ -136,7 +136,7 @@ exports[`prettier with-githooks 1`] = `
           }
         },
         "devDependencies": {
-          "@namics/prettier-config": "0.2.0",
+          "@namics/prettier-config": "0.3.0",
           "husky": "3.0.5",
           "lint-staged": "9.2.5",
           "prettier": "1.18.2"
@@ -211,7 +211,7 @@ exports[`prettier with-githooks 5`] = `
     }
   },
   "devDependencies": {
-    "@namics/prettier-config": "0.2.0",
+    "@namics/prettier-config": "0.3.0",
     "husky": "3.0.5",
     "lint-staged": "9.2.5",
     "prettier": "1.18.2"
