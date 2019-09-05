@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.5.0...@namics/frontend-defaults-cli@0.5.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **prettier:** remove pretty-quick and linters object [#18](https://github.com/namics/frontend-defaults/issues/18) ([6aadc19](https://github.com/namics/frontend-defaults/commit/6aadc19))
+* update dependencies ([8120c8e](https://github.com/namics/frontend-defaults/commit/8120c8e))
+
+
+
+
+
 # [0.5.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.4.3...@namics/frontend-defaults-cli@0.5.0) (2019-08-23)
 
 

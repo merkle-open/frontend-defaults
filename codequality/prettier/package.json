@@ -1,7 +1,7 @@
 {
   "name": "@namics/prettier-config",
   "description": "Shared prettier config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "https://github.com/namics/frontend-defaults",
   "license": "MIT",
   "author": "Namics AG",
@@ -14,7 +14,11 @@
     "node": ">=8"
   },
   "main": "./index.js",
-  "files": ["README.md", "LICENSE", "index.js"],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
   "peerDependencies": {
     "prettier": "1.x"
   }

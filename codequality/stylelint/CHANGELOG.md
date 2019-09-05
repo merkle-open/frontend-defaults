@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.3.6...@namics/stylelint-config@0.3.7) (2019-09-05)
+
+
+### Bug Fixes
+
+* **prettier:** remove pretty-quick and linters object [#18](https://github.com/namics/frontend-defaults/issues/18) ([6aadc19](https://github.com/namics/frontend-defaults/commit/6aadc19))
+
+
+
+
+
 ## [0.3.6](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.3.5...@namics/stylelint-config@0.3.6) (2019-08-21)
 
 **Note:** Version bump only for package @namics/stylelint-config
