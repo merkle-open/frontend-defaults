@@ -58,7 +58,7 @@ exports[`typescript-eslint default 4`] = `
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"8.0.1\\",
-          \\"@namics/ts-config\\": \\"0.3.1\\",
+          \\"@namics/ts-config\\": \\"0.3.2\\",
           \\"eslint\\": \\"6.4.0\\",
           \\"eslint-plugin-import\\": \\"2.18.2\\",
           \\"npm-run-all\\": \\"4.1.5\\",
@@ -94,7 +94,7 @@ exports[`typescript-eslint default 5`] = `
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"8.0.1\\",
-    \\"@namics/ts-config\\": \\"0.3.1\\",
+    \\"@namics/ts-config\\": \\"0.3.2\\",
     \\"eslint\\": \\"6.4.0\\",
     \\"eslint-plugin-import\\": \\"2.18.2\\",
     \\"npm-run-all\\": \\"4.1.5\\",
@@ -180,7 +180,7 @@ exports[`typescript-eslint with-githooks 4`] = `
         },
         "devDependencies": {
           "@namics/eslint-config": "8.0.1",
-          "@namics/ts-config": "0.3.1",
+          "@namics/ts-config": "0.3.2",
           "eslint": "6.4.0",
           "eslint-plugin-import": "2.18.2",
           "husky": "3.0.5",
@@ -240,7 +240,7 @@ exports[`typescript-eslint with-githooks 6`] = `
   },
   "devDependencies": {
     "@namics/eslint-config": "8.0.1",
-    "@namics/ts-config": "0.3.1",
+    "@namics/ts-config": "0.3.2",
     "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "husky": "3.0.5",
@@ -344,7 +344,7 @@ exports[`typescript-eslint with-prettier 4`] = `
         "devDependencies": {
           "@namics/eslint-config": "8.0.1",
           "@namics/prettier-config": "0.3.0",
-          "@namics/ts-config": "0.3.1",
+          "@namics/ts-config": "0.3.2",
           "eslint": "6.4.0",
           "eslint-plugin-import": "2.18.2",
           "npm-run-all": "4.1.5",
@@ -418,7 +418,7 @@ exports[`typescript-eslint with-prettier 7`] = `
   "devDependencies": {
     "@namics/eslint-config": "8.0.1",
     "@namics/prettier-config": "0.3.0",
-    "@namics/ts-config": "0.3.1",
+    "@namics/ts-config": "0.3.2",
     "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "npm-run-all": "4.1.5",

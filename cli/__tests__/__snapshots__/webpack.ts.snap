@@ -201,7 +201,7 @@ exports[`webpack webpack-with-ts 1`] = `
       "override": false,
       "data": {
         "devDependencies": {
-          "@namics/ts-config": "0.3.1",
+          "@namics/ts-config": "0.3.2",
           "@types/core-js": "2.5.2",
           "asset-config-webpack-plugin": "0.1.0-mock",
           "clean-webpack-plugin": "0.1.0-mock",
@@ -260,7 +260,7 @@ exports[`webpack webpack-with-ts 1`] = `
 exports[`webpack webpack-with-ts 2`] = `
 {
   "devDependencies": {
-    "@namics/ts-config": "0.3.1",
+    "@namics/ts-config": "0.3.2",
     "@types/core-js": "2.5.2",
     "asset-config-webpack-plugin": "0.1.0-mock",
     "clean-webpack-plugin": "0.1.0-mock",

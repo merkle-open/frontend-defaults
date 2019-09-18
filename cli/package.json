@@ -33,7 +33,7 @@
     "prepublishOnly": "npm-run-all test build"
   },
   "devDependencies": {
-    "@namics/ts-config": "0.3.1",
+    "@namics/ts-config": "0.3.2",
     "@types/diff": "4.0.2",
     "@types/fs-extra": "8.0.0",
     "@types/jest": "24.0.18",
