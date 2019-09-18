@@ -61,8 +61,8 @@ exports[`eslint default 4`] = `
           \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
         },
         \\"devDependencies\\": {
-          \\"@namics/eslint-config\\": \\"8.0.0\\",
-          \\"eslint\\": \\"6.3.0\\",
+          \\"@namics/eslint-config\\": \\"8.0.1\\",
+          \\"eslint\\": \\"6.4.0\\",
           \\"eslint-plugin-import\\": \\"2.18.2\\",
           \\"npm-run-all\\": \\"4.1.5\\"
         }
@@ -91,8 +91,8 @@ exports[`eslint default 5`] = `
     \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
   },
   \\"devDependencies\\": {
-    \\"@namics/eslint-config\\": \\"8.0.0\\",
-    \\"eslint\\": \\"6.3.0\\",
+    \\"@namics/eslint-config\\": \\"8.0.1\\",
+    \\"eslint\\": \\"6.4.0\\",
     \\"eslint-plugin-import\\": \\"2.18.2\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   }
@@ -170,8 +170,8 @@ exports[`eslint with-githooks 4`] = `
           "lint:js": "eslint . -c .eslintrc.strict.js"
         },
         "devDependencies": {
-          "@namics/eslint-config": "8.0.0",
-          "eslint": "6.3.0",
+          "@namics/eslint-config": "8.0.1",
+          "eslint": "6.4.0",
           "eslint-plugin-import": "2.18.2",
           "husky": "3.0.5",
           "lint-staged": "9.2.5",
@@ -224,8 +224,8 @@ exports[`eslint with-githooks 6`] = `
     "lint:js": "eslint . -c .eslintrc.strict.js"
   },
   "devDependencies": {
-    "@namics/eslint-config": "8.0.0",
-    "eslint": "6.3.0",
+    "@namics/eslint-config": "8.0.1",
+    "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "husky": "3.0.5",
     "lint-staged": "9.2.5",
@@ -320,9 +320,9 @@ exports[`eslint with-prettier 4`] = `
           "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
         },
         "devDependencies": {
-          "@namics/eslint-config": "8.0.0",
+          "@namics/eslint-config": "8.0.1",
           "@namics/prettier-config": "0.3.0",
-          "eslint": "6.3.0",
+          "eslint": "6.4.0",
           "eslint-plugin-import": "2.18.2",
           "npm-run-all": "4.1.5",
           "prettier": "1.18.2"
@@ -388,9 +388,9 @@ exports[`eslint with-prettier 7`] = `
     "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
   },
   "devDependencies": {
-    "@namics/eslint-config": "8.0.0",
+    "@namics/eslint-config": "8.0.1",
     "@namics/prettier-config": "0.3.0",
-    "eslint": "6.3.0",
+    "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2"

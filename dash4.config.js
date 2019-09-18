@@ -92,7 +92,6 @@ async function getConfig() {
 							width: [12, 6, 4],
 							scripts: [
 								{ title: 'build', cmd: 'npm run build', cwd: 'cli' },
-								{ title: 'watch', cmd: 'npm run watch', cwd: 'cli' },
 								{ title: 'test', cmd: 'npm run test', cwd: 'cli' },
 							],
 						}),

@@ -37,10 +37,10 @@ exports[`webpack default 1`] = `
           \\"start\\": \\"webpack-dev-server --mode development\\"
         },
         \\"devDependencies\\": {
-          \\"@babel/core\\": \\"7.5.5\\",
-          \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
+          \\"@babel/core\\": \\"7.6.0\\",
+          \\"@babel/plugin-proposal-decorators\\": \\"7.6.0\\",
           \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-          \\"@babel/preset-env\\": \\"7.5.5\\",
+          \\"@babel/preset-env\\": \\"7.6.0\\",
           \\"@babel/preset-react\\": \\"7.0.0\\",
           \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
           \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -52,7 +52,7 @@ exports[`webpack default 1`] = `
           \\"webpack-dev-server\\": \\"0.1.0-mock\\"
         },
         \\"dependencies\\": {
-          \\"@babel/polyfill\\": \\"7.4.4\\"
+          \\"@babel/polyfill\\": \\"7.6.0\\"
         }
       }
     },
@@ -121,10 +121,10 @@ exports[`webpack default 3`] = `
     \\"start\\": \\"webpack-dev-server --mode development\\"
   },
   \\"devDependencies\\": {
-    \\"@babel/core\\": \\"7.5.5\\",
-    \\"@babel/plugin-proposal-decorators\\": \\"7.4.4\\",
+    \\"@babel/core\\": \\"7.6.0\\",
+    \\"@babel/plugin-proposal-decorators\\": \\"7.6.0\\",
     \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-    \\"@babel/preset-env\\": \\"7.5.5\\",
+    \\"@babel/preset-env\\": \\"7.6.0\\",
     \\"@babel/preset-react\\": \\"7.0.0\\",
     \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
@@ -136,7 +136,7 @@ exports[`webpack default 3`] = `
     \\"webpack-dev-server\\": \\"0.1.0-mock\\"
   },
   \\"dependencies\\": {
-    \\"@babel/polyfill\\": \\"7.4.4\\"
+    \\"@babel/polyfill\\": \\"7.6.0\\"
   }
 }"
 `;
