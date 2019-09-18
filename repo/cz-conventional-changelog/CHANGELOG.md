@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.5...@namics/cz-conventional-changelog@1.1.6) (2019-09-18)
+
+
+### Bug Fixes
+
+* update dependencies ([f3d913b](https://github.com/namics/frontend-defaults/commit/f3d913b))
+
+
+
+
+
 ## [1.1.5](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.4...@namics/cz-conventional-changelog@1.1.5) (2019-09-05)
 
 **Note:** Version bump only for package @namics/cz-conventional-changelog
