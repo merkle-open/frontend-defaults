@@ -28,7 +28,7 @@ exports[`build build-with-ts 1`] = `
       "data": {
         "devDependencies": {
           "@namics/ts-config": "0.3.2",
-          "typescript": "3.4.5"
+          "typescript": "3.6.4"
         },
         "browserslist": [
           "> 1%",
@@ -57,7 +57,7 @@ exports[`build build-with-ts 2`] = `
 {
   "devDependencies": {
     "@namics/ts-config": "0.3.2",
-    "typescript": "3.4.5"
+    "typescript": "3.6.4"
   },
   "browserslist": [
     "> 1%",
@@ -119,12 +119,12 @@ exports[`build default 1`] = `
           \\"not ie <= 10\\"
         ],
         \\"devDependencies\\": {
-          \\"@babel/cli\\": \\"7.6.0\\",
-          \\"@babel/core\\": \\"7.6.0\\",
+          \\"@babel/cli\\": \\"7.6.4\\",
+          \\"@babel/core\\": \\"7.6.4\\",
           \\"@babel/plugin-proposal-decorators\\": \\"7.6.0\\",
           \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-          \\"@babel/preset-env\\": \\"7.6.0\\",
-          \\"@babel/preset-react\\": \\"7.0.0\\"
+          \\"@babel/preset-env\\": \\"7.6.3\\",
+          \\"@babel/preset-react\\": \\"7.6.3\\"
         },
         \\"scripts\\": {
           \\"build\\": \\"babel src --out-dir build\\",
@@ -180,12 +180,12 @@ exports[`build default 3`] = `
     \\"not ie <= 10\\"
   ],
   \\"devDependencies\\": {
-    \\"@babel/cli\\": \\"7.6.0\\",
-    \\"@babel/core\\": \\"7.6.0\\",
+    \\"@babel/cli\\": \\"7.6.4\\",
+    \\"@babel/core\\": \\"7.6.4\\",
     \\"@babel/plugin-proposal-decorators\\": \\"7.6.0\\",
     \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-    \\"@babel/preset-env\\": \\"7.6.0\\",
-    \\"@babel/preset-react\\": \\"7.0.0\\"
+    \\"@babel/preset-env\\": \\"7.6.3\\",
+    \\"@babel/preset-react\\": \\"7.6.3\\"
   },
   \\"scripts\\": {
     \\"build\\": \\"babel src --out-dir build\\",

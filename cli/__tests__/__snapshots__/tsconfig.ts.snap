@@ -28,7 +28,7 @@ exports[`tsconfig default 1`] = `
       \\"data\\": {
         \\"devDependencies\\": {
           \\"@namics/ts-config\\": \\"0.3.2\\",
-          \\"typescript\\": \\"3.4.5\\"
+          \\"typescript\\": \\"3.6.4\\"
         }
       }
     },
@@ -44,7 +44,7 @@ exports[`tsconfig default 2`] = `
 "{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.3.2\\",
-    \\"typescript\\": \\"3.4.5\\"
+    \\"typescript\\": \\"3.6.4\\"
   }
 }"
 `;

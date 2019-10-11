@@ -62,7 +62,7 @@ exports[`eslint default 4`] = `
         },
         \\"devDependencies\\": {
           \\"@namics/eslint-config\\": \\"8.0.1\\",
-          \\"eslint\\": \\"6.4.0\\",
+          \\"eslint\\": \\"6.5.1\\",
           \\"eslint-plugin-import\\": \\"2.18.2\\",
           \\"npm-run-all\\": \\"4.1.5\\"
         }
@@ -92,7 +92,7 @@ exports[`eslint default 5`] = `
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"8.0.1\\",
-    \\"eslint\\": \\"6.4.0\\",
+    \\"eslint\\": \\"6.5.1\\",
     \\"eslint-plugin-import\\": \\"2.18.2\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   }
@@ -171,10 +171,10 @@ exports[`eslint with-githooks 4`] = `
         },
         "devDependencies": {
           "@namics/eslint-config": "8.0.1",
-          "eslint": "6.4.0",
+          "eslint": "6.5.1",
           "eslint-plugin-import": "2.18.2",
-          "husky": "3.0.5",
-          "lint-staged": "9.2.5",
+          "husky": "3.0.8",
+          "lint-staged": "9.4.2",
           "npm-run-all": "4.1.5"
         },
         "husky": {
@@ -225,10 +225,10 @@ exports[`eslint with-githooks 6`] = `
   },
   "devDependencies": {
     "@namics/eslint-config": "8.0.1",
-    "eslint": "6.4.0",
+    "eslint": "6.5.1",
     "eslint-plugin-import": "2.18.2",
-    "husky": "3.0.5",
-    "lint-staged": "9.2.5",
+    "husky": "3.0.8",
+    "lint-staged": "9.4.2",
     "npm-run-all": "4.1.5"
   },
   "husky": {
@@ -322,7 +322,7 @@ exports[`eslint with-prettier 4`] = `
         "devDependencies": {
           "@namics/eslint-config": "8.0.1",
           "@namics/prettier-config": "0.3.0",
-          "eslint": "6.4.0",
+          "eslint": "6.5.1",
           "eslint-plugin-import": "2.18.2",
           "npm-run-all": "4.1.5",
           "prettier": "1.18.2"
@@ -390,7 +390,7 @@ exports[`eslint with-prettier 7`] = `
   "devDependencies": {
     "@namics/eslint-config": "8.0.1",
     "@namics/prettier-config": "0.3.0",
-    "eslint": "6.4.0",
+    "eslint": "6.5.1",
     "eslint-plugin-import": "2.18.2",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2"
