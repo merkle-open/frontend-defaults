@@ -3,7 +3,8 @@
 exports[`typescript-eslint default 1`] = `
 "/.idea/
 /node_modules/
-/*.js"
+/*.js
+/**.js"
 `;
 
 exports[`typescript-eslint default 2`] = `
@@ -65,6 +66,7 @@ exports[`typescript-eslint with-githooks 1`] = `
 /.idea/
 /node_modules/
 /*.js
+/**.js
 `;
 
 exports[`typescript-eslint with-githooks 2`] = `
@@ -147,6 +149,7 @@ exports[`typescript-eslint with-prettier 1`] = `
 /.idea/
 /node_modules/
 /*.js
+/**.js
 `;
 
 exports[`typescript-eslint with-prettier 2`] = `
@@ -188,6 +191,7 @@ exports[`typescript-eslint with-prettier 4`] = `
 **/public
 **/coverage
 **/storybook-static
+**/.next
 
 # Nitro
 **/project/blueprints

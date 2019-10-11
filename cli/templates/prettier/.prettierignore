@@ -13,6 +13,7 @@
 **/public
 **/coverage
 **/storybook-static
+**/.next
 
 # Nitro
 **/project/blueprints

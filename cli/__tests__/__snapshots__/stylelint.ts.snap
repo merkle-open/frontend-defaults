@@ -2,7 +2,8 @@
 
 exports[`stylelint default 1`] = `
 "node_modules/
-src/shared/base/reset/css/yui/reset.css"
+src/shared/base/reset/css/yui/reset.css
+.next/"
 `;
 
 exports[`stylelint default 2`] = `
@@ -43,6 +44,7 @@ fi
 exports[`stylelint with-githooks 2`] = `
 node_modules/
 src/shared/base/reset/css/yui/reset.css
+.next/
 `;
 
 exports[`stylelint with-githooks 3`] = `

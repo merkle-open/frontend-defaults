@@ -61,7 +61,7 @@ lerna-debug.log
 # build
 dist
 build
-"
+.next"
 `;
 
 exports[`gitignore default 3`] = `

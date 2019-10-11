@@ -16,6 +16,7 @@ exports[`prettier default 1`] = `
 **/public
 **/coverage
 **/storybook-static
+**/.next
 
 # Nitro
 **/project/blueprints
@@ -71,6 +72,7 @@ exports[`prettier with-githooks 2`] = `
 **/public
 **/coverage
 **/storybook-static
+**/.next
 
 # Nitro
 **/project/blueprints
