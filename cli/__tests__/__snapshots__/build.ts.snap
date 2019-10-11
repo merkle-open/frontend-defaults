@@ -3,7 +3,7 @@
 exports[`build build-with-ts 1`] = `
 {
   "devDependencies": {
-    "@namics/ts-config": "0.3.2",
+    "@namics/ts-config": "0.4.0",
     "typescript": "3.6.4"
   },
   "browserslist": [
