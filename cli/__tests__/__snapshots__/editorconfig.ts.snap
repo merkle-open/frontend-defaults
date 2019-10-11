@@ -43,39 +43,7 @@ indent_size = 2
 `;
 
 exports[`editorconfig default 2`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": true,
-    \\"prettier\\": false,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\".editorconfig\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# EditorConfig. Frontend. Default. Namics.\\\\n# @see: http://EditorConfig.org\\\\n# install a plugin to your editor: http://editorconfig.org/#download\\\\n# mark: not all plugins supports the same EditorConfig properties\\\\n\\\\n# This is the top-most .editorconfig file (do not search in parent directories)\\\\nroot = true\\\\n\\\\n### All files\\\\n[*]\\\\n# Force charset utf-8\\\\ncharset = utf-8\\\\n# Indentation\\\\nindent_style = tab\\\\nindent_size = 4\\\\n# line breaks and whitespace\\\\ninsert_final_newline = true\\\\ntrim_trailing_whitespace = true\\\\n# end_of_line = lf\\\\n\\\\n### Frontend files\\\\n[*.{css,scss,less,js,json,ts,sass,php,html,hbs,mustache,phtml,html.twig}]\\\\n\\\\n### Markdown\\\\n[*.md]\\\\nindent_style = space\\\\nindent_size = 4\\\\ntrim_trailing_whitespace = false\\\\n\\\\n### YAML\\\\n[*.yml]\\\\nindent_style = space\\\\nindent_size = 2\\\\n\\\\n### Specific files\\\\n[{package,bower,lerna}.json]\\\\nindent_style = space\\\\nindent_size = 2\\\\n\\"
-    }
-  }
-}"
-`;
-
-exports[`editorconfig default 3`] = `
 Array [
   .editorconfig,
-  .frontend-defaults-rc.json,
 ]
 `;

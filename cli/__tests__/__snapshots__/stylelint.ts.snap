@@ -1,60 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`stylelint default 1`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": false,
-    \\"prettier\\": false,
-    \\"stylelint\\": true,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"scripts\\": {
-          \\"lint\\": \\"npm-run-all lint:*\\",
-          \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
-        },
-        \\"devDependencies\\": {
-          \\"@namics/stylelint-config\\": \\"0.3.8\\",
-          \\"npm-run-all\\": \\"4.1.5\\",
-          \\"stylelint\\": \\"11.1.1\\"
-        }
-      }
-    },
-    \\"stylelint.config.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = require('@namics/stylelint-config');\\\\n\\"
-    },
-    \\".stylelintignore\\": {
-      \\"override\\": false,
-      \\"data\\": \\"node_modules/\\\\nsrc/shared/base/reset/css/yui/reset.css\\"
-    }
-  }
-}"
-`;
-
-exports[`stylelint default 2`] = `
 "node_modules/
 src/shared/base/reset/css/yui/reset.css"
 `;
 
-exports[`stylelint default 3`] = `
+exports[`stylelint default 2`] = `
 "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
@@ -68,14 +19,13 @@ exports[`stylelint default 3`] = `
 }"
 `;
 
-exports[`stylelint default 4`] = `
+exports[`stylelint default 3`] = `
 "module.exports = require('@namics/stylelint-config');
 "
 `;
 
-exports[`stylelint default 5`] = `
+exports[`stylelint default 4`] = `
 Array [
-  .frontend-defaults-rc.json,
   .stylelintignore,
   package.json,
   stylelint.config.js,
@@ -83,71 +33,6 @@ Array [
 `;
 
 exports[`stylelint with-githooks 1`] = `
-{
-  "options": {
-    "ts": false,
-    "es": false,
-    "eslint": false,
-    "editorconfig": false,
-    "prettier": false,
-    "stylelint": true,
-    "gitignore": false,
-    "npmrc": false,
-    "readme": false,
-    "githooks": true,
-    "commitlint": false,
-    "nodeVersion": false,
-    "webpack": false,
-    "build": false,
-    "install": false,
-    "force": true,
-    "dryRun": false,
-    "mode": "api"
-  },
-  "mergedFiles": {
-    "package.json": {
-      "override": false,
-      "data": {
-        "scripts": {
-          "lint": "npm-run-all lint:*",
-          "lint:css": "stylelint src/**/*.*ss"
-        },
-        "husky": {
-          "hooks": {
-            "pre-commit": "lint-staged"
-          }
-        },
-        "lint-staged": {
-          "src/**/*.*ss": [
-            "stylelint"
-          ]
-        },
-        "devDependencies": {
-          "@namics/stylelint-config": "0.3.8",
-          "husky": "3.0.8",
-          "lint-staged": "9.4.2",
-          "npm-run-all": "4.1.5",
-          "stylelint": "11.1.1"
-        }
-      }
-    },
-    ".huskyrc": {
-      "override": false,
-      "data": "# ~/.huskyrc/n# Note: it will run in /bin/sh shell/nif command -v nodenv >/dev/null 2>&1; then/n  eval /"$(nodenv init -)/"/nfi"
-    },
-    "stylelint.config.js": {
-      "override": false,
-      "data": "module.exports = require('@namics/stylelint-config');/n"
-    },
-    ".stylelintignore": {
-      "override": false,
-      "data": "node_modules//nsrc/shared/base/reset/css/yui/reset.css"
-    }
-  }
-}
-`;
-
-exports[`stylelint with-githooks 2`] = `
 # ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -155,12 +40,12 @@ if command -v nodenv >/dev/null 2>&1; then
 fi
 `;
 
-exports[`stylelint with-githooks 3`] = `
+exports[`stylelint with-githooks 2`] = `
 node_modules/
 src/shared/base/reset/css/yui/reset.css
 `;
 
-exports[`stylelint with-githooks 4`] = `
+exports[`stylelint with-githooks 3`] = `
 {
   "scripts": {
     "lint": "npm-run-all lint:*",
@@ -186,14 +71,13 @@ exports[`stylelint with-githooks 4`] = `
 }
 `;
 
-exports[`stylelint with-githooks 5`] = `
+exports[`stylelint with-githooks 4`] = `
 module.exports = require('@namics/stylelint-config');
 
 `;
 
-exports[`stylelint with-githooks 6`] = `
+exports[`stylelint with-githooks 5`] = `
 Array [
-  .frontend-defaults-rc.json,
   .huskyrc,
   .stylelintignore,
   package.json,

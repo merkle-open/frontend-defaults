@@ -1,86 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`webpack default 1`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": false,
-    \\"prettier\\": false,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": true,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"browserslist\\": [
-          \\"> 1%\\",
-          \\"last 2 versions\\",
-          \\"not ie <= 10\\"
-        ],
-        \\"scripts\\": {
-          \\"build\\": \\"webpack --mode production\\",
-          \\"postinstall\\": \\"npm rebuild node-sass\\",
-          \\"start\\": \\"webpack-dev-server --mode development\\"
-        },
-        \\"devDependencies\\": {
-          \\"@babel/core\\": \\"7.6.4\\",
-          \\"@babel/plugin-proposal-decorators\\": \\"7.6.0\\",
-          \\"@babel/plugin-syntax-dynamic-import\\": \\"7.2.0\\",
-          \\"@babel/preset-env\\": \\"7.6.3\\",
-          \\"@babel/preset-react\\": \\"7.6.3\\",
-          \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
-          \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
-          \\"css-loader\\": \\"3.2.0\\",
-          \\"html-webpack-plugin\\": \\"0.1.0-mock\\",
-          \\"scss-config-webpack-plugin\\": \\"0.1.0-mock\\",
-          \\"webpack\\": \\"0.1.0-mock\\",
-          \\"webpack-cli\\": \\"0.1.0-mock\\",
-          \\"webpack-dev-server\\": \\"0.1.0-mock\\"
-        },
-        \\"dependencies\\": {
-          \\"@babel/polyfill\\": \\"7.6.0\\"
-        }
-      }
-    },
-    \\"webpack.config.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');\\\\nconst { CleanWebpackPlugin } = require('clean-webpack-plugin');\\\\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\\\\nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');\\\\n\\\\nmodule.exports = {\\\\n  plugins: [\\\\n    // File loader configuration for .woff and .woff2 files\\\\n    // File loader configuration for .gif .jpg .jpeg .png and .svg files\\\\n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin\\\\n    new AssetConfigWebpackPlugin(),\\\\n    // Cleans the dist folder before the build starts\\\\n    new CleanWebpackPlugin(),\\\\n    // Generate a base html file and injects all generated css and js files\\\\n    new HtmlWebpackPlugin(),\\\\n    // SCSS Configuration for .css .module.css and .scss .module.scss files\\\\n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config\\\\n    new ScssConfigWebpackPlugin(),\\\\n  ],\\\\n};\\\\n\\"
-    },
-    \\"babel.config.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\tplugins: [\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/plugin-proposal-decorators'),\\\\n\\\\t\\\\t\\\\t{\\\\n\\\\t\\\\t\\\\t\\\\t\\\\\\"legacy\\\\\\": true\\\\n\\\\t\\\\t\\\\t},\\\\n\\\\t\\\\t],\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/plugin-syntax-dynamic-import'),\\\\n\\\\t\\\\t],\\\\n\\\\t],\\\\n\\\\tpresets: [\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/preset-react'),\\\\n\\\\t\\\\t],\\\\n\\\\t\\\\t[\\\\n\\\\t\\\\t\\\\trequire.resolve('@babel/preset-env'),\\\\n\\\\t\\\\t\\\\t{\\\\n\\\\t\\\\t\\\\t\\\\tuseBuiltIns: 'entry'\\\\n\\\\t\\\\t\\\\t},\\\\n\\\\t\\\\t],\\\\n\\\\t],\\\\n};\\\\n\\"
-    },
-    \\"src/wait.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"\\\\n/**\\\\n * \\\\n * @param {number} delay - delay in milliseconds\\\\n * @returns {void}\\\\n */\\\\nexport async function wait(delay = 500) {\\\\n\\\\treturn new Promise((resolve) => setTimeout(resolve, delay));\\\\n};\\\\n\\"
-    },
-    \\"src/index.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"import '@babel/polyfill';\\\\nimport './styles.scss';\\\\n\\\\n(async () => {\\\\n\\\\t// dynamic import\\\\n\\\\tconst { wait } = await import(/* webpackChunkName: \\\\\\"wait\\\\\\" */ './wait');\\\\n\\\\tawait wait();\\\\n\\\\tdocument.body.innerHTML =\\\\n\\\\t\\\\t'<h1 class=\\\\\\"m-title\\\\\\">@namics/frontend-defaults. <span class=\\\\\\"m-title__highlight\\\\\\">Installed.</span></h1>';\\\\n})();\\\\n\\"
-    },
-    \\"src/styles.scss\\": {
-      \\"override\\": false,
-      \\"data\\": \\"body {\\\\n\\\\tbackground: #fff;\\\\n\\\\tcolor: #000;\\\\n\\\\tfont-family: -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, Oxygen, Ubuntu, Cantarell, \\\\\\"Fira Sans\\\\\\", \\\\\\"Droid Sans\\\\\\", \\\\\\"Helvetica Neue\\\\\\", sans-serif;\\\\n\\\\tfont-size: 20px;\\\\n\\\\t-webkit-font-smoothing: antialiased;\\\\n\\\\ttext-align: center;\\\\n\\\\tpadding: 100px 20px;\\\\n}\\\\n\\\\n.m-title__highlight {\\\\n\\\\tcolor: #ff003d;\\\\n}\\\\n\\"
-    }
-  }
-}"
-`;
-
-exports[`webpack default 2`] = `
 "module.exports = {
 	plugins: [
 		[
@@ -108,7 +28,7 @@ exports[`webpack default 2`] = `
 "
 `;
 
-exports[`webpack default 3`] = `
+exports[`webpack default 2`] = `
 "{
   \\"browserslist\\": [
     \\"> 1%\\",
@@ -141,7 +61,7 @@ exports[`webpack default 3`] = `
 }"
 `;
 
-exports[`webpack default 4`] = `
+exports[`webpack default 3`] = `
 "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -165,9 +85,8 @@ module.exports = {
 "
 `;
 
-exports[`webpack default 5`] = `
+exports[`webpack default 4`] = `
 Array [
-  .frontend-defaults-rc.json,
   babel.config.js,
   package.json,
   webpack.config.js,
@@ -175,89 +94,6 @@ Array [
 `;
 
 exports[`webpack webpack-with-ts 1`] = `
-{
-  "options": {
-    "ts": true,
-    "es": false,
-    "eslint": false,
-    "editorconfig": false,
-    "prettier": false,
-    "stylelint": false,
-    "gitignore": false,
-    "npmrc": false,
-    "readme": false,
-    "githooks": false,
-    "commitlint": false,
-    "nodeVersion": false,
-    "webpack": true,
-    "build": false,
-    "install": false,
-    "force": true,
-    "dryRun": false,
-    "mode": "api"
-  },
-  "mergedFiles": {
-    "package.json": {
-      "override": false,
-      "data": {
-        "devDependencies": {
-          "@namics/ts-config": "0.3.2",
-          "@types/core-js": "2.5.2",
-          "asset-config-webpack-plugin": "0.1.0-mock",
-          "clean-webpack-plugin": "0.1.0-mock",
-          "css-loader": "3.2.0",
-          "html-webpack-plugin": "0.1.0-mock",
-          "scss-config-webpack-plugin": "0.1.0-mock",
-          "ts-config-webpack-plugin": "0.1.0-mock",
-          "typescript": "0.1.0-mock",
-          "webpack": "0.1.0-mock",
-          "webpack-cli": "0.1.0-mock",
-          "webpack-dev-server": "0.1.0-mock"
-        },
-        "browserslist": [
-          "> 1%",
-          "last 2 versions",
-          "not ie <= 10"
-        ],
-        "scripts": {
-          "build": "webpack --mode production",
-          "postinstall": "npm rebuild node-sass",
-          "start": "webpack-dev-server --mode development"
-        },
-        "dependencies": {
-          "core-js": "3.2.1"
-        }
-      }
-    },
-    "tsconfig.json": {
-      "override": false,
-      "data": "{/n/t/"extends/": /"@namics/ts-config/",/n/t/"exclude/": [/"dist/", /"build/", /"node_modules/", /"__tests__/"]/n}/n"
-    },
-    "webpack.config.js": {
-      "override": false,
-      "data": "const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');/nconst { CleanWebpackPlugin } = require('clean-webpack-plugin');/nconst HtmlWebpackPlugin = require('html-webpack-plugin');/nconst ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');/nconst TsConfigWebpackPlugin = require('ts-config-webpack-plugin');/n/nmodule.exports = {/n  plugins: [/n    // File loader configuration for .woff and .woff2 files/n    // File loader configuration for .gif .jpg .jpeg .png and .svg files/n    // https://github.com/namics/webpack-config-plugins/tree/master/packages/asset-config-webpack-plugin/n    new AssetConfigWebpackPlugin(),/n    // Cleans the dist folder before the build starts/n    new CleanWebpackPlugin(),/n    // Generate a base html file and injects all generated css and js files/n    new HtmlWebpackPlugin(),/n    // SCSS Configuration for .css .module.css and .scss .module.scss files/n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin/config/n    new ScssConfigWebpackPlugin(),/n    // Multi threading typescript loader configuration with caching for .ts and .tsx files/n    // see https://github.com/namics/webpack-config-plugins/tree/master/packages/ts-config-webpack-plugin/config/n    new TsConfigWebpackPlugin(),/n  ],/n};/n"
-    },
-    "src/wait.ts": {
-      "override": false,
-      "data": "/nexport async function wait(delay = 500) {/n/treturn new Promise((resolve) => setTimeout(resolve, delay));/n};/n"
-    },
-    "src/index.ts": {
-      "override": false,
-      "data": "import './polyfill';/nimport './styles.scss';/n/n(async () => {/n/t// dynamic import/n/tconst { wait } = await import(/* webpackChunkName: /"wait/" */ './wait');/n/tawait wait();/n/tdocument.body.innerHTML =/n/t/t'<h1 class=/"m-title/">@namics/frontend-defaults. <span class=/"m-title__highlight/">Installed.</span></h1>';/n})();/n"
-    },
-    "src/polyfill.ts": {
-      "override": false,
-      "data": "/n// https://github.com/zloirock/core-js/tree/v2/n/n// import required polyfills here/nimport 'core-js/features/promise'; /n"
-    },
-    "src/styles.scss": {
-      "override": false,
-      "data": "body {/n/tbackground: #fff;/n/tcolor: #000;/n/tfont-family: -apple-system, BlinkMacSystemFont, /"Segoe UI/", Roboto, Oxygen, Ubuntu, Cantarell, /"Fira Sans/", /"Droid Sans/", /"Helvetica Neue/", sans-serif;/n/tfont-size: 20px;/n/t-webkit-font-smoothing: antialiased;/n/ttext-align: center;/n/tpadding: 100px 20px;/n}/n/n.m-title__highlight {/n/tcolor: #ff003d;/n}/n"
-    }
-  }
-}
-`;
-
-exports[`webpack webpack-with-ts 2`] = `
 {
   "devDependencies": {
     "@namics/ts-config": "0.3.2",
@@ -289,7 +125,7 @@ exports[`webpack webpack-with-ts 2`] = `
 }
 `;
 
-exports[`webpack webpack-with-ts 3`] = `
+exports[`webpack webpack-with-ts 2`] = `
 {
 	"extends": "@namics/ts-config",
 	"exclude": ["dist", "build", "node_modules", "__tests__"]
@@ -297,7 +133,7 @@ exports[`webpack webpack-with-ts 3`] = `
 
 `;
 
-exports[`webpack webpack-with-ts 4`] = `
+exports[`webpack webpack-with-ts 3`] = `
 const AssetConfigWebpackPlugin = require('asset-config-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -325,9 +161,8 @@ module.exports = {
 
 `;
 
-exports[`webpack webpack-with-ts 5`] = `
+exports[`webpack webpack-with-ts 4`] = `
 Array [
-  .frontend-defaults-rc.json,
   package.json,
   tsconfig.json,
   webpack.config.js,

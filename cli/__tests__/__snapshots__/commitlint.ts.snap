@@ -1,68 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`commitlint default 1`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": false,
-    \\"prettier\\": false,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": true,
-    \\"commitlint\\": true,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"scripts\\": {
-          \\"cz\\": \\"git-cz\\"
-        },
-        \\"husky\\": {
-          \\"hooks\\": {
-            \\"commit-msg\\": \\"commitlint -E HUSKY_GIT_PARAMS\\"
-          }
-        },
-        \\"commitlint\\": {
-          \\"extends\\": [
-            \\"@namics/commitlint-conventional-changelog\\"
-          ]
-        },
-        \\"config\\": {
-          \\"commitizen\\": {
-            \\"path\\": \\"@namics/cz-conventional-changelog\\"
-          }
-        },
-        \\"devDependencies\\": {
-          \\"@commitlint/cli\\": \\"8.2.0\\",
-          \\"@namics/commitlint-conventional-changelog\\": \\"1.1.7\\",
-          \\"@namics/cz-conventional-changelog\\": \\"1.1.6\\",
-          \\"commitizen\\": \\"4.0.3\\",
-          \\"husky\\": \\"3.0.8\\",
-          \\"lint-staged\\": \\"9.4.2\\"
-        }
-      }
-    },
-    \\".huskyrc\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# ~/.huskyrc\\\\n# Note: it will run in /bin/sh shell\\\\nif command -v nodenv >/dev/null 2>&1; then\\\\n  eval \\\\\\"$(nodenv init -)\\\\\\"\\\\nfi\\"
-    }
-  }
-}"
-`;
-
-exports[`commitlint default 2`] = `
 "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -70,7 +8,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi"
 `;
 
-exports[`commitlint default 3`] = `
+exports[`commitlint default 2`] = `
 "{
   \\"scripts\\": {
     \\"cz\\": \\"git-cz\\"
@@ -101,9 +39,8 @@ exports[`commitlint default 3`] = `
 }"
 `;
 
-exports[`commitlint default 4`] = `
+exports[`commitlint default 3`] = `
 Array [
-  .frontend-defaults-rc.json,
   .huskyrc,
   package.json,
 ]

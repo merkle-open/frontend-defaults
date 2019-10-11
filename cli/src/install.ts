@@ -70,29 +70,6 @@ export const openVSCode = async ({ cwd }: IOptions) => {
 	}
 };
 
-export const storeOptionsAndChanges = async (options: IOptions, mergedFiles: IMergedFiles) => {
-	try {
-		const cwd = getCwd();
-		await fs.writeFile(
-			path.join(options.cwd || cwd, '.frontend-defaults-rc.json'),
-			JSON.stringify(
-				{
-					options: {
-						...options,
-						cwd: undefined,
-					},
-					mergedFiles,
-				},
-				null,
-				2
-			)
-		);
-	} catch (err) {
-		console.error(chalk.red(err));
-		process.exit(1);
-	}
-};
-
 export const create = async <P>(options: IOptions, changes: P) => ({
 	...(await updatePackageJson(options, changes)),
 });

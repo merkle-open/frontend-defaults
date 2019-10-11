@@ -1,53 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prettier default 1`] = `
-"{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": false,
-    \\"editorconfig\\": false,
-    \\"prettier\\": true,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"scripts\\": {
-          \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
-        },
-        \\"devDependencies\\": {
-          \\"@namics/prettier-config\\": \\"0.3.0\\",
-          \\"prettier\\": \\"1.18.2\\"
-        }
-      }
-    },
-    \\".prettierignore\\": {
-      \\"override\\": false,
-      \\"data\\": \\"# Node\\\\n**/node_modules\\\\n**/package.json\\\\n**/package-lock.json\\\\n\\\\n# Generated\\\\n**/bower.json\\\\n**/lerna.json\\\\n\\\\n# Build\\\\n**/build\\\\n**/dist\\\\n**/public\\\\n**/coverage\\\\n**/storybook-static\\\\n\\\\n# Nitro\\\\n**/project/blueprints\\\\n**/.yo-rc.json\\"
-    },
-    \\".prettierrc.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = require('@namics/prettier-config');\\\\n\\"
-    }
-  }
-}"
-`;
-
-exports[`prettier default 2`] = `
 "# Node
 **/node_modules
 **/package.json
@@ -69,12 +22,12 @@ exports[`prettier default 2`] = `
 **/.yo-rc.json"
 `;
 
-exports[`prettier default 3`] = `
+exports[`prettier default 2`] = `
 "module.exports = require('@namics/prettier-config');
 "
 `;
 
-exports[`prettier default 4`] = `
+exports[`prettier default 3`] = `
 "{
   \\"scripts\\": {
     \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
@@ -86,9 +39,8 @@ exports[`prettier default 4`] = `
 }"
 `;
 
-exports[`prettier default 5`] = `
+exports[`prettier default 4`] = `
 Array [
-  .frontend-defaults-rc.json,
   .prettierignore,
   .prettierrc.js,
   package.json,
@@ -96,70 +48,6 @@ Array [
 `;
 
 exports[`prettier with-githooks 1`] = `
-{
-  "options": {
-    "ts": false,
-    "es": false,
-    "eslint": false,
-    "editorconfig": false,
-    "prettier": true,
-    "stylelint": false,
-    "gitignore": false,
-    "npmrc": false,
-    "readme": false,
-    "githooks": true,
-    "commitlint": false,
-    "nodeVersion": false,
-    "webpack": false,
-    "build": false,
-    "install": false,
-    "force": true,
-    "dryRun": false,
-    "mode": "api"
-  },
-  "mergedFiles": {
-    "package.json": {
-      "override": false,
-      "data": {
-        "lint-staged": {
-          "*.{js,jsx,ts,tsx,json}": [
-            "prettier --write",
-            "git add"
-          ]
-        },
-        "scripts": {
-          "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
-        },
-        "husky": {
-          "hooks": {
-            "pre-commit": "lint-staged"
-          }
-        },
-        "devDependencies": {
-          "@namics/prettier-config": "0.3.0",
-          "husky": "3.0.8",
-          "lint-staged": "9.4.2",
-          "prettier": "1.18.2"
-        }
-      }
-    },
-    ".huskyrc": {
-      "override": false,
-      "data": "# ~/.huskyrc/n# Note: it will run in /bin/sh shell/nif command -v nodenv >/dev/null 2>&1; then/n  eval /"$(nodenv init -)/"/nfi"
-    },
-    ".prettierignore": {
-      "override": false,
-      "data": "# Node/n**/node_modules/n**/package.json/n**/package-lock.json/n/n# Generated/n**/bower.json/n**/lerna.json/n/n# Build/n**/build/n**/dist/n**/public/n**/coverage/n**/storybook-static/n/n# Nitro/n**/project/blueprints/n**/.yo-rc.json"
-    },
-    ".prettierrc.js": {
-      "override": false,
-      "data": "module.exports = require('@namics/prettier-config');/n"
-    }
-  }
-}
-`;
-
-exports[`prettier with-githooks 2`] = `
 # ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -167,7 +55,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi
 `;
 
-exports[`prettier with-githooks 3`] = `
+exports[`prettier with-githooks 2`] = `
 # Node
 **/node_modules
 **/package.json
@@ -189,12 +77,12 @@ exports[`prettier with-githooks 3`] = `
 **/.yo-rc.json
 `;
 
-exports[`prettier with-githooks 4`] = `
+exports[`prettier with-githooks 3`] = `
 module.exports = require('@namics/prettier-config');
 
 `;
 
-exports[`prettier with-githooks 5`] = `
+exports[`prettier with-githooks 4`] = `
 {
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": [
@@ -219,9 +107,8 @@ exports[`prettier with-githooks 5`] = `
 }
 `;
 
-exports[`prettier with-githooks 6`] = `
+exports[`prettier with-githooks 5`] = `
 Array [
-  .frontend-defaults-rc.json,
   .huskyrc,
   .prettierignore,
   .prettierrc.js,

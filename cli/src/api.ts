@@ -1,10 +1,10 @@
 import { IOptions, TMode, TPreset } from './fetch-options';
 import { getCwd } from './get-cwd';
 
-import { install, openVSCode, storeOptionsAndChanges } from './install';
+import { install, openVSCode } from './install';
 import { showDiff } from './log-diff';
 import { writeFiles } from './write-files';
-import { fetchSurveyFiles, TLicense, TYPE_CHOICES } from './fetch-survey';
+import { fetchSurveyFiles, TLicense } from './fetch-survey';
 import { collectChanges } from './collect-changes';
 import chalk from 'chalk';
 import { IPackageJson } from './type-package-json';
@@ -89,7 +89,6 @@ export default async (apiOptions: IApiOptions) => {
 		}
 		const files = await fetchSurveyFiles(mergedFiles, options);
 		await writeFiles(files, mergedFiles, options);
-		await storeOptionsAndChanges(options, mergedFiles);
 		await gitInit(options.cwd);
 		await install(options);
 		await openVSCode(options);

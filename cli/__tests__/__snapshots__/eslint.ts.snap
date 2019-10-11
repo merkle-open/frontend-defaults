@@ -32,60 +32,6 @@ exports[`eslint default 3`] = `
 
 exports[`eslint default 4`] = `
 "{
-  \\"options\\": {
-    \\"ts\\": false,
-    \\"es\\": false,
-    \\"eslint\\": true,
-    \\"editorconfig\\": false,
-    \\"prettier\\": false,
-    \\"stylelint\\": false,
-    \\"gitignore\\": false,
-    \\"npmrc\\": false,
-    \\"readme\\": false,
-    \\"githooks\\": false,
-    \\"commitlint\\": false,
-    \\"nodeVersion\\": false,
-    \\"webpack\\": false,
-    \\"build\\": false,
-    \\"install\\": false,
-    \\"force\\": true,
-    \\"dryRun\\": false,
-    \\"mode\\": \\"api\\"
-  },
-  \\"mergedFiles\\": {
-    \\"package.json\\": {
-      \\"override\\": false,
-      \\"data\\": {
-        \\"scripts\\": {
-          \\"lint\\": \\"npm-run-all lint:*\\",
-          \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
-        },
-        \\"devDependencies\\": {
-          \\"@namics/eslint-config\\": \\"8.0.1\\",
-          \\"eslint\\": \\"6.5.1\\",
-          \\"eslint-plugin-import\\": \\"2.18.2\\",
-          \\"npm-run-all\\": \\"4.1.5\\"
-        }
-      }
-    },
-    \\".eslintrc.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\textends: [\\\\n\\\\t\\\\t'./.eslintrc.strict.js',\\\\n\\\\t].map(require.resolve),\\\\n\\\\t/* define rules for IDE only here https://github.com/namics/frontend-defaults/issues/12 */\\\\n\\\\trules: {\\\\n\\\\t\\\\t'no-console': 1\\\\n\\\\t}\\\\n};\\\\n\\"
-    },
-    \\".eslintrc.strict.js\\": {
-      \\"override\\": false,
-      \\"data\\": \\"module.exports = {\\\\n\\\\textends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),\\\\n};\\\\n\\"
-    },
-    \\".eslintignore\\": {
-      \\"override\\": false,
-      \\"data\\": \\"/.idea/\\\\n/node_modules/\\\\n/*.js\\\\n/dist\\\\n/build\\\\n/coverage\\\\n\\"
-    }
-  }
-}"
-`;
-
-exports[`eslint default 5`] = `
-"{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
@@ -99,12 +45,11 @@ exports[`eslint default 5`] = `
 }"
 `;
 
-exports[`eslint default 6`] = `
+exports[`eslint default 5`] = `
 Array [
   .eslintignore,
   .eslintrc.js,
   .eslintrc.strict.js,
-  .frontend-defaults-rc.json,
   package.json,
 ]
 `;
@@ -140,76 +85,6 @@ module.exports = {
 `;
 
 exports[`eslint with-githooks 4`] = `
-{
-  "options": {
-    "ts": false,
-    "es": false,
-    "eslint": true,
-    "editorconfig": false,
-    "prettier": false,
-    "stylelint": false,
-    "gitignore": false,
-    "npmrc": false,
-    "readme": false,
-    "githooks": true,
-    "commitlint": false,
-    "nodeVersion": false,
-    "webpack": false,
-    "build": false,
-    "install": false,
-    "force": true,
-    "dryRun": false,
-    "mode": "api"
-  },
-  "mergedFiles": {
-    "package.json": {
-      "override": false,
-      "data": {
-        "scripts": {
-          "lint": "npm-run-all lint:*",
-          "lint:js": "eslint . -c .eslintrc.strict.js"
-        },
-        "devDependencies": {
-          "@namics/eslint-config": "8.0.1",
-          "eslint": "6.5.1",
-          "eslint-plugin-import": "2.18.2",
-          "husky": "3.0.8",
-          "lint-staged": "9.4.2",
-          "npm-run-all": "4.1.5"
-        },
-        "husky": {
-          "hooks": {
-            "pre-commit": "lint-staged"
-          }
-        },
-        "lint-staged": {
-          "src/**/*.{js,jsx}": [
-            "eslint"
-          ]
-        }
-      }
-    },
-    ".huskyrc": {
-      "override": false,
-      "data": "# ~/.huskyrc/n# Note: it will run in /bin/sh shell/nif command -v nodenv >/dev/null 2>&1; then/n  eval /"$(nodenv init -)/"/nfi"
-    },
-    ".eslintrc.js": {
-      "override": false,
-      "data": "module.exports = {/n/textends: [/n/t/t'./.eslintrc.strict.js',/n/t].map(require.resolve),/n/t/* define rules for IDE only here https://github.com/namics/frontend-defaults/issues/12 *//n/trules: {/n/t/t'no-console': 1/n/t}/n};/n"
-    },
-    ".eslintrc.strict.js": {
-      "override": false,
-      "data": "module.exports = {/n/textends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),/n};/n"
-    },
-    ".eslintignore": {
-      "override": false,
-      "data": "/.idea//n/node_modules//n/*.js/n/dist/n/build/n/coverage/n"
-    }
-  }
-}
-`;
-
-exports[`eslint with-githooks 5`] = `
 # ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
@@ -217,7 +92,7 @@ if command -v nodenv >/dev/null 2>&1; then
 fi
 `;
 
-exports[`eslint with-githooks 6`] = `
+exports[`eslint with-githooks 5`] = `
 {
   "scripts": {
     "lint": "npm-run-all lint:*",
@@ -244,12 +119,11 @@ exports[`eslint with-githooks 6`] = `
 }
 `;
 
-exports[`eslint with-githooks 7`] = `
+exports[`eslint with-githooks 6`] = `
 Array [
   .eslintignore,
   .eslintrc.js,
   .eslintrc.strict.js,
-  .frontend-defaults-rc.json,
   .huskyrc,
   package.json,
 ]
@@ -289,71 +163,6 @@ module.exports = {
 `;
 
 exports[`eslint with-prettier 4`] = `
-{
-  "options": {
-    "ts": false,
-    "es": false,
-    "eslint": true,
-    "editorconfig": false,
-    "prettier": true,
-    "stylelint": false,
-    "gitignore": false,
-    "npmrc": false,
-    "readme": false,
-    "githooks": false,
-    "commitlint": false,
-    "nodeVersion": false,
-    "webpack": false,
-    "build": false,
-    "install": false,
-    "force": true,
-    "dryRun": false,
-    "mode": "api"
-  },
-  "mergedFiles": {
-    "package.json": {
-      "override": false,
-      "data": {
-        "scripts": {
-          "lint": "npm-run-all lint:*",
-          "lint:js": "eslint . -c .eslintrc.strict.js",
-          "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
-        },
-        "devDependencies": {
-          "@namics/eslint-config": "8.0.1",
-          "@namics/prettier-config": "0.3.0",
-          "eslint": "6.5.1",
-          "eslint-plugin-import": "2.18.2",
-          "npm-run-all": "4.1.5",
-          "prettier": "1.18.2"
-        }
-      }
-    },
-    ".prettierignore": {
-      "override": false,
-      "data": "# Node/n**/node_modules/n**/package.json/n**/package-lock.json/n/n# Generated/n**/bower.json/n**/lerna.json/n/n# Build/n**/build/n**/dist/n**/public/n**/coverage/n**/storybook-static/n/n# Nitro/n**/project/blueprints/n**/.yo-rc.json"
-    },
-    ".prettierrc.js": {
-      "override": false,
-      "data": "module.exports = require('@namics/prettier-config');/n"
-    },
-    ".eslintrc.js": {
-      "override": false,
-      "data": "module.exports = {/n/textends: [/n/t/t'./.eslintrc.strict.js',/n/t].map(require.resolve),/n/t/* define rules for IDE only here https://github.com/namics/frontend-defaults/issues/12 *//n/trules: {/n/t/t'no-console': 1/n/t}/n};/n"
-    },
-    ".eslintrc.strict.js": {
-      "override": false,
-      "data": "module.exports = {/n/textends: [/n/t/t'@namics/eslint-config/configurations/es8-react.js',/n/t/t'@namics/eslint-config/configurations/es8-react-disable-styles.js',/n/t].map(require.resolve),/n};/n"
-    },
-    ".eslintignore": {
-      "override": false,
-      "data": "/.idea//n/node_modules//n/*.js/n/dist/n/build/n/coverage/n"
-    }
-  }
-}
-`;
-
-exports[`eslint with-prettier 5`] = `
 # Node
 **/node_modules
 **/package.json
@@ -375,12 +184,12 @@ exports[`eslint with-prettier 5`] = `
 **/.yo-rc.json
 `;
 
-exports[`eslint with-prettier 6`] = `
+exports[`eslint with-prettier 5`] = `
 module.exports = require('@namics/prettier-config');
 
 `;
 
-exports[`eslint with-prettier 7`] = `
+exports[`eslint with-prettier 6`] = `
 {
   "scripts": {
     "lint": "npm-run-all lint:*",
@@ -398,12 +207,11 @@ exports[`eslint with-prettier 7`] = `
 }
 `;
 
-exports[`eslint with-prettier 8`] = `
+exports[`eslint with-prettier 7`] = `
 Array [
   .eslintignore,
   .eslintrc.js,
   .eslintrc.strict.js,
-  .frontend-defaults-rc.json,
   .prettierignore,
   .prettierrc.js,
   package.json,
