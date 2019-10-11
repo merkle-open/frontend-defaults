@@ -20,7 +20,7 @@
     "engine.js"
   ],
   "dependencies": {
-    "conventional-commit-types": "2.1.1",
+    "conventional-commit-types": "2.3.0",
     "lodash.map": "4.6.0",
     "longest": "2.0.1",
     "right-pad": "1.0.1",

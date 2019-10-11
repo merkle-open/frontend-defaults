@@ -1,4 +1,4 @@
-import ora from 'ora';
+import ora = require('ora');
 
 export default (options?: ora.Options | string) => {
 	if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci') {
@@ -14,7 +14,7 @@ export default (options?: ora.Options | string) => {
 			render: () => oraInst,
 			frame: () => oraInst,
 		};
-		return oraInst as ora.Ora;
+		return (oraInst as any) as ora.Ora;
 	}
 	return ora(options);
 };
