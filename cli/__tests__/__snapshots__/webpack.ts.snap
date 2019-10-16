@@ -120,7 +120,7 @@ exports[`webpack webpack-with-ts 1`] = `
     "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
-    "core-js": "3.2.1"
+    "core-js": "3.3.2"
   }
 }
 `;

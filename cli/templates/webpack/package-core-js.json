@@ -3,6 +3,6 @@
 		"@types/core-js": "2.5.2"
 	},
 	"dependencies": {
-		"core-js": "3.2.1"
+		"core-js": "3.3.2"
 	}
 }

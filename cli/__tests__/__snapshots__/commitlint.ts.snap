@@ -33,7 +33,7 @@ exports[`commitlint default 2`] = `
     \\"@namics/commitlint-conventional-changelog\\": \\"1.1.7\\",
     \\"@namics/cz-conventional-changelog\\": \\"1.1.7\\",
     \\"commitizen\\": \\"4.0.3\\",
-    \\"husky\\": \\"3.0.8\\",
+    \\"husky\\": \\"3.0.9\\",
     \\"lint-staged\\": \\"9.4.2\\"
   }
 }"
