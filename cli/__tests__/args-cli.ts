@@ -5,6 +5,7 @@ import { fetchOptions } from '../src/fetch-options';
 
 const defaultOptions = {
 	commitlint: false,
+	licenseChecker: false,
 	copyrightHolder: undefined,
 	dryRun: false,
 	editorconfig: false,
@@ -40,6 +41,7 @@ describe('presetTs', () => {
 		expect(options).toEqual({
 			...defaultOptions,
 			commitlint: true,
+			licenseChecker: true,
 			editorconfig: true,
 			force: true,
 			githooks: true,
@@ -71,6 +73,7 @@ describe('presetEs', () => {
 		expect(options).toEqual({
 			...defaultOptions,
 			commitlint: true,
+			licenseChecker: true,
 			editorconfig: true,
 			force: true,
 			githooks: true,
@@ -100,6 +103,21 @@ describe('commitlint', () => {
 		const options = await fetchOptions();
 		delete options.cwd;
 		expect(options).toEqual({ ...defaultOptions, commitlint: true, force: true });
+	});
+});
+
+describe('licenseChecker', () => {
+	it('default', async () => {
+		global.process.argv = [
+			'/usr/local/bin/node',
+			'/usr/local/bin/frontend-defaults',
+			'--licenseChecker',
+			'--force',
+			'--noInstall',
+		];
+		const options = await fetchOptions();
+		delete options.cwd;
+		expect(options).toEqual({ ...defaultOptions, licenseChecker: true, force: true });
 	});
 });
 

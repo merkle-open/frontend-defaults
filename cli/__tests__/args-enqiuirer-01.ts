@@ -30,7 +30,12 @@ describe('enqirer', () => {
 				TYPE_CHOICES.gitignore,
 				TYPE_CHOICES.githooks,
 			],
-			linters: [TYPE_CHOICES.prettier, TYPE_CHOICES.stylelint, TYPE_CHOICES.commitlint],
+			linters: [
+				TYPE_CHOICES.prettier,
+				TYPE_CHOICES.stylelint,
+				TYPE_CHOICES.commitlint,
+				TYPE_CHOICES.licenseChecker,
+			],
 			webpack: true,
 			install: true,
 		});
@@ -42,6 +47,7 @@ describe('enqirer', () => {
 			cwd: undefined,
 			packageJson: undefined,
 			commitlint: true,
+			licenseChecker: true,
 			copyrightHolder: undefined,
 			dryRun: false,
 			editorconfig: true,

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`license-checker default 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:license\\": \\"license-checker --production --summary --exclude \\\\\\"Apache-2.0, BSD, ISC, LGPL, MIT, MPL\\\\\\" --failOn \\\\\\"AGPL; EPL; GPL\\\\\\"\\"
+  },
+  \\"devDependencies\\": {
+    \\"license-checker\\": \\"25.0.1\\",
+    \\"npm-run-all\\": \\"4.1.5\\"
+  }
+}",
+    }
+  }
+/>
+`;
+
+exports[`license-checker default 2`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "package.json",
+    }
+  }
+/>
+`;

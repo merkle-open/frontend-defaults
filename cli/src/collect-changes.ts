@@ -14,6 +14,7 @@ import { create as createTypescriptEslint } from './create-typescript-eslint';
 import { create as createTsconfig } from './create-tsconfig';
 import { create as createStylelint } from './create-stylelint';
 import { create as createCommitlint } from './create-commitlint';
+import { create as createLicenseChecker } from './create-license-checker';
 import { create as createEslint } from './create-eslint';
 
 import { create as createWebpack } from './create-webpack';
@@ -44,6 +45,7 @@ export const collectChanges = async (options: IOptions) => {
 		await createTsconfig(options),
 		await createStylelint(options),
 		await createCommitlint(options),
+		await createLicenseChecker(options),
 		await createEslint(options),
 		await createWebpack(options, spinnerCollectChanges),
 		await createBuild(options)

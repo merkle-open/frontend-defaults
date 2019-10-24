@@ -17,6 +17,7 @@ export const TYPE_CHOICES = {
 	prettier: 'prettier' as 'prettier',
 	stylelint: 'stylelint' as 'stylelint',
 	commitlint: 'commitlint' as 'commitlint',
+	licenseChecker: 'licenseChecker' as 'licenseChecker',
 
 	webpack: 'webpack' as 'webpack',
 	install: 'install' as 'install',
@@ -54,6 +55,7 @@ export interface IOptions {
 	readme: boolean;
 	githooks: boolean;
 	commitlint: boolean;
+	licenseChecker: boolean;
 	nodeVersion: boolean;
 	webpack: boolean;
 	build: boolean;
@@ -88,6 +90,7 @@ export interface IProgram {
 	readme?: boolean;
 	githooks?: boolean;
 	commitlint?: boolean;
+	licenseChecker?: boolean;
 	nodeVersion?: boolean;
 	webpack?: boolean;
 	build?: boolean;

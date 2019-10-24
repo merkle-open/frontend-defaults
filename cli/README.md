@@ -41,6 +41,7 @@ Options:
   -r --readme                     add readme file
   -gh --githooks                  add githooks
   -c --commitlint                 add commitlint (will enable githooks too)
+  -lch --licenseChecker           add licenseChecker
   -nv --nodeVersion               add node-version file
   -w --webpack                    add webpack with webpack-config-plugins
   -b --build                      add build and watch script

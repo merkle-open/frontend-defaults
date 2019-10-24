@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "lint:license": "license-checker --production --summary --exclude \"Apache-2.0, BSD, ISC, LGPL, MIT, MPL\" --failOn \"AGPL; EPL; GPL\""
+    },
+    "devDependencies": {
+        "license-checker": "25.0.1"
+    }
+}

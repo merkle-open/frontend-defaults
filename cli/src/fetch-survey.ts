@@ -85,6 +85,7 @@ export const fetchSurvey = async (cwd: string): Promise<IOptions> => {
 		nodeVersion: project.includes(TYPE_CHOICES.nodeVersion),
 
 		commitlint: linters.includes(TYPE_CHOICES.commitlint),
+		licenseChecker: linters.includes(TYPE_CHOICES.licenseChecker),
 		prettier: linters.includes(TYPE_CHOICES.prettier),
 		stylelint: linters.includes(TYPE_CHOICES.stylelint),
 

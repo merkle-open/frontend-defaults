@@ -163,11 +163,12 @@ export const getLinters = promptCache(
 			type: 'multiselect',
 			name: 'linters',
 			message: 'Select autoformatter and additional linters \n',
-			initial: [0, 1, 2],
+			initial: [0, 1, 2, 3],
 			choices: [
 				getChoice(TYPE_CHOICES.prettier),
 				getChoice(TYPE_CHOICES.stylelint),
 				getChoice(TYPE_CHOICES.commitlint),
+				getChoice(TYPE_CHOICES.licenseChecker),
 			],
 		});
 	}

@@ -27,6 +27,7 @@ export interface IApiOptions {
 	readme?: boolean;
 	githooks?: boolean;
 	commitlint?: boolean;
+	licenseChecker?: boolean;
 	nodeVersion?: boolean;
 	webpack?: boolean;
 	build?: boolean;
@@ -51,6 +52,7 @@ const defaultApiOptions = {
 	readme: false,
 	githooks: false,
 	commitlint: false,
+	licenseChecker: false,
 	nodeVersion: false,
 	webpack: false,
 	build: false,

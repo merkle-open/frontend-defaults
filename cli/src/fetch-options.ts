@@ -39,6 +39,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			readme: true,
 			githooks: true,
 			commitlint: true,
+			licenseChecker: true,
 			nodeVersion: true,
 			webpack: true,
 			preset: presets.ts,
@@ -59,6 +60,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 			readme: true,
 			githooks: true,
 			commitlint: true,
+			licenseChecker: true,
 			nodeVersion: true,
 			webpack: true,
 			preset: presets.es,
@@ -78,6 +80,7 @@ const transformAnswersToOptions = (answers: IProgram): IOptions => {
 		readme: answers.readme || false,
 		githooks: answers.githooks || false,
 		commitlint: answers.commitlint || false,
+		licenseChecker: answers.licenseChecker || false,
 		nodeVersion: answers.nodeVersion || false,
 		webpack: answers.webpack || false,
 	};
@@ -105,6 +108,7 @@ export const fetchOptions = async (): Promise<IOptions> => {
 		.option('-r --readme', 'add readme file')
 		.option('-gh --githooks', 'add githooks')
 		.option('-c --commitlint', 'add commitlint (will enable githooks too)')
+		.option('-lch --licenseChecker', 'add licenseChecker')
 		.option('-nv --nodeVersion', 'add node-version file')
 		.option('-w --webpack', 'add webpack with webpack-config-plugins')
 		.option('-b --build', 'add build and watch script')
