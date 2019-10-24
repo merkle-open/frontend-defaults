@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`npmrc default 1`] = `
-"save-exact=true
-"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "save-exact=true
+",
+    }
+  }
+/>
 `;
 
 exports[`npmrc default 2`] = `
-Array [
-  .npmrc,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".npmrc",
+    }
+  }
+/>
 `;

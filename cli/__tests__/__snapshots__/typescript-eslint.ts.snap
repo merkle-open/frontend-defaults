@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`typescript-eslint default 1`] = `
-"/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
-/**.js"
+/**.js",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint default 2`] = `
-"module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -17,18 +26,30 @@ exports[`typescript-eslint default 2`] = `
 		'no-console': 1
 	}
 };
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint default 3`] = `
-"module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),
 };
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint default 4`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js\\"
@@ -41,36 +62,54 @@ exports[`typescript-eslint default 4`] = `
     \\"npm-run-all\\": \\"4.1.5\\",
     \\"typescript\\": \\"3.6.4\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint default 5`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
 	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint default 6`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  package.json,
-  tsconfig.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,package.json,tsconfig.json",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 1`] = `
-/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
-/**.js
+/**.js",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 2`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -79,81 +118,116 @@ module.exports = {
 		'no-console': 1
 	}
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 3`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: ['@namics/eslint-config/configurations/typescript-react.js'].map(require.resolve),
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 4`] = `
-# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
-  eval "$(nodenv init -)"
-fi
+  eval \\"$(nodenv init -)\\"
+fi",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 5`] = `
-{
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js\\"
   },
-  "devDependencies": {
-    "@namics/eslint-config": "8.0.2",
-    "@namics/ts-config": "0.4.0",
-    "eslint": "6.5.1",
-    "eslint-plugin-import": "2.18.2",
-    "husky": "3.0.9",
-    "lint-staged": "9.4.2",
-    "npm-run-all": "4.1.5",
-    "typescript": "3.6.4"
+  \\"devDependencies\\": {
+    \\"@namics/eslint-config\\": \\"8.0.2\\",
+    \\"@namics/ts-config\\": \\"0.4.0\\",
+    \\"eslint\\": \\"6.5.1\\",
+    \\"eslint-plugin-import\\": \\"2.18.2\\",
+    \\"husky\\": \\"3.0.9\\",
+    \\"lint-staged\\": \\"9.4.2\\",
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"typescript\\": \\"3.6.4\\"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
     }
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --ext .jsx,.js,.ts,.tsx"
+  \\"lint-staged\\": {
+    \\"src/**/*.{js,jsx,ts,tsx}\\": [
+      \\"eslint --ext .jsx,.js,.ts,.tsx\\"
     ]
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 6`] = `
-{
-	"extends": "@namics/ts-config",
-	"exclude": ["dist", "build", "node_modules", "__tests__"]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+	\\"extends\\": \\"@namics/ts-config\\",
+	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-githooks 7`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  .huskyrc,
-  package.json,
-  tsconfig.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,.huskyrc,package.json,tsconfig.json",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 1`] = `
-/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
-/**.js
+/**.js",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 2`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -162,21 +236,33 @@ module.exports = {
 		'no-console': 1
 	}
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 3`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'@namics/eslint-config/configurations/typescript-react.js',
 		'@namics/eslint-config/configurations/typescript-react-disable-styles.js',
 	].map(require.resolve),
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 4`] = `
-# Node
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# Node
 **/node_modules
 **/package.json
 **/package-lock.json
@@ -195,50 +281,69 @@ exports[`typescript-eslint with-prettier 4`] = `
 
 # Nitro
 **/project/blueprints
-**/.yo-rc.json
+**/.yo-rc.json",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 5`] = `
-module.exports = require('@namics/prettier-config');
-
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/prettier-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 6`] = `
-{
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js",
-    "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js\\",
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
-  "devDependencies": {
-    "@namics/eslint-config": "8.0.2",
-    "@namics/prettier-config": "0.3.0",
-    "@namics/ts-config": "0.4.0",
-    "eslint": "6.5.1",
-    "eslint-plugin-import": "2.18.2",
-    "npm-run-all": "4.1.5",
-    "prettier": "1.18.2",
-    "typescript": "3.6.4"
+  \\"devDependencies\\": {
+    \\"@namics/eslint-config\\": \\"8.0.2\\",
+    \\"@namics/prettier-config\\": \\"0.3.0\\",
+    \\"@namics/ts-config\\": \\"0.4.0\\",
+    \\"eslint\\": \\"6.5.1\\",
+    \\"eslint-plugin-import\\": \\"2.18.2\\",
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"prettier\\": \\"1.18.2\\",
+    \\"typescript\\": \\"3.6.4\\"
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 7`] = `
-{
-	"extends": "@namics/ts-config",
-	"exclude": ["dist", "build", "node_modules", "__tests__"]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+	\\"extends\\": \\"@namics/ts-config\\",
+	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
-
+",
+    }
+  }
+/>
 `;
 
 exports[`typescript-eslint with-prettier 8`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  .prettierignore,
-  .prettierrc.js,
-  package.json,
-  tsconfig.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,.prettierignore,.prettierrc.js,package.json,tsconfig.json",
+    }
+  }
+/>
 `;

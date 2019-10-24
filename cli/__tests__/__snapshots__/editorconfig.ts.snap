@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`editorconfig default 1`] = `
-"# EditorConfig. Frontend. Default. Namics.
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# EditorConfig. Frontend. Default. Namics.
 # @see: http://EditorConfig.org
 # install a plugin to your editor: http://editorconfig.org/#download
 # mark: not all plugins supports the same EditorConfig properties
@@ -39,11 +42,18 @@ indent_size = 2
 [{package,bower,lerna}.json]
 indent_style = space
 indent_size = 2
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`editorconfig default 2`] = `
-Array [
-  .editorconfig,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".editorconfig",
+    }
+  }
+/>
 `;

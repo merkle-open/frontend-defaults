@@ -1,4 +1,7 @@
 /// <reference types="@types/jest" />
+import React from 'react';
+import renderer from 'react-test-renderer';
+
 jest.mock('latest-version');
 
 import 'jest';
@@ -17,6 +20,10 @@ const cwd = process.cwd();
 
 const deleteDir = (pathName: string) => new Promise((resolve) => rimraf(pathName, resolve));
 const removeIgnoredFiles = (fileName: string) => fileName !== '.DS_Store' && fileName !== 'Thumbs.db';
+
+function AsReactComponent({ data }: { data: string }) {
+	return <div dangerouslySetInnerHTML={{ __html: data }} />;
+}
 
 export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDeleteDir: boolean = true) => {
 	const tmpPathRoot = path.join(cwd, '__tests__', 'tmp');
@@ -43,15 +50,17 @@ export const apiIt = async (tmpPathName: string, options: IApiOptions, shouldDel
 	let i = 0;
 	for (i = 0; i < files.length; i += 1) {
 		const fileData = await fs.readFile(path.join(tmpPath, files[i]), 'utf8');
-		expect(fileData).toMatchSnapshot();
+		const tree = renderer.create(<AsReactComponent data={fileData} />).toJSON();
+		expect(tree).toMatchSnapshot();
 	}
 
 	// normalize pathes to look the same on windows, linux and mac
-	expect.addSnapshotSerializer({
-		test: (val) => typeof val === 'string',
-		print(val) {
-			return `${val.replace(/\\/g, '/')}`;
-		},
-	});
-	expect(files).toMatchSnapshot();
+	// expect.addSnapshotSerializer({
+	// 	test: (val) => typeof val === 'string',
+	// 	print(val) {
+	// 		return `${val.replace(/\\/g, '/')}`;
+	// 	},
+	// });
+	const tree = renderer.create(<AsReactComponent data={files.join(',')} />).toJSON();
+	expect(tree).toMatchSnapshot();
 };

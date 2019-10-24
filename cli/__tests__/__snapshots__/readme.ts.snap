@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`readme closed-source 1`] = `
-# readme-closed-source
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# readme-closed-source
 
 Introduction ...
 
@@ -83,25 +86,40 @@ Introduction ...
 * Minification & Compression: ...
 
 ...
-
+",
+    }
+  }
+/>
 `;
 
 exports[`readme closed-source 2`] = `
-{
-  "license": "UNLICENSED",
-  "private": true
-}
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"license\\": \\"UNLICENSED\\",
+  \\"private\\": true
+}",
+    }
+  }
+/>
 `;
 
 exports[`readme closed-source 3`] = `
-Array [
-  README.md,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "README.md,package.json",
+    }
+  }
+/>
 `;
 
 exports[`readme open-source 1`] = `
-"MIT License
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "MIT License
 
 Copyright (c) 2019-present Namics AG
 
@@ -122,11 +140,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`readme open-source 2`] = `
-"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "
 <div align=\\"center\\">
 <br />
 #logo
@@ -158,20 +182,31 @@ exports[`readme open-source 2`] = `
 ## License
 
 The readme-open-source is [MIT licensed](./LICENSE)
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`readme open-source 3`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"license\\": \\"MIT\\",
   \\"private\\": false
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`readme open-source 4`] = `
-Array [
-  LICENSE,
-  README.md,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "LICENSE,README.md,package.json",
+    }
+  }
+/>
 `;

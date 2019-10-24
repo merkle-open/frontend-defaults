@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prettier default 1`] = `
-"# Node
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# Node
 **/node_modules
 **/package.json
 **/package-lock.json
@@ -20,16 +23,28 @@ exports[`prettier default 1`] = `
 
 # Nitro
 **/project/blueprints
-**/.yo-rc.json"
+**/.yo-rc.json",
+    }
+  }
+/>
 `;
 
 exports[`prettier default 2`] = `
-"module.exports = require('@namics/prettier-config');
-"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/prettier-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`prettier default 3`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"scripts\\": {
     \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
@@ -37,27 +52,41 @@ exports[`prettier default 3`] = `
     \\"@namics/prettier-config\\": \\"0.3.0\\",
     \\"prettier\\": \\"1.18.2\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`prettier default 4`] = `
-Array [
-  .prettierignore,
-  .prettierrc.js,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".prettierignore,.prettierrc.js,package.json",
+    }
+  }
+/>
 `;
 
 exports[`prettier with-githooks 1`] = `
-# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
-  eval "$(nodenv init -)"
-fi
+  eval \\"$(nodenv init -)\\"
+fi",
+    }
+  }
+/>
 `;
 
 exports[`prettier with-githooks 2`] = `
-# Node
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# Node
 **/node_modules
 **/package.json
 **/package-lock.json
@@ -76,44 +105,60 @@ exports[`prettier with-githooks 2`] = `
 
 # Nitro
 **/project/blueprints
-**/.yo-rc.json
+**/.yo-rc.json",
+    }
+  }
+/>
 `;
 
 exports[`prettier with-githooks 3`] = `
-module.exports = require('@namics/prettier-config');
-
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/prettier-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`prettier with-githooks 4`] = `
-{
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
-      "prettier --write",
-      "git add"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"lint-staged\\": {
+    \\"*.{js,jsx,ts,tsx,json}\\": [
+      \\"prettier --write\\",
+      \\"git add\\"
     ]
   },
-  "scripts": {
-    "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
+  \\"scripts\\": {
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
     }
   },
-  "devDependencies": {
-    "@namics/prettier-config": "0.3.0",
-    "husky": "3.0.9",
-    "lint-staged": "9.4.2",
-    "prettier": "1.18.2"
+  \\"devDependencies\\": {
+    \\"@namics/prettier-config\\": \\"0.3.0\\",
+    \\"husky\\": \\"3.0.9\\",
+    \\"lint-staged\\": \\"9.4.2\\",
+    \\"prettier\\": \\"1.18.2\\"
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`prettier with-githooks 5`] = `
-Array [
-  .huskyrc,
-  .prettierignore,
-  .prettierrc.js,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".huskyrc,.prettierignore,.prettierrc.js,package.json",
+    }
+  }
+/>
 `;

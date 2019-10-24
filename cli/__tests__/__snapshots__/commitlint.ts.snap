@@ -1,15 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`commitlint default 1`] = `
-"# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
   eval \\"$(nodenv init -)\\"
-fi"
+fi",
+    }
+  }
+/>
 `;
 
 exports[`commitlint default 2`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"scripts\\": {
     \\"cz\\": \\"git-cz\\"
   },
@@ -36,12 +45,18 @@ exports[`commitlint default 2`] = `
     \\"husky\\": \\"3.0.9\\",
     \\"lint-staged\\": \\"9.4.2\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`commitlint default 3`] = `
-Array [
-  .huskyrc,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".huskyrc,package.json",
+    }
+  }
+/>
 `;

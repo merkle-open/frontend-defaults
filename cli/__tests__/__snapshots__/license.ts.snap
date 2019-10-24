@@ -1,20 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`license license-closed-source 1`] = `
-{
-  "license": "UNLICENSED",
-  "private": true
-}
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"license\\": \\"UNLICENSED\\",
+  \\"private\\": true
+}",
+    }
+  }
+/>
 `;
 
 exports[`license license-closed-source 2`] = `
-Array [
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "package.json",
+    }
+  }
+/>
 `;
 
 exports[`license license-open-source 1`] = `
-"MIT License
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "MIT License
 
 Copyright (c) 2019-present Namics AG
 
@@ -35,19 +48,31 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`license license-open-source 2`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"license\\": \\"MIT\\",
   \\"private\\": false
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`license license-open-source 3`] = `
-Array [
-  LICENSE,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "LICENSE,package.json",
+    }
+  }
+/>
 `;

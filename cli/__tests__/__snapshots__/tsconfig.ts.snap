@@ -1,25 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tsconfig default 1`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"devDependencies\\": {
     \\"@namics/ts-config\\": \\"0.4.0\\",
     \\"typescript\\": \\"3.6.4\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`tsconfig default 2`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
 	\\"extends\\": \\"@namics/ts-config\\",
 	\\"exclude\\": [\\"dist\\", \\"build\\", \\"node_modules\\", \\"__tests__\\"]
 }
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`tsconfig default 3`] = `
-Array [
-  package.json,
-  tsconfig.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "package.json,tsconfig.json",
+    }
+  }
+/>
 `;

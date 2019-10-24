@@ -1,50 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`node-version default 1`] = `"0.1.0-mock"`;
+exports[`node-version default 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "0.1.0-mock",
+    }
+  }
+/>
+`;
 
-exports[`node-version default 2`] = `"0.1.0-mock"`;
+exports[`node-version default 2`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "0.1.0-mock",
+    }
+  }
+/>
+`;
 
 exports[`node-version default 3`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"engines\\": {
     \\"node\\": \\">=0\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`node-version default 4`] = `
-Array [
-  .node-version,
-  .nvmrc,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".node-version,.nvmrc,package.json",
+    }
+  }
+/>
 `;
 
 exports[`node-version with-githooks 1`] = `
-# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
-  eval "$(nodenv init -)"
-fi
+  eval \\"$(nodenv init -)\\"
+fi",
+    }
+  }
+/>
 `;
 
-exports[`node-version with-githooks 2`] = `0.1.0-mock`;
+exports[`node-version with-githooks 2`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "0.1.0-mock",
+    }
+  }
+/>
+`;
 
-exports[`node-version with-githooks 3`] = `0.1.0-mock`;
+exports[`node-version with-githooks 3`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "0.1.0-mock",
+    }
+  }
+/>
+`;
 
 exports[`node-version with-githooks 4`] = `
-{
-  "engines": {
-    "node": ">=0"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"engines\\": {
+    \\"node\\": \\">=0\\"
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`node-version with-githooks 5`] = `
-Array [
-  .huskyrc,
-  .node-version,
-  .nvmrc,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".huskyrc,.node-version,.nvmrc,package.json",
+    }
+  }
+/>
 `;

@@ -1,18 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`eslint default 1`] = `
-"/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
 /dist
 /build
 /coverage
 /.next
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint default 2`] = `
-"module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -21,18 +30,30 @@ exports[`eslint default 2`] = `
 		'no-console': 1
 	}
 };
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint default 3`] = `
-"module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),
 };
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint default 4`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
@@ -43,31 +64,44 @@ exports[`eslint default 4`] = `
     \\"eslint-plugin-import\\": \\"2.18.2\\",
     \\"npm-run-all\\": \\"4.1.5\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`eslint default 5`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,package.json",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 1`] = `
-/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
 /dist
 /build
 /coverage
 /.next
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 2`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -76,74 +110,104 @@ module.exports = {
 		'no-console': 1
 	}
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 3`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: ['@namics/eslint-config/configurations/es8-react.js'].map(require.resolve),
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 4`] = `
-# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
-  eval "$(nodenv init -)"
-fi
+  eval \\"$(nodenv init -)\\"
+fi",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 5`] = `
-{
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:js": "eslint . -c .eslintrc.strict.js"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\"
   },
-  "devDependencies": {
-    "@namics/eslint-config": "8.0.2",
-    "eslint": "6.5.1",
-    "eslint-plugin-import": "2.18.2",
-    "husky": "3.0.9",
-    "lint-staged": "9.4.2",
-    "npm-run-all": "4.1.5"
+  \\"devDependencies\\": {
+    \\"@namics/eslint-config\\": \\"8.0.2\\",
+    \\"eslint\\": \\"6.5.1\\",
+    \\"eslint-plugin-import\\": \\"2.18.2\\",
+    \\"husky\\": \\"3.0.9\\",
+    \\"lint-staged\\": \\"9.4.2\\",
+    \\"npm-run-all\\": \\"4.1.5\\"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
     }
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint"
+  \\"lint-staged\\": {
+    \\"src/**/*.{js,jsx}\\": [
+      \\"eslint\\"
     ]
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-githooks 6`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  .huskyrc,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,.huskyrc,package.json",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 1`] = `
-/.idea/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "/.idea/
 /node_modules/
 /*.js
 /dist
 /build
 /coverage
 /.next
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 2`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'./.eslintrc.strict.js',
 	].map(require.resolve),
@@ -152,21 +216,33 @@ module.exports = {
 		'no-console': 1
 	}
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 3`] = `
-module.exports = {
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = {
 	extends: [
 		'@namics/eslint-config/configurations/es8-react.js',
 		'@namics/eslint-config/configurations/es8-react-disable-styles.js',
 	].map(require.resolve),
 };
-
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 4`] = `
-# Node
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# Node
 **/node_modules
 **/package.json
 **/package-lock.json
@@ -185,39 +261,53 @@ exports[`eslint with-prettier 4`] = `
 
 # Nitro
 **/project/blueprints
-**/.yo-rc.json
+**/.yo-rc.json",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 5`] = `
-module.exports = require('@namics/prettier-config');
-
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/prettier-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 6`] = `
-{
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:js": "eslint . -c .eslintrc.strict.js",
-    "prettier": "prettier --write /"**/*.*(js|jsx|ts|tsx|json)/""
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\",
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
   },
-  "devDependencies": {
-    "@namics/eslint-config": "8.0.2",
-    "@namics/prettier-config": "0.3.0",
-    "eslint": "6.5.1",
-    "eslint-plugin-import": "2.18.2",
-    "npm-run-all": "4.1.5",
-    "prettier": "1.18.2"
+  \\"devDependencies\\": {
+    \\"@namics/eslint-config\\": \\"8.0.2\\",
+    \\"@namics/prettier-config\\": \\"0.3.0\\",
+    \\"eslint\\": \\"6.5.1\\",
+    \\"eslint-plugin-import\\": \\"2.18.2\\",
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"prettier\\": \\"1.18.2\\"
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`eslint with-prettier 7`] = `
-Array [
-  .eslintignore,
-  .eslintrc.js,
-  .eslintrc.strict.js,
-  .prettierignore,
-  .prettierrc.js,
-  package.json,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".eslintignore,.eslintrc.js,.eslintrc.strict.js,.prettierignore,.prettierrc.js,package.json",
+    }
+  }
+/>
 `;

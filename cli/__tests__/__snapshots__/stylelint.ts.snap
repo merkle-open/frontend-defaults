@@ -1,13 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`stylelint default 1`] = `
-"node_modules/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "node_modules/
 src/shared/base/reset/css/yui/reset.css
-.next/"
+.next/",
+    }
+  }
+/>
 `;
 
 exports[`stylelint default 2`] = `
-"{
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
@@ -17,72 +26,108 @@ exports[`stylelint default 2`] = `
     \\"npm-run-all\\": \\"4.1.5\\",
     \\"stylelint\\": \\"11.1.1\\"
   }
-}"
+}",
+    }
+  }
+/>
 `;
 
 exports[`stylelint default 3`] = `
-"module.exports = require('@namics/stylelint-config');
-"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/stylelint-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`stylelint default 4`] = `
-Array [
-  .stylelintignore,
-  package.json,
-  stylelint.config.js,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".stylelintignore,package.json,stylelint.config.js",
+    }
+  }
+/>
 `;
 
 exports[`stylelint with-githooks 1`] = `
-# ~/.huskyrc
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# ~/.huskyrc
 # Note: it will run in /bin/sh shell
 if command -v nodenv >/dev/null 2>&1; then
-  eval "$(nodenv init -)"
-fi
+  eval \\"$(nodenv init -)\\"
+fi",
+    }
+  }
+/>
 `;
 
 exports[`stylelint with-githooks 2`] = `
-node_modules/
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "node_modules/
 src/shared/base/reset/css/yui/reset.css
-.next/
+.next/",
+    }
+  }
+/>
 `;
 
 exports[`stylelint with-githooks 3`] = `
-{
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:css": "stylelint src/**/*.*ss"
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{
+  \\"scripts\\": {
+    \\"lint\\": \\"npm-run-all lint:*\\",
+    \\"lint:css\\": \\"stylelint src/**/*.*ss\\"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
     }
   },
-  "lint-staged": {
-    "src/**/*.*ss": [
-      "stylelint"
+  \\"lint-staged\\": {
+    \\"src/**/*.*ss\\": [
+      \\"stylelint\\"
     ]
   },
-  "devDependencies": {
-    "@namics/stylelint-config": "0.3.9",
-    "husky": "3.0.9",
-    "lint-staged": "9.4.2",
-    "npm-run-all": "4.1.5",
-    "stylelint": "11.1.1"
+  \\"devDependencies\\": {
+    \\"@namics/stylelint-config\\": \\"0.3.9\\",
+    \\"husky\\": \\"3.0.9\\",
+    \\"lint-staged\\": \\"9.4.2\\",
+    \\"npm-run-all\\": \\"4.1.5\\",
+    \\"stylelint\\": \\"11.1.1\\"
   }
-}
+}",
+    }
+  }
+/>
 `;
 
 exports[`stylelint with-githooks 4`] = `
-module.exports = require('@namics/stylelint-config');
-
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "module.exports = require('@namics/stylelint-config');
+",
+    }
+  }
+/>
 `;
 
 exports[`stylelint with-githooks 5`] = `
-Array [
-  .huskyrc,
-  .stylelintignore,
-  package.json,
-  stylelint.config.js,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".huskyrc,.stylelintignore,package.json,stylelint.config.js",
+    }
+  }
+/>
 `;

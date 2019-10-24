@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gitignore default 1`] = `
-"# Set default behaviour, in case users don't have core.autocrlf set.
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# Set default behaviour, in case users don't have core.autocrlf set.
 * text=auto
 
 # Explicitly declare text files we want to always be normalized and converted
@@ -22,11 +25,17 @@ exports[`gitignore default 1`] = `
 *.bat     eol=crlf
 *.cmd     eol=crlf
 *-windows.tmpl eol=crlf
-"
+",
+    }
+  }
+/>
 `;
 
 exports[`gitignore default 2`] = `
-"# OS
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# OS
 .DS_Store
 Thumbs.db
 
@@ -61,12 +70,18 @@ lerna-debug.log
 # build
 dist
 build
-.next"
+.next",
+    }
+  }
+/>
 `;
 
 exports[`gitignore default 3`] = `
-Array [
-  .gitattributes,
-  .gitignore,
-]
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": ".gitattributes,.gitignore",
+    }
+  }
+/>
 `;
