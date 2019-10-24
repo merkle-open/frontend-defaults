@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.7.0...@namics/frontend-defaults-cli@0.8.0) (2019-10-24)
+
+
+### Features
+
+* **cli:** add licenseChecker ([99534e9](https://github.com/namics/frontend-defaults/commit/99534e9ab8435b386a289233a55742fc1e1e2e38))
+
+
+
+
+
 # [0.7.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.6.1...@namics/frontend-defaults-cli@0.7.0) (2019-10-24)
 
 
