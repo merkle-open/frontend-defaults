@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.6.1...@namics/frontend-defaults-cli@0.7.0) (2019-10-24)
+
+
+### Bug Fixes
+
+* update dependencies ([4bbf690](https://github.com/namics/frontend-defaults/commit/4bbf6901ea56e58d764186d1bcb70f92ac9751f4))
+* update template dependencies ([713e038](https://github.com/namics/frontend-defaults/commit/713e038e1f887aeea412b0d2220e6160fb3e5783))
+
+
+### Features
+
+* **cli:** bundle cli to single file, zero dependency ([523c732](https://github.com/namics/frontend-defaults/commit/523c7329c4cb924620ec68c0ab230d8ad3a0e3eb))
+
+
+
+
+
 ## [0.6.1](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.6.0...@namics/frontend-defaults-cli@0.6.1) (2019-10-16)
 
 
