@@ -1,7 +1,6 @@
 import { fetchTemplate } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
-import { TYPE_CHOICES } from './fetch-survey';
+import { TYPE_CHOICES, IOptions } from './const';
 import chalk from 'chalk';
 
 const createLicense = async ({ license, copyrightHolder }: IOptions): Promise<{ LICENSE?: string }> => {

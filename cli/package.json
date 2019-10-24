@@ -3,7 +3,7 @@
   "description": "CLI tool which creates a default setup for your frontend project",
   "version": "0.6.1",
   "repository": "https://github.com/namics/frontend-defaults",
-  "main": "./build/index.js",
+  "main": "./dist/index.js",
   "typings": "./build/index.d.ts",
   "bin": {
     "frontend-defaults": "./bin/index.js"
@@ -22,14 +22,20 @@
     "LICENSE",
     "bin",
     "build",
+    "dist",
     "templates"
   ],
   "scripts": {
     "test": "jest --coverage",
     "watch-test": "jest --watchAll --coverage --notify --notifyMode=failure-change",
-    "watch": "tsc -w",
-    "prebuild": "rimraf build",
-    "build": "tsc",
+    "watch": "run-p watch:*",
+    "watch:bundle": "webpack --watch --mode=\"development\"",
+    "watch:definitions": "tsc -w",
+    "prebuild": "rimraf build dist",
+    "build": "npm-run-all build:*",
+    "build:bundle": "webpack --mode=\"production\"",
+    "build:definitions": "tsc",
+    "postbuild": "rimraf build/*.js build/*js.map",
     "prepublishOnly": "npm-run-all test build"
   },
   "devDependencies": {
@@ -43,12 +49,15 @@
     "@types/rimraf": "2.0.2",
     "@types/semver": "6.0.2",
     "@types/username": "3.0.0",
+    "@types/zen-observable": "0.8.0",
     "jest": "24.9.0",
     "npm-run-all": "4.1.5",
     "ts-jest": "24.1.0",
-    "typescript": "3.6.4"
-  },
-  "dependencies": {
+    "typescript": "3.6.4",
+    "clean-webpack-plugin": "3.0.0",
+    "ts-config-webpack-plugin": "1.4.0",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.9",
     "chalk": "2.4.2",
     "commander": "3.0.2",
     "deepmerge": "4.1.1",
@@ -64,6 +73,7 @@
     "ora": "4.0.2",
     "rimraf": "3.0.0",
     "semver": "6.3.0",
-    "username": "5.1.0"
+    "username": "5.1.0",
+    "zen-observable": "0.8.14"
   }
 }

@@ -1,8 +1,7 @@
 import path from 'path';
 
 import { fetchTemplate } from './fetch-template';
-import { IOptions } from './fetch-options';
-import { TYPE_CHOICES } from './fetch-survey';
+import { TYPE_CHOICES, IOptions } from './const';
 
 const createReadme = async ({ cwd, readme, license, copyrightHolder }: IOptions): Promise<{ 'README.md'?: string }> => {
 	if (!readme) {
@@ -10,11 +9,9 @@ const createReadme = async ({ cwd, readme, license, copyrightHolder }: IOptions)
 	}
 
 	if (license === TYPE_CHOICES.licenseClosedSource) {
+		const template = await fetchTemplate('readme', 'README_closed-source.md');
 		return {
-			'README.md': (await fetchTemplate('readme', 'README_closed-source.md')).replace(
-				new RegExp('PROJECT_NAME', 'g'),
-				path.basename(cwd)
-			),
+			'README.md': template.replace(new RegExp('PROJECT_NAME', 'g'), path.basename(cwd)),
 		};
 	}
 
@@ -28,6 +25,9 @@ const createReadme = async ({ cwd, readme, license, copyrightHolder }: IOptions)
 	};
 };
 
-export const create = async (options: IOptions) => ({
-	...(await createReadme(options)),
-});
+export const create = async (options: IOptions) => {
+	const readme = await createReadme(options);
+	return {
+		...readme,
+	};
+};

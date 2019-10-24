@@ -1,4 +1,4 @@
-import ora = require('ora');
+import ora from 'ora';
 
 export default (options?: ora.Options | string) => {
 	if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'ci') {

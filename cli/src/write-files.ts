@@ -5,7 +5,7 @@ import makeDir from 'make-dir';
 
 import { IMergedFiles } from './merge-files';
 import { wait } from './wait';
-import { IOptions } from './fetch-options';
+import { IOptions } from './const';
 
 const writeFile = async (pathName: string, data: string | object) => {
 	await makeDir(path.join(pathName.replace(path.basename(pathName), '')));

@@ -1,5 +1,5 @@
 import { fetchTemplate } from './fetch-template';
-import { IOptions } from './fetch-options';
+import { IOptions } from './const';
 
 const createHuskyrcFile = async ({ githooks }: IOptions): Promise<{ '.huskyrc'?: string }> => {
 	if (!githooks) {

@@ -3,7 +3,7 @@ import { prompt } from 'enquirer';
 
 import { IFiles, IMergedFiles } from './merge-files';
 import { diffLines } from 'diff';
-import { IOptions } from './fetch-options';
+import { IOptions } from './const';
 
 const { log } = console;
 

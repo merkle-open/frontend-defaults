@@ -1,10 +1,9 @@
-import { IOptions, TMode, TPreset } from './fetch-options';
 import { getCwd } from './get-cwd';
-
 import { install, openVSCode } from './install';
 import { showDiff } from './log-diff';
 import { writeFiles } from './write-files';
-import { fetchSurveyFiles, TLicense } from './fetch-survey';
+import { fetchSurveyFiles } from './fetch-survey';
+import { TLicense, TMode, TPreset, IOptions } from './const';
 import { collectChanges } from './collect-changes';
 import chalk from 'chalk';
 import { IPackageJson } from './type-package-json';
@@ -63,7 +62,7 @@ const defaultApiOptions = {
 	mode: 'api' as 'api',
 };
 
-export default async (apiOptions: IApiOptions) => {
+export async function api(apiOptions: IApiOptions) {
 	const cwd = getCwd();
 	const options: IOptions = {
 		cwd,
@@ -98,4 +97,4 @@ export default async (apiOptions: IApiOptions) => {
 		process.exit(1);
 	}
 	return;
-};
+}

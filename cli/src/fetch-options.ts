@@ -2,83 +2,8 @@ import path from 'path';
 import { Command } from 'commander';
 
 import { getCwd } from './get-cwd';
-import { fetchSurvey, TLicense, TYPE_CHOICES } from './fetch-survey';
-import { IPackageJson } from './type-package-json';
-
-export const presets = {
-	ts: 'ts' as 'ts',
-	es: 'es' as 'es',
-};
-
-export type TPreset = keyof typeof presets;
-
-export type TMode = 'cli' | 'api' | 'survey';
-
-// define cli api by using commander
-export interface IOptions {
-	cwd: string;
-	packageJson?: IPackageJson;
-	license?: TLicense;
-	copyrightHolder?: string;
-
-	// details
-	ts: boolean;
-	es: boolean;
-	eslint: boolean;
-	editorconfig: boolean;
-	prettier: boolean;
-	stylelint: boolean;
-	gitignore: boolean;
-	npmrc: boolean;
-	readme: boolean;
-	githooks: boolean;
-	commitlint: boolean;
-	nodeVersion: boolean;
-	webpack: boolean;
-	build: boolean;
-
-	install: boolean;
-	force: boolean;
-	dryRun: boolean;
-
-	mode?: TMode;
-	preset?: TPreset;
-}
-
-export interface IProgram {
-	cwd?: string;
-	licenseOpenSource?: boolean;
-	licenseClosedSource?: boolean;
-	copyrightHolder?: string;
-
-	// presets
-	presetTs?: boolean;
-	presetEs?: boolean;
-
-	// details
-	ts?: boolean;
-	es?: boolean;
-	eslint?: boolean;
-	editorconfig?: boolean;
-	prettier?: boolean;
-	stylelint?: boolean;
-	gitignore?: boolean;
-	npmrc?: boolean;
-	readme?: boolean;
-	githooks?: boolean;
-	commitlint?: boolean;
-	nodeVersion?: boolean;
-	webpack?: boolean;
-	build?: boolean;
-
-	install?: boolean;
-	noInstall?: boolean;
-	force?: boolean;
-	dryRun?: boolean;
-
-	rawArgs: string[];
-	args: string[];
-}
+import { TYPE_CHOICES, IProgram, IOptions, presets } from './const';
+import { fetchSurvey } from './fetch-survey';
 
 const cwd = getCwd();
 
@@ -193,11 +118,13 @@ export const fetchOptions = async (): Promise<IOptions> => {
 	let newCwd = pg.args.length === 1 ? path.join(cwd, pg.args[0]) : path.join(cwd);
 
 	if (pg.args.length === 1 && pg.rawArgs.length <= 3) {
-		return await fetchSurvey(newCwd);
+		const survey = await fetchSurvey(newCwd);
+		return survey;
 	}
 
 	if (pg.rawArgs.length <= 2) {
-		return await fetchSurvey(newCwd);
+		const survey = await fetchSurvey(newCwd);
+		return survey;
 	}
 
 	return transformAnswersToOptions(pg);

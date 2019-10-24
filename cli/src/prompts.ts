@@ -5,7 +5,7 @@ import { prompt } from 'enquirer';
 import getUsername from 'username';
 
 import { promptCache } from './prompt-cache';
-import { TYPE_CHOICES, TLanguage, TLicense } from './fetch-survey';
+import { TYPE_CHOICES, TLanguage, TLicense } from './const';
 import { IPackageJson } from './type-package-json';
 import { templatePackageSnippet } from './template-package-snippet';
 import { fetchPackage } from './fetch-package';

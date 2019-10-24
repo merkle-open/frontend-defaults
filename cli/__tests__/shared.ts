@@ -6,7 +6,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import rimraf from 'rimraf';
 
-import api, { IApiOptions } from '../src/api';
+import { api, IApiOptions } from '../src/api';
 
 jest.mock('latest-version', () => ({
 	__esModule: true,

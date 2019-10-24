@@ -1,20 +1,16 @@
-import path from 'path';
-import fs from 'fs-extra';
 import execa from 'execa';
 import chalk from 'chalk';
 
-import ora from './ora';
-import { getCwd } from './get-cwd';
-import { IOptions } from './fetch-options';
+import ora from './ora-facade';
 import { fetchTemplateJson } from './fetch-template';
-import { IMergedFiles } from './merge-files';
 import { fetchPackage } from './fetch-package';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const updatePackageJson = async <P>({ cwd }: IOptions, changes: P): Promise<{ 'package.json'?: IPackageJson }> => {
 	const packageDataScripts: { [script: string]: string } = {
 		...(((await fetchPackage(cwd)) || {}).scripts || {}),
-		...((changes['package.json'] || {}).scripts || {}),
+		...(((changes as any)['package.json'] || {}).scripts || {}),
 	};
 
 	if (
@@ -25,8 +21,9 @@ const updatePackageJson = async <P>({ cwd }: IOptions, changes: P): Promise<{ 'p
 		return {};
 	}
 
+	const template = await fetchTemplateJson('install', 'package.json');
 	return {
-		'package.json': await fetchTemplateJson('install', 'package.json'),
+		'package.json': template,
 	};
 };
 

@@ -15,5 +15,6 @@ lerna-debug.log
 # build
 /build
 /__tests__/tmp
+/dist
 
 coverage

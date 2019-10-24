@@ -5,13 +5,13 @@ import { generateConfigurations } from 'generate-webpack-config';
 import { Ora } from 'ora';
 import deepMerge from 'deepmerge';
 
-import { IOptions } from './fetch-options';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createWebpackConfigFile = async (
 	webpackConfig: string,
-	{ ts, webpack }: IOptions
+	{ webpack }: IOptions
 ): Promise<{ 'webpack.config.js'?: string; 'src/index.ts'?: string; 'src/index.js'?: string }> => {
 	if (!webpack) {
 		return {};
@@ -34,19 +34,21 @@ const createDemoFiles = async ({
 	}
 
 	if (ts) {
-		return {
+		const result = {
 			[path.join('src', 'wait.ts')]: await fetchTemplate('webpack', 'wait.ts'),
 			[path.join('src', 'index.ts')]: await fetchTemplate('webpack', 'index.ts'),
 			[path.join('src', 'polyfill.ts')]: await fetchTemplate('webpack', 'polyfill.ts'),
 			[path.join('src', 'styles.scss')]: await fetchTemplate('webpack', 'styles.scss'),
 		};
+		return result;
 	}
 
-	return {
+	const result = {
 		[path.join('src', 'wait.js')]: await fetchTemplate('webpack', 'wait.js'),
 		[path.join('src', 'index.js')]: await fetchTemplate('webpack', 'index.js'),
 		[path.join('src', 'styles.scss')]: await fetchTemplate('webpack', 'styles.scss'),
 	};
+	return result;
 };
 
 const createBabelConfigFile = async ({ webpack, ts }: IOptions): Promise<{ 'babel.config.js'?: string }> => {
@@ -54,8 +56,9 @@ const createBabelConfigFile = async ({ webpack, ts }: IOptions): Promise<{ 'babe
 		return {};
 	}
 
+	const template = await fetchTemplate('webpack', 'babel.config.js');
 	return {
-		'babel.config.js': await fetchTemplate('webpack', 'babel.config.js'),
+		'babel.config.js': template,
 	};
 };
 
@@ -69,7 +72,7 @@ const updatePackageJson = async (
 	}
 
 	const npmInstallSpl = npmInstall.trim().split(' ');
-	const devDependencies = {};
+	const devDependencies: { [key: string]: string } = {};
 	let i = 0;
 
 	try {
@@ -81,15 +84,18 @@ const updatePackageJson = async (
 		process.exit(1);
 	}
 
-	let packageData = deepMerge(await fetchTemplateJson('webpack', 'package.json'), { devDependencies });
+	const template = await fetchTemplateJson('webpack', 'package.json');
+	let packageData = deepMerge(template, { devDependencies });
 
 	if (ts) {
+		const templateCoreJs = await fetchTemplateJson('webpack', 'package-core-js.json');
 		return {
-			'package.json': deepMerge(packageData, await fetchTemplateJson('webpack', 'package-core-js.json')),
+			'package.json': deepMerge(packageData, templateCoreJs),
 		};
 	}
 
-	return { 'package.json': deepMerge(packageData, await fetchTemplateJson('webpack', 'package-babel.json')) };
+	const templateBabel = await fetchTemplateJson('webpack', 'package-babel.json');
+	return { 'package.json': deepMerge(packageData, templateBabel) };
 };
 
 export const create = async (options: IOptions, oraSpinner: Ora) => {

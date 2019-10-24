@@ -1,8 +1,9 @@
 /// <reference types="@types/jest" />
 import enquirer from 'enquirer';
 
-import { fetchSurvey, TYPE_CHOICES } from '../src/fetch-survey';
+import { fetchSurvey } from '../src/fetch-survey';
 import { getCwd } from '../src/get-cwd';
+import { TYPE_CHOICES } from '../src/const';
 const cwd = getCwd();
 
 jest.mock('enquirer');

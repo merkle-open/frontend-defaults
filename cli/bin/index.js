@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-require('../build');
+var cli = require('../dist');
+cli.execute();

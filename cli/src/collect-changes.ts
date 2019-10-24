@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import ora from './ora';
+import ora from './ora-facade';
 
 import { create as createReadme } from './create-readme';
 import { create as createLicense } from './create-license';
@@ -21,11 +21,11 @@ import { create as createBuild } from './create-build';
 import { create as createInstall } from './install';
 
 import { sortPackageJson } from './sort-package-json';
-import { IOptions } from './fetch-options';
 import { fetchOriginalFiles } from './fetch-original-files';
 import { mergeFiles } from './merge-files';
 import { IPackageJson } from './type-package-json';
 import deepMerge from './deep-merge';
+import { IOptions } from './const';
 
 export const collectChanges = async (options: IOptions) => {
 	const spinnerCollectChanges = ora('Collect changes').start();

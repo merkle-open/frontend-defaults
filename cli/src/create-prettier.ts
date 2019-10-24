@@ -1,14 +1,15 @@
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createPrettieringoreFile = async ({ prettier }: IOptions): Promise<{ '.prettierignore'?: string }> => {
 	if (!prettier) {
 		return {};
 	}
 
+	const template = await fetchTemplate('prettier', '.prettierignore');
 	return {
-		'.prettierignore': await fetchTemplate('prettier', '.prettierignore'),
+		'.prettierignore': template,
 	};
 };
 
@@ -17,8 +18,9 @@ const createPrittierrcFile = async ({ prettier }: IOptions): Promise<{ '.prettie
 		return {};
 	}
 
+	const template = await fetchTemplate('prettier', '.prettierrc.js');
 	return {
-		'.prettierrc.js': await fetchTemplate('prettier', '.prettierrc.js'),
+		'.prettierrc.js': template,
 	};
 };
 
@@ -28,13 +30,15 @@ const updatePackageJson = async ({ prettier, githooks }: IOptions): Promise<{ 'p
 	}
 
 	if (githooks) {
+		const template = await fetchTemplateJson('prettier', 'package-githooks.json');
 		return {
-			'package.json': await fetchTemplateJson('prettier', 'package-githooks.json'),
+			'package.json': template,
 		};
 	}
 
+	const template = await fetchTemplateJson('prettier', 'package.json');
 	return {
-		'package.json': await fetchTemplateJson('prettier', 'package.json'),
+		'package.json': template,
 	};
 };
 

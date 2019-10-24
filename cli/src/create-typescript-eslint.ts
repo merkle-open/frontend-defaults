@@ -1,8 +1,8 @@
 import deepMerge from 'deepmerge';
 
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createEslintFile = async ({
 	eslint,
@@ -14,15 +14,19 @@ const createEslintFile = async ({
 	}
 
 	if (prettier) {
+		const template = await fetchTemplate('typescript-eslint', '.eslintrc-prettier.js');
+		const templateStrict = await fetchTemplate('typescript-eslint', '.eslintrc-prettier.strict.js');
 		return {
-			'.eslintrc.js': await fetchTemplate('typescript-eslint', '.eslintrc-prettier.js'),
-			'.eslintrc.strict.js': await fetchTemplate('typescript-eslint', '.eslintrc-prettier.strict.js'),
+			'.eslintrc.js': template,
+			'.eslintrc.strict.js': templateStrict,
 		};
 	}
 
+	const template = await fetchTemplate('typescript-eslint', '.eslintrc.js');
+	const templateStrict = await fetchTemplate('typescript-eslint', '.eslintrc.strict.js');
 	return {
-		'.eslintrc.js': await fetchTemplate('typescript-eslint', '.eslintrc.js'),
-		'.eslintrc.strict.js': await fetchTemplate('typescript-eslint', '.eslintrc.strict.js'),
+		'.eslintrc.js': template,
+		'.eslintrc.strict.js': templateStrict,
 	};
 };
 
@@ -31,8 +35,9 @@ const createEslintignoreFile = async ({ ts, eslint }: IOptions): Promise<{ '.esl
 		return {};
 	}
 
+	const template = await fetchTemplate('typescript-eslint', '.eslintignore');
 	return {
-		'.eslintignore': await fetchTemplate('typescript-eslint', '.eslintignore'),
+		'.eslintignore': template,
 	};
 };
 
@@ -44,7 +49,8 @@ const updatePackageJson = async ({ githooks, ts, eslint }: IOptions): Promise<{ 
 	let packageJson = await fetchTemplateJson('typescript-eslint', 'package.json');
 
 	if (githooks) {
-		packageJson = deepMerge(packageJson, await fetchTemplateJson('typescript-eslint', 'package-githooks.json'));
+		const templateGithooks = await fetchTemplateJson('typescript-eslint', 'package-githooks.json');
+		packageJson = deepMerge(packageJson, templateGithooks);
 	}
 
 	return {

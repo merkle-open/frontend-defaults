@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import execa from 'execa';
 
-import ora from './ora';
+import ora from './ora-facade';
 import { wait } from './wait';
 
 async function existGit(cwd: string) {

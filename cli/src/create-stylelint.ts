@@ -1,14 +1,15 @@
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createStylelintConfigFile = async ({ stylelint }: IOptions): Promise<{ 'stylelint.config.js'?: string }> => {
 	if (!stylelint) {
 		return {};
 	}
 
+	const template = await fetchTemplate('stylelint', 'stylelint.config.js');
 	return {
-		'stylelint.config.js': await fetchTemplate('stylelint', 'stylelint.config.js'),
+		'stylelint.config.js': template,
 	};
 };
 
@@ -17,28 +18,27 @@ const createStylelintIgnoreFile = async ({ stylelint }: IOptions): Promise<{ '.s
 		return {};
 	}
 
+	const template = await fetchTemplate('stylelint', '.stylelintignore');
 	return {
-		'.stylelintignore': await fetchTemplate('stylelint', '.stylelintignore'),
+		'.stylelintignore': template,
 	};
 };
 
-const updatePackageJson = async ({
-	cwd,
-	stylelint,
-	githooks,
-}: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
+const updatePackageJson = async ({ stylelint, githooks }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!stylelint) {
 		return {};
 	}
 
 	if (githooks) {
+		const template = await fetchTemplateJson('stylelint', 'package-githooks.json');
 		return {
-			'package.json': await fetchTemplateJson('stylelint', 'package-githooks.json'),
+			'package.json': template,
 		};
 	}
 
+	const template = await fetchTemplateJson('stylelint', 'package.json');
 	return {
-		'package.json': await fetchTemplateJson('stylelint', 'package.json'),
+		'package.json': template,
 	};
 };
 

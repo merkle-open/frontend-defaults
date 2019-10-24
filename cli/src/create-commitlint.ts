@@ -1,6 +1,6 @@
 import { fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const updatePackageJson = async ({ commitlint }: IOptions): Promise<{ 'package.json'?: IPackageJson }> => {
 	if (!commitlint) {

@@ -1,9 +1,9 @@
 import path from 'path';
 import deepMerge from 'deepmerge';
 
-import { IOptions } from './fetch-options';
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createDemoFiles = async ({ ts, build }: IOptions): Promise<{ 'src/index.ts'?: string }> => {
 	if (!build) {
@@ -11,13 +11,15 @@ const createDemoFiles = async ({ ts, build }: IOptions): Promise<{ 'src/index.ts
 	}
 
 	if (ts) {
+		const template = await fetchTemplate('build', 'index.ts');
 		return {
-			[path.join('src', 'index.ts')]: await fetchTemplate('build', 'index.ts'),
+			[path.join('src', 'index.ts')]: template,
 		};
 	}
 
+	const template = await fetchTemplate('build', 'index.js');
 	return {
-		[path.join('src', 'index.js')]: await fetchTemplate('build', 'index.js'),
+		[path.join('src', 'index.js')]: template,
 	};
 };
 
@@ -26,8 +28,9 @@ const createBabelConfigFile = async ({ build, ts }: IOptions): Promise<{ 'babel.
 		return {};
 	}
 
+	const template = await fetchTemplate('build', 'babel.config.js');
 	return {
-		'babel.config.js': await fetchTemplate('build', 'babel.config.js'),
+		'babel.config.js': template,
 	};
 };
 
@@ -39,12 +42,14 @@ const updatePackageJson = async ({ build, ts }: IOptions): Promise<{ 'package.js
 	let packageData = await fetchTemplateJson('build', 'package.json');
 
 	if (ts) {
+		const template = await fetchTemplateJson('build', 'package-ts.json');
 		return {
-			'package.json': deepMerge(packageData, await fetchTemplateJson('build', 'package-ts.json')),
+			'package.json': deepMerge(packageData, template),
 		};
 	}
 
-	return { 'package.json': deepMerge(packageData, await fetchTemplateJson('build', 'package-babel.json')) };
+	const template = await fetchTemplateJson('build', 'package-babel.json');
+	return { 'package.json': deepMerge(packageData, template) };
 };
 
 export const create = async (options: IOptions) => {

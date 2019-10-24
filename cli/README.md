@@ -52,6 +52,18 @@ Options:
   -h, --help                      output usage information
 ```
 
+## API usage
+
+```
+const { api } = require("@namics/frontend-defaults-cli");
+
+api({
+  ts: true,
+  eslint: true,
+  install: false
+});
+```
+
 ## License
 
 [MIT License](./LICENSE)

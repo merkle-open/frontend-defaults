@@ -1,6 +1,6 @@
 /// <reference types="@types/jest" />
 import { apiIt } from './shared';
-import { TYPE_CHOICES } from '../src/fetch-survey';
+import { TYPE_CHOICES } from '../src/const';
 
 describe('license', () => {
 	it('license-open-source', async () =>

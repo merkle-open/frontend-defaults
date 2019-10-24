@@ -1,7 +1,6 @@
 import latestVersion from 'latest-version';
-
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createNodeVersionFiles = async ({
 	nodeVersion,

@@ -10,8 +10,8 @@
 import deepMerge from 'deepmerge';
 
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
 import { IPackageJson } from './type-package-json';
+import { IOptions } from './const';
 
 const createEslintFile = async ({
 	ts,
@@ -23,15 +23,19 @@ const createEslintFile = async ({
 	}
 
 	if (prettier) {
+		const template = await fetchTemplate('eslint', '.eslintrc-prettier.js');
+		const templateStrict = await fetchTemplate('eslint', '.eslintrc-prettier.strict.js');
 		return {
-			'.eslintrc.js': await fetchTemplate('eslint', '.eslintrc-prettier.js'),
-			'.eslintrc.strict.js': await fetchTemplate('eslint', '.eslintrc-prettier.strict.js'),
+			'.eslintrc.js': template,
+			'.eslintrc.strict.js': templateStrict,
 		};
 	}
 
+	const template = await fetchTemplate('eslint', '.eslintrc.js');
+	const templateStrict = await fetchTemplate('eslint', '.eslintrc.strict.js');
 	return {
-		'.eslintrc.js': await fetchTemplate('eslint', '.eslintrc.js'),
-		'.eslintrc.strict.js': await fetchTemplate('eslint', '.eslintrc.strict.js'),
+		'.eslintrc.js': template,
+		'.eslintrc.strict.js': templateStrict,
 	};
 };
 
@@ -40,8 +44,9 @@ const createEslintignoreFile = async ({ ts, eslint }: IOptions): Promise<{ '.esl
 		return {};
 	}
 
+	const template = await fetchTemplate('eslint', '.eslintignore');
 	return {
-		'.eslintignore': await fetchTemplate('eslint', '.eslintignore'),
+		'.eslintignore': template,
 	};
 };
 
@@ -61,11 +66,8 @@ const updatePackageJson = async ({ ts, githooks, eslint }: IOptions): Promise<{ 
 	};
 };
 
-export const create = async (options: IOptions) => {
-	const config = {
-		...(await createEslintFile(options)),
-		...(await createEslintignoreFile(options)),
-		...(await updatePackageJson(options)),
-	};
-	return config;
-};
+export const create = async (options: IOptions) => ({
+	...(await createEslintFile(options)),
+	...(await createEslintignoreFile(options)),
+	...(await updatePackageJson(options)),
+});

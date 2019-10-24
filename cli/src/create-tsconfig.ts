@@ -1,5 +1,5 @@
 import { fetchTemplate, fetchTemplateJson } from './fetch-template';
-import { IOptions } from './fetch-options';
+import { IOptions } from './const';
 
 const createTsconfigFile = async ({ ts }: IOptions): Promise<{ [key: string]: any }> => {
 	if (!ts) {

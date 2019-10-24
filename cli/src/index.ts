@@ -1,8 +1,8 @@
-import api from './api';
+import { api } from './api';
 import { fetchOptions } from './fetch-options';
 import chalk from 'chalk';
 
-(async () => {
+export async function execute() {
 	try {
 		const options = await fetchOptions();
 		await api(options);
@@ -10,4 +10,6 @@ import chalk from 'chalk';
 		console.error(chalk.red(err));
 		process.exit(1);
 	}
-})();
+}
+
+export * from './api';

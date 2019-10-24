@@ -1,7 +1,6 @@
 import { prompt } from 'enquirer';
 import chalk from 'chalk';
 
-import { IOptions } from './fetch-options';
 import { IMergedFiles } from './merge-files';
 import {
 	getPackageJson,
@@ -15,32 +14,7 @@ import {
 	getInstall,
 	getLicense,
 } from './prompts';
-
-export const TYPE_CHOICES = {
-	ts: 'typescript' as 'typescript',
-	es: 'javascript' as 'javascript',
-	eslint: 'eslint' as 'eslint',
-
-	readme: 'readme' as 'readme',
-	licenseOpenSource: 'licenseOpenSource' as 'licenseOpenSource',
-	licenseClosedSource: 'licenseClosedSource' as 'licenseClosedSource',
-	editorconfig: 'editorconfig' as 'editorconfig',
-	npmrc: 'npmrc' as 'npmrc',
-	nodeVersion: 'nodeVersion' as 'nodeVersion',
-	gitignore: 'gitignore' as 'gitignore',
-	githooks: 'githooks' as 'githooks',
-
-	prettier: 'prettier' as 'prettier',
-	stylelint: 'stylelint' as 'stylelint',
-	commitlint: 'commitlint' as 'commitlint',
-
-	webpack: 'webpack' as 'webpack',
-	install: 'install' as 'install',
-	force: 'force' as 'force',
-};
-
-export type TLanguage = typeof TYPE_CHOICES.ts | typeof TYPE_CHOICES.es;
-export type TLicense = typeof TYPE_CHOICES.licenseOpenSource | typeof TYPE_CHOICES.licenseClosedSource | undefined;
+import { TYPE_CHOICES, IOptions } from './const';
 
 export const fetchSurveyFiles = async (mergedFiles: IMergedFiles, options: IOptions) => {
 	const filesChoices = Object.keys(mergedFiles).map((fileName) => ({

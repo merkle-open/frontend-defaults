@@ -5,6 +5,7 @@ export function promptCache<T extends Function>(question: T): T {
 		if (promptMap.has(question)) {
 			return promptMap.get(question) as T;
 		}
+		// @ts-ignore
 		const result = question.apply(this, arguments) as T;
 		promptMap.set(question, result);
 		return result;
