@@ -32,6 +32,7 @@ module.exports = {
 		'selector-max-id': 0,
 		'selector-pseudo-class-case': 'lower',
 		'selector-pseudo-element-case': 'lower',
+		'selector-pseudo-element-colon-notation': 'double',
 		'selector-type-case': 'lower',
 		'string-quotes': 'single',
 		'unit-case': 'lower',
