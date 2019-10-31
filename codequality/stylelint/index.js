@@ -30,6 +30,7 @@ module.exports = {
 		'property-case': 'lower',
 		'property-no-vendor-prefix': [true, { severity: 'warning' }],
 		'selector-max-id': 0,
+		'selector-list-comma-newline-after': 'always-multi-line',
 		'selector-pseudo-class-case': 'lower',
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': 'double',
