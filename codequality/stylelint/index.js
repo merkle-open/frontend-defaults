@@ -26,6 +26,7 @@ module.exports = {
 		'number-leading-zero': 'always',
 		'property-no-vendor-prefix': [true, { severity: 'warning' }],
 		'selector-max-id': 0,
+		'string-quotes': 'single',
 		'value-no-vendor-prefix': [true, { severity: 'warning' }],
 	},
 };
