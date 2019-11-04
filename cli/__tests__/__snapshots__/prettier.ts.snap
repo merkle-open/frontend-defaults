@@ -46,7 +46,7 @@ exports[`prettier default 3`] = `
     Object {
       "__html": "{
   \\"scripts\\": {
-    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json|md)\\\\\\"\\"
   },
   \\"devDependencies\\": {
     \\"@namics/prettier-config\\": \\"0.3.1\\",
@@ -128,13 +128,13 @@ exports[`prettier with-githooks 4`] = `
     Object {
       "__html": "{
   \\"lint-staged\\": {
-    \\"*.{js,jsx,ts,tsx,json}\\": [
+    \\"*.{js,jsx,ts,tsx,json,md}\\": [
       \\"prettier --write\\",
       \\"git add\\"
     ]
   },
   \\"scripts\\": {
-    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json|md)\\\\\\"\\"
   },
   \\"husky\\": {
     \\"hooks\\": {
