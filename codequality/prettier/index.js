@@ -22,5 +22,11 @@ module.exports = {
 				parser: 'babylon',
 			},
 		},
+		{
+			files: ['*.md'],
+			options: {
+				parser: 'markdown',
+			},
+		},
 	],
 };
