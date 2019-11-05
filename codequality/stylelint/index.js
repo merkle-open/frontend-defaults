@@ -1,5 +1,8 @@
 module.exports = {
-	plugins: ['@namics/stylelint-bem'],
+	plugins: [
+		'@namics/stylelint-bem',
+		'stylelint-scss',
+	],
 	rules: {
 		'plugin/stylelint-bem-namics': true,
 		'at-rule-name-case': 'lower',
@@ -29,6 +32,12 @@ module.exports = {
 		'number-leading-zero': 'always',
 		'property-case': 'lower',
 		'property-no-vendor-prefix': [true, { severity: 'warning' }],
+		'scss/declaration-nested-properties': 'never',
+		'scss/operator-no-newline-after': true,
+		'scss/operator-no-newline-before': true,
+		'scss/selector-nest-combinators': 'always',
+		'scss/selector-no-redundant-nesting-selector': true,
+		'scss/selector-no-union-class-name': true,
 		'selector-max-id': 0,
 		'selector-list-comma-newline-after': 'always-multi-line',
 		'selector-pseudo-class-case': 'lower',
