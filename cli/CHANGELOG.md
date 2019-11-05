@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.8.0...@namics/frontend-defaults-cli@0.9.0) (2019-11-05)
+
+
+### Bug Fixes
+
+* update dependencies ([40d682c](https://github.com/namics/frontend-defaults/commit/40d682c7f67ed7990295c171b6898b74a52ebb70))
+* **cli:** update template dependencies ([4b41b1a](https://github.com/namics/frontend-defaults/commit/4b41b1ac86f279fa1f84e15a9f4f8584ccf51a8b))
+* **cli:** update template internal dependencies ([4ae2021](https://github.com/namics/frontend-defaults/commit/4ae2021f5e0119854e7ce7588cc9412a7e87f456))
+
+
+### Features
+
+* **cli:** add markdown support in prettier scripts ([0d39915](https://github.com/namics/frontend-defaults/commit/0d39915b919dbd0e3919e94cf12906411b13e287))
+
+
+
+
+
 # [0.8.0](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.7.0...@namics/frontend-defaults-cli@0.8.0) (2019-10-24)
 
 

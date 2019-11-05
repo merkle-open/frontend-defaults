@@ -1,7 +1,7 @@
 {
   "name": "@namics/frontend-defaults-cli",
   "description": "CLI tool which creates a default setup for your frontend project",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "repository": "https://github.com/namics/frontend-defaults",
   "main": "./dist/index.js",
   "typings": "./build/index.d.ts",
@@ -39,7 +39,7 @@
     "prepublishOnly": "npm-run-all test build"
   },
   "devDependencies": {
-    "@namics/ts-config": "0.4.0",
+    "@namics/ts-config": "^0.4.1",
     "@types/diff": "4.0.2",
     "@types/fs-extra": "8.0.1",
     "@types/jest": "24.0.21",

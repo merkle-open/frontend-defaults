@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@0.3.1...@namics/prettier-config@0.4.0) (2019-11-05)
+
+
+### Bug Fixes
+
+* update dependencies ([40d682c](https://github.com/namics/frontend-defaults/commit/40d682c7f67ed7990295c171b6898b74a52ebb70))
+
+
+### Features
+
+* **prettier:** add markdown support in prettier config ([40ba977](https://github.com/namics/frontend-defaults/commit/40ba977826554ec1287cea27ffb7d19b32c7b087))
+
+
+
+
+
 ## [0.3.1](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@0.3.0...@namics/prettier-config@0.3.1) (2019-10-24)
 
 **Note:** Version bump only for package @namics/prettier-config

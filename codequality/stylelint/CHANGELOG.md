@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.3.9...@namics/stylelint-config@0.4.0) (2019-11-05)
+
+
+### Bug Fixes
+
+* update dependencies ([40d682c](https://github.com/namics/frontend-defaults/commit/40d682c7f67ed7990295c171b6898b74a52ebb70))
+
+
+### Features
+
+* **stylelint:** add rule for selector lists ([08f23d5](https://github.com/namics/frontend-defaults/commit/08f23d57b2394205095a881e8b68b8d878ccfcf0))
+* **stylelint:** add rule to force single quotes around strings ([d32475f](https://github.com/namics/frontend-defaults/commit/d32475fe1e7c0ad0cee54e159ba7926fe0cd5c81))
+* **stylelint:** add rules that require lower case for properties, selectors, units and more ([28a8fda](https://github.com/namics/frontend-defaults/commit/28a8fdaf9ed136042010d05fdb54b78bf703dc5e))
+* **stylelint:** add stylelint-scss and some scss rules [#16](https://github.com/namics/frontend-defaults/issues/16) ([ea3d58e](https://github.com/namics/frontend-defaults/commit/ea3d58ee5b4cdbf0ebd5e3b7a194aaa0297b4b70))
+* **stylelint:** force double colon notation for pseudo elements ([8bcb9f4](https://github.com/namics/frontend-defaults/commit/8bcb9f4429024b941c47f52b68cbf14d845051e4))
+
+
+
+
+
 ## [0.3.9](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.3.8...@namics/stylelint-config@0.3.9) (2019-10-11)
 
 
