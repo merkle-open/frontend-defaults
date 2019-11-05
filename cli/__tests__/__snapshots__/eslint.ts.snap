@@ -286,7 +286,7 @@ exports[`eslint with-prettier 6`] = `
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:js\\": \\"eslint . -c .eslintrc.strict.js\\",
-    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json|md)\\\\\\"\\"
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"8.0.2\\",

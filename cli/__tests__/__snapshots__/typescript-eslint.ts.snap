@@ -306,7 +306,7 @@ exports[`typescript-eslint with-prettier 6`] = `
   \\"scripts\\": {
     \\"lint\\": \\"npm-run-all lint:*\\",
     \\"lint:ts\\": \\"eslint . --ext .jsx,.js,.ts,.tsx -c .eslintrc.strict.js\\",
-    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json)\\\\\\"\\"
+    \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json|md)\\\\\\"\\"
   },
   \\"devDependencies\\": {
     \\"@namics/eslint-config\\": \\"8.0.2\\",
