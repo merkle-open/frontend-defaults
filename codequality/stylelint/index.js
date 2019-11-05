@@ -35,7 +35,6 @@ module.exports = {
 		'scss/declaration-nested-properties': 'never',
 		'scss/operator-no-newline-after': true,
 		'scss/operator-no-newline-before': true,
-		'scss/selector-nest-combinators': 'always',
 		'scss/selector-no-redundant-nesting-selector': true,
 		'scss/selector-no-union-class-name': true,
 		'selector-max-id': 0,
