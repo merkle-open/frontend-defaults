@@ -37,6 +37,7 @@ async function getConfig() {
 								{ title: 'lint', cmd: 'npm run lint' },
 								{ title: 'clean', cmd: 'npm run clean' },
 								{ title: 'prettier', cmd: 'npm run prettier' },
+								{ title: 'audit', cmd: 'npm run audit' },
 							],
 						}),
 					],
