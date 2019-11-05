@@ -38,6 +38,7 @@ async function getConfig() {
 								{ title: 'clean', cmd: 'npm run clean' },
 								{ title: 'prettier', cmd: 'npm run prettier' },
 								{ title: 'audit', cmd: 'npm run audit' },
+								{ title: 'audit fix', cmd: 'npm audit fix' },
 							],
 						}),
 					],
@@ -49,7 +50,18 @@ async function getConfig() {
 			},
 			{
 				title: 'stylelint',
-				rows: [[new PluginReadme({ file: 'codequality/stylelint/README.md', width: [12, 10, 6] })]],
+				rows: [
+					[
+						new PluginReadme({ file: 'codequality/stylelint/README.md', width: [12, 6, 8] }),
+						new PluginNpmScripts({
+							width: [12, 6, 4],
+							scripts: [
+								{ title: 'audit', cmd: 'npm audit', cwd: 'codequality/stylelint' },
+								{ title: 'audit fix', cmd: 'npm audit fix', cwd: 'codequality/stylelint' },
+							],
+						}),
+					],
+				],
 			},
 			{
 				title: 'ts',
@@ -61,7 +73,19 @@ async function getConfig() {
 					[
 						new PluginReadme({
 							file: 'repo/commitlint-conventional-changelog/README.md',
-							width: [12, 10, 6],
+							width: [12, 6, 8],
+						}),
+						new PluginNpmScripts({
+							scripts: [
+								{ title: 'test', cmd: 'npm run test', cwd: 'repo/commitlint-conventional-changelog' },
+								{ title: 'audit', cmd: 'npm audit', cwd: 'repo/commitlint-conventional-changelog' },
+								{
+									title: 'audit fix',
+									cmd: 'npm audit fix',
+									cwd: 'repo/commitlint-conventional-changelog',
+								},
+							],
+							width: [12, 6, 4],
 						}),
 					],
 					[
@@ -71,18 +95,23 @@ async function getConfig() {
 							allowedCommands: jestCommands,
 							width: [12, 6, 8],
 						}),
-						new PluginNpmScripts({
-							scripts: [
-								{ title: 'test', cmd: 'npm run test', cwd: 'repo/commitlint-conventional-changelog' },
-							],
-							width: [12, 6, 4],
-						}),
 					],
 				],
 			},
 			{
 				title: 'commitizen',
-				rows: [[new PluginReadme({ file: 'repo/cz-conventional-changelog/README.md', width: [12, 10, 6] })]],
+				rows: [
+					[
+						new PluginReadme({ file: 'repo/cz-conventional-changelog/README.md', width: [12, 6, 8] }),
+						new PluginNpmScripts({
+							width: [12, 6, 4],
+							scripts: [
+								{ title: 'audit', cmd: 'npm audit', cwd: 'repo/cz-conventional-changelog' },
+								{ title: 'audit fix', cmd: 'npm audit fix', cwd: 'repo/cz-conventional-changelog' },
+							],
+						}),
+					],
+				],
 			},
 			{
 				title: 'cli',
@@ -94,6 +123,8 @@ async function getConfig() {
 							scripts: [
 								{ title: 'build', cmd: 'npm run build', cwd: 'cli' },
 								{ title: 'test', cmd: 'npm run test', cwd: 'cli' },
+								{ title: 'audit', cmd: 'npm audit', cwd: 'cli' },
+								{ title: 'audit fix', cmd: 'npm audit fix', cwd: 'cli' },
 							],
 						}),
 					],
