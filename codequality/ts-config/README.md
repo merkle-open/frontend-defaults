@@ -10,7 +10,7 @@
 
 ```json
 {
-  "extends": "@namics/ts-config"
+	"extends": "@namics/ts-config"
 }
 ```
 

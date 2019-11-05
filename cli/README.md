@@ -11,6 +11,7 @@ or in an existing project
 `npx @namics/frontend-defaults-cli`
 
 ### Show potential changes
+
 `npx @namics/frontend-defaults-cli --eslint --dryRun`
 
 ### Example greenfield project default with Typescript

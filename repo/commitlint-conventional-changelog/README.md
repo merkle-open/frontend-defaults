@@ -2,7 +2,6 @@
 
 > Shareable `commitlint` config enforcing [convention commits](https://conventionalcommits.org/).
 
-
 ## Usage
 
 `npm i -D husky @commitlint/cli @namics/commitlint-conventional-changelog`

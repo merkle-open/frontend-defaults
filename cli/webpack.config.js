@@ -7,13 +7,13 @@ module.exports = {
 	node: {
 		__dirname: false,
 		__filename: false,
-    },
-    resolve: {
-        alias: {
-            // override any-observable in listr because it uses require in runtime
-            'any-observable': path.resolve('./src/observable.js')
-        },
-    },
+	},
+	resolve: {
+		alias: {
+			// override any-observable in listr because it uses require in runtime
+			'any-observable': path.resolve('./src/observable.js'),
+		},
+	},
 	output: {
 		filename: `index.js`,
 		library: 'frontend-defaults-cli',

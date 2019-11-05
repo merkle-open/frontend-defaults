@@ -1,8 +1,5 @@
 module.exports = {
-	plugins: [
-		'@namics/stylelint-bem',
-		'stylelint-scss',
-	],
+	plugins: ['@namics/stylelint-bem', 'stylelint-scss'],
 	rules: {
 		'plugin/stylelint-bem-namics': true,
 		'at-rule-name-case': 'lower',
