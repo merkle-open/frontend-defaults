@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.2](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.9.1...@namics/frontend-defaults-cli@0.9.2) (2019-11-06)
+
+
+### Bug Fixes
+
+* **cli:** fix linting errors in styles.scss template ([06a843e](https://github.com/namics/frontend-defaults/commit/06a843eb5be97aa60ac5ff6139a155511d3e724b))
+* **cli:** update template internal dependencies ([0f8b29a](https://github.com/namics/frontend-defaults/commit/0f8b29ab40367a8bd75c2c88329d1164f9cd3bd0))
+
+
+
+
+
 ## [0.9.1](https://github.com/namics/frontend-defaults/compare/@namics/frontend-defaults-cli@0.9.0...@namics/frontend-defaults-cli@0.9.1) (2019-11-05)
 
 ### Bug Fixes
