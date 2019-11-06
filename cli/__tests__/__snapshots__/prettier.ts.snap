@@ -49,7 +49,7 @@ exports[`prettier default 3`] = `
     \\"prettier\\": \\"prettier --write \\\\\\"**/*.*(js|jsx|ts|tsx|json|md)\\\\\\"\\"
   },
   \\"devDependencies\\": {
-    \\"@namics/prettier-config\\": \\"0.4.0\\",
+    \\"@namics/prettier-config\\": \\"0.4.1\\",
     \\"prettier\\": \\"1.18.2\\"
   }
 }",
@@ -142,7 +142,7 @@ exports[`prettier with-githooks 4`] = `
     }
   },
   \\"devDependencies\\": {
-    \\"@namics/prettier-config\\": \\"0.4.0\\",
+    \\"@namics/prettier-config\\": \\"0.4.1\\",
     \\"husky\\": \\"3.0.9\\",
     \\"lint-staged\\": \\"9.4.2\\",
     \\"prettier\\": \\"1.18.2\\"

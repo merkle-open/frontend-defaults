@@ -18,8 +18,8 @@
 		}
 	},
 	"devDependencies": {
-		"@namics/cz-conventional-changelog": "1.1.8",
-		"@namics/commitlint-conventional-changelog": "1.1.9",
+		"@namics/cz-conventional-changelog": "1.1.9",
+		"@namics/commitlint-conventional-changelog": "1.1.10",
 		"@commitlint/cli": "8.2.0",
 		"husky": "3.0.9",
 		"lint-staged": "9.4.2",

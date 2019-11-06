@@ -119,7 +119,7 @@ exports[`webpack webpack-with-ts 1`] = `
     Object {
       "__html": "{
   \\"devDependencies\\": {
-    \\"@namics/ts-config\\": \\"0.4.1\\",
+    \\"@namics/ts-config\\": \\"0.4.2\\",
     \\"@types/core-js\\": \\"2.5.2\\",
     \\"asset-config-webpack-plugin\\": \\"0.1.0-mock\\",
     \\"clean-webpack-plugin\\": \\"0.1.0-mock\\",
