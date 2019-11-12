@@ -13,7 +13,3 @@
 **/public
 **/coverage
 **/storybook-static
-
-# Project
-cli/templates
-cli/__tests__/tmp

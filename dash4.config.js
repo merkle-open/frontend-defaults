@@ -113,37 +113,6 @@ async function getConfig() {
 					],
 				],
 			},
-			{
-				title: 'cli',
-				rows: [
-					[
-						new PluginReadme({ file: 'cli/README.md', width: [12, 6, 8] }),
-						new PluginNpmScripts({
-							width: [12, 6, 4],
-							scripts: [
-								{ title: 'build', cmd: 'npm run build', cwd: 'cli' },
-								{ title: 'test', cmd: 'npm run test', cwd: 'cli' },
-								{ title: 'audit', cmd: 'npm audit', cwd: 'cli' },
-								{ title: 'audit fix', cmd: 'npm audit fix', cwd: 'cli' },
-							],
-						}),
-					],
-					[
-						new PluginTerminal({
-							cmd: 'npm run watch-test',
-							cwd: 'cli',
-							allowedCommands: jestCommands,
-							width: [12, 6, 6],
-						}),
-						new PluginTerminal({
-							autostart: true,
-							cmd: 'npm run watch',
-							cwd: 'cli',
-							width: [12, 6, 6],
-						}),
-					],
-				],
-			},
 		],
 	};
 }

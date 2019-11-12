@@ -1,6 +1,0 @@
-{
-	"scripts": {
-		"build": "tsc --outDir build",
-		"watch": "tsc --watch --outDir build"
-	}
-}

@@ -1,4 +1,4 @@
 {
-  "packages": ["codequality/*", "repo/*", "cli"],
+  "packages": ["codequality/*", "repo/*"],
   "version": "independent"
 }

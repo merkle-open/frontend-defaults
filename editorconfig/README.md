@@ -7,4 +7,4 @@ Reason: Configures the editor
 -   force charset & newline styles
 -   set defaults
 
-[editorconfig template](../cli/templates/editorconfig/.editorconfig)
+[editorconfig template](https://github.com/namics/frontend-defaults-cli/blob/master/templates/editorconfig/.editorconfig)

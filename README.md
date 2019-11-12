@@ -12,7 +12,7 @@ git clone https://github.com/namics/frontend-defaults.git
 
 ## CLI
 
-You can use our [CLI](./cli/README.md) for adding configurations to your project
+You can use our [CLI](https://github.com/namics/frontend-defaults-cli) for adding configurations to your project
 
 ## Contents
 
@@ -47,9 +47,6 @@ Reason:
 
 | Package                                     | npm                                                                                                                                                           |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **cli**                                     |                                                                                                                                                               |
-| `@namics/frontend-defaults-cli`             | [![npm](https://img.shields.io/npm/v/@namics/frontend-defaults-cli.svg)](https://www.npmjs.com/package/@namics/frontend-defaults-cli)                         |
-| **configs**                                 |                                                                                                                                                               |
 | `@namics/commitlint-conventional-changelog` | [![npm](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/commitlint-conventional-changelog) |
 | `@namics/cz-conventional-changelog`         | [![npm](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/cz-conventional-changelog)                 |
 | `@namics/prettier-config`                   | [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                                     |

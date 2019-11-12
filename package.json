@@ -19,7 +19,7 @@
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\" \"!cli/templates/**\" \"!cli/__tests__/tmp/**\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\"",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "build": "lerna run build",
@@ -31,8 +31,7 @@
     "audit:root": "npm audit",
     "audit:package1": "lerna exec --scope @namics/stylelint-config -- npm audit",
     "audit:package2": "lerna exec --scope @namics/commitlint-conventional-changelog -- npm audit",
-    "audit:package3": "lerna exec --scope @namics/cz-conventional-changelog -- npm audit",
-    "audit:package4": "lerna exec --scope @namics/frontend-defaults-cli -- npm audit"
+    "audit:package3": "lerna exec --scope @namics/cz-conventional-changelog -- npm audit"
   },
   "husky": {
     "hooks": {
@@ -41,12 +40,6 @@
     }
   },
   "lint-staged": {
-    "cli/src/*.*{js,jsx,ts,tsx,json}": [
-      "prettier --list-different --write"
-    ],
-    "cli/__tests__/*.*{js,jsx,ts,tsx,json}": [
-      "prettier --list-different --write"
-    ],
     "codequality/*.*{js,jsx,ts,tsx,json}": [
       "prettier --list-different --write"
     ],
