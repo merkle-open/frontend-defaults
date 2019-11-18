@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.4.1](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.4.0...@namics/stylelint-config@0.4.1) (2019-11-06)
 
-
 ### Bug Fixes
 
-* **stylelint:** remove scss/selector-nest-combinators rule because it is too strict ([463862e](https://github.com/namics/frontend-defaults/commit/463862e3860f458961a660ef96f64ff1bec53d7c))
-
-
-
-
+-   **stylelint:** remove scss/selector-nest-combinators rule because it is too strict ([463862e](https://github.com/namics/frontend-defaults/commit/463862e3860f458961a660ef96f64ff1bec53d7c))
 
 # [0.4.0](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.3.9...@namics/stylelint-config@0.4.0) (2019-11-05)
 

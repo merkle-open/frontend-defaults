@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @namics/ts-config
 
-
-
-
-
 ## [0.4.1](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@0.4.0...@namics/ts-config@0.4.1) (2019-11-05)
 
 ### Bug Fixes

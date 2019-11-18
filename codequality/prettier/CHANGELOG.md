@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @namics/prettier-config
 
-
-
-
-
 # [0.4.0](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@0.3.1...@namics/prettier-config@0.4.0) (2019-11-05)
 
 ### Bug Fixes

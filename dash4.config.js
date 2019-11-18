@@ -15,7 +15,7 @@ const { PluginTerminal, jestCommands } = require('@dash4/plugin-terminal');
 
 async function getConfig() {
 	return {
-		port: 8080,
+		port: 4000,
 		tabs: [
 			{
 				title: 'root',
