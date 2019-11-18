@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.10...@namics/commitlint-conventional-changelog@1.1.11) (2019-11-18)
+
+
+### Bug Fixes
+
+* update dependencies ([f151d42](https://github.com/namics/frontend-defaults/commit/f151d4275056f78a59d0f992b5fcb17489244027))
+
+
+
+
+
 ## [1.1.10](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.9...@namics/commitlint-conventional-changelog@1.1.10) (2019-11-06)
 
 **Note:** Version bump only for package @namics/commitlint-conventional-changelog
