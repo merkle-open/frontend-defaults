@@ -13,3 +13,6 @@
 **/public
 **/coverage
 **/storybook-static
+
+# Generated
+**/CHANGELOG.md
