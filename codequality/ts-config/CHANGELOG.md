@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@0.4.3...@namics/ts-config@0.4.4) (2020-01-06)
+
+
+### Bug Fixes
+
+* update node version and update dependencies ([5f835b5](https://github.com/namics/frontend-defaults/commit/5f835b5a690d57177d0e18d0fc4c6644adba8d2e))
+
+
+
+
+
 ## [0.4.3](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@0.4.2...@namics/ts-config@0.4.3) (2019-11-18)
 
 

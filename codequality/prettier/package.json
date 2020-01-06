@@ -1,7 +1,7 @@
 {
   "name": "@namics/prettier-config",
   "description": "Shared prettier config",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "repository": "https://github.com/namics/frontend-defaults",
   "license": "MIT",
   "author": "Namics AG",
