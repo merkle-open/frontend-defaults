@@ -12,10 +12,13 @@
     "Simon Mollweide<simon.mollweide@namics.com>"
   ],
   "scripts": {
-    "clean": "npx npm-run-all clean:*",
+    "update-dependencies": "npm-run-all --parallel update-dependencies:*",
+    "update-dependencies:packages": "lerna exec -- npm-check-updates -u",
+    "update-dependencies:root": "npm-check-updates -u",
+    "clean": "npx --ignore-existing --quiet npm-run-all clean:*",
     "clean:lerna": "lerna clean --yes",
     "clean:dirs": "rimraf **/lerna-debug.log **/npm-debug.log **/package-lock.json",
-    "clean:modules": "npx rimraf node_modules",
+    "clean:modules": "npx --ignore-existing --quiet rimraf node_modules",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
@@ -76,6 +79,7 @@
     "lerna": "3.20.2",
     "lint-staged": "9.5.0",
     "npm-run-all": "4.1.5",
+    "npm-check-updates": "4.0.1",
     "prettier": "1.19.1",
     "rimraf": "3.0.0"
   }
