@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.5.2...@namics/stylelint-config@0.5.3) (2020-01-17)
+
+
+### Bug Fixes
+
+* update dependencies ([b4d0244](https://github.com/namics/frontend-defaults/commit/b4d024413003dafb5c5e7b6792bb2d40caf7bb3f))
+
+
+
+
+
 ## [0.5.2](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.5.1...@namics/stylelint-config@0.5.2) (2020-01-06)
 
 
