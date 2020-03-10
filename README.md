@@ -28,7 +28,7 @@ Reason:
 
 ### Codequality
 
--   [accessibility](./codequality/accessibility/README.md)
+-   [accessibility](./codequality/accessibility/README.md) (deprecated)
 -   [editorconfig](./editorconfig/README.md)
 -   [eslint](./codequality/eslint/README.md)
 -   [htmllint](./codequality/htmllint/.htmllintrc)
