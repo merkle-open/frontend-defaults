@@ -32,7 +32,6 @@ async function getConfig() {
 							scripts: [
 								{ title: 'install', cmd: 'npm install' },
 								{ title: 'bootstrap', cmd: 'npm run bootstrap' },
-								{ title: 'build', cmd: 'npm run build' },
 								{ title: 'test', cmd: 'npm run test' },
 								{ title: 'lint', cmd: 'npm run lint' },
 								{ title: 'clean', cmd: 'npm run clean' },

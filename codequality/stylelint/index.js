@@ -3,7 +3,7 @@ module.exports = {
 	rules: {
 		'plugin/stylelint-bem-namics': true,
 		'at-rule-name-case': 'lower',
-		"at-rule-no-unknown": null,
+		'at-rule-no-unknown': null,
 		'at-rule-no-vendor-prefix': true,
 		'block-closing-brace-space-before': ['always-single-line', { severity: 'warning' }],
 		'block-opening-brace-space-after': ['always-single-line', { severity: 'warning' }],
@@ -30,7 +30,7 @@ module.exports = {
 		'number-leading-zero': 'always',
 		'property-case': 'lower',
 		'property-no-vendor-prefix': [true, { severity: 'warning' }],
-		"scss/at-rule-no-unknown": true,
+		'scss/at-rule-no-unknown': true,
 		'scss/declaration-nested-properties': 'never',
 		'scss/operator-no-newline-after': true,
 		'scss/operator-no-newline-before': true,

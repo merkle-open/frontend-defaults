@@ -25,7 +25,6 @@
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\"",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
-    "build": "lerna run build",
     "prerelease": "npm-run-all test lint",
     "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master",
     "start": "dash4",
@@ -42,16 +41,16 @@
     }
   },
   "lint-staged": {
-    "codequality/*.*{js,jsx,ts,tsx,json}": [
+    "codequality/*.*{js,jsx,ts,tsx,json,md}": [
       "prettier --list-different --write"
     ],
-    "docs/*.*{js,jsx,ts,tsx,json}": [
+    "doc/*.*{js,jsx,ts,tsx,json,md}": [
       "prettier --list-different --write"
     ],
-    "editorconfig/*.*{js,jsx,ts,tsx,json}": [
+    "editorconfig/*.*{js,jsx,ts,tsx,json,md}": [
       "prettier --list-different --write"
     ],
-    "repo/*.*{js,jsx,ts,tsx,json}": [
+    "repo/*.*{js,jsx,ts,tsx,json,md}": [
       "prettier --list-different --write"
     ]
   },
