@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.5.3...@namics/stylelint-config@1.0.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* update default node version, remove node 8 ([1110c7e](https://github.com/namics/frontend-defaults/commit/1110c7e6d66620a192dd29893df9b049ac435a59))
+* update dependencies [#23](https://github.com/namics/frontend-defaults/issues/23) ([01d0f77](https://github.com/namics/frontend-defaults/commit/01d0f77ced8013e856b61d603ad1e2bf187d4845))
+
+
+### Features
+
+* **stylelint:** add rule scss/at-rule-no-unknown [#24](https://github.com/namics/frontend-defaults/issues/24) ([50826d2](https://github.com/namics/frontend-defaults/commit/50826d26681a3808ca825a96fd98dc5f87468124))
+
+
+### BREAKING CHANGES
+
+* remove official support for node 8
+
+
+
+
+
+
 ## [0.5.3](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@0.5.2...@namics/stylelint-config@0.5.3) (2020-01-17)
 
 

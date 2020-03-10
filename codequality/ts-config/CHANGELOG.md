@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@0.4.4...@namics/ts-config@1.0.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* update default node version, remove node 8 ([1110c7e](https://github.com/namics/frontend-defaults/commit/1110c7e6d66620a192dd29893df9b049ac435a59))
+
+
+### BREAKING CHANGES
+
+* remove official support for node 8
+
+
+
+
+
+
 ## [0.4.4](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@0.4.3...@namics/ts-config@0.4.4) (2020-01-06)
 
 

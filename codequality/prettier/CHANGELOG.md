@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@0.4.3...@namics/prettier-config@1.0.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* update default node version, remove node 8 ([1110c7e](https://github.com/namics/frontend-defaults/commit/1110c7e6d66620a192dd29893df9b049ac435a59))
+* update dependencies [#23](https://github.com/namics/frontend-defaults/issues/23) ([01d0f77](https://github.com/namics/frontend-defaults/commit/01d0f77ced8013e856b61d603ad1e2bf187d4845))
+
+
+### BREAKING CHANGES
+
+* remove official support for node 8
+
+
+
+
+
+
 ## [0.4.3](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@0.4.2...@namics/prettier-config@0.4.3) (2020-01-06)
 
 

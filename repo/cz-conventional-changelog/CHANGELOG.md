@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.11...@namics/cz-conventional-changelog@2.0.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* update default node version, remove node 8 ([1110c7e](https://github.com/namics/frontend-defaults/commit/1110c7e6d66620a192dd29893df9b049ac435a59))
+
+
+### BREAKING CHANGES
+
+* remove official support for node 8
+
+
+
+
+
+
 ## [1.1.11](https://github.com/namics/frontend-defaults/compare/@namics/cz-conventional-changelog@1.1.10...@namics/cz-conventional-changelog@1.1.11) (2020-01-06)
 
 
