@@ -57,8 +57,7 @@ module.exports = require('@namics/prettier-config');
   ...
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "scripts": {
