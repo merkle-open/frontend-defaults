@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@1.0.1...@namics/prettier-config@1.1.0) (2020-04-22)
+
+
+### Features
+
+* **prettier:** compatibility with version 2 of prettier ([5877b02](https://github.com/namics/frontend-defaults/commit/5877b027b4695b059f18571adf823c09aec72967))
+
+
+
+
+
+
 ## [1.0.1](https://github.com/namics/frontend-defaults/compare/@namics/prettier-config@1.0.0...@namics/prettier-config@1.0.1) (2020-03-15)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@namics/commitlint-conventional-changelog",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "repository": "https://github.com/namics/frontend-defaults",
   "author": "Namics AG",
   "contributors": [
