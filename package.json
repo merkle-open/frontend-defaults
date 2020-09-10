@@ -22,7 +22,7 @@
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|html|yml|yaml)\"",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "prerelease": "npm-run-all test lint",
@@ -41,16 +41,16 @@
     }
   },
   "lint-staged": {
-    "codequality/*.*{js,jsx,ts,tsx,json,md}": [
+    "codequality/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
       "prettier --list-different --write"
     ],
-    "doc/*.*{js,jsx,ts,tsx,json,md}": [
+    "doc/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
       "prettier --list-different --write"
     ],
-    "editorconfig/*.*{js,jsx,ts,tsx,json,md}": [
+    "editorconfig/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
       "prettier --list-different --write"
     ],
-    "repo/*.*{js,jsx,ts,tsx,json,md}": [
+    "repo/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
       "prettier --list-different --write"
     ]
   },

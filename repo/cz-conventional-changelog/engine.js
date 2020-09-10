@@ -5,8 +5,8 @@ const map = require('lodash.map');
 const longest = require('longest');
 const rightPad = require('right-pad');
 
-const filter = function (array) {
-	return array.filter(function (x) {
+const filter = function(array) {
+	return array.filter(function(x) {
 		return x;
 	});
 };
@@ -17,11 +17,11 @@ const addTicket = (ticket) => (ticket && ticket !== '' ? ` [${ticket.trim()}]` :
 // This can be any kind of SystemJS compatible module.
 // We use Commonjs here, but ES6 or AMD would do just
 // fine.
-module.exports = function (options) {
+module.exports = function(options) {
 	const types = options.types;
 
 	const length = longest(Object.keys(types)).length + 1;
-	const choices = map(types, function (type, key) {
+	const choices = map(types, function(type, key) {
 		return {
 			name: rightPad(key + ':', length) + ' ' + type.description,
 			value: key,
@@ -40,7 +40,7 @@ module.exports = function (options) {
 		//
 		// By default, we'll de-indent your commit
 		// template and will keep empty lines.
-		prompter: function (cz, commit) {
+		prompter: function(cz, commit) {
 			console.log(
 				'\nLine 1 will be cropped at 120 characters. All other lines will be wrapped after 120 characters.\n'
 			);
@@ -91,11 +91,11 @@ module.exports = function (options) {
 					name: 'breaking',
 					message: 'Describe the breaking changes:\n',
 					validate: requiredInput,
-					when: function (answers) {
+					when: function(answers) {
 						return answers.isBreaking;
 					},
 				},
-			]).then(function (answers) {
+			]).then(function(answers) {
 				const maxLineWidth = 120;
 
 				const wrapOptions = {

@@ -8,7 +8,7 @@ Some defaults for frontend projects
 git clone https://github.com/namics/frontend-defaults.git
 ```
 
--   Branch - Master only (so long)
+- Branch - Master only (so long)
 
 ## CLI
 
@@ -22,26 +22,26 @@ You can use our [CLI](https://github.com/namics/frontend-defaults-cli) for addin
 
 Reason:
 
--   Readme for your project root
--   Define & check some project specific basics (Setup, Specification, Usage, ...)
--   Link to other documentations
+- Readme for your project root
+- Define & check some project specific basics (Setup, Specification, Usage, ...)
+- Link to other documentations
 
 ### Codequality
 
--   [accessibility](./codequality/accessibility/README.md) (deprecated)
--   [editorconfig](./editorconfig/README.md)
--   [eslint](./codequality/eslint/README.md)
--   [htmllint](./codequality/htmllint/.htmllintrc)
--   [prettier-config](./codequality/prettier/README.md)
--   [stylelint-config](./codequality/stylelint/README.md)
--   [ts-config](./codequality/ts-config/README.md)
+- [accessibility](./codequality/accessibility/README.md) (deprecated)
+- [editorconfig](./editorconfig/README.md)
+- [eslint](./codequality/eslint/README.md)
+- [htmllint](./codequality/htmllint/.htmllintrc)
+- [prettier-config](./codequality/prettier/README.md)
+- [stylelint-config](./codequality/stylelint/README.md)
+- [ts-config](./codequality/ts-config/README.md)
 
 ### Repo
 
--   [.gitattributes](./repo/gitattributes/README.md)
--   [.gitignore](./repo/gitignore/README.md)
--   [commitlint](./repo/commitlint-conventional-changelog/README.md)
--   [commitizen](./repo/cz-conventional-changelog/README.md)
+- [.gitattributes](./repo/gitattributes/README.md)
+- [.gitignore](./repo/gitignore/README.md)
+- [commitlint](./repo/commitlint-conventional-changelog/README.md)
+- [commitizen](./repo/cz-conventional-changelog/README.md)
 
 ## Published packages
 

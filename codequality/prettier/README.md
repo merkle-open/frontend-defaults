@@ -41,7 +41,7 @@ module.exports = require('@namics/prettier-config');
 ```json
   ...
   "scripts": {
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|html|yml|yaml)\"",
     ...
   },
   ...
@@ -56,12 +56,12 @@ module.exports = require('@namics/prettier-config');
 ```json
   ...
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,md}": [
+    "*.{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
       "prettier --write"
     ]
   },
   "scripts": {
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|html|yml|yaml)\"",
     ...
   },
   "husky": {

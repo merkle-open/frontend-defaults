@@ -23,9 +23,9 @@ src/shared/base/reset/css/yui/reset.css
 
 ```json
 {
-	"scripts": {
-		"lint:css": "stylelint src/**/*.*ss"
-	}
+  "scripts": {
+    "lint:css": "stylelint src/**/*.*ss"
+  }
 }
 ```
 
@@ -37,17 +37,17 @@ src/shared/base/reset/css/yui/reset.css
 
 ```json
 {
-	"scripts": {
-		"lint:css": "stylelint src/**/*.*ss"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"src/**/*.*ss": ["stylelint"]
-	}
+  "scripts": {
+    "lint:css": "stylelint src/**/*.*ss"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.*ss": ["stylelint"]
+  }
 }
 ```
 

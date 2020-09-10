@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "10"
-  - "12"
+  - '10'
+  - '12'
 install:
   - travis_retry npm install
 script:
