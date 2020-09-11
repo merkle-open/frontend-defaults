@@ -1,4 +1,4 @@
-const lint = require('@commitlint/lint').default;
+const lint = require('@commitlint/lint');
 const rules = require('./index').rules;
 
 describe('commitlint', () => {
