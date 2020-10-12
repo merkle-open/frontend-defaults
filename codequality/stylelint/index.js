@@ -11,7 +11,7 @@ module.exports = {
 		'color-hex-case': ['lower', { severity: 'warning' }],
 		'color-named': 'never',
 		'color-no-invalid-hex': [true, { severity: 'warning' }],
-		'comment-word-blacklist': ['todo', { severity: 'warning' }],
+		'comment-word-disallowed-list': ['todo', { severity: 'warning' }],
 		'declaration-block-no-duplicate-properties': [true, { severity: 'warning' }],
 		'declaration-block-no-shorthand-property-overrides': [true, { severity: 'warning' }],
 		'declaration-block-semicolon-newline-after': ['always', { severity: 'warning' }],
