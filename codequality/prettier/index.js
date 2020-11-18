@@ -13,7 +13,7 @@ module.exports = {
 		{
 			files: ['*.json', '.*.json'],
 			options: {
-				parser: 'json-stringify',
+				parser: 'json',
 			},
 		},
 		{
