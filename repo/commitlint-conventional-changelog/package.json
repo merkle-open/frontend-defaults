@@ -1,6 +1,6 @@
 {
   "name": "@namics/commitlint-conventional-changelog",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "repository": "https://github.com/namics/frontend-defaults",
   "author": "Namics AG",
   "contributors": [
@@ -20,8 +20,8 @@
     "husky": ">=4.0.0"
   },
   "devDependencies": {
-    "@commitlint/lint": "9.1.2",
-    "jest": "26.4.2",
+    "@commitlint/lint": "11.0.0",
+    "jest": "26.6.3",
     "npm-run-all": "4.1.5"
   },
   "commitlint": {
