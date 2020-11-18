@@ -14,7 +14,7 @@ describe('commitlint', () => {
 		const { valid } = await lint('chore(scope): message\n\ndetails\n\nBREAKING CHANGE: something', rules);
 		expect(valid).toBe(true);
 	});
-	test('chore(scope): message\n\nBREAKING CHANGE: something => valid'.replace(/\n/g, ' '), async () => {
+    test('chore(scope): message\n\nBREAKING CHANGE: something => valid'.replace(/\n/g, ' '), async () => {
 		const { valid } = await lint('chore(scope): message\n\nBREAKING CHANGE: something', rules);
 		expect(valid).toBe(true);
 	});

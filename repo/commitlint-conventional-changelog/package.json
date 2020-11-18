@@ -31,7 +31,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm-run-all test",
-    "test": "jest",
+    "test": "jest --forceExit --detectOpenHandles",
     "watch-test": "jest --watchAll"
   }
 }
