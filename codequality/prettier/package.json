@@ -20,6 +20,6 @@
     "index.js"
   ],
   "peerDependencies": {
-    "prettier": ">=1.13.0"
+    "prettier": ">=2 <3"
   }
 }
