@@ -19,6 +19,6 @@
     "tsconfig.json"
   ],
   "peerDependencies": {
-    "typescript": "4.x"
+    "typescript": ">= 3 < 5"
   }
 }
