@@ -41,17 +41,17 @@
     }
   },
   "lint-staged": {
-    "codequality/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
-      "prettier --list-different --write"
+    "codequality/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,yml,yaml}": [
+      "prettier --write"
     ],
-    "doc/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
-      "prettier --list-different --write"
+    "doc/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,yml,yaml}": [
+      "prettier --write"
     ],
-    "editorconfig/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
-      "prettier --list-different --write"
+    "editorconfig/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,yml,yaml}": [
+      "prettier --write"
     ],
-    "repo/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,html,yml,yaml}": [
-      "prettier --list-different --write"
+    "repo/*.*{js,jsx,ts,tsx,json,md,mdx,graphql,gql,yml,yaml}": [
+      "prettier --write"
     ]
   },
   "commitlint": {
