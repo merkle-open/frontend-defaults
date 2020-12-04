@@ -11,26 +11,26 @@ module.exports = {
 	arrowParens: 'always',
 	overrides: [
 		{
-			files: ['*.json', '.*.json'],
+			files: '*.json',
 			options: {
 				parser: 'json',
 			},
 		},
 		{
-			files: ['*.(js|jsx)', '.*.(js|jsx)'],
+			files: '*.(js|jsx)',
 			options: {
 				parser: 'babylon',
 			},
 		},
 		{
-			files: ['*.(ts|tsx)', '.*.(ts|tsx)'],
+			files: '*.(ts|tsx)',
 			options: {
 				parser: 'typescript',
 			},
 		},
 		{
 			// use 2 spaces and 80 with because stories also used in documentation
-			files: ['*.stories.ts', '*.stories.tsx'],
+			files: '*.stories.(ts|tsx)',
 			options: {
 				useTabs: false,
 				tabWidth: 2,
@@ -38,13 +38,13 @@ module.exports = {
 			},
 		},
 		{
-			files: ['*.gql', '.*.graphql'],
+			files: '*.(gql|graphql)',
 			options: {
 				parser: 'graphql',
 			},
 		},
 		{
-			files: ['*.md'],
+			files: '*.md',
 			options: {
 				useTabs: false,
 				tabWidth: 2,
@@ -53,7 +53,7 @@ module.exports = {
 			},
 		},
 		{
-			files: ['*.mdx'],
+			files: '*.mdx',
 			options: {
 				useTabs: false,
 				tabWidth: 2,
@@ -62,13 +62,13 @@ module.exports = {
 			},
 		},
 		{
-			files: ['*.html'],
+			files: '*.html',
 			options: {
 				parser: 'html',
 			},
 		},
 		{
-			files: ['*.yml', '*.yaml'],
+			files: '*.(yml|yaml)',
 			options: {
 				useTabs: false,
 				tabWidth: 2,
