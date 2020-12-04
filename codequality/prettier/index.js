@@ -17,12 +17,6 @@ module.exports = {
 			},
 		},
 		{
-			files: '*.html',
-			options: {
-				parser: 'html',
-			},
-		},
-		{
 			files: '*.(js|jsx)',
 			options: {
 				parser: 'babylon',
