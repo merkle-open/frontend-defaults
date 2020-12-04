@@ -11,9 +11,15 @@ module.exports = {
 	arrowParens: 'always',
 	overrides: [
 		{
-			files: '*.json',
+			files: '*.(gql|graphql)',
 			options: {
-				parser: 'json',
+				parser: 'graphql',
+			},
+		},
+		{
+			files: '*.html',
+			options: {
+				parser: 'html',
 			},
 		},
 		{
@@ -23,24 +29,9 @@ module.exports = {
 			},
 		},
 		{
-			files: '*.(ts|tsx)',
+			files: '*.json',
 			options: {
-				parser: 'typescript',
-			},
-		},
-		{
-			// use 2 spaces and 80 with because stories also used in documentation
-			files: '*.stories.(ts|tsx)',
-			options: {
-				useTabs: false,
-				tabWidth: 2,
-				printWidth: 60,
-			},
-		},
-		{
-			files: '*.(gql|graphql)',
-			options: {
-				parser: 'graphql',
+				parser: 'json',
 			},
 		},
 		{
@@ -62,9 +53,18 @@ module.exports = {
 			},
 		},
 		{
-			files: '*.html',
+			files: '*.(ts|tsx)',
 			options: {
-				parser: 'html',
+				parser: 'typescript',
+			},
+		},
+		{
+			// use 2 spaces and 80 with because stories also used in documentation
+			files: '*.stories.(ts|tsx)',
+			options: {
+				useTabs: false,
+				tabWidth: 2,
+				printWidth: 60,
 			},
 		},
 		{
