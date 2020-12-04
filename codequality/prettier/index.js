@@ -75,6 +75,7 @@ module.exports = {
 			files: ['*.yml','*.yaml'],
 			options: {
 				parser: 'yaml',
+				singleQuote: false,
 				useTabs: false,
 				tabWidth: 2,
 			},
