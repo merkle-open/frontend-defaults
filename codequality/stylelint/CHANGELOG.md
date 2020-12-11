@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@1.0.4...@namics/stylelint-config@1.1.0) (2020-12-11)
+
+
+### Features
+
+* **prettier:** add prettier support for mdx, graphql, html and yml ([c97e810](https://github.com/namics/frontend-defaults/commit/c97e810ef092d35f715fbc5139aaa8118d439b2e))
+
+
+
+
+
 ## [1.0.4](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@1.0.3...@namics/stylelint-config@1.0.4) (2020-10-12)
 
 

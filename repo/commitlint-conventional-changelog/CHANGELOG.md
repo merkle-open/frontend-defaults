@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.18...@namics/commitlint-conventional-changelog@1.2.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* **prettier:** use correct peerDependency for prettier ([6cad0b7](https://github.com/namics/frontend-defaults/commit/6cad0b7ca7c4f9b0a5cdb039822a0aaf9eccefdc))
+
+
+### Features
+
+* **prettier:** use "json" parser instead of "json-stringify" ([3229d17](https://github.com/namics/frontend-defaults/commit/3229d1769c792caeabd23b3b2afc47255d7a4de5))
+
+
+
+
+
 ## [1.1.18](https://github.com/namics/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.1.17...@namics/commitlint-conventional-changelog@1.1.18) (2020-10-12)
 
 **Note:** Version bump only for package @namics/commitlint-conventional-changelog

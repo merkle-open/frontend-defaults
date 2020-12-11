@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@1.0.1...@namics/ts-config@1.1.0) (2020-12-11)
+
+
+### Features
+
+* **prettier:** add prettier support for mdx, graphql, html and yml ([c97e810](https://github.com/namics/frontend-defaults/commit/c97e810ef092d35f715fbc5139aaa8118d439b2e))
+* **prettier:** use "json" parser instead of "json-stringify" ([3229d17](https://github.com/namics/frontend-defaults/commit/3229d1769c792caeabd23b3b2afc47255d7a4de5))
+* **ts-config:** Add TS4.x compatibility via peerDependencies ([871a9fe](https://github.com/namics/frontend-defaults/commit/871a9fe65418fdd07f4499d628b5f261d04ed945))
+* **tsconfig:** Add support for TS 3 & 4 ([b45ca7e](https://github.com/namics/frontend-defaults/commit/b45ca7e6152085f9ef000ca842f8f9efe71aa5ad))
+
+
+
+
+
+
 ## [1.0.1](https://github.com/namics/frontend-defaults/compare/@namics/ts-config@1.0.0...@namics/ts-config@1.0.1) (2020-03-15)
 
 
