@@ -11,7 +11,7 @@
   ],
   "private": false,
   "engines": {
-    "node": ">=10"
+    "node": ">=10.13.0"
   },
   "main": "./index.js",
   "files": [
@@ -20,6 +20,6 @@
     "index.js"
   ],
   "peerDependencies": {
-    "prettier": ">=1.0.0"
+    "prettier": ">=2 <3"
   }
 }

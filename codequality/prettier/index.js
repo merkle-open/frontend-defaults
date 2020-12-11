@@ -9,24 +9,66 @@ module.exports = {
 	bracketSpacing: true,
 	jsxBracketSameLine: false,
 	arrowParens: 'always',
-	parser: 'typescript',
 	overrides: [
 		{
-			files: ['*.json', '.*.json'],
+			files: ['*.gql', '*.graphql'],
+			options: {
+				parser: 'graphql',
+			},
+		},
+		{
+			files: ['*.js', '*.jsx'],
+			options: {
+				parser: 'babel',
+			},
+		},
+		{
+			files: '*.json',
 			options: {
 				parser: 'json',
 			},
 		},
 		{
-			files: ['*.(js|jsx)', '.*.(js|jsx)'],
+			files: '*.md',
 			options: {
-				parser: 'babylon',
+				parser: 'markdown',
+				useTabs: false,
+				tabWidth: 2,
+				printWidth: 60,
 			},
 		},
 		{
-			files: ['*.md'],
+			files: '*.mdx',
 			options: {
-				parser: 'markdown',
+				parser: 'mdx',
+				useTabs: false,
+				tabWidth: 2,
+				printWidth: 60,
+			},
+		},
+		{
+			files: ['*.ts', '*.tsx'],
+			options: {
+				parser: 'typescript',
+			},
+		},
+		{
+			// use 2 spaces and 80 with because stories also used in documentation
+			files: ['*.stories.ts', '*.stories.tsx'],
+			options: {
+				parser: 'typescript',
+				useTabs: false,
+				tabWidth: 2,
+				printWidth: 60,
+			},
+		},
+		{
+			files: ['*.yml', '*.yaml'],
+			options: {
+				parser: 'yaml',
+				singleQuote: false,
+				useTabs: false,
+				tabWidth: 2,
 			},
 		},
 	],
