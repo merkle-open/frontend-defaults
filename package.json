@@ -22,7 +22,7 @@
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|html|yml|yaml)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|yml|yaml)\"",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "prerelease": "npm-run-all test lint",
