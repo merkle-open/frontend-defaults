@@ -72,13 +72,13 @@
     "@dash4/plugin-readme": "0.9.3",
     "@dash4/plugin-terminal": "0.9.3",
     "@dash4/server": "0.9.3",
-    "commitizen": "4.2.2",
+    "commitizen": "4.2.3",
     "conventional-changelog": "3.1.24",
-    "husky": "4.3.6",
+    "husky": "4.3.8",
     "lerna": "3.22.1",
     "lint-staged": "10.5.3",
     "npm-run-all": "4.1.5",
-    "npm-check-updates": "10.2.5",
+    "npm-check-updates": "10.3.1",
     "prettier": "2.2.1",
     "rimraf": "3.0.2"
   }
