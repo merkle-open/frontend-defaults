@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@1.1.0...@namics/stylelint-config@1.1.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* **stylelint:** bump stylelint-scss ([44e7fc8](https://github.com/namics/frontend-defaults/commit/44e7fc86fd598a941a601689999b6519a358ae20))
+
+
+
+
+
 # [1.1.0](https://github.com/namics/frontend-defaults/compare/@namics/stylelint-config@1.0.4...@namics/stylelint-config@1.1.0) (2020-12-11)
 
 
