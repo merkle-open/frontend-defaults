@@ -6,9 +6,6 @@
   "main": "./tsconfig.json",
   "license": "MIT",
   "author": "Namics AG",
-  "contributors": [
-    "Simon Mollweide <simon.mollweide@namics.com>"
-  ],
   "private": false,
   "engines": {
     "node": ">=10"

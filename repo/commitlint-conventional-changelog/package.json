@@ -3,9 +3,6 @@
   "version": "1.2.1",
   "repository": "https://github.com/namics/frontend-defaults",
   "author": "Namics AG",
-  "contributors": [
-    "Simon Mollweide <simon.mollweide@namics.com>"
-  ],
   "description": "Shareable commitlint config enforcing conventional commits",
   "main": "index.js",
   "license": "MIT",
