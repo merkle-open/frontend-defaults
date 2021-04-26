@@ -5,10 +5,6 @@
   "repository": "https://github.com/namics/frontend-defaults",
   "license": "MIT",
   "author": "Namics AG",
-  "contributors": [
-    "Simon Mollweide <simon.mollweide@namics.com>",
-    "Ernst Ammann <ernst.ammann@namics.com>"
-  ],
   "private": false,
   "engines": {
     "node": ">=10.13.0"
