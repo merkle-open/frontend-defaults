@@ -1,8 +1,8 @@
 {
   "name": "@namics/commitlint-conventional-changelog",
   "version": "1.2.1",
-  "repository": "https://github.com/namics/frontend-defaults",
-  "author": "Namics AG",
+  "repository": "https://github.com/merkle-open/frontend-defaults",
+  "author": "Merkle Inc.",
   "description": "Shareable commitlint config enforcing conventional commits",
   "main": "index.js",
   "license": "MIT",

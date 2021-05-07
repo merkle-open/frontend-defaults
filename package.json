@@ -2,9 +2,9 @@
   "name": "@namics/frontend-defaults",
   "version": "1.1.0",
   "license": "MIT",
-  "repository": "https://github.com/namics/frontend-defaults",
+  "repository": "https://github.com/merkle-open/frontend-defaults",
   "private": true,
-  "author": "Namics AG",
+  "author": "Merkle Inc.",
   "scripts": {
     "update-dependencies": "npm-run-all --parallel update-dependencies:*",
     "update-dependencies:packages": "lerna exec -- npm-check-updates -u",
