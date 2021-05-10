@@ -1,18 +1,18 @@
-# Namics Frontend Defaults
+# Frontend Defaults
 
 Some defaults for frontend projects
 
 ## This Project
 
 ```
-git clone https://github.com/namics/frontend-defaults.git
+git clone https://github.com/merkle-open/frontend-defaults.git
 ```
 
 - Branch - Master only (so long)
 
 ## CLI
 
-You can use our [CLI](https://github.com/namics/frontend-defaults-cli) for adding configurations to your project
+You can use our [CLI](https://github.com/merkle-open/frontend-defaults-cli) for adding configurations to your project
 
 ## Contents
 
