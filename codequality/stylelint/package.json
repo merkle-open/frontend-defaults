@@ -22,7 +22,7 @@
     "stylelint": "13.8.0"
   },
   "dependencies": {
-    "@namics/stylelint-bem": "6.3.1",
+    "@namics/stylelint-bem": "6.3.4",
     "stylelint-scss": "3.19.0"
   }
 }
