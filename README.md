@@ -1,4 +1,4 @@
-# Namics Frontend Defaults
+# Frontend Defaults
 
 Some defaults for frontend projects
 
