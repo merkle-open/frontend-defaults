@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/merkle-open/frontend-defaults/compare/@namics/stylelint-config@1.1.1...@namics/stylelint-config@1.1.2) (2021-05-11)
+
+
+### Bug Fixes
+
+* **namics/stylelint-bem:** bump @namics/stylelint-bem (patch) ([e72485c](https://github.com/merkle-open/frontend-defaults/commit/e72485cacde77937a8712662cbf17497217b671f))
+
+
+
+
+
 ## [1.1.1](https://github.com/merkle-open/frontend-defaults/compare/@namics/stylelint-config@1.1.0...@namics/stylelint-config@1.1.1) (2021-02-11)
 
 
