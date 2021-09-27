@@ -21,12 +21,7 @@
     "lint": "lerna run lint --parallel",
     "prerelease": "npm-run-all test lint",
     "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master",
-    "start": "npm run test",
-    "audit": "npm-run-all audit:*",
-    "audit:root": "npm audit",
-    "audit:package1": "lerna exec --scope @namics/stylelint-config -- npm audit",
-    "audit:package2": "lerna exec --scope @namics/commitlint-conventional-changelog -- npm audit",
-    "audit:package3": "lerna exec --scope @namics/cz-conventional-changelog -- npm audit"
+    "start": "npm run test"
   },
   "husky": {
     "hooks": {
