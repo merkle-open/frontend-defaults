@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "@namics/stylelint-bem": "6.3.4",
-    "stylelint-scss": "3.20.1"
+    "stylelint-scss": "3.21.0"
   }
 }
