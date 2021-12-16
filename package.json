@@ -9,10 +9,10 @@
     "update-dependencies": "npm-run-all --parallel update-dependencies:*",
     "update-dependencies:packages": "lerna exec -- npm-check-updates -u",
     "update-dependencies:root": "npm-check-updates -u",
-    "clean": "npx --ignore-existing --quiet npm-run-all clean:*",
+    "clean": "npx -y npm-run-all --npm-path npm clean:*",
     "clean:lerna": "lerna clean --yes",
     "clean:dirs": "rimraf **/lerna-debug.log **/npm-debug.log **/package-lock.json",
-    "clean:modules": "npx --ignore-existing --quiet rimraf node_modules",
+    "clean:modules": "npx -y rimraf node_modules",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
@@ -56,7 +56,7 @@
     "lerna": "4.0.0",
     "lint-staged": "12.1.2",
     "npm-run-all": "4.1.5",
-    "npm-check-updates": "12.0.2",
+    "npm-check-updates": "12.0.3",
     "prettier": "2.5.1",
     "rimraf": "3.0.2"
   }
