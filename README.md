@@ -10,10 +10,6 @@ git clone https://github.com/merkle-open/frontend-defaults.git
 
 - Branch - Master only (so long)
 
-## CLI
-
-You can use our [CLI](https://github.com/merkle-open/frontend-defaults-cli) for adding configurations to your project
-
 ## Contents
 
 ### Documentation
@@ -31,7 +27,7 @@ Reason:
 - [accessibility](./codequality/accessibility/README.md) (deprecated)
 - [editorconfig](./editorconfig/README.md)
 - [eslint](./codequality/eslint/README.md)
-- [htmllint](./codequality/htmllint/.htmllintrc) (deprecated)
+- [htmllint](./codequality/htmllint/README.md) (deprecated)
 - [html-validate](./codequality/html-validate/README.md)
 - [prettier-config](./codequality/prettier/README.md)
 - [stylelint-config](./codequality/stylelint/README.md)

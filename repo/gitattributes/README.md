@@ -9,5 +9,5 @@ Reason:
 - Normalize tabs vs spaces
 - Set Defaults
 
-Place file '[.gitattributes](https://github.com/merkle-open/frontend-defaults-cli/blob/master/templates/gitignore/gitattributes)' in root of every project and add it to git.  
+Place file '[.gitattributes](./.gitattributes)' in root of every project and add it to git.  
 Optional: Place file in user home (\$HOME/.gitconfig) for global defaults.
