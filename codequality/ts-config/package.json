@@ -8,7 +8,7 @@
   "author": "Merkle Inc.",
   "private": false,
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "files": [
     "README.md",
