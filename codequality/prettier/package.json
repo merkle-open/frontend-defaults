@@ -7,7 +7,7 @@
   "author": "Merkle Inc.",
   "private": false,
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=14"
   },
   "main": "./index.js",
   "files": [
