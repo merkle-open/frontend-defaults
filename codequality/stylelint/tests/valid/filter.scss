@@ -1,0 +1,91 @@
+@import '../../../../shared/base/grid/css/variables/grid';
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/component-spacing/css/component-spacing';
+@import '../../../../shared/utils/transitions/css/transitions';
+@import '../../../../shared/utils/vertical-spacing/css/vertical-spacing';
+
+@import './utils/_variables';
+
+.o-filter {
+	@include component-spacing();
+	background-color: $color-filter-background;
+}
+
+.o-filter__container {
+	background-color: $color-filter-background;
+}
+
+.o-filter__bar {
+	@include vertical-spacing(s2, padding-y);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-filter-background;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.o-filter__bar-buttons {
+	// initially hidden
+	.a-button__number {
+		display: none;
+	}
+}
+
+.o-filter__results {
+	position: relative; // anchor for .o-filter__results-loader
+}
+
+.o-filter__results-content {
+	display: grid;
+	gap: $grid-gutter-width;
+	@include media-query(sm) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include media-query(md) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	opacity: 1;
+	transform: translateY(0);
+	@include transitions(opacity 0.3s ease, transform 0.3s ease);
+	.state-o-filter__results--loading & {
+		opacity: 0;
+		transform: translateY(100px);
+		@include transitions(opacity 0.6s ease, transform 0.6s ease 0.2s);
+	}
+}
+
+.o-filter__results-loader {
+	position: absolute;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+	opacity: 0;
+	@include transitions(opacity 0.6s ease);
+	.state-o-filter__results--loading & {
+		display: block;
+		opacity: 1;
+		@include transitions(opacity 0.3s ease);
+	}
+}
+
+.o-filter__no-results {
+	display: none;
+}
+
+.state-o-filter__no-results--visible {
+	display: block;
+}
+
+.o-filter__more {
+	display: flex;
+	justify-content: center;
+	@include vertical-spacing(s4, padding-top);
+}
+
+.state-o-filter__more--hidden {
+	display: none;
+}

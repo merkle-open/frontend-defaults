@@ -15,10 +15,17 @@
 		"stylelint": ">=7.0.0 <14.0.0"
 	},
 	"devDependencies": {
+    "jest": "29.3.1",
 		"stylelint": "13.13.1"
 	},
 	"dependencies": {
 		"@namics/stylelint-bem": "8.0.0",
 		"stylelint-scss": "3.21.0"
-	}
+	},
+  "scripts": {
+    "lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
+    "prepublishOnly": "npm test",
+    "test": "jest",
+    "watch-test": "jest --watchAll"
+  }
 }
