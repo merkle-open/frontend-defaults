@@ -1,0 +1,153 @@
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/elements/css/elements';
+@import '../../../../shared/utils/ellipsis/css/ellipsis';
+@import '../../../../shared/utils/media-queries/css/media-queries';
+@import '../../../../shared/utils/transitions/css/transitions';
+@import '../../../../shared/utils/typo/css/typo';
+
+.a-button {
+	@include typography('button');
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	color: $color-button-primary-font-default;
+	background-color: $color-button-primary-background-default;
+	border: 2px solid $color-button-primary-border-default;
+	border-radius: $button-border-radius;
+	outline: none;
+	cursor: pointer; // to have a pointer for button tag which does not have it per default
+	text-decoration: none;
+
+	[data-whatintent='mouse'] & {
+		@include transitions(background-color, border-color, color);
+	}
+
+	&:hover {
+		color: $color-button-primary-font-hover;
+		background-color: $color-button-primary-background-hover;
+		border-color: $color-button-primary-border-hover;
+
+		.a-button__number {
+			color: $color-button-number-font-hover;
+		}
+	}
+	&:focus {
+		background-color: $color-button-primary-background-focus;
+		border-color: $color-button-primary-border-focus;
+		color: $color-button-primary-font-focus;
+		[data-whatintent='keyboard'] & {
+			box-shadow: $button-keyboard-focus-box-shadow;
+		}
+	}
+	&:active {
+		color: $color-button-primary-font-active;
+		background-color: $color-button-primary-background-active;
+		border-color: $color-button-primary-border-active;
+	}
+
+	@include media-query(xs, sm) {
+		width: 100%;
+		padding: 0.6rem 1.8rem;
+	}
+
+	@include media-query(md) {
+		padding: 1rem 2.2rem;
+	}
+
+	@include media-query(lg, xl) {
+		padding: 1.4rem 2.2rem;
+	}
+}
+
+.a-button__text,
+.a-button__icon,
+.a-button__number {
+	pointer-events: none;
+}
+
+.a-button__text {
+	@include ellipsis();
+	width: auto;
+}
+
+.a-button__icon {
+	margin-right: 0.5rem;
+	font-size: 2rem;
+	line-height: 1;
+
+	@include media-query(md, xl) {
+		font-size: 2.4rem;
+	}
+}
+
+.a-button__number {
+	white-space: nowrap;
+	color: $color-button-number-font-default;
+	background-color: $color-button-number-background-default;
+	padding: 0 0.8rem 0 0.8rem;
+	border-radius: $button-border-radius;
+	margin-left: 0.8rem;
+	margin-right: -1.2rem;
+
+	@include media-query(lg, xl) {
+		margin-right: -0.8rem;
+	}
+}
+
+.a-button__loader {
+	display: none;
+	position: absolute;
+	margin-top: 0.1em;
+	font-size: 1.4em;
+	opacity: 0;
+	animation: a-button-pulse 2s linear infinite normal forwards;
+}
+
+// states
+.state-a-button--disabled,
+.state-a-button--disabled:hover,
+.state-a-button--disabled:focus {
+	color: $color-button-primary-font-disabled;
+	background-color: $color-button-primary-background-disabled;
+	border-color: $color-button-primary-border-disabled;
+	cursor: not-allowed;
+
+	.a-button__number {
+		color: $color-button-number-font-disabled;
+	}
+}
+
+.state-a-button--loading {
+	overflow: hidden;
+	cursor: wait;
+
+	background-color: $color-button-primary-background-focus;
+	border-color: $color-button-primary-border-focus;
+
+	.a-button__text {
+		transform: scale(2.5);
+		opacity: 0;
+		@include transitions(transform 0.5s, opacity 0.3s);
+	}
+
+	.a-button__loader {
+		display: block;
+		opacity: 1;
+		@include transitions(opacity 0.5s);
+	}
+}
+
+@keyframes a-button-pulse {
+	0%, 25% {
+		transform: scale(1, 1);
+		animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+	}
+	12.5%, 37.5% {
+		transform: scale(1.2, 1.2);
+		animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+	}
+	50%, to {
+		transform: scale(1, 1);
+	}
+}

@@ -1,0 +1,75 @@
+@import '../../../../shared/utils/ellipsis/css/ellipsis';
+@import '../../../../shared/utils/helper/css/helper';
+@import '../../../../shared/utils/link/css/link';
+@import '../../../../shared/utils/typo/css/typo';
+@import '../../../../shared/utils/vertical-spacing/css/vertical-spacing';
+
+.m-gdpr-settings__title {
+	@include typography(t6);
+	@include vertical-spacing(s2, margin-bottom);
+}
+
+.m-gdpr-settings__text {
+	@include vertical-spacing(s3, margin-bottom);
+
+	.state-m-gdpr-settings--read-more & {
+		/* stylelint-disable max-nesting-depth */
+		@include media-query(xs, sm) {
+			p {
+				@include ellipsis(4);
+			}
+		}
+		/* stylelint-enable max-nesting-depth */
+	}
+}
+
+.m-gdpr-settings__read-more {
+	@include link-styles();
+	@include typography(body-small);
+	@include h-hide();
+	margin-top: 0.4rem;
+
+	.state-m-gdpr-settings--read-more & {
+		display: inline-block;
+		visibility: visible;
+
+		@include media-query(md) {
+			@include h-hide();
+		}
+	}
+
+	@include media-query(md) {
+		@include h-hide();
+	}
+}
+
+.m-gdpr-settings__categories {
+	@include vertical-spacing(s3, margin-bottom);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.m-gdpr-settings__category {
+	@include vertical-spacing(s3, margin-bottom);
+	margin-right: 4rem;
+}
+
+.m-gdpr-settings__buttons {
+	display: flex;
+	flex-direction: column;
+
+	@include media-query(sm) {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+.m-gdpr-settings__button + .m-gdpr-settings__button {
+	margin-top: 2rem;
+
+	@include media-query(sm) {
+		margin-top: 0;
+		margin-left: 2rem;
+	}
+}

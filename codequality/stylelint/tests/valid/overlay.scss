@@ -1,0 +1,174 @@
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/helper/css/helper';
+@import '../../../../shared/utils/link/css/link';
+@import '../../../../shared/utils/media-queries/css/media-queries';
+@import '../../../../shared/utils/transitions/css/transitions';
+@import '../../../../shared/utils/z-index/css/z-index';
+
+@import './utils/overlay';
+@import './utils/variables';
+
+.o-overlay {
+	@include transitions(transform 0.3s ease-in-out);
+	@include h-hide();
+	pointer-events: none; // needed to be able to close overlay on outer top/bottom click
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateY(-100%);
+
+	@include media-query(xs, sm) {
+		transform: translateX(100%);
+	}
+}
+
+.state-o-overlay--visible {
+	@include z-index('overlay');
+	display: flex;
+	visibility: visible;
+	transform: translateY(-100%);
+
+	@include media-query(xs, sm) {
+		transform: translateX(100%);
+	}
+}
+
+.state-o-overlay--transition {
+	transform: translateY(0);
+
+	@include media-query(xs, sm) {
+		transform: translateX(0);
+	}
+}
+
+.state-o-overlay--back-button-visible {
+	.o-overlay__back {
+		@include media-query(xs, sm) {
+			@include h-show();
+		}
+	}
+}
+
+.o-overlay__vertical-alignment {
+	// needed to make content display flex work inside
+	height: 100%;
+	width: 100%;
+
+	@include media-query(md) {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+
+.o-overlay__horizontal-alignment {
+	// needed to make content display flex work inside
+	height: 100%;
+	width: 100%;
+
+	@include media-query(sm) {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+.o-overlay__wrapper {
+	background: $color-overlay-background;
+	position: relative;
+	pointer-events: auto; // reset pointer events
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	@include media-query(sm) {
+		max-width: 66vw;
+	}
+
+	@include media-query(md) {
+		height: auto;
+
+		.h-browser-device--ie & {
+			height: 100%; // needed because of IE11 flex max-height bug
+		}
+	}
+}
+
+.o-overlay__header {
+	@include header-min-height(base, 3rem, 3rem);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+
+	@include media-query(md) {
+		@include header-min-height(md, 3rem, 3rem);
+	}
+}
+
+.o-overlay__logo {
+	justify-self: flex-start;
+}
+
+.o-overlay__title {
+	color: $color-overlay-title;
+}
+
+.o-overlay__back,
+.o-overlay__close {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	right: 0;
+	display: flex;
+	align-items: center;
+
+	@include media-query(xs, sm) {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.o-overlay__back {
+	@include link-styles('.o-overlay__back-text');
+	@include h-hide();
+	left: 0;
+}
+
+.o-overlay__close {
+	@include link-styles('.o-overlay__close-text');
+	right: 0;
+
+	@include media-query(md) {
+		margin-left: auto;
+	}
+}
+
+.o-overlay__close-text {
+	margin-right: 0.5rem;
+
+	@include media-query(xs, sm) {
+		@include h-visually-hide();
+	}
+}
+
+.o-overlay__close-icon {
+	font-size: 1.8em;
+	line-height: 1;
+
+	@include media-query(md) {
+		font-size: 1.3em;
+	}
+}
+
+.o-overlay__content {
+	overflow-y: auto;
+	overflow-x: hidden;
+}

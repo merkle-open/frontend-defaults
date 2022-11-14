@@ -1,0 +1,78 @@
+@import '../../../../shared/utils/helper/css/helper';
+@import '../../../../shared/utils/link/css/link';
+@import '../../../../shared/utils/media-queries/css/media-queries';
+@import '../../../../shared/utils/transitions/css/transitions';
+@import '../../../../shared/utils/z-index/css/z-index';
+
+@import './utils/variables';
+
+.m-cookie-layer {
+	@include z-index('cookie-layer'); // needed to cover the nav-main appearing below the header
+	@include h-hide();
+	position: relative;
+	background-color: $color-background;
+
+	&.state-m-cookie-layer--visible {
+		@include h-show();
+		@media print {
+			display: none;
+		}
+	}
+}
+
+.m-cookie-layer__inner {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.m-cookie-layer__text {
+	margin-right: 1.8rem;
+	@include media-query(lg) {
+		margin-right: 3.8rem;
+	}
+	@include media-query(xl) {
+		margin-right: 5.4rem;
+	}
+
+	.a-text {
+		a {
+			@include link-styles();
+		}
+	}
+}
+
+.m-cookie-layer__close {
+	margin-left: auto;
+}
+
+.m-cookie-layer__close-button {
+	background: none;
+	border: none;
+	padding: 0;
+	color: $color-close-font-default;
+	font-size: 3.6rem;
+	line-height: 1;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+
+		[data-whatintent='keyboard'] & {
+			background-color: $color-close-background-focus;
+			color: $color-close-font-focus;
+		}
+	}
+
+	[data-whatintent='mouse'] & {
+		@include transitions(color);
+
+		&:hover {
+			color: $color-close-font-hover;
+		}
+	}
+}
+
+.m-cookie-layer__close-button-text {
+	@include h-visually-hide();
+}

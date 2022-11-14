@@ -1,0 +1,49 @@
+@import '../../../../shared/utils/component-spacing/css/component-spacing';
+@import '../../../../shared/utils/typo/css/typo';
+
+@import './utils/variables';
+
+.o-quote {
+	@include component-spacing();
+	background: $color-quote-background;
+}
+
+.o-quote__blockquote {
+	text-align: center;
+}
+
+.o-quote__text {
+	quotes: '“' '”' '‘' '’';
+	padding-top: 0.3em; // to compensate quote char offset
+	padding-bottom: 0.3em; // to compensate quote char offset
+
+	&::before,
+	&::after {
+		color: $color-quote-signs;
+		font-size: 4em;
+		line-height: 0;
+		display: inline-block;
+	}
+
+	&::before {
+		content: open-quote;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+
+	&::after {
+		content: close-quote;
+		margin-left: 0.25em;
+		vertical-align: -0.7em;
+		margin-bottom: -1em; // to compensate quote char offset
+	}
+}
+
+.o-quote__name {
+	@include typography(font-weight, bold);
+}
+
+.o-quote__date,
+.o-quote__additional-text {
+	@include typography(font-style, italic);
+}

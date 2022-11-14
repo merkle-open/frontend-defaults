@@ -1,0 +1,129 @@
+@import '../../../../shared/utils/helper/css/helper';
+@import '../../../../shared/utils/media-queries/css/media-queries';
+@import '../../../../shared/utils/transitions/css/transitions';
+
+@import './utils/variables';
+
+.m-search {
+	padding: 2px;
+}
+
+.m-search__form {
+	position: relative;
+}
+
+.m-search__label {
+	@include h-visually-hide();
+}
+
+.m-search__input {
+	background-color: $color-input-background-default;
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 1px 0 0 $color-input-border-default;
+	color: $color-input-font-default;
+	width: 100%;
+	// make search field work on safari
+	/* stylelint-disable property-no-vendor-prefix */
+	-webkit-appearance: none;
+	/* stylelint-enable property-no-vendor-prefix */
+	padding: 1.3rem ($input-height-xs + 1rem) 1.5rem 1rem;
+
+	[data-whatintent='mouse'] & {
+		@include transitions(box-shadow, background-color);
+	}
+
+	@include media-query(sm) {
+		padding-right: ($input-height-sm + 1rem);
+	}
+
+	@include media-query(md) {
+		padding-right: ($input-height-md + 1rem);
+	}
+
+	@include media-query(lg) {
+		padding-right: ($input-height-lg + 1rem);
+	}
+
+	@include media-query(xl) {
+		padding-right: ($input-height-xl + 1rem);
+	}
+
+	&:hover {
+		box-shadow: 0 1px 0 0 $color-input-border-hover;
+		background-color: $color-input-background-hover;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 2px $color-input-border-focus;
+		background-color: $color-input-background-focus;
+	}
+
+	&::placeholder {
+		color: $color-input-font-placeholder;
+	}
+
+	&::-ms-clear {
+		display: none;
+	}
+
+	&::-webkit-search-cancel-button {
+		display: none;
+	}
+}
+
+.m-search__submit {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: none;
+	background: $color-button-background-default;
+	color: $color-button-font-default;
+	width: $input-height-xs;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+
+	[data-whatintent='mouse'] & {
+		@include transitions(color, background-color);
+	}
+
+	@include media-query(sm) {
+		width: $input-height-sm;
+	}
+
+	@include media-query(md) {
+		width: $input-height-md;
+	}
+
+	@include media-query(lg) {
+		width: $input-height-lg;
+	}
+
+	@include media-query(xl) {
+		width: $input-height-xl;
+	}
+
+	&:hover {
+		background-color: $color-button-background-hover;
+		color: $color-button-font-hover;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: $color-button-background-focus;
+		color: $color-button-font-focus;
+	}
+}
+
+.m-search__submit-text {
+	@include h-visually-hide();
+}
+
+.m-search__submit-icon {
+	font-size: 1.73em;
+	display: block;
+	line-height: 0;
+}

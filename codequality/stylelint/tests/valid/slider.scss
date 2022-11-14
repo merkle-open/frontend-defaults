@@ -1,0 +1,107 @@
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/helper/css/helper';
+@import '../../../../shared/utils/component-spacing/css/component-spacing';
+@import '../../../../shared/utils/ellipsis/css/ellipsis';
+@import '../../../../shared/utils/media-queries/css/media-queries';
+@import '../../../../shared/utils/typo/css/typo';
+@import '../../../../shared/utils/transitions/css/transitions';
+@import '../../../../shared/utils/vertical-spacing/css/vertical-spacing';
+
+@import './utils/_variables';
+
+.state-m-slider--pre-init {
+	.m-slider__button-prev,
+	.m-slider__button-next {
+		@include h-hide();
+	}
+}
+
+.m-slider__slider {
+	// DO NOT use filter in combination with css transitions on the same element
+	.a-img__preview {
+		filter: none;
+	}
+}
+
+.m-slider__content {
+	@include vertical-spacing(s3, padding-top);
+	padding-left: 15px; // container padding on mobile
+	padding-right: 15px; // container padding on mobile
+
+	@include media-query(md) {
+		z-index: 1; // z-index without the mixin to make clear, it has no dependencies with other page elements
+		padding: 0;
+		position: absolute;
+		top: 25%;
+		left: 0;
+		right: 0;
+	}
+}
+
+.m-slider__title {
+	color: $color-slider-title;
+
+	@include media-query(md) {
+		.a-heading {
+			@include ellipsis();
+		}
+	}
+}
+
+.m-slider__text {
+	@include media-query(md) {
+		p {
+			@include ellipsis(3);
+		}
+	}
+}
+
+.m-slider__button-prev,
+.m-slider__button-next {
+	@include transitions(color);
+	color: $color-slider-navigation-buttons;
+	top: 0;
+	margin-top: calc(37.5% / 2); // 8:3 image height / 2 to center
+	transform: translateY(-50%);
+
+	&:hover {
+		color: $color-slider-navigation-buttons-hover;
+	}
+	&:focus {
+		color: $color-slider-navigation-buttons-focus;
+	}
+}
+
+.m-slider__pagination {
+	top: 0;
+	margin-top: calc(37.5%); // at the bottom of the image (8:3)
+
+	@include media-query(md) {
+		top: auto;
+		margin-top: 0;
+	}
+
+	/* stylelint-disable plugin/stylelint-bem-namics */
+	.swiper-pagination-bullet {
+		@include transitions(background-color);
+		background-color: $color-slider-pagination-bullet;
+		opacity: 1;
+
+		&:hover {
+			background-color: $color-slider-pagination-bullet-hover;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		@include transitions(background-color);
+		background-color: $color-slider-pagination-bullet-active;
+
+		&:hover {
+			background-color: $color-slider-pagination-bullet-active-hover;
+		}
+		&:focus {
+			background-color: $color-slider-pagination-bullet-active-focus;
+		}
+	}
+	/* stylelint-enable plugin/stylelint-bem-namics */
+}
