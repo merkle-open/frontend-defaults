@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm i -D prettier @namics/prettier-config`
+`npm install --save-dev prettier @namics/prettier-config`
 
 **.prettierrc.js**
 
@@ -49,7 +49,7 @@ module.exports = require('@namics/prettier-config');
 
 ## We recommend to use prettier together with lint-staged and husky
 
-`npm i -D husky lint-staged`
+`npm install --save-dev husky lint-staged`
 
 **package.json**
 

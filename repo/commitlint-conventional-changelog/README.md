@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm i -D husky @commitlint/cli @namics/commitlint-conventional-changelog`
+`npm install --save-dev husky @commitlint/cli @namics/commitlint-conventional-changelog`
 
 **package.json**
 

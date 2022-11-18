@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm i -D commitizen @namics/cz-conventional-changelog`
+`npm install --save-dev commitizen @namics/cz-conventional-changelog`
 
 **package.json**
 

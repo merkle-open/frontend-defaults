@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm i -D typescript @namics/ts-config`
+`npm install --save-dev typescript @namics/ts-config`
 
 **tsconfig.json**
 
