@@ -10,7 +10,7 @@
 		.o-accordion-item__button {
 			color: $color;
 
-			@if($background-color) {
+			@if $background-color {
 				background-color: $background-color;
 			}
 		}

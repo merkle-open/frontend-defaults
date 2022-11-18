@@ -46,13 +46,15 @@
 .m-gdpr-settings__categories {
 	@include vertical-spacing(s3, margin-bottom);
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 }
 
 .m-gdpr-settings__category {
 	@include vertical-spacing(s3, margin-bottom);
 	margin-right: 4rem;
+	&::after {
+		font-icon: url('../img/arrow.svg');
+	}
 }
 
 .m-gdpr-settings__buttons {
