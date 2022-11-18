@@ -12,15 +12,15 @@
 	},
 	"files": ["README.md", "LICENSE", "index.js"],
 	"peerDependencies": {
-		"stylelint": ">=7.0.0 <14.0.0"
+		"stylelint": "^14.14.0"
 	},
 	"devDependencies": {
     "jest": "29.3.1",
-		"stylelint": "13.13.1"
+		"stylelint": "14.15.0"
 	},
 	"dependencies": {
 		"@namics/stylelint-bem": "8.0.0",
-		"stylelint-scss": "3.21.0"
+		"stylelint-config-standard-scss": "6.1.0"
 	},
   "scripts": {
     "lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
