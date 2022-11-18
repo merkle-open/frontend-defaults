@@ -85,7 +85,7 @@
 	white-space: nowrap;
 	color: $color-button-number-font-default;
 	background-color: $color-button-number-background-default;
-	padding: 0 0.8rem 0 0.8rem;
+	padding: 0 0.8rem;
 	border-radius: $button-border-radius;
 	margin-left: 0.8rem;
 	margin-right: -1.2rem;
@@ -139,15 +139,18 @@
 }
 
 @keyframes a-button-pulse {
-	0%, 25% {
+	0%,
+	25% {
 		transform: scale(1, 1);
 		animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 	}
-	12.5%, 37.5% {
+	12.5%,
+	37.5% {
 		transform: scale(1.2, 1.2);
 		animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 	}
-	50%, to {
+	50%,
+	100% {
 		transform: scale(1, 1);
 	}
 }

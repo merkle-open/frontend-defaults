@@ -42,7 +42,7 @@
 
 @mixin theme($theme: DarkGray) {
 	background: $theme;
-	box-shadow: 0 0 1px rgb($theme / 25%);
+	box-shadow: 0 0 1px rgb($theme / 0.25);
 }
 
 @mixin -private-mixin() {
