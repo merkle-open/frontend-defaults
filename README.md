@@ -41,7 +41,7 @@ Reason:
 ## Published packages
 
 | Package                                          | npm                                                                                                                                                           |
-|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `@merkle-open/@merkle-open/html-validate-config` | [![npm](https://img.shields.io/npm/v/@merkle-open/html-validate-config.svg)](https://www.npmjs.com/package/@merkle-open/html-validate-config)                 |
 | `@namics/commitlint-conventional-changelog`      | [![npm](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/commitlint-conventional-changelog) |
 | `@namics/cz-conventional-changelog`              | [![npm](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/cz-conventional-changelog)                 |

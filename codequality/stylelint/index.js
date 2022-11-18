@@ -26,7 +26,10 @@ module.exports = {
 		'comment-word-disallowed-list': ['todo', { severity: 'warning' }],
 		'custom-media-pattern': null,
 		'custom-property-pattern': null,
-		'declaration-block-no-duplicate-properties': [true, { ignore: [ 'consecutive-duplicates-with-different-values' ], severity: 'warning' }],
+		'declaration-block-no-duplicate-properties': [
+			true,
+			{ ignore: ['consecutive-duplicates-with-different-values'], severity: 'warning' },
+		],
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-semicolon-newline-after': ['always-multi-line', { severity: 'warning' }],
 		'declaration-block-trailing-semicolon': ['always', { severity: 'warning' }],
