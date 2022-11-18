@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/merkle-open/frontend-defaults/compare/@namics/stylelint-config@2.0.0...@namics/stylelint-config@3.0.0) (2022-11-18)
+
+### Features
+
+- **stylelint-config:** use stylelint 14 ([88c228c](https://github.com/merkle-open/frontend-defaults/commit/88c228c686ef88947db713bf6360576c3b169a68))
+
+### BREAKING CHANGES
+
+- **stylelint-config:** new configuration set for stylelint 14 only
+
 # [2.0.0](https://github.com/merkle-open/frontend-defaults/compare/@namics/stylelint-config@1.1.2...@namics/stylelint-config@2.0.0) (2022-10-14)
 
 ### Bug Fixes

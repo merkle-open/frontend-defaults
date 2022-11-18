@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/merkle-open/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.2.3...@namics/commitlint-conventional-changelog@1.2.4) (2022-11-18)
+
+**Note:** Version bump only for package @namics/commitlint-conventional-changelog
+
 ## [1.2.3](https://github.com/merkle-open/frontend-defaults/compare/@namics/commitlint-conventional-changelog@1.2.2...@namics/commitlint-conventional-changelog@1.2.3) (2022-10-14)
 
 **Note:** Version bump only for package @namics/commitlint-conventional-changelog
