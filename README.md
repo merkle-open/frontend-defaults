@@ -24,10 +24,8 @@ Reason:
 
 ### Codequality
 
-- [accessibility](./codequality/accessibility/README.md) (deprecated)
 - [editorconfig](./editorconfig/README.md)
 - [eslint](./codequality/eslint/README.md)
-- [htmllint](./codequality/htmllint/README.md) (deprecated)
 - [html-validate](./codequality/html-validate/README.md)
 - [prettier-config](./codequality/prettier/README.md)
 - [stylelint-config](./codequality/stylelint/README.md)
