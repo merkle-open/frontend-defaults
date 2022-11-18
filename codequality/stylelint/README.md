@@ -1,10 +1,10 @@
 # Shared stylelint config [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)
 
-> reusable stylelint config
+> reusable stylelint config for stylelint 14
 
 ## Usage
 
-`npm i -D stylelint @namics/stylelint-config`
+`npm install --save-dev stylelint@14 @namics/stylelint-config`
 
 **stylelint.config.js**
 
@@ -31,7 +31,7 @@ src/shared/base/reset/css/yui/reset.css
 
 ## We recommend to use stylelint together with lint-staged and husky
 
-`npm i -D husky lint-staged`
+`npm install --save-dev husky lint-staged`
 
 **package.json**
 
