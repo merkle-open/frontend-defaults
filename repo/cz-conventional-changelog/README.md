@@ -1,10 +1,10 @@
-# Shared commitizen conventional changelog config [![npm version](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.org/package/@namics/cz-conventional-changelog)
+# Shared commitizen conventional changelog config [![npm version](https://img.shields.io/npm/v/@merkle-open/cz-conventional-changelog.svg)](https://www.npmjs.org/package/@merkle-open/cz-conventional-changelog)
 
 > reusable commitizen conventional changelog config
 
 ## Usage
 
-`npm install --save-dev commitizen @namics/cz-conventional-changelog`
+`npm install --save-dev commitizen @merkle-open/cz-conventional-changelog`
 
 **package.json**
 
@@ -16,7 +16,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "@namics/cz-conventional-changelog"
+      "path": "@merkle-open/cz-conventional-changelog"
     }
   },
   ...

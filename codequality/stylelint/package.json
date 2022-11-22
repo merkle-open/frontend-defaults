@@ -1,7 +1,7 @@
 {
-	"name": "@namics/stylelint-config",
+	"name": "@merkle-open/stylelint-config",
 	"description": "Shared stylelint config",
-	"version": "3.0.0",
+	"version": "1.0.0",
 	"repository": "https://github.com/merkle-open/frontend-defaults",
 	"main": "./index.js",
 	"license": "MIT",

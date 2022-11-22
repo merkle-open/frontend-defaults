@@ -1,15 +1,15 @@
-# Shared stylelint config [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)
+# Shared stylelint config [![npm](https://img.shields.io/npm/v/@merkle-open/stylelint-config.svg)](https://www.npmjs.com/package/@merkle-open/stylelint-config)
 
 > reusable stylelint config for stylelint 14
 
 ## Usage
 
-`npm install --save-dev stylelint@14 @namics/stylelint-config`
+`npm install --save-dev stylelint@14 @merkle-open/stylelint-config`
 
 **stylelint.config.js**
 
 ```js
-module.exports = require('@namics/stylelint-config');
+module.exports = require('@merkle-open/stylelint-config');
 ```
 
 **.stylelintignore**

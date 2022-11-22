@@ -1,6 +1,6 @@
 {
-  "name": "@namics/frontend-defaults",
-  "version": "1.1.0",
+  "name": "frontend-defaults",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "https://github.com/merkle-open/frontend-defaults",
   "private": true,

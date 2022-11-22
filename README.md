@@ -40,11 +40,11 @@ Reason:
 
 ## Published packages
 
-| Package                                          | npm                                                                                                                                                           |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `@merkle-open/@merkle-open/html-validate-config` | [![npm](https://img.shields.io/npm/v/@merkle-open/html-validate-config.svg)](https://www.npmjs.com/package/@merkle-open/html-validate-config)                 |
-| `@namics/commitlint-conventional-changelog`      | [![npm](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/commitlint-conventional-changelog) |
-| `@namics/cz-conventional-changelog`              | [![npm](https://img.shields.io/npm/v/@namics/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@namics/cz-conventional-changelog)                 |
-| `@namics/prettier-config`                        | [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)                                     |
-| `@namics/stylelint-config`                       | [![npm](https://img.shields.io/npm/v/@namics/stylelint-config.svg)](https://www.npmjs.com/package/@namics/stylelint-config)                                   |
-| `@namics/ts-config`                              | [![npm](https://img.shields.io/npm/v/@namics/ts-config.svg)](https://www.npmjs.com/package/@namics/ts-config)                                                 |
+| Package                                          | npm                                                                                                                                                                     |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `@merkle-open/commitlint-conventional-changelog` | [![npm](https://img.shields.io/npm/v/@merkle-open/commitlint-conventional-changelog.svg)](https://www.npmjs.com/package/@merkle-open/commitlint-conventional-changelog) |
+| `@merkle-open/cz-conventional-changelog`         | [![npm](https://img.shields.io/npm/v/@merkle-open/cz-conventional-changelog.svg)](https://www.npmjs.com/package/@merkle-open/cz-conventional-changelog)                 |
+| `@merkle-open/html-validate-config`              | [![npm](https://img.shields.io/npm/v/@merkle-open/html-validate-config.svg)](https://www.npmjs.com/package/@merkle-open/html-validate-config)                           |
+| `@merkle-open/prettier-config`                   | [![npm](https://img.shields.io/npm/v/@merkle-open/prettier-config.svg)](https://www.npmjs.com/package/@merkle-open/prettier-config)                                     |
+| `@merkle-open/stylelint-config`                  | [![npm](https://img.shields.io/npm/v/@merkle-open/stylelint-config.svg)](https://www.npmjs.com/package/@merkle-open/stylelint-config)                                   |
+| `@merkle-open/ts-config`                         | [![npm](https://img.shields.io/npm/v/@merkle-open/ts-config.svg)](https://www.npmjs.com/package/@merkle-open/ts-config)                                                 |

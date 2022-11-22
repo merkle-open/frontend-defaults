@@ -1,15 +1,15 @@
-# Shared prettier config [![npm](https://img.shields.io/npm/v/@namics/prettier-config.svg)](https://www.npmjs.com/package/@namics/prettier-config)
+# Shared prettier config [![npm](https://img.shields.io/npm/v/@merkle-open/prettier-config.svg)](https://www.npmjs.com/package/@merkle-open/prettier-config)
 
 > reusable prettier config
 
 ## Usage
 
-`npm install --save-dev prettier @namics/prettier-config`
+`npm install --save-dev prettier @merkle-open/prettier-config`
 
 **.prettierrc.js**
 
 ```js
-module.exports = require('@namics/prettier-config');
+module.exports = require('@merkle-open/prettier-config');
 ```
 
 **.prettierignore**

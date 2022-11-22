@@ -1,10 +1,10 @@
-# @namics/commitlint-conventional-changelog [![npm version](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.org/package/@namics/commitlint-conventional-changelog)
+# Shared commitlint config [![npm version](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.org/package/@namics/commitlint-conventional-changelog)
 
-> Shareable `commitlint` config enforcing [convention commits](https://conventionalcommits.org/).
+> Shareable `commitlint` config enforcing [conventional commits](https://conventionalcommits.org/).
 
 ## Usage
 
-`npm install --save-dev husky @commitlint/cli @namics/commitlint-conventional-changelog`
+`npm install --save-dev husky @commitlint/cli @merkle-open/commitlint-conventional-changelog`
 
 **package.json**
 
