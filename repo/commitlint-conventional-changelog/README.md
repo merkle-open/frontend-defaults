@@ -1,4 +1,4 @@
-# Shared commitlint config [![npm version](https://img.shields.io/npm/v/@namics/commitlint-conventional-changelog.svg)](https://www.npmjs.org/package/@namics/commitlint-conventional-changelog)
+# Shared commitlint config [![npm version](https://img.shields.io/npm/v/@merkle-open/commitlint-conventional-changelog.svg)](https://www.npmjs.org/package/@merkle-open/commitlint-conventional-changelog)
 
 > Shareable `commitlint` config enforcing [conventional commits](https://conventionalcommits.org/).
 
@@ -18,7 +18,7 @@
   },
   "commitlint": {
     "extends": [
-      "@namics/commitlint-conventional-changelog"
+      "@merkle-open/commitlint-conventional-changelog"
     ]
   },
   ...
