@@ -1,5 +1,5 @@
 # This workflow will do a clean install of node dependencies and run tests across different versions of node on different environments
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# For more information see: https://docs.github.com/de/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: ci
 on:
@@ -18,15 +18,15 @@ jobs:
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run tests
         run: npm test
