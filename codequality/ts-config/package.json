@@ -1,7 +1,7 @@
 {
 	"name": "@merkle-open/ts-config",
 	"description": "Shared configuration for Typescript",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": "https://github.com/merkle-open/frontend-defaults",
 	"main": "./tsconfig.json",
 	"license": "MIT",
@@ -10,7 +10,11 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"files": ["README.md", "LICENSE", "tsconfig.json"],
+	"files": [
+		"README.md",
+		"LICENSE",
+		"tsconfig.json"
+	],
 	"peerDependencies": {
 		"typescript": ">= 3 < 5"
 	}

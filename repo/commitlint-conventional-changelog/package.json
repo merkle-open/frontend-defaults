@@ -1,13 +1,17 @@
 {
 	"name": "@merkle-open/commitlint-conventional-changelog",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": "https://github.com/merkle-open/frontend-defaults",
 	"author": "Merkle Inc.",
 	"description": "Shareable commitlint config enforcing conventional commits",
 	"main": "index.js",
 	"license": "MIT",
 	"private": false,
-	"files": ["README.md", "LICENSE", "index.js"],
+	"files": [
+		"README.md",
+		"LICENSE",
+		"index.js"
+	],
 	"peerDependencies": {
 		"@commitlint/cli": ">= 8.0.0",
 		"husky": ">=4.0.0"
@@ -17,7 +21,9 @@
 		"jest": "29.4.3"
 	},
 	"commitlint": {
-		"extends": ["./index.js"]
+		"extends": [
+			"./index.js"
+		]
 	},
 	"scripts": {
 		"prepublishOnly": "npm test",

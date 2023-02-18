@@ -1,7 +1,7 @@
 {
 	"name": "@merkle-open/html-validate-config",
 	"description": "Shared html-validate config",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": "https://github.com/merkle-open/frontend-defaults",
 	"main": "./index.js",
 	"license": "MIT",
@@ -10,7 +10,11 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"files": ["README.md", "LICENSE", "index.js"],
+	"files": [
+		"README.md",
+		"LICENSE",
+		"index.js"
+	],
 	"peerDependencies": {
 		"html-validate": ">=7"
 	}
