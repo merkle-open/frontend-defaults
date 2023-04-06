@@ -13,10 +13,7 @@
 	@include h-hide();
 	pointer-events: none; // needed to be able to close overlay on outer top/bottom click
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	inset: 0;
 	z-index: -1;
 	transform: translateY(-100%);
 
