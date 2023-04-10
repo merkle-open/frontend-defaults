@@ -17,7 +17,7 @@
     "bootstrap": "lerna bootstrap",
     "postinstall": "npm run bootstrap",
     "prepare": "husky install",
-    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|md|mdx|graphql|gql|yml|yaml)\"",
+    "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|css|scss|md|mdx|graphql|gql|yml|yaml)\"",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "prerelease": "npm-run-all test lint",

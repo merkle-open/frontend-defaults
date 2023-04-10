@@ -47,6 +47,12 @@ module.exports = {
 			},
 		},
 		{
+			files: ['*.css', '*.scss'],
+			options: {
+				parser: 'scss',
+			},
+		},
+		{
 			files: ['*.ts', '*.tsx'],
 			options: {
 				parser: 'typescript',

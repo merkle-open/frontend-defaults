@@ -41,8 +41,18 @@
 	}
 
 	[data-whatintent='keyboard'] & {
-		@include hover-focus-active-styles('&:focus-within', $color-accordion-font-focus, $color-accordion-border-focus, $color-accordion-background-focus);
-		@include hover-focus-active-styles('&[focus-within]', $color-accordion-font-focus, $color-accordion-border-focus, $color-accordion-background-focus);
+		@include hover-focus-active-styles(
+			'&:focus-within',
+			$color-accordion-font-focus,
+			$color-accordion-border-focus,
+			$color-accordion-background-focus
+		);
+		@include hover-focus-active-styles(
+			'&[focus-within]',
+			$color-accordion-font-focus,
+			$color-accordion-border-focus,
+			$color-accordion-background-focus
+		);
 	}
 }
 
