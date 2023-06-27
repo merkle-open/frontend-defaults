@@ -1,10 +1,10 @@
 # Shared stylelint config [![npm](https://img.shields.io/npm/v/@merkle-open/stylelint-config.svg)](https://www.npmjs.com/package/@merkle-open/stylelint-config)
 
-> reusable stylelint config for stylelint 14
+> reusable stylelint config for stylelint 15
 
 ## Usage
 
-`npm install --save-dev stylelint@14 @merkle-open/stylelint-config`
+`npm install --save-dev stylelint@15 @merkle-open/stylelint-config`
 
 **stylelint.config.js**
 
