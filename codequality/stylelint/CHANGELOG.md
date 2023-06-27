@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@2.1.0...@merkle-open/stylelint-config@3.0.0) (2023-06-27)
+
+
+### Features
+
+* **stylelint-config:** update stylelint-config-standard-scss ([2477f2b](https://github.com/merkle-open/frontend-defaults/commit/2477f2b2185ec6021a1e32b7389f08c0601d9886))
+
+
+### BREAKING CHANGES
+
+* **stylelint-config:** remove stylelint less than 15.5.0 from peer dependencies
+
+
+
+
+
 # [2.1.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@2.0.1...@merkle-open/stylelint-config@2.1.0) (2023-04-13)
 
 
