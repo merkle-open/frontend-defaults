@@ -1,4 +1,5 @@
 {
-  "packages": ["codequality/*", "repo/*"],
-  "version": "independent"
+	"$schema": "node_modules/lerna/schemas/lerna-schema.json",
+	"packages": ["codequality/*", "repo/*"],
+	"version": "independent"
 }
