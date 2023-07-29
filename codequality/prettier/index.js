@@ -5,10 +5,11 @@ module.exports = {
 	endOfLine: 'auto',
 	semi: true,
 	singleQuote: true,
-	trailingComma: 'es5',
+	trailingComma: 'all',
 	bracketSpacing: true,
-	bracketSameLine: false,
+	bracketSameLine: true,
 	arrowParens: 'always',
+	embeddedLanguageFormatting: 'off',
 	overrides: [
 		{
 			files: ['*.gql', '*.graphql'],

@@ -42,7 +42,7 @@ module.exports = function (options) {
 		// template and will keep empty lines.
 		prompter: function (cz, commit) {
 			console.log(
-				'\nLine 1 will be cropped at 120 characters. All other lines will be wrapped after 120 characters.\n'
+				'\nLine 1 will be cropped at 120 characters. All other lines will be wrapped after 120 characters.\n',
 			);
 
 			// Let's ask some questions of the user
@@ -116,7 +116,7 @@ module.exports = function (options) {
 
 				const head = `${answers.type}${scope}: ${answers.subject.trim()}${addTicket(answers.ticket)}`.slice(
 					0,
-					maxLineWidth
+					maxLineWidth,
 				);
 				const body = wrap(answers.body, wrapOptions);
 				const footer = filter([breaking]).join('\n\n');

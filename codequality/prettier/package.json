@@ -16,6 +16,6 @@
 		"index.js"
 	],
 	"peerDependencies": {
-		"prettier": ">=2 <3"
+		"prettier": ">=2 <4"
 	}
 }
