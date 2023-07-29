@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@1.1.0...@merkle-open/prettier-config@1.2.0) (2023-07-29)
+
+
+### Features
+
+* **prettier:** add compatibility with prettier 3 ([436325e](https://github.com/merkle-open/frontend-defaults/commit/436325ebcf56d41069a9295f076862ec67fdd5bd))
+
+
+
+
+
 # [1.1.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@1.0.1...@merkle-open/prettier-config@1.1.0) (2023-04-13)
 
 
