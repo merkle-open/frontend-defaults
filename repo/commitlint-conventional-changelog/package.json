@@ -17,7 +17,7 @@
 		"husky": ">=4.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/lint": "17.6.7",
+		"@commitlint/lint": "17.7.0",
 		"jest": "29.6.2"
 	},
 	"commitlint": {
