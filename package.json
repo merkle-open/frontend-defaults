@@ -20,8 +20,8 @@
     "cz": "git-cz",
     "prepare": "husky install",
     "prettier": "prettier --write \"**/*.*(js|jsx|ts|tsx|json|css|scss|md|mdx|graphql|gql|yml|yaml)\"",
-    "test": "npm run test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
     "prerelease": "npm-run-all test lint",
     "release": "lerna publish --conventional-commits --no-commit-hooks --allow-branch master",
     "start": "npm run test"
