@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"@namics/stylelint-bem": "9.0.0",
-		"stylelint-config-standard-scss": "10.0.0"
+		"stylelint-config-standard-scss": "11.0.0"
 	},
 	"scripts": {
 		"lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
