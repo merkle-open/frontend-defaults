@@ -166,6 +166,5 @@
 }
 
 .o-overlay__content {
-	overflow-y: auto;
-	overflow-x: hidden;
+	overflow: hidden auto;
 }

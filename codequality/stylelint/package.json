@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"jest": "29.7.0",
-		"stylelint": "15.10.3"
+		"stylelint": "15.11.0"
 	},
 	"dependencies": {
 		"@namics/stylelint-bem": "9.0.0",
