@@ -1,38 +1,38 @@
 {
-	"name": "@merkle-open/stylelint-config",
-	"description": "Shared stylelint config",
-	"version": "3.2.0",
-	"repository": "https://github.com/merkle-open/frontend-defaults",
-	"main": "./index.js",
-	"license": "MIT",
-	"author": "Merkle Inc.",
-	"private": false,
-	"engines": {
-		"node": ">=14"
-	},
-	"files": [
-		"README.md",
-		"LICENSE",
-		"index.js"
-	],
-	"peerDependencies": {
-		"stylelint": "^15.5.0"
-	},
-	"devDependencies": {
-		"jest": "29.7.0",
+  "name": "@merkle-open/stylelint-config",
+  "description": "Shared stylelint config",
+  "version": "3.2.0",
+  "repository": "https://github.com/merkle-open/frontend-defaults",
+  "main": "./index.js",
+  "license": "MIT",
+  "author": "Merkle Inc.",
+  "private": false,
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "peerDependencies": {
+    "stylelint": ">=16.1.0"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
     "jest-light-runner": "0.6.0",
-		"stylelint": "15.11.0"
-	},
-	"dependencies": {
-		"@namics/stylelint-bem": "9.0.0",
-		"stylelint-config-standard-scss": "11.0.0"
-	},
-	"scripts": {
-		"lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
-		"prepublishOnly": "npm test",
-		"test": "jest",
-		"watch-test": "jest --watchAll"
-	},
+    "stylelint": "16.1.0"
+  },
+  "dependencies": {
+    "@namics/stylelint-bem": "10.0.0",
+    "stylelint-config-standard-scss": "13.0.0"
+  },
+  "scripts": {
+    "lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
+    "prepublishOnly": "npm test",
+    "test": "jest",
+    "watch-test": "jest --watchAll"
+  },
   "jest": {
     "runner": "jest-light-runner"
   }

@@ -17,7 +17,7 @@ describe('flags errors with invalid css', () => {
 	});
 
 	it('flags warnings', () => {
-		expect(result.results[0].warnings).toHaveLength(9);
+		expect(result.results[0].warnings).toHaveLength(6);
 	});
 
 	it('correct warning text', () => {
@@ -25,12 +25,9 @@ describe('flags errors with invalid css', () => {
 			'Expected class name "selector" to start with a valid prefix: "a-", "m-", "o-", "l-", "g-", "h-", "state-". (plugin/stylelint-bem-namics)',
 			'Expected class name "z-selector" to start with a valid prefix: "a-", "m-", "o-", "l-", "g-", "h-", "state-". (plugin/stylelint-bem-namics)',
 			'Expected modern color-function notation (color-function-notation)',
-			'Expected "#CCC" to be "#ccc" (color-hex-case)',
 			'Unexpected named color "darkgray" (color-named)',
 			'Unexpected !important (declaration-no-important)',
-			'Expected a leading zero (number-leading-zero)',
 			'Expected "#FOO" to have no more than 0 ID selectors (selector-max-id)',
-			'Expected single quotes (string-quotes)',
 		]);
 	});
 
@@ -39,12 +36,9 @@ describe('flags errors with invalid css', () => {
 			'plugin/stylelint-bem-namics',
 			'plugin/stylelint-bem-namics',
 			'color-function-notation',
-			'color-hex-case',
 			'color-named',
 			'declaration-no-important',
-			'number-leading-zero',
 			'selector-max-id',
-			'string-quotes',
 		]);
 	});
 
@@ -58,13 +52,13 @@ describe('flags errors with invalid css', () => {
 		expect(result.results[0].warnings[0].line).toBe(12);
 		expect(result.results[0].warnings[1].line).toBe(14);
 		expect(result.results[0].warnings[2].line).toBe(7);
-		expect(result.results[0].warnings[3].line).toBe(5);
+		expect(result.results[0].warnings[3].line).toBe(4);
 	});
 
 	it('correct column number', () => {
 		expect(result.results[0].warnings[0].column).toBe(1);
 		expect(result.results[0].warnings[1].column).toBe(1);
 		expect(result.results[0].warnings[2].column).toBe(22);
-		expect(result.results[0].warnings[3].column).toBe(20);
+		expect(result.results[0].warnings[3].column).toBe(9);
 	});
 });
