@@ -20,6 +20,7 @@
 	},
 	"devDependencies": {
 		"jest": "29.7.0",
+    "jest-light-runner": "0.6.0",
 		"stylelint": "15.11.0"
 	},
 	"dependencies": {
@@ -31,5 +32,8 @@
 		"prepublishOnly": "npm test",
 		"test": "jest",
 		"watch-test": "jest --watchAll"
-	}
+	},
+  "jest": {
+    "runner": "jest-light-runner"
+  }
 }

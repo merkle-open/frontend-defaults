@@ -1,9 +1,6 @@
 const stylelint = require('stylelint');
 const config = require('../');
 
-// needs bigger timeout
-jest.setTimeout(10000);
-
 describe('flags errors with invalid css', () => {
 	const files = 'tests/invalid/examples.scss';
 	let result;
