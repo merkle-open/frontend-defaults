@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@3.2.0...@merkle-open/stylelint-config@4.0.0) (2024-01-08)
+
+
+### Features
+
+* **stylelint-config:** update stylelint-config-standard-scss ([90f514f](https://github.com/merkle-open/frontend-defaults/commit/90f514f58fe907cb57378ee71be1c27392c257af))
+* **stylelint-config:** use stylelint 16, update stylelint-config-standard-scssand ([a183537](https://github.com/merkle-open/frontend-defaults/commit/a183537e21bd1e5dc69bfa0f9686c7ac704d1364))
+
+
+### BREAKING CHANGES
+
+* **stylelint-config:** remove node support < 18.12.0 and remove support for stylelint < 16.1.0
+
+
+
+
+
 # [3.2.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@3.1.0...@merkle-open/stylelint-config@3.2.0) (2023-09-01)
 
 
