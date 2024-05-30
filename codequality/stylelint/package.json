@@ -21,11 +21,11 @@
   "devDependencies": {
     "jest": "29.7.0",
     "jest-light-runner": "0.6.0",
-    "stylelint": "16.2.1"
+    "stylelint": "16.6.1"
   },
   "dependencies": {
     "@namics/stylelint-bem": "10.0.0",
-    "stylelint-config-standard-scss": "13.0.0"
+    "stylelint-config-standard-scss": "13.1.0"
   },
   "scripts": {
     "lint:css": "stylelint tests/**/*.*ss --allow-empty-input",
