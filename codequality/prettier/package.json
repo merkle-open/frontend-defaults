@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/prettier-config",
   "description": "Shared prettier config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": "https://github.com/merkle-open/frontend-defaults",
   "license": "MIT",
   "author": "Merkle Inc.",

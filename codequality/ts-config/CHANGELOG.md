@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.1.0...@merkle-open/ts-config@1.1.1) (2024-07-23)
+
+**Note:** Version bump only for package @merkle-open/ts-config
+
+
+
+
+
 # [1.1.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.0.1...@merkle-open/ts-config@1.1.0) (2023-04-08)
 
 

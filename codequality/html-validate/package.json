@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/html-validate-config",
   "description": "Shared html-validate config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/merkle-open/frontend-defaults",
   "main": "./index.js",
   "license": "MIT",

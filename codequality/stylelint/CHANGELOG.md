@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.0...@merkle-open/stylelint-config@4.0.1) (2024-07-23)
+
+
+### Bug Fixes
+
+* **stylelint-config:** bump deps ([be41953](https://github.com/merkle-open/frontend-defaults/commit/be419532f6517b39f337af0af2a80efcd639724f))
+* **stylelint-config:** use scss/load-partial-extension ([53f4302](https://github.com/merkle-open/frontend-defaults/commit/53f4302fd1e4911c105545403a45539701b6b567))
+
+
+
+
+
 # [4.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@3.2.0...@merkle-open/stylelint-config@4.0.0) (2024-01-08)
 
 
