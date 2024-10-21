@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.1...@merkle-open/stylelint-config@4.0.2) (2024-10-21)
+
+
+### Bug Fixes
+
+* **stylelint-config:** update stylelint-bem for compatibility with stylelint 16.10.0 ([ba3ffe5](https://github.com/merkle-open/frontend-defaults/commit/ba3ffe5adab489b8fdd585dfda5daa9f4abead12))
+
+
+
+
+
 ## [4.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.0...@merkle-open/stylelint-config@4.0.1) (2024-07-23)
 
 
