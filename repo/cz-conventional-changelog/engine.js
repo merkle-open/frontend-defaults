@@ -1,9 +1,6 @@
 'format cjs';
 
 const wrap = require('word-wrap');
-const map = require('lodash.map');
-const longest = require('longest');
-const rightPad = require('right-pad');
 
 const filter = function (array) {
 	return array.filter(function (x) {
@@ -20,10 +17,10 @@ const addTicket = (ticket) => (ticket && ticket !== '' ? ` [${ticket.trim()}]` :
 module.exports = function (options) {
 	const types = options.types;
 
-	const length = longest(Object.keys(types)).length + 1;
-	const choices = map(types, function (type, key) {
+	const length = Math.max(...Object.keys(types).map(key => key.length)) + 1;
+	const choices = Object.entries(types).map(([key, type]) => {
 		return {
-			name: rightPad(key + ':', length) + ' ' + type.description,
+			name: (key + ':').padEnd(length, ' ') + ' ' + type.description,
 			value: key,
 		};
 	});
