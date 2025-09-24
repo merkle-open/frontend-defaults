@@ -17,7 +17,7 @@ const addTicket = (ticket) => (ticket && ticket !== '' ? ` [${ticket.trim()}]` :
 module.exports = function (options) {
 	const types = options.types;
 
-	const length = Math.max(...Object.keys(types).map(key => key.length)) + 1;
+	const length = Math.max(...Object.keys(types).map((key) => key.length)) + 1;
 	const choices = Object.entries(types).map(([key, type]) => {
 		return {
 			name: (key + ':').padEnd(length, ' ') + ' ' + type.description,
