@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/cz-conventional-changelog@1.1.1...@merkle-open/cz-conventional-changelog@1.1.2) (2025-09-24)
+
+
+### Bug Fixes
+
+* **cz-conventional-changelog:** remove unneeded dependencies ([d8fdaaf](https://github.com/merkle-open/frontend-defaults/commit/d8fdaaf9d8c3968013fb4d5298b10c7d4bcaaa0a))
+
+
+
+
+
 ## [1.1.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/cz-conventional-changelog@1.1.0...@merkle-open/cz-conventional-changelog@1.1.1) (2024-07-23)
 
 **Note:** Version bump only for package @merkle-open/cz-conventional-changelog

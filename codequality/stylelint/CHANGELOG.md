@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.2...@merkle-open/stylelint-config@4.0.3) (2025-09-24)
+
+**Note:** Version bump only for package @merkle-open/stylelint-config
+
+
+
+
+
 ## [4.0.2](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.1...@merkle-open/stylelint-config@4.0.2) (2024-10-21)
 
 
