@@ -17,5 +17,14 @@
   ],
   "peerDependencies": {
     "html-validate": "^7.0.0"
+  },
+  "devDependencies": {
+    "vitest": "3.2.4",
+    "html-validate": "7.18.1"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "watch-test": "vitest",
+    "prepublishOnly": "npm test"
   }
 }
