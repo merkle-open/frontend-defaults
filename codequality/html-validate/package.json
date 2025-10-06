@@ -16,6 +16,6 @@
     "index.js"
   ],
   "peerDependencies": {
-    "html-validate": ">=7"
+    "html-validate": "^7.0.0"
   }
 }

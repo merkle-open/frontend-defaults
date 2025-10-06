@@ -2,6 +2,7 @@ module.exports = {
 	root: true,
 	extends: ['html-validate:recommended'],
 	rules: {
+		'doctype-style': 'off',
 		'element-required-attributes': 'warn',
 		'element-permitted-order': 'warn',
 		'no-inline-style': 'off',
