@@ -28,7 +28,8 @@ describe('flags no errors with valid css', () => {
 		expect(result.results[8].warnings).toHaveLength(0);
 		expect(result.results[9].warnings).toHaveLength(0);
 		expect(result.results[10].warnings).toHaveLength(0);
-		expect(result.results[11].warnings).toHaveLength(1);
-		expect(result.results[12].warnings).toHaveLength(0);
+		expect(result.results[11].warnings).toHaveLength(0);
+		expect(result.results[12].warnings).toHaveLength(1);
+		expect(result.results[13].warnings).toHaveLength(0);
 	});
 });

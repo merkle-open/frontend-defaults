@@ -1,0 +1,65 @@
+@supports (display: flex) {
+	.a-box > * {
+		color: #000b;
+		text-shadow: 0 0 2px #0000ffbb;
+		float: none;
+	}
+}
+
+@keyframes foo {
+	from {
+	}
+	50% {
+	}
+	to {
+	}
+}
+
+[popover]:popover-open {
+	opacity: 1;
+	transform: scaleX(1);
+	transition:
+		opacity 0.3s,
+		transform 0.3s;
+
+	@starting-style {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+}
+
+@property --theme {
+	syntax: 'light | dark';
+	inherits: true;
+	initial-value: light;
+}
+
+:root {
+	--theme: dark;
+}
+
+@container style(--theme: dark) {
+	body {
+		background-color: #000;
+		color: #fff;
+	}
+}
+
+@property --box-shadow-length {
+	syntax: '<length>+';
+	inherits: false;
+	initial-value: 0 0 8px 2px;
+}
+
+@property --box-shadow-color {
+	syntax: '<color>';
+	inherits: false;
+	initial-value: hsl(0 0% 75%);
+}
+
+.a-block {
+	box-shadow: var(--box-shadow-length) var(--box-shadow-color);
+	background-color: hsl(50deg 60% 45% / 0.7);
+	inline-size: 5rem;
+	aspect-ratio: 1;
+}
