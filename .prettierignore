@@ -18,5 +18,5 @@
 **/CHANGELOG.md
 
 # Project
-codequality/stylelint/tests/invalid
+codequality/stylelint/__test__/invalid
 /.nx/workspace-data
