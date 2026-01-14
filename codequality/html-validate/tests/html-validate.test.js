@@ -4,6 +4,7 @@ const fs = require('fs');
 const fixturesRoot = path.join(__dirname);
 const validDir = path.join(fixturesRoot, 'valid');
 const invalidDir = path.join(fixturesRoot, 'invalid');
+const warnDir = path.join(fixturesRoot, 'warn');
 
 function collectFiles(dir) {
 	if (!fs.existsSync(dir)) return [];
@@ -27,6 +28,7 @@ try {
 
 const validFiles = collectFiles(validDir);
 const invalidFiles = collectFiles(invalidDir);
+const warnFiles = collectFiles(warnDir);
 
 if (!hv) {
 	test.skip('html-validate not installed — skipping fixture tests', () => {});
@@ -59,6 +61,30 @@ if (!hv) {
 					0,
 				);
 				expect(errors).toBeGreaterThan(0);
+			},
+		);
+	});
+
+	describe('warn fixtures', () => {
+		test.each(warnFiles.map((p) => [path.relative(fixturesRoot, p), p]))(
+			'%s should report warnings but no error',
+			(_, filePath) => {
+				const src = fs.readFileSync(filePath, 'utf8');
+				const report = hv.validateString(src, filePath);
+				const results = report && report.results ? report.results : [report];
+
+				let errors = 0;
+				let warnings = 0;
+
+				results.forEach((r) => {
+					if (r.messages) {
+						errors += r.messages.filter((m) => m.severity === 2).length;
+						warnings += r.messages.filter((m) => m.severity === 1).length;
+					}
+				});
+
+				expect(errors).toBe(0);
+				expect(warnings).toBeGreaterThan(0);
 			},
 		);
 	});
