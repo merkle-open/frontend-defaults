@@ -1,7 +1,10 @@
 {
   "name": "@merkle-open/commitlint-conventional-changelog",
   "version": "1.0.10",
-  "repository": "https://github.com/merkle-open/frontend-defaults",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merkle-open/frontend-defaults.git"
+  },
   "author": "Merkle Inc.",
   "description": "Shareable commitlint config enforcing conventional commits",
   "main": "index.js",

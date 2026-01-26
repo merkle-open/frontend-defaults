@@ -1,7 +1,10 @@
 {
   "name": "@merkle-open/cz-conventional-changelog",
   "version": "1.1.2",
-  "repository": "https://github.com/merkle-open/frontend-defaults",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merkle-open/frontend-defaults.git"
+  },
   "author": "Merkle Inc.",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",

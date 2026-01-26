@@ -2,7 +2,10 @@
   "name": "@merkle-open/stylelint-config",
   "description": "Shared stylelint config",
   "version": "5.0.0",
-  "repository": "https://github.com/merkle-open/frontend-defaults",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merkle-open/frontend-defaults.git"
+  },
   "main": "./index.js",
   "license": "MIT",
   "author": "Merkle Inc.",
