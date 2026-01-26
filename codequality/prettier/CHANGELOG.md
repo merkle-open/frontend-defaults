@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@1.2.1...@merkle-open/prettier-config@2.0.0) (2026-01-26)
+
+
+### chore
+
+* **prettier-config:** update minimum required node version ([1b5a43c](https://github.com/merkle-open/frontend-defaults/commit/1b5a43c36e5d8378365e943bed6ed2102370cecd))
+
+
+### BREAKING CHANGES
+
+* **prettier-config:** remove support for node versions before 20.19.0
+
+
+
+
+
 ## [1.2.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@1.2.0...@merkle-open/prettier-config@1.2.1) (2024-07-23)
 
 **Note:** Version bump only for package @merkle-open/prettier-config
