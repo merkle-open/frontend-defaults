@@ -16,14 +16,14 @@
     "index.js"
   ],
   "peerDependencies": {
-    "stylelint": ">=16.1.0"
+    "stylelint": ">=16.11.0 <17"
   },
   "devDependencies": {
     "stylelint": "16.26.1"
   },
   "dependencies": {
     "@namics/stylelint-bem": "11.0.0",
-    "stylelint-config-standard-scss": "13.1.0"
+    "stylelint-config-standard-scss": "14.0.0"
   },
   "scripts": {
     "lint:css": "stylelint __test__/**/*.*ss --allow-empty-input",
