@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/stylelint-config",
   "description": "Shared stylelint config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merkle-open/frontend-defaults.git"

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@2.0.0...@merkle-open/prettier-config@2.0.1) (2026-02-09)
+
+**Note:** Version bump only for package @merkle-open/prettier-config
+
+
+
+
+
 # [2.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/prettier-config@1.2.1...@merkle-open/prettier-config@2.0.0) (2026-01-26)
 
 

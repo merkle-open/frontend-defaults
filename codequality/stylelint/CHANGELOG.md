@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@5.0.0...@merkle-open/stylelint-config@5.0.1) (2026-02-09)
+
+
+### Bug Fixes
+
+* **stylelint-config:** add some rules ([932d970](https://github.com/merkle-open/frontend-defaults/commit/932d970c63dda4d6e2d2af620f9d91c16a9505fb))
+
+
+
+
+
 # [5.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@4.0.4...@merkle-open/stylelint-config@5.0.0) (2026-01-26)
 
 
