@@ -22,8 +22,10 @@ module.exports = {
 		'color-hex-length': null,
 		'color-named': 'never',
 		'color-no-invalid-hex': [true, { severity: 'warning' }],
+		'comment-empty-line-before': null,
 		'comment-word-disallowed-list': ['todo', { severity: 'warning' }],
 		'custom-media-pattern': null,
+		'custom-property-empty-line-before': null,
 		'custom-property-pattern': null,
 		'declaration-block-no-duplicate-properties': [
 			true,
@@ -40,6 +42,7 @@ module.exports = {
 		'keyframes-name-pattern': null,
 		'length-zero-no-unit': true,
 		'max-nesting-depth': [2, { severity: 'warning' }],
+		'media-feature-range-notation': ['context', { severity: 'warning' }],
 		'no-descending-specificity': null,
 		'no-duplicate-selectors': [true, { severity: 'warning' }],
 		'no-empty-source': null,

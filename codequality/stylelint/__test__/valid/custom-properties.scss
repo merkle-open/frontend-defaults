@@ -1,0 +1,18 @@
+:root {
+	--spacing-s1: var(--dimension-4);
+	--spacing-s2: var(--dimension-8);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--spacing-s1: var(--dimension-8);
+		--spacing-s2: var(--dimension-16);
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--spacing-s1: var(--dimension-10);
+		--spacing-s2: var(--dimension-24);
+	}
+}
