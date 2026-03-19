@@ -38,7 +38,7 @@ if (!hv) {
 			'%s should have no errors',
 			(_, filePath) => {
 				const src = fs.readFileSync(filePath, 'utf8');
-				const report = hv.validateString(src, filePath);
+				const report = hv.validateStringSync(src, filePath);
 				const results = report && report.results ? report.results : [report];
 				const errors = results.reduce(
 					(acc, r) => acc + (r.messages ? r.messages.filter((m) => m.severity === 2).length : 0),
@@ -54,7 +54,7 @@ if (!hv) {
 			'%s should report errors',
 			(_, filePath) => {
 				const src = fs.readFileSync(filePath, 'utf8');
-				const report = hv.validateString(src, filePath);
+				const report = hv.validateStringSync(src, filePath);
 				const results = report && report.results ? report.results : [report];
 				const errors = results.reduce(
 					(acc, r) => acc + (r.messages ? r.messages.filter((m) => m.severity === 2).length : 0),
@@ -70,7 +70,7 @@ if (!hv) {
 			'%s should report warnings but no error',
 			(_, filePath) => {
 				const src = fs.readFileSync(filePath, 'utf8');
-				const report = hv.validateString(src, filePath);
+				const report = hv.validateStringSync(src, filePath);
 				const results = report && report.results ? report.results : [report];
 
 				let errors = 0;

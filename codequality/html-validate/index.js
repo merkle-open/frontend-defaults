@@ -6,6 +6,7 @@ module.exports = {
 		'element-required-attributes': 'warn',
 		'element-permitted-order': 'warn',
 		'no-inline-style': 'off',
+		'no-implicit-button-type': 'warn',
 		'no-implicit-close': 'warn',
 		'no-raw-characters': ['warn', { relaxed: true }],
 		'prefer-native-element': 'warn',
