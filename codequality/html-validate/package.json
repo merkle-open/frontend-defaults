@@ -11,7 +11,7 @@
   "author": "Merkle Inc.",
   "private": false,
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.22.3"
   },
   "files": [
     "README.md",
@@ -19,10 +19,10 @@
     "index.js"
   ],
   "peerDependencies": {
-    "html-validate": "^10.0.0"
+    "html-validate": "^11.0.0"
   },
   "devDependencies": {
-    "html-validate": "10.11.2",
+    "html-validate": "11.4.0",
     "vitest": "4.0.18"
   },
   "scripts": {
