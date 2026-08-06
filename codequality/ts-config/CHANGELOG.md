@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-> Current release: `2.0.0-alpha.3`. See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/MIGRATION.md) for the v1 → v2 upgrade guide.
+> Current release: `2.0.0-alpha.4`. See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.4/codequality/ts-config/MIGRATION.md) for the v1 → v2 upgrade guide.
+
+## [2.0.0-alpha.4](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@2.0.0-alpha.3...@merkle-open/ts-config@2.0.0-alpha.4) (2026-08-06)
+
+### Fixes
+
+- Removed redundant "What changed in v2" block from README to avoid duplication with changelog/migration docs.
 
 ## [2.0.0-alpha.3](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@2.0.0-alpha.2...@merkle-open/ts-config@2.0.0-alpha.3) (2026-08-06)
 

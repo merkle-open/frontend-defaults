@@ -1,6 +1,6 @@
 # `@merkle-open/ts-config` v1 → v2 Migration Guide
 
-> Applies to projects moving from `@merkle-open/ts-config` 1.x to 2.0.0-alpha.3 and later.
+> Applies to projects moving from `@merkle-open/ts-config` 1.x to 2.0.0-alpha.4 and later.
 
 ## What changed
 
@@ -85,4 +85,4 @@ Only projects that still rely on TypeScript's legacy decorator emit need this:
 
 ## Release notes
 
-See [CHANGELOG.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/CHANGELOG.md) for the exact breaking changes in `2.0.0-alpha.3`.
+See [CHANGELOG.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.4/codequality/ts-config/CHANGELOG.md) for the exact breaking changes in `2.0.0-alpha.4`.

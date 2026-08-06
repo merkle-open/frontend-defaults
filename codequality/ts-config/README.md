@@ -4,7 +4,7 @@
 
 ## Current state
 
-- Package version: `2.0.0-alpha.3`
+- Package version: `2.0.0-alpha.4`
 - Node.js: `^20.19.0 || ^22.13.0 || >=24`
 - TypeScript: `^6.0.0`
 - Variants: `node`, `browser`, `browser-react`
@@ -45,23 +45,13 @@ Use the variant that matches the project type.
 }
 ```
 
-## What changed in v2
-
-- `target` moved from `es5` to `es2025`
-- Package split into `node`, `browser`, and `browser-react` variants
-- Node variant uses `module` and `moduleResolution: "nodenext"`
-- Browser variant uses `module: "preserve"` and `moduleResolution: "bundler"`
-- Browser-react variant adds `jsx: "react-jsx"`
-- TypeScript legacy decorators stay opt-in for projects that still need them
-- `strict` follows the defaults from TypeScript 6
-
 ## Migration guide
 
-See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/MIGRATION.md) for the full v1 → v2 migration guide.
+See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.4/codequality/ts-config/MIGRATION.md) for the full v1 → v2 migration guide.
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/CHANGELOG.md) for release history and breaking changes.
+See [CHANGELOG.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.4/codequality/ts-config/CHANGELOG.md) for release history and breaking changes.
 
 ## License
 
