@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+> Current release: `2.0.0-alpha.2`. See [MIGRATION.md](./MIGRATION.md) for the v1 → v2 upgrade guide.
+
+## [2.0.0-alpha.2](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@2.0.0-alpha.1...@merkle-open/ts-config@2.0.0-alpha.2) (2026-08-06)
+
+### ⚠ BREAKING CHANGES
+
+- Removed `jsx: "react-jsx"` from the generic `browser` variant
+- Added `browser-react` as the opt-in React-specific browser variant
+- Removed `types: ["node"]` from the generic `browser` variant
+
+### Features
+
+- Added `tsconfig.browser-react.json`
+- Added package export for `./browser-react`
+- Updated README and migration guide for generic browser vs React browser usage
+
 ## [2.0.0-alpha.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.1.2...@merkle-open/ts-config@2.0.0-alpha.1) (2026-07-03)
 
 ### ⚠ BREAKING CHANGES

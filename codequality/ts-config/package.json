@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/ts-config",
   "description": "Shared TypeScript configuration",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merkle-open/frontend-defaults.git"
@@ -10,7 +10,8 @@
   "exports": {
     ".": "./tsconfig.base.json",
     "./node": "./tsconfig.node.json",
-    "./browser": "./tsconfig.browser.json"
+    "./browser": "./tsconfig.browser.json",
+    "./browser-react": "./tsconfig.browser-react.json"
   },
   "license": "MIT",
   "author": "Merkle Inc.",
@@ -20,10 +21,13 @@
   },
   "files": [
     "README.md",
+    "MIGRATION.md",
+    "CHANGELOG.md",
     "LICENSE",
     "tsconfig.base.json",
     "tsconfig.node.json",
-    "tsconfig.browser.json"
+    "tsconfig.browser.json",
+    "tsconfig.browser-react.json"
   ],
   "peerDependencies": {
     "typescript": "^6.0.0"

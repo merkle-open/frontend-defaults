@@ -1,13 +1,17 @@
 # Shared TypeScript config [![npm](https://img.shields.io/npm/v/@merkle-open/ts-config.svg)](https://www.npmjs.com/package/@merkle-open/ts-config)
 
-> Shared TypeScript configuration for Merkle projects (TypeScript 6).
+> Shared TypeScript configuration for Merkle projects.
+
+## Current state
+
+- Package version: `2.0.0-alpha.2`
+- Node.js: `^20.19.0 || ^22.13.0 || >=24`
+- TypeScript: `^6.0.0`
+- Variants: `node`, `browser`, `browser-react`
 
 ## Requirements
 
-- Node.js: `^20.19.0 || ^22.13.0 || >=24`
-- TypeScript: `^6.0.0`
-
-## Installation
+- Install TypeScript and the shared config:
 
 ```bash
 npm install --save-dev typescript @merkle-open/ts-config
@@ -15,12 +19,9 @@ npm install --save-dev typescript @merkle-open/ts-config
 
 ## Usage
 
-Version 2 provides two dedicated variants:
+Use the variant that matches the project type.
 
-- `@merkle-open/ts-config/node` for Node.js/server projects
-- `@merkle-open/ts-config/browser` for browser/bundled projects
-
-### Node.js
+### Node.js / server
 
 ```json
 {
@@ -28,7 +29,7 @@ Version 2 provides two dedicated variants:
 }
 ```
 
-### Browser / Bundler
+### Browser / bundler
 
 ```json
 {
@@ -36,28 +37,31 @@ Version 2 provides two dedicated variants:
 }
 ```
 
-## What changed in v2
-
-- `target` moved from `es5` to `es2025`
-- Package split into `node` and `browser` variants
-- Node variant uses `module`/`moduleResolution: "nodenext"`
-- Browser variant uses `module: "preserve"` and `moduleResolution: "bundler"`
-- JSX defaults to `"react-jsx"` in browser variant
-- Legacy decorators are no longer enabled by default
-- `strict` defaults from TypeScript 6 are used
-
-## Legacy decorator opt-in
-
-If your project still requires legacy decorators (for example Angular/NestJS patterns), add this in your project `tsconfig.json`:
+### Browser / React
 
 ```json
 {
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  }
+  "extends": "@merkle-open/ts-config/browser-react"
 }
 ```
+
+## What changed in v2
+
+- `target` moved from `es5` to `es2025`
+- Package split into `node`, `browser`, and `browser-react` variants
+- Node variant uses `module` and `moduleResolution: "nodenext"`
+- Browser variant uses `module: "preserve"` and `moduleResolution: "bundler"`
+- Browser-react variant adds `jsx: "react-jsx"`
+- TypeScript legacy decorators stay opt-in for projects that still need them
+- `strict` follows the defaults from TypeScript 6
+
+## Migration guide
+
+See [MIGRATION.md](./MIGRATION.md) for the full v1 → v2 migration guide.
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for release history and breaking changes.
 
 ## License
 
