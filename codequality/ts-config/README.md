@@ -4,7 +4,7 @@
 
 ## Current state
 
-- Package version: `2.0.0-alpha.2`
+- Package version: `2.0.0-alpha.3`
 - Node.js: `^20.19.0 || ^22.13.0 || >=24`
 - TypeScript: `^6.0.0`
 - Variants: `node`, `browser`, `browser-react`
@@ -57,11 +57,11 @@ Use the variant that matches the project type.
 
 ## Migration guide
 
-See [MIGRATION.md](./MIGRATION.md) for the full v1 → v2 migration guide.
+See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/MIGRATION.md) for the full v1 → v2 migration guide.
 
 ## Changelog
 
-See [CHANGELOG.md](./CHANGELOG.md) for release history and breaking changes.
+See [CHANGELOG.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.3/codequality/ts-config/CHANGELOG.md) for release history and breaking changes.
 
 ## License
 
