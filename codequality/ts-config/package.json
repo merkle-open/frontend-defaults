@@ -1,35 +1,35 @@
 {
-  "name": "@merkle-open/ts-config",
-  "description": "Shared TypeScript configuration",
-  "version": "2.0.0-alpha.4",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/merkle-open/frontend-defaults.git"
-  },
-  "main": "./tsconfig.base.json",
-  "exports": {
-    ".": "./tsconfig.base.json",
-    "./node": "./tsconfig.node.json",
-    "./browser": "./tsconfig.browser.json",
-    "./browser-react": "./tsconfig.browser-react.json"
-  },
-  "license": "MIT",
-  "author": "Merkle Inc.",
-  "private": false,
-  "engines": {
-    "node": "^20.19.0 || ^22.13.0 || >=24"
-  },
-  "files": [
-    "README.md",
-    "MIGRATION.md",
-    "CHANGELOG.md",
-    "LICENSE",
-    "tsconfig.base.json",
-    "tsconfig.node.json",
-    "tsconfig.browser.json",
-    "tsconfig.browser-react.json"
-  ],
-  "peerDependencies": {
-    "typescript": "^6.0.0"
-  }
+	"name": "@merkle-open/ts-config",
+	"description": "Shared TypeScript configuration",
+	"version": "2.0.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/merkle-open/frontend-defaults.git"
+	},
+	"main": "./tsconfig.base.json",
+	"exports": {
+		".": "./tsconfig.base.json",
+		"./node": "./tsconfig.node.json",
+		"./browser": "./tsconfig.browser.json",
+		"./browser-react": "./tsconfig.browser-react.json"
+	},
+	"license": "MIT",
+	"author": "Merkle Inc.",
+	"private": false,
+	"engines": {
+		"node": "^20.19.0 || ^22.13.0 || >=24"
+	},
+	"files": [
+		"README.md",
+		"MIGRATION.md",
+		"CHANGELOG.md",
+		"LICENSE",
+		"tsconfig.base.json",
+		"tsconfig.node.json",
+		"tsconfig.browser.json",
+		"tsconfig.browser-react.json"
+	],
+	"peerDependencies": {
+		"typescript": "^6.0.0"
+	}
 }

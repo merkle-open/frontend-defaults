@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-> Current release: `2.0.0-alpha.4`. See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0-alpha.4/codequality/ts-config/MIGRATION.md) for the v1 → v2 upgrade guide.
+> Current release: `2.0.0`. See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0/codequality/ts-config/MIGRATION.md) for the v1 → v2 upgrade guide.
+
+## [2.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@2.0.0-alpha.4...@merkle-open/ts-config@2.0.0) (2026-08-11)
+
+### Notes
+
+- Promoted the v2 alpha line to the final stable `2.0.0` release.
+- Finalized README/MIGRATION/CHANGELOG versioned links for the stable release tag.
 
 ## [2.0.0-alpha.4](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@2.0.0-alpha.3...@merkle-open/ts-config@2.0.0-alpha.4) (2026-08-06)
 
@@ -59,37 +66,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @merkle-open/ts-config
 
-
-
-
-
 ## [1.1.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.1.0...@merkle-open/ts-config@1.1.1) (2024-07-23)
 
 **Note:** Version bump only for package @merkle-open/ts-config
 
-
-
-
-
 # [1.1.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.0.1...@merkle-open/ts-config@1.1.0) (2023-04-08)
-
 
 ### Features
 
-* **ts-config:** add support for TypeScript 5 ([74047b6](https://github.com/merkle-open/frontend-defaults/commit/74047b68d2239594d42317b5d6894577ed734476))
-
-
-
-
+- **ts-config:** add support for TypeScript 5 ([74047b6](https://github.com/merkle-open/frontend-defaults/commit/74047b68d2239594d42317b5d6894577ed734476))
 
 ## [1.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.0.0...@merkle-open/ts-config@1.0.1) (2023-02-18)
 
 **Note:** Version bump only for package @merkle-open/ts-config
-
-
-
-
-
 
 # 1.0.0 (2022-11-22)
 
