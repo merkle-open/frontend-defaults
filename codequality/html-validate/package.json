@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "html-validate": "7.18.1",
-    "vitest": "4.1.6"
+    "vitest": "4.1.10"
   },
   "scripts": {
     "test": "vitest run",
