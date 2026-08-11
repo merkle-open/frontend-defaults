@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2025",
+    "declaration": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}
