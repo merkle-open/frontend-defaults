@@ -6,10 +6,32 @@
 
 `npm install --save-dev stylelint@17 @merkle-open/stylelint-config`
 
-**stylelint.config.js**
+**stylelint.config.js** (CommonJS)
 
 ```js
-module.exports = require('@merkle-open/stylelint-config');
+const config = require('@merkle-open/stylelint-config');
+
+module.exports = {
+  ...config,
+  rules: {
+    ...config.rules,
+    // overrides
+  },
+};
+```
+
+**stylelint.config.js** (ESM)
+
+```js
+import config from '@merkle-open/stylelint-config';
+
+export default {
+  ...config,
+  rules: {
+    ...config.rules,
+    // overrides
+  },
+};
 ```
 
 **.stylelintignore**
