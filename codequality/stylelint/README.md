@@ -1,15 +1,37 @@
 # Shared stylelint config [![npm](https://img.shields.io/npm/v/@merkle-open/stylelint-config.svg)](https://www.npmjs.com/package/@merkle-open/stylelint-config)
 
-> reusable stylelint config for stylelint 15
+> reusable stylelint config for stylelint 17
 
 ## Usage
 
-`npm install --save-dev stylelint@15 @merkle-open/stylelint-config`
+`npm install --save-dev stylelint@17 @merkle-open/stylelint-config`
 
-**stylelint.config.js**
+**stylelint.config.js** (CommonJS)
 
 ```js
-module.exports = require('@merkle-open/stylelint-config');
+const config = require('@merkle-open/stylelint-config');
+
+module.exports = {
+  ...config,
+  rules: {
+    ...config.rules,
+    // overrides
+  },
+};
+```
+
+**stylelint.config.js** (ESM)
+
+```js
+import config from '@merkle-open/stylelint-config';
+
+export default {
+  ...config,
+  rules: {
+    ...config.rules,
+    // overrides
+  },
+};
 ```
 
 **.stylelintignore**
