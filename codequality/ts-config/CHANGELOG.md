@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/merkle-open/frontend-defaults/compare/%40merkle-open%2Fts-config%402.0.0...%40merkle-open%2Fts-config%402.0.1) (2026-09-03)
+
+### Bug Fixes
+
+* **docs:** reduce changelog 2.0.0 breaking changes ([f48b34d](https://github.com/merkle-open/frontend-defaults/commit/f48b34dd63e42d1d8f16b7bd9128cc5654a7d775))
+* **docs:** top level heading for major update ([669c266](https://github.com/merkle-open/frontend-defaults/commit/669c266cf469e275cc7d73715b8e668b8bc4e5a9))
+
+
 > Current release: `2.0.0`. See [MIGRATION.md](https://github.com/merkle-open/frontend-defaults/blob/%40merkle-open/ts-config%402.0.0/codequality/ts-config/MIGRATION.md) for the v1 → v2 upgrade guide.
 
 # [2.0.0](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/ts-config@1.1.2...@merkle-open/ts-config@2.0.0) (2026-08-11)

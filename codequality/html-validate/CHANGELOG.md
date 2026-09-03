@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/merkle-open/frontend-defaults/compare/%40merkle-open%2Fhtml-validate-config%402.0.1...%40merkle-open%2Fhtml-validate-config%403.0.0) (2026-09-03)
+
+### chore
+
+* **html-validate:** update html-validate to version 11 ([02d49ac](https://github.com/merkle-open/frontend-defaults/commit/02d49ac5f86d24a51cebbc9a9d8cf51673393318))
+
+### BREAKING CHANGES
+
+* **html-validate:** remove support for node versions before 22.22.3
+
+
 ## [2.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/html-validate-config@2.0.0...@merkle-open/html-validate-config@2.0.1) (2026-02-09)
 
 **Note:** Version bump only for package @merkle-open/html-validate-config

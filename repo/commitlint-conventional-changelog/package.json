@@ -1,6 +1,6 @@
 {
   "name": "@merkle-open/commitlint-conventional-changelog",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merkle-open/frontend-defaults.git"

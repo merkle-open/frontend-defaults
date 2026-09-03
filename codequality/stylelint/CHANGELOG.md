@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/merkle-open/frontend-defaults/compare/%40merkle-open%2Fstylelint-config%405.0.1...%40merkle-open%2Fstylelint-config%405.1.0) (2026-09-03)
+
+### Bug Fixes
+
+* **stylelint-config:** update stylelint-bem ([96063ce](https://github.com/merkle-open/frontend-defaults/commit/96063ced4ca8ab177bdd4934d6d293486ee2a303))
+
+### Features
+
+* **stylelint-config:** update stylelint to v17 and stylelint-config-standard-scss to v17 ([61ac3cf](https://github.com/merkle-open/frontend-defaults/commit/61ac3cf3c3b341117224ab55588b99ba5a4e4277))
+
+
 ## [5.0.1](https://github.com/merkle-open/frontend-defaults/compare/@merkle-open/stylelint-config@5.0.0...@merkle-open/stylelint-config@5.0.1) (2026-02-09)
 
 
