@@ -4,7 +4,7 @@
 
 ## Usage
 
-`npm install --save-dev @merkle-open/html-validate-config html-validate@7`
+`npm install --save-dev @merkle-open/html-validate-config html-validate@11`
 
 **.htmlvalidate.js**
 
