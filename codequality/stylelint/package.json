@@ -22,7 +22,7 @@
     "stylelint": ">=17 <18"
   },
   "devDependencies": {
-    "stylelint": "17.14.1"
+    "stylelint": "17.16.0"
   },
   "dependencies": {
     "@namics/stylelint-bem": "11.1.0",
