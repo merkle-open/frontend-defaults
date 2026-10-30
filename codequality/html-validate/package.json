@@ -22,8 +22,8 @@
     "html-validate": "^11.0.0"
   },
   "devDependencies": {
-    "html-validate": "11.16.1",
-    "vitest": "5.0.3"
+    "html-validate": "11.17.0",
+    "vitest": "5.0.5"
   },
   "scripts": {
     "test": "vitest run",
